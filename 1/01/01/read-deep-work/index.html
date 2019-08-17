@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>读《Deep Work》 - OR in Action</title>
+  <meta property="og:title" content="读《Deep Work》" />
+  <meta name="twitter:title" content="读《Deep Work》" />
+  <meta name="description" content="很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。
+深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是处理邮件都不是深度工作，这本书给这类工作起名叫做“浅度工作”。书的前半部分解释深度工作的重要性，其中道理相信大多数人都已经知道，那就是任何有创造性的工作都需要高度的专注和持续的努力，书的后半部分讲实现深度工作的方式和技巧。在我看来，深度工作和各种时间管理方法类似，都是建立在一个人已经有想要进行创造性工作的动力基础之上的，很难相信一个没有目标的人去主动寻求深度工作。一个人本身的动力是内因，深度工作是方式。没有内因的驱动再好的工作方式也坚持不下来。举个我自己的例子来说，我读博士的时候有段时间感觉研究的东西没有实际意义，对科研的兴趣也有缺失，当时还要每周汇报研究进展，于是每天的被动研究就痛苦无比，而且当时饱受拖延症困扰。我在那个时候看了很多时间管理的书籍，结果都是流于形式，坚持一段时间就放弃了。如果当时让我看深度工作这本书，估计也是浪费时间。现在工作以后，我重拾了对运筹优化的强烈兴趣，每天感觉自己做的项目都很有成就感，这个时候我就很希望能进行深度工作，从而作出有价值的东西。这本书从语言上感觉不是很优美，读起来很干涩。作者的计算机工科背景也体现的很明显，作者在论述一个观点的时候往往会给出一些特殊情况的解释，很像是写一个理论的证明。
+不可否认的是，深度工作能否顺利进行还受工作环境的高度影响。这本书的作者是计算机系的教授，在美国除了上课答疑教授还是能够很自主的安排自己的时间的，起码单独的办公室是教授的标配。深度工作的一个基本条件就是安静的环境，很难想象一个人在菜市场的环境中能够进行深度工作，这是外因。进入工业界之后，我发现很多时候很难进行深度工作，经常感觉一天忙下来什么实质性的进展都没有，就是开了几个会，该写的算法还是没有完成，该修复的程序还在那里。特别是刚坐下来写点程序，突然邮箱提醒半个小时后有个会议，或者是同事走过来，思路不断被打断。特别是现在美国开放型办公室越来月流行，浅度工作似乎不可避免，而这又与商业性公司追求效益最大化的初衷背道而驰。公司雇佣知识型员工追求的应该是员工在有限时间内的最大产出，而最大产出又需要高度的专注，同时又把员工放在熙熙攘攘的工作环境中让他们没法进入深度工作的状态中，实在是很矛盾。于是在办公室经常看到的现象是大家都在开放型的办公室工作，同时每个人都戴着大大的降噪耳机保持专注，俨然降噪耳机成了额外的器官。
+最近将近一年养成了一个比较好的习惯&ndash;早起。生活在美国的大农村早起上班的第一个好处就是不堵车，基本上七分钟左右就能从家到达办公室，而且能把车停在里办公室非常近的地方。早点上班的自然好处就是能够早点下班，堵在下班路上的时间也少了很多。早上六点到九点是一天工作中最舒服的时光，最主要的原因是这段时间办公环境非常安静，能够相对容易的进入深度工作的状态中。之前看到过的一个统计说大多数人一天中的有效工作时间是三个半小时，这里的有效工作大概就是深度工作。据我有限的经验来看，这个统计数字还是有道理的。深度工作很难得，我发现每天一个相对固定的习惯可以一定程度上帮助自己进入深度工作的状态，比如先准备一杯咖啡再加上白噪音，我习惯把雷雨声作为白噪音。一天中如果能有一到两次的深度工作就很难得了。今年要继续争取进行更多更长时间的深度工作。">
+  <meta property="og:description" content="很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。
+深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是处理邮件都不是深度工作，这本书给这类工作起名叫做“浅度工作”。书的前半部分解释深度工作的重要性，其中道理相信大多数人都已经知道，那就是任何有创造性的工作都需要高度的专注和持续的努力，书的后半部分讲实现深度工作的方式和技巧。在我看来，深度工作和各种时间管理方法类似，都是建立在一个人已经有想要进行创造性工作的动力基础之上的，很难相信一个没有目标的人去主动寻求深度工作。一个人本身的动力是内因，深度工作是方式。没有内因的驱动再好的工作方式也坚持不下来。举个我自己的例子来说，我读博士的时候有段时间感觉研究的东西没有实际意义，对科研的兴趣也有缺失，当时还要每周汇报研究进展，于是每天的被动研究就痛苦无比，而且当时饱受拖延症困扰。我在那个时候看了很多时间管理的书籍，结果都是流于形式，坚持一段时间就放弃了。如果当时让我看深度工作这本书，估计也是浪费时间。现在工作以后，我重拾了对运筹优化的强烈兴趣，每天感觉自己做的项目都很有成就感，这个时候我就很希望能进行深度工作，从而作出有价值的东西。这本书从语言上感觉不是很优美，读起来很干涩。作者的计算机工科背景也体现的很明显，作者在论述一个观点的时候往往会给出一些特殊情况的解释，很像是写一个理论的证明。
+不可否认的是，深度工作能否顺利进行还受工作环境的高度影响。这本书的作者是计算机系的教授，在美国除了上课答疑教授还是能够很自主的安排自己的时间的，起码单独的办公室是教授的标配。深度工作的一个基本条件就是安静的环境，很难想象一个人在菜市场的环境中能够进行深度工作，这是外因。进入工业界之后，我发现很多时候很难进行深度工作，经常感觉一天忙下来什么实质性的进展都没有，就是开了几个会，该写的算法还是没有完成，该修复的程序还在那里。特别是刚坐下来写点程序，突然邮箱提醒半个小时后有个会议，或者是同事走过来，思路不断被打断。特别是现在美国开放型办公室越来月流行，浅度工作似乎不可避免，而这又与商业性公司追求效益最大化的初衷背道而驰。公司雇佣知识型员工追求的应该是员工在有限时间内的最大产出，而最大产出又需要高度的专注，同时又把员工放在熙熙攘攘的工作环境中让他们没法进入深度工作的状态中，实在是很矛盾。于是在办公室经常看到的现象是大家都在开放型的办公室工作，同时每个人都戴着大大的降噪耳机保持专注，俨然降噪耳机成了额外的器官。
+最近将近一年养成了一个比较好的习惯&ndash;早起。生活在美国的大农村早起上班的第一个好处就是不堵车，基本上七分钟左右就能从家到达办公室，而且能把车停在里办公室非常近的地方。早点上班的自然好处就是能够早点下班，堵在下班路上的时间也少了很多。早上六点到九点是一天工作中最舒服的时光，最主要的原因是这段时间办公环境非常安静，能够相对容易的进入深度工作的状态中。之前看到过的一个统计说大多数人一天中的有效工作时间是三个半小时，这里的有效工作大概就是深度工作。据我有限的经验来看，这个统计数字还是有道理的。深度工作很难得，我发现每天一个相对固定的习惯可以一定程度上帮助自己进入深度工作的状态，比如先准备一杯咖啡再加上白噪音，我习惯把雷雨声作为白噪音。一天中如果能有一到两次的深度工作就很难得了。今年要继续争取进行更多更长时间的深度工作。">
+  <meta name="twitter:description" content="很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。
+深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是 …">
+  <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "OR in Action",
+    
+    "url": "https:\/\/kunlei.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kunlei.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kunlei.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/read-deep-work\/",
+          "name": "读《 deep work》"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Kunlei Lian"
+  },
+  "headline": "读《Deep Work》",
+  "description" : "很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。\n深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是处理邮件都不是深度工作，这本书给这类工作起名叫做“浅度工作”。书的前半部分解释深度工作的重要性，其中道理相信大多数人都已经知道，那就是任何有创造性的工作都需要高度的专注和持续的努力，书的后半部分讲实现深度工作的方式和技巧。在我看来，深度工作和各种时间管理方法类似，都是建立在一个人已经有想要进行创造性工作的动力基础之上的，很难相信一个没有目标的人去主动寻求深度工作。一个人本身的动力是内因，深度工作是方式。没有内因的驱动再好的工作方式也坚持不下来。举个我自己的例子来说，我读博士的时候有段时间感觉研究的东西没有实际意义，对科研的兴趣也有缺失，当时还要每周汇报研究进展，于是每天的被动研究就痛苦无比，而且当时饱受拖延症困扰。我在那个时候看了很多时间管理的书籍，结果都是流于形式，坚持一段时间就放弃了。如果当时让我看深度工作这本书，估计也是浪费时间。现在工作以后，我重拾了对运筹优化的强烈兴趣，每天感觉自己做的项目都很有成就感，这个时候我就很希望能进行深度工作，从而作出有价值的东西。这本书从语言上感觉不是很优美，读起来很干涩。作者的计算机工科背景也体现的很明显，作者在论述一个观点的时候往往会给出一些特殊情况的解释，很像是写一个理论的证明。\n不可否认的是，深度工作能否顺利进行还受工作环境的高度影响。这本书的作者是计算机系的教授，在美国除了上课答疑教授还是能够很自主的安排自己的时间的，起码单独的办公室是教授的标配。深度工作的一个基本条件就是安静的环境，很难想象一个人在菜市场的环境中能够进行深度工作，这是外因。进入工业界之后，我发现很多时候很难进行深度工作，经常感觉一天忙下来什么实质性的进展都没有，就是开了几个会，该写的算法还是没有完成，该修复的程序还在那里。特别是刚坐下来写点程序，突然邮箱提醒半个小时后有个会议，或者是同事走过来，思路不断被打断。特别是现在美国开放型办公室越来月流行，浅度工作似乎不可避免，而这又与商业性公司追求效益最大化的初衷背道而驰。公司雇佣知识型员工追求的应该是员工在有限时间内的最大产出，而最大产出又需要高度的专注，同时又把员工放在熙熙攘攘的工作环境中让他们没法进入深度工作的状态中，实在是很矛盾。于是在办公室经常看到的现象是大家都在开放型的办公室工作，同时每个人都戴着大大的降噪耳机保持专注，俨然降噪耳机成了额外的器官。\n最近将近一年养成了一个比较好的习惯\x26ndash;早起。生活在美国的大农村早起上班的第一个好处就是不堵车，基本上七分钟左右就能从家到达办公室，而且能把车停在里办公室非常近的地方。早点上班的自然好处就是能够早点下班，堵在下班路上的时间也少了很多。早上六点到九点是一天工作中最舒服的时光，最主要的原因是这段时间办公环境非常安静，能够相对容易的进入深度工作的状态中。之前看到过的一个统计说大多数人一天中的有效工作时间是三个半小时，这里的有效工作大概就是深度工作。据我有限的经验来看，这个统计数字还是有道理的。深度工作很难得，我发现每天一个相对固定的习惯可以一定程度上帮助自己进入深度工作的状态，比如先准备一杯咖啡再加上白噪音，我习惯把雷雨声作为白噪音。一天中如果能有一到两次的深度工作就很难得了。今年要继续争取进行更多更长时间的深度工作。",
+  "inLanguage" : "en",
+  "wordCount":  4 ,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "0001-01-01T00:00:00",
+  "image" : "https:\/\/kunlei.github.io\/img\/myAvatar.png",
+  "keywords" : [ "Books" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/read-deep-work\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kunlei.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kunlei.github.io\/img\/myAvatar.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="读《Deep Work》" />
+<meta property="og:description" content="很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。
+深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是处理邮件都不是深度工作，这本书给这类工作起名叫做“浅度工作”。书的前半部分解释深度工作的重要性，其中道理相信大多数人都已经知道，那就是任何有创造性的工作都需要高度的专注和持续的努力，书的后半部分讲实现深度工作的方式和技巧。在我看来，深度工作和各种时间管理方法类似，都是建立在一个人已经有想要进行创造性工作的动力基础之上的，很难相信一个没有目标的人去主动寻求深度工作。一个人本身的动力是内因，深度工作是方式。没有内因的驱动再好的工作方式也坚持不下来。举个我自己的例子来说，我读博士的时候有段时间感觉研究的东西没有实际意义，对科研的兴趣也有缺失，当时还要每周汇报研究进展，于是每天的被动研究就痛苦无比，而且当时饱受拖延症困扰。我在那个时候看了很多时间管理的书籍，结果都是流于形式，坚持一段时间就放弃了。如果当时让我看深度工作这本书，估计也是浪费时间。现在工作以后，我重拾了对运筹优化的强烈兴趣，每天感觉自己做的项目都很有成就感，这个时候我就很希望能进行深度工作，从而作出有价值的东西。这本书从语言上感觉不是很优美，读起来很干涩。作者的计算机工科背景也体现的很明显，作者在论述一个观点的时候往往会给出一些特殊情况的解释，很像是写一个理论的证明。
+不可否认的是，深度工作能否顺利进行还受工作环境的高度影响。这本书的作者是计算机系的教授，在美国除了上课答疑教授还是能够很自主的安排自己的时间的，起码单独的办公室是教授的标配。深度工作的一个基本条件就是安静的环境，很难想象一个人在菜市场的环境中能够进行深度工作，这是外因。进入工业界之后，我发现很多时候很难进行深度工作，经常感觉一天忙下来什么实质性的进展都没有，就是开了几个会，该写的算法还是没有完成，该修复的程序还在那里。特别是刚坐下来写点程序，突然邮箱提醒半个小时后有个会议，或者是同事走过来，思路不断被打断。特别是现在美国开放型办公室越来月流行，浅度工作似乎不可避免，而这又与商业性公司追求效益最大化的初衷背道而驰。公司雇佣知识型员工追求的应该是员工在有限时间内的最大产出，而最大产出又需要高度的专注，同时又把员工放在熙熙攘攘的工作环境中让他们没法进入深度工作的状态中，实在是很矛盾。于是在办公室经常看到的现象是大家都在开放型的办公室工作，同时每个人都戴着大大的降噪耳机保持专注，俨然降噪耳机成了额外的器官。
+最近将近一年养成了一个比较好的习惯&ndash;早起。生活在美国的大农村早起上班的第一个好处就是不堵车，基本上七分钟左右就能从家到达办公室，而且能把车停在里办公室非常近的地方。早点上班的自然好处就是能够早点下班，堵在下班路上的时间也少了很多。早上六点到九点是一天工作中最舒服的时光，最主要的原因是这段时间办公环境非常安静，能够相对容易的进入深度工作的状态中。之前看到过的一个统计说大多数人一天中的有效工作时间是三个半小时，这里的有效工作大概就是深度工作。据我有限的经验来看，这个统计数字还是有道理的。深度工作很难得，我发现每天一个相对固定的习惯可以一定程度上帮助自己进入深度工作的状态，比如先准备一杯咖啡再加上白噪音，我习惯把雷雨声作为白噪音。一天中如果能有一到两次的深度工作就很难得了。今年要继续争取进行更多更长时间的深度工作。">
+<meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
+<meta property="og:url" content="https://kunlei.github.io/1/01/01/read-deep-work/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="OR in Action" />
+
+  <meta name="twitter:title" content="读《Deep Work》" />
+  <meta name="twitter:description" content="很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。
+深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是 …">
+  <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://kunlei.github.io/img/myAvatar.png' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://kunlei.github.io/1/01/01/read-deep-work/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="OR in Action" />
+
+  <meta name="generator" content="Hugo 0.57.1" />
+  <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="OR in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://kunlei.github.io/css/syntax.css" /><link rel="stylesheet" href="https://kunlei.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="/css/tweaks.css"/>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-124241468-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kunlei.github.io">OR in Action</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/post">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Contact" href="/contact">Contact</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="OR in Action" href="https://kunlei.github.io">
+            <img class="avatar-img" src="https://kunlei.github.io/img/myAvatar.png" alt="OR in Action" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>读《Deep Work》</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。</p>
+
+<p>深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是处理邮件都不是深度工作，这本书给这类工作起名叫做“浅度工作”。书的前半部分解释深度工作的重要性，其中道理相信大多数人都已经知道，那就是任何有创造性的工作都需要高度的专注和持续的努力，书的后半部分讲实现深度工作的方式和技巧。在我看来，深度工作和各种时间管理方法类似，都是建立在一个人已经有想要进行创造性工作的动力基础之上的，很难相信一个没有目标的人去主动寻求深度工作。一个人本身的动力是内因，深度工作是方式。没有内因的驱动再好的工作方式也坚持不下来。举个我自己的例子来说，我读博士的时候有段时间感觉研究的东西没有实际意义，对科研的兴趣也有缺失，当时还要每周汇报研究进展，于是每天的被动研究就痛苦无比，而且当时饱受拖延症困扰。我在那个时候看了很多时间管理的书籍，结果都是流于形式，坚持一段时间就放弃了。如果当时让我看深度工作这本书，估计也是浪费时间。现在工作以后，我重拾了对运筹优化的强烈兴趣，每天感觉自己做的项目都很有成就感，这个时候我就很希望能进行深度工作，从而作出有价值的东西。这本书从语言上感觉不是很优美，读起来很干涩。作者的计算机工科背景也体现的很明显，作者在论述一个观点的时候往往会给出一些特殊情况的解释，很像是写一个理论的证明。</p>
+
+<p>不可否认的是，深度工作能否顺利进行还受工作环境的高度影响。这本书的作者是计算机系的教授，在美国除了上课答疑教授还是能够很自主的安排自己的时间的，起码单独的办公室是教授的标配。深度工作的一个基本条件就是安静的环境，很难想象一个人在菜市场的环境中能够进行深度工作，这是外因。进入工业界之后，我发现很多时候很难进行深度工作，经常感觉一天忙下来什么实质性的进展都没有，就是开了几个会，该写的算法还是没有完成，该修复的程序还在那里。特别是刚坐下来写点程序，突然邮箱提醒半个小时后有个会议，或者是同事走过来，思路不断被打断。特别是现在美国开放型办公室越来月流行，浅度工作似乎不可避免，而这又与商业性公司追求效益最大化的初衷背道而驰。公司雇佣知识型员工追求的应该是员工在有限时间内的最大产出，而最大产出又需要高度的专注，同时又把员工放在熙熙攘攘的工作环境中让他们没法进入深度工作的状态中，实在是很矛盾。于是在办公室经常看到的现象是大家都在开放型的办公室工作，同时每个人都戴着大大的降噪耳机保持专注，俨然降噪耳机成了额外的器官。</p>
+
+<p>最近将近一年养成了一个比较好的习惯&ndash;早起。生活在美国的大农村早起上班的第一个好处就是不堵车，基本上七分钟左右就能从家到达办公室，而且能把车停在里办公室非常近的地方。早点上班的自然好处就是能够早点下班，堵在下班路上的时间也少了很多。早上六点到九点是一天工作中最舒服的时光，最主要的原因是这段时间办公环境非常安静，能够相对容易的进入深度工作的状态中。之前看到过的一个统计说大多数人一天中的有效工作时间是三个半小时，这里的有效工作大概就是深度工作。据我有限的经验来看，这个统计数字还是有道理的。深度工作很难得，我发现每天一个相对固定的习惯可以一定程度上帮助自己进入深度工作的状态，比如先准备一杯咖啡再加上白噪音，我习惯把雷雨声作为白噪音。一天中如果能有一到两次的深度工作就很难得了。今年要继续争取进行更多更长时间的深度工作。</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kunlei.github.io/tags/books/">Books</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kunlei.github.io/1/01/01/read-little-prince/" data-toggle="tooltip" data-placement="top" title="读《The Little Prince》">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kunlei.github.io/1/01/01/visitor/" data-toggle="tooltip" data-placement="top" title="Visitor Pattern">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "orinaction" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:kunlei1987@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/kunlei" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/kunlei-lian-ba55a73b" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Kunlei Lian
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kunlei.github.io">OR in Action</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kunlei.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kunlei.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

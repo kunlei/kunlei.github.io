@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>OR in Action - OR in Action</title>
+  <meta property="og:title" content="OR in Action" />
+  <meta name="twitter:title" content="OR in Action" />
+  <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "OR in Action",
+    
+    "url": "https:\/\/kunlei.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kunlei.github.io"
+  
+  
+  
+  
+}
+</script>
+
+<meta property="og:title" content="OR in Action" />
+<meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
+<meta property="og:url" content="https://kunlei.github.io/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="OR in Action" />
+
+  <meta name="twitter:title" content="OR in Action" />
+  <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://kunlei.github.io/img/myAvatar.png' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://kunlei.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="OR in Action" />
+
+  <meta name="generator" content="Hugo 0.57.1" />
+  <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="OR in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://kunlei.github.io/css/syntax.css" /><link rel="stylesheet" href="https://kunlei.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="/css/tweaks.css"/>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-124241468-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kunlei.github.io">OR in Action</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/post">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Contact" href="/contact">Contact</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="OR in Action" href="https://kunlei.github.io">
+            <img class="avatar-img" src="https://kunlei.github.io/img/myAvatar.png" alt="OR in Action" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              
+                <h1>OR in Action</h1>
+              
+              
+                <hr class="small">
+              
+              
+                
+                  <span class="page-subheading">Kunlei&#39;s Personal Blog</span>
+                
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+
+        <div class="posts-list">
+          
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/chain-of-responsibility/">
+                <h2 class="post-title">Chain of Responsibility</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Chain of Responsibility is one of the behavioral design patterns popularized by the original GoF book. It involves a sender object and potentially multiple receiver objects, and the point of this pattern is to decouple the sender from various receivers. Without this pattern, a sender would have to keep reference to all possible receivers and also define the logic of how the sender is processed by receivers.
+A good example I can think of is the car maintenance service.
+                  <a href="https://kunlei.github.io/1/01/01/chain-of-responsibility/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/command-pattern/">
+                <h2 class="post-title">Command Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Command Pattern is one of the behavioral design patterns that consists of four essential components: - Command: this is essentially an interface to be implemented by concrete classes. It decouples the invoker which is the user of various methods provided by receivers, so instead of a invoker directly calling methods provided by receivers, invokers call a common interface. An example of this pattern can be seen in the Runnable interface provided by JDK.
+                  <a href="https://kunlei.github.io/1/01/01/command-pattern/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/composite/">
+                <h2 class="post-title">Composite Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Composite Pattern is one of the structural design patterns and it has three main components:
+ Component: this is an interface to be implemented by either a leaf or a composite Leaf: an end node of a tree object structure Composite: a composite has multiple leaves  An example of composite pattern can be found in companies, which normally have two types of employees, individual contributors and managers. We can therefore represent them in a tree structure and the common component interface allow uniform treatment of these two types of workers.
+                  <a href="https://kunlei.github.io/1/01/01/composite/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/decorator/">
+                <h2 class="post-title">Decorator Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Decorator Pattern is one of the structural design patterns that are popularized by the original GoF book. According to WikiPedia, it &ldquo;allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class&rdquo;.
+Let&rsquo;s see how we can use it in real life. Suppose we go to a restaurant and order either chicken or pork and we can also order soup or noodle on top of the main menu.
+                  <a href="https://kunlei.github.io/1/01/01/decorator/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/flyweight/">
+                <h2 class="post-title">Flyweight Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Proxy Pattern is one of the structural design patterns that are popularized by the original GoF book. In this pattern, a class can function as an interface to some other class. To achieve this, the proxy class and the original class must implement the same interface.
+In the example below, a computer implements the computing interface to carry out computation tasks.
+1public interface Computing { 2 void compute(int value); 3} The computer class just accepts a value and prints it.
+                  <a href="https://kunlei.github.io/1/01/01/flyweight/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/test/">
+                <h2 class="post-title">Media Temple Makes a Deal with the Devil</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Today, Media Temple announced that they are being acquired by GoDaddy.</p>
+
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/personal/">personal</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/mediator/">
+                <h2 class="post-title">Mediator Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Mediator Pattern is one of the behavioral patterns and it aims to decouple some related objects by using a separate object to manage their communications. This may better be explained by an example. Think of the stock trading system as a mediator to manage buying and selling of stocks. Individual investors do not talk to other tradres directly, instead they interact with the trading system directly.
+Let&rsquo;s define the mediator interface as below.
+                  <a href="https://kunlei.github.io/1/01/01/mediator/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/memento/">
+                <h2 class="post-title">Memento Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Memento Pattern is one of the behavioral design patterns defined in the original GoF book. It is useful when we need to save the state of an object and restore it to a saved state at a later time. There are three components in this pattern:
+ Originator: this is the class whose state needs to be saved and restored. Memento: this is the class used to capture the state of the originator.
+                  <a href="https://kunlei.github.io/1/01/01/memento/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/observer/">
+                <h2 class="post-title">Observer Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Observer Pattern is a behavioral pattern suitable for decoupling objects with one-to-many relations. There are two components in this pattern:
+ Subject: this is the object whose state is subject to changes and will affect many following objects. Observer: this is the object which will updates its status based on the status of the subject.  An example is the information updating system used in my daughter&rsquo;s school. Parents get udpates from the class teacher constantly.
+                  <a href="https://kunlei.github.io/1/01/01/observer/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/proxy/">
+                <h2 class="post-title">Proxy Pattern</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
+  
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Flyweight Pattern is one of the structural design patterns that are popularized by the original GoF book. This pattern is useful if one has to create a large number of objects and they share some invariants, so instead of duplicating the shared information and consuming large amount of memories, one can just keep one copy of each shared state.
+In the example below, let&rsquo;s say there are five possible colors associated with a circle shape, however, the size of the circle can be different.
+                  <a href="https://kunlei.github.io/1/01/01/proxy/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
+          
+        </div>
+
+        
+          <ul class="pager main-pager">
+            
+              <li class="previous">
+                <a href="https://kunlei.github.io/page/2/">&larr; Newer Posts</a>
+              </li>
+            
+            
+              <li class="next">
+                <a href="https://kunlei.github.io/page/4/">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:kunlei1987@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/kunlei" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/kunlei-lian-ba55a73b" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Kunlei Lian
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kunlei.github.io">OR in Action</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kunlei.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kunlei.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Posts - OR in Action</title>
+  <meta property="og:title" content="Posts" />
+  <meta name="twitter:title" content="Posts" />
+  <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "OR in Action",
+    
+    "url": "https:\/\/kunlei.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kunlei.github.io"
+  
+  
+  
+  
+}
+</script>
+
+<meta property="og:title" content="Posts" />
+<meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
+<meta property="og:url" content="https://kunlei.github.io/post/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="OR in Action" />
+
+  <meta name="twitter:title" content="Posts" />
+  <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://kunlei.github.io/img/myAvatar.png' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://kunlei.github.io/post/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="OR in Action" />
+
+  <meta name="generator" content="Hugo 0.57.1" />
+  <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="OR in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://kunlei.github.io/css/syntax.css" /><link rel="stylesheet" href="https://kunlei.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="/css/tweaks.css"/>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-124241468-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kunlei.github.io">OR in Action</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/post">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Contact" href="/contact">Contact</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="OR in Action" href="https://kunlei.github.io">
+            <img class="avatar-img" src="https://kunlei.github.io/img/myAvatar.png" alt="OR in Action" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+  <header class="header-section ">
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>Posts</h1>
+              <hr class="small">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/03/31/talk-about-race/">
+                <h2 class="post-title">读《So You Want to Talk about Race》</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on March 31, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    <p><a href="https://www.amazon.com/You-Want-Talk-About-Race/dp/1580056776">链接</a></p>
+
+<p>这本书谈论美国的种族问题，其中有一章讲述亚裔这个模范族裔，话题过于敏感，不做评论，但是值得一看。</p>
+
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/books">Books</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/03/29/crush-it/">
+                <h2 class="post-title">读《Crush It》</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on March 29, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    <p>放个网页链接：<a href="https://www.amazon.com/Crush-Time-Cash-Your-Passion/dp/0061914177">Crush It!</a></p>
+
+<p>不知道为什么看到了这本书，很短，感觉没什么干货，总结一下：</p>
+
+<ul>
+<li>找一个自己非常感兴趣的领域</li>
+<li>建一个个人网站，写优质内容</li>
+<li>吸引流量然后变现</li>
+</ul>
+
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/books">Books</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/03/29/crush-it/">
+                <h2 class="post-title">读《Crush It》</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on March 29, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    <p>放个网页链接：<a href="https://www.amazon.com/Crush-Time-Cash-Your-Passion/dp/0061914177">Crush It!</a></p>
+
+<p>不知道为什么看到了这本书，很短，感觉没什么干货，总结一下：</p>
+
+<ul>
+<li>找一个自己非常感兴趣的领域</li>
+<li>建一个个人网站，写优质内容</li>
+<li>吸引流量然后变现</li>
+</ul>
+
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/books">Books</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/03/29/peak/">
+                <h2 class="post-title">读《Peak》</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on March 29, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    
+
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="https://www.amazon.com/Peak-Secrets-New-Science-Expertise-ebook/dp/B011H56MKS"><em>Peak</em>: Secrets from the New Science of Expertise</a></td>
+<td>5 / 5</td>
+</tr>
+</tbody>
+</table>
+
+<p>最近看完《刻意练习》这本书，有些启发，记录下来以便回顾。</p>
+
+<h3 id="什么是刻意练习">什么是刻意练习</h3>
+
+<p>简单来说，刻意练习是为了提高某一个技能而进行的采用科学方法的主动学习过程。
+刻意练习必须有一个明确的目标，太笼统的目标，比如说锻炼身体或者是多读书，都不适合作为刻意练习的目标，因为它们没有一个可以衡量的标准；而“每周跑步三次每次五千米”或者“年底之前读五十本书并写读书感想”都可以作为目标。
+我个人的体验是目标不能定太高太完美，那样很容易放弃。
+比如之前制定新年计划类似每天跑步一迈，结果都是因为中断了一天而全盘放弃，当时的心理过程是完美目标已经不可能实现于是自暴自弃。
+现在定的目标是每周跑步一次每次一迈，即使有时候忙连续几天没有机会运动心理上也不会有负罪感，最后反而跑步的次数更多。</p>
+
+<h3 id="什么不是刻意练习">什么不是刻意练习</h3>
+
+<p>刻意练习的一个重点是要采用科学的方式。这本书举了一些例子来说明有些人虽然进行了长时间的练习但是并没有达到提高技能的效果，那并不能被成为刻意练习，更多是重复性的机械练习。
+一个例子是说一个人如果练习弹钢琴但是并没有积极主动的发现并改正自己发生的错误，那么练习时间的延长并不能带来技能的提高。
+回想高中时候的学习经历，有些人看起来学习很刻苦，但是他们一直在重复自己已经掌握的知识，同时经常犯的错误一再发生并没有纠正，反应到学习成绩上就是停滞不前。
+而我工作时候的学习经历有时候也没有起到刻意练习的效果，比如说我一直在努力提高自己的编程水平，于是经常有计划的阅读一些经典数目，但是很多时候时间是花在了阅读已经知道的知识上，对于不了解的内容还是不能掌握。
+如果把现在的编程水平比作一个舒适区的话，那么以往很多时候的学习都是在舒适区里面打转。</p>
+
+<h3 id="知识和技能">知识和技能</h3>
+
+<p>书中提到了一个观点我觉着很有道理，那就是学习中获得了知识并不等于掌握了使用它的技能。
+比如说我了解了面向对象的知识比如继承封装多态，这并不意味着我能够在实际的项目中正确的使用它们。
+又或者说我学习了设计模式的知识，但是有些时候并没有了解在什么场景下应该使用什么样的模式。
+刻意练习注重的习得技能，特别是熟练运用知识的技能。</p>
+
+<h3 id="刻意练习的核心追求">刻意练习的核心追求</h3>
+
+<p>书中提到了一个概念，我姑且称之为“思维模式”，刻意练习的终极追求就是建立某个领域内的正确有效的思维模式。
+我觉着作者的观察总结很深刻，就像围棋大师看一眼棋盘就能了解对弈的现状并分析可能的走势，这都离不开思维模式。
+这让我联想起了现在火起来的神经网络，通过对大量数据样本的训练-“刻意练习”，一个神经网络模型就能够对新的数据作出有效的判断，其中的黑盒模型就类似作者说的思维模式。
+现在做运筹优化的项目，基本上遇到一个新的问题大脑就会自动归类，这也是长时间专业学习形成的思维模式的结果。</p>
+
+<h3 id="启示">启示</h3>
+
+<p>现在的工作学习中很多地方可以运用刻意练习的方法。
+运筹优化的理论学习要注重形成并补充思维模式，并且要着重训练解决实际问题的能力。
+编程技能的提高也要注重思维模式的训练，不能只学习零散的知识点。</p>
+
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/books">Books</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/03/06/cplex-java-constraints/">
+                <h2 class="post-title">Cplex Java Concert Technology - Constraints (1)</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on March 6, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Constraint is an essential part of an optimization model, and Cplex provides various ways of defining constraints in a model. All constraints in Cplex have a base interface IloConstraint, from which other constraint types are derived. Probably the most commonly used constraint types are IloRange and IloLPMatrix.
+IloConstraint IloConstraint is a marker interface which extends from IloAddable and IloIntExpr, both are marker interfaces themselves. The fact that IloConstraint being a IloAddable indicates that an object of classes implementing this interface can be added to a model.<a href="https://kunlei.github.io/2019/03/06/cplex-java-constraints/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/cplex">cplex</a>&nbsp;
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/03/04/cplex-java-objectives/">
+                <h2 class="post-title">Cplex Java Concert Technology - Objectives</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on March 4, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    IloModeler Objectives can be added to the model in multiple ways:
+ IloObjective addMinimize(IloNumExpr expr) IloObjective addMinimize(IloNumExpr expr, java.lang.String name) IloObjective addMaximize(IloNumExpr expr) IloObjective addMaximize(IloNumExpr expr, java.lang.String name) IloObjective addObjective(IloObjectiveSense sense, IloNumExpr expr) IloObjective addObjective(IloObjectiveSense sense, IloNumExpr expr, java.lang.String name)  or they can be defined without being added to the model:
+ IloObjective minimize(IloNumExpr expr) IloObjective minimize(IloNumExpr expr, java.lang.String name) IloObjective maximize(IloNumExpr expr) IloObjective maximize(IloNumExpr expr, java.lang.String name) IloObjective objective(IloObjectiveSense sense, IloNumExpr expr) IloObjective objective(IloObjectiveSense sense, IloNumExpr expr, java.<a href="https://kunlei.github.io/2019/03/04/cplex-java-objectives/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/cplex">cplex</a>&nbsp;
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/03/04/cplex-java-variables/">
+                <h2 class="post-title">Cplex Java Concert Technology - Variables</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on March 4, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Cplex provides three types of decision variables, which are defined by class IloNumVarType. There are two key information about a variable: bound and type, the former can be changed after a variable is created, but the latter remains the same throughout the lifetime of the object. Also, a variable bound consists of lower bound and upper bound, defined by class IloNumVarBoundType.
+Although variables are key components of a mathematical model, Cplex does not provide function to explicitly add variables to a model, instead, variables are added implicitly.<a href="https://kunlei.github.io/2019/03/04/cplex-java-variables/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/cplex">cplex</a>&nbsp;
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/cplex-java-conversion/">
+                <h2 class="post-title"></h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 1, 0001
+              </p>
+              <div class="post-entry">
+                
+                  
+                    
+                  
+                
+              </div>
+
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/adapter/">
+                <h2 class="post-title">Adapter Pattern</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 1, 0001
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Adapter Pattern is one of the structural design patterns that connects two otherwise incompatible interfaces. Adapters are often used in real life. Suppose there is a car interface that can run and a vehicle interface that can drive. An adapter is connect these two interfaces so that a car can act like a vehicle. To see this, let&rsquo;s define two interfaces:
+1public interface Car { 2 void run(); 3}1public interface Vehicle { 2 void drive(); 3} Then let&rsquo;s have some implementations:<a href="https://kunlei.github.io/1/01/01/adapter/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/bridge/">
+                <h2 class="post-title">Bridge Pattern</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 1, 0001
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Bridge Pattern is one of the structural design patterns and it aims to separate abstractions from implementations by allowing them to be developed independently. This may better be explained by an example. Think of a company with two types of employees: onsite and remote. Naturally, the way they attend meetings differ based on the location they work. An onsite employee can join meetings either online or in person, while a remote employee can only call in meeting online.<a href="https://kunlei.github.io/1/01/01/bridge/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+        </div>
+        
+          <ul class="pager main-pager">
+            
+              <li class="previous">
+                <a href="https://kunlei.github.io/post/page/1">&larr; Newer Posts</a>
+              </li>
+            
+            
+              <li class="next">
+                <a href="https://kunlei.github.io/post/page/3">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:kunlei1987@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/kunlei" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/kunlei-lian-ba55a73b" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="/post/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Kunlei Lian
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kunlei.github.io">OR in Action</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kunlei.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kunlei.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
