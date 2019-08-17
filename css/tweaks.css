@@ -1,0 +1,21 @@
+figcaption p {
+  text-align: center;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+/* Float a figure to the right of the article. */
+.figureright {
+  float: right;
+  margin: 20px;
+}
+
+/* Float a figure to the left of the article. */
+.figureleft {
+  float: left;
+  margin: 20px;
+}
+
+.chroma .hl {
+  background-color: #555a70;
+}
