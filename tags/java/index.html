@@ -645,7 +645,7 @@ A good example I can think of is the car maintenance service.<a href="https://ku
         <p class="credits copyright text-muted">
           
             
-              Kunlei Lian
+              <a href="https://kunlei.githu.io">Kunlei Lian</a>
             
           
 
@@ -679,6 +679,28 @@ A good example I can think of is the car maintenance service.<a href="https://ku
 
 
 
+
+
+
+<script type="text/javascript">
+$(function(){
+  $('#show-comments').on('click', function(){
+    var disqus_shortname = 'orinaction';
+      
+    (function() {
+      var disqus = document.createElement('script'); 
+      disqus.type = 'text/javascript'; 
+      disqus.async = true;
+      disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+    })();
+      
+    $(this).hide(); 
+    });
+  });
+      
+</script>
+<script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
 
