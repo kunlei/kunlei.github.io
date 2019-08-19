@@ -63,7 +63,7 @@
   "headline": "Recent Updates and Blog Redesign using Hugo",
   "description" : "Recent updates I have a blog setup using Hugo with the theme called mainroad and it has been working fine, functionally, but I always feel something missing from that design. All the contents, including the navigation menu and posts, are centered on a paper-like area, which looks great at first impression. On the other hand, much of the screen space seems wasted, which is especially true when I have to big monitors and the design only takes up a small portion of the screen.",
   "inLanguage" : "en",
-  "wordCount":  675 ,
+  "wordCount":  845 ,
   "datePublished" : "2019-08-17T00:00:00",
   "dateModified" : "2019-08-17T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/myAvatar.png",
@@ -145,14 +145,21 @@ if (!doNotTrack) {
           
         
           
-            <li>
-              <a title="About" href="/about">About</a>
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Coding</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/java-index">Java</a>
+                
+                  <a href="/page/java-index">O.R.</a>
+                
+              </div>
             </li>
           
         
           
             <li>
-              <a title="Contact" href="/contact">Contact</a>
+              <a title="About" href="/about">About</a>
             </li>
           
         
@@ -266,7 +273,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;675&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;845&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
@@ -364,7 +371,47 @@ drwxr-xr-x  2 klian  74715970    64B Aug 18 10:27 themes
 
 <h4 id="install-the-theme">Install the theme</h4>
 
-<h4 id="build-site-and-publish">Build site and publish</h4>
+<p>At this point, we have a local directory that is not version controlled.
+To do this, execute the following command at <em>~/dev/blog/tutorial/</em>:</p>
+
+<pre><code>git init
+</code></pre>
+
+<p>This effectively initializes a git repository on our machine.
+The Hugo community makes available lots of themes for us to choose from, and this site uses a theme called <strong>beautifulhugo</strong>, which is available on github and can be cloned into the <em>themes</em> directory.
+Run the command below at <em>~/dev/blog/tutorial/</em>:</p>
+
+<pre><code>git submodule add https://github.com/halogenica/beautifulhugo themes/beautifulhugo
+</code></pre>
+
+<p>Now the <em>themes</em> directory looks like below:</p>
+
+<pre><code>total 0
+drwxr-xr-x  15 klian  74715970   480B Aug 18 21:36 beautifulhugo
+</code></pre>
+
+<p>We&rsquo;ve successfully installed a theme ready to be used by our site.</p>
+
+<h4 id="start-blogging">Start blogging</h4>
+
+<p>All of our site contents are placed within the, not surprisingly, <em>content</em> directory.
+As a start, we can create markdown file <em>about.md</em> to say something about the author of the site:</p>
+
+<pre><code>---
+title: About Me
+date: 2019-08-17
+tags: [&quot;site&quot;]
+---
+
+This is John Doe's site.
+</code></pre>
+
+<p>The site can be viewed locally by running the Hugo command:</p>
+
+<pre><code>hugo server -t beautifulhugo
+</code></pre>
+
+<h4 id="build-site-and-deploy">Build site and deploy</h4>
 
 
         
