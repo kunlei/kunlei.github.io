@@ -63,7 +63,7 @@
   "headline": "Recent Updates and Blog Redesign using Hugo",
   "description" : "Recent updates I have a blog setup using Hugo with the theme called mainroad and it has been working fine, functionally, but I always feel something missing from that design. All the contents, including the navigation menu and posts, are centered on a paper-like area, which looks great at first impression. On the other hand, much of the screen space seems wasted, which is especially true when I have to big monitors and the design only takes up a small portion of the screen.",
   "inLanguage" : "en",
-  "wordCount":  845 ,
+  "wordCount":  1112 ,
   "datePublished" : "2019-08-17T00:00:00",
   "dateModified" : "2019-08-17T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/myAvatar.png",
@@ -276,10 +276,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on August 17, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;845&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1112&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
@@ -418,6 +418,51 @@ This is John Doe's site.
 </code></pre>
 
 <h4 id="build-site-and-deploy">Build site and deploy</h4>
+
+<p>For now, the site only lives on your machine and only by deploying it to some hosting servers that others can access it.
+The easiest way to get a free hosting server is probably using something you already have, that is, github.
+<a href="https://gohugo.io/hosting-and-deployment/">This page</a> provides awesome guides to other deploying options, but in this post I&rsquo;ll just show how to deploy our site to github.</p>
+
+<p>Github offers two options to host user sites: user pages or project pages.
+The former can be achieved by creating a special repository with name <em>username.github.io</em>.
+Note that the <em>username</em> is your github account name.
+This repository is where we should put our generated site files produced by Hugo.
+It is not the place we save the source file of our site.
+We should create a separate repository to save the source files and the repository I created for this tutorial is</p>
+
+<pre><code>https://github.com/kunlei/hugo-tutorial.git
+</code></pre>
+
+<p>Now we can push our local source files to this repository</p>
+
+<pre><code>git add .
+git commit -m &quot;first commit&quot;
+git remote add origin https://github.com/kunlei/hugo-tutorial.git
+git push -u origin master
+</code></pre>
+
+<p>Next, we need to link the user page repository to the <em>public</em> directory:`</p>
+
+<pre><code>rm -rf public
+git submodule add -b master git@github.com:kunlei/kunlei.github.io.git public
+</code></pre>
+
+<p>Then we can ask Hugo to create our site files by running</p>
+
+<pre><code>hugo -t beautifulhugo
+</code></pre>
+
+<p>This will create all our site files and put them into the <em>public</em> directory.</p>
+
+<p>Last, we only need to push all the files inside the <em>public</em> directory to github:</p>
+
+<pre><code>cd public
+git add .
+git commit -m &quot;update&quot;
+git push origin master
+</code></pre>
+
+<p>Congratulations! Now your site can be viewed anywhere at <code>https://username.github.io</code>.</p>
 
 
         
