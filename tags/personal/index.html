@@ -75,6 +75,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -322,7 +324,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>

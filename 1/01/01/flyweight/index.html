@@ -131,6 +131,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -325,6 +327,8 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        
+
         <p><strong>Proxy Pattern</strong> is one of the structural design patterns that are popularized by the original GoF book.
 In this pattern, a class can function as an interface to some other class.
 To achieve this, the proxy class and the original class must implement the same interface.</p>
@@ -602,7 +606,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>

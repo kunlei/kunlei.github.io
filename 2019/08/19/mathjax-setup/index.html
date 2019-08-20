@@ -125,6 +125,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -319,6 +321,21 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#credits-to-the-original-post">Credits to the Original Post</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
         
 
 <p>With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts.
@@ -640,7 +657,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>

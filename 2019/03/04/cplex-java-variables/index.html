@@ -128,6 +128,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -322,6 +324,25 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#variable-instantiation">Variable Instantiation</a>
+<ul>
+<li><a href="#bool-variable">Bool variable</a></li>
+<li><a href="#int-variable">Int variable</a></li>
+<li><a href="#float-variable">Float variable</a></li>
+</ul></li>
+<li><a href="#ilonumvartype-implementation">IloNumVarType Implementation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
         
 
 <p>Cplex provides three types of decision variables, which are defined by class <em>IloNumVarType</em>.
@@ -728,7 +749,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>

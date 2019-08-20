@@ -136,6 +136,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -330,6 +332,8 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        
+
         <p>很久之前就知道《深度工作》这本书，在谢益辉的个人博客里也看到过推荐，只是一直找不到时间，最近趁着2018的圣诞假期终于有机会认真阅读这本书。读这本书体力上很累，主要是我大多数时候都是在一只胳膊扛着九个月的小家伙另一只胳膊拿着平板电脑的情况下读的，小家伙一般睡一个多小时，基本上到他醒的时候我已经腰酸背痛了。</p>
 
 <p>深度工作无非就是长时间不受打扰的专注工作。很明显，边读书边看手机或者是浏览学习相关网页或者是处理邮件都不是深度工作，这本书给这类工作起名叫做“浅度工作”。书的前半部分解释深度工作的重要性，其中道理相信大多数人都已经知道，那就是任何有创造性的工作都需要高度的专注和持续的努力，书的后半部分讲实现深度工作的方式和技巧。在我看来，深度工作和各种时间管理方法类似，都是建立在一个人已经有想要进行创造性工作的动力基础之上的，很难相信一个没有目标的人去主动寻求深度工作。一个人本身的动力是内因，深度工作是方式。没有内因的驱动再好的工作方式也坚持不下来。举个我自己的例子来说，我读博士的时候有段时间感觉研究的东西没有实际意义，对科研的兴趣也有缺失，当时还要每周汇报研究进展，于是每天的被动研究就痛苦无比，而且当时饱受拖延症困扰。我在那个时候看了很多时间管理的书籍，结果都是流于形式，坚持一段时间就放弃了。如果当时让我看深度工作这本书，估计也是浪费时间。现在工作以后，我重拾了对运筹优化的强烈兴趣，每天感觉自己做的项目都很有成就感，这个时候我就很希望能进行深度工作，从而作出有价值的东西。这本书从语言上感觉不是很优美，读起来很干涩。作者的计算机工科背景也体现的很明显，作者在论述一个观点的时候往往会给出一些特殊情况的解释，很像是写一个理论的证明。</p>
@@ -568,7 +572,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>

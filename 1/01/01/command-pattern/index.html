@@ -125,6 +125,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -319,6 +321,8 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        
+
         <p><strong>Command Pattern</strong> is one of the behavioral design patterns that consists of four essential components:
 - Command: this is essentially an interface to be implemented by concrete classes. It decouples the invoker which is the user of various methods provided by receivers, so instead of a invoker directly calling methods provided by receivers, invokers call a common interface. An example of this pattern can be seen in the Runnable interface provided by JDK.
 - Receiver: this is the concrete classes that define specific behaviors conforming to the method defined by the Command interface.</p>
@@ -636,7 +640,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>

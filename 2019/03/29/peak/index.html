@@ -142,6 +142,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -336,6 +338,22 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#什么是刻意练习">什么是刻意练习</a></li>
+<li><a href="#什么不是刻意练习">什么不是刻意练习</a></li>
+<li><a href="#知识和技能">知识和技能</a></li>
+<li><a href="#刻意练习的核心追求">刻意练习的核心追求</a></li>
+<li><a href="#启示">启示</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
         
 
 <table>
@@ -622,7 +640,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>

@@ -125,6 +125,8 @@ MathJax.Hub.Config({
 });
 </script>
 
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -319,6 +321,32 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#optimization-workflow-and-where-cplex-comes-into-play">Optimization Workflow and Where Cplex Comes into Play</a></li>
+<li><a href="#the-little-optimization-problem-that-could">The Little Optimization Problem that could</a></li>
+<li><a href="#a-simple-java-example">A simple Java example</a></li>
+<li><a href="#mac">Mac</a>
+<ul>
+<li>
+<ul>
+<li><a href="#using-command-line">Using command line</a>
+<ul>
+<li><a href="#using-ide">Using IDE</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#windows">Windows</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
         
 
 <p>I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years.
@@ -768,7 +796,20 @@ $(function(){
 <script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
 
 
-
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
 
   </body>
 </html>
