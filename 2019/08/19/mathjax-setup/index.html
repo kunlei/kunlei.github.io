@@ -7,14 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Cplex Java API Design - O.R. in Action</title>
-  <meta property="og:title" content="Cplex Java API Design" />
-  <meta name="twitter:title" content="Cplex Java API Design" />
-  <meta name="description" content="I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &ldquo;Programming to the Interface, not Implementation&rdquo;. This post tries to show how various components of this API work together to let us build mathematical models.
-Java Interface Design of Cplex Concert Let&rsquo;s first take a look of the class diagram, a picture is worth a thousand words, after all.">
-  <meta property="og:description" content="I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &ldquo;Programming to the Interface, not Implementation&rdquo;. This post tries to show how various components of this API work together to let us build mathematical models.
-Java Interface Design of Cplex Concert Let&rsquo;s first take a look of the class diagram, a picture is worth a thousand words, after all.">
-  <meta name="twitter:description" content="I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &ldquo;Programming to the Interface, not Implementation&rdquo;. This …">
+  <title>MathJax Setup in Hugo - O.R. in Action</title>
+  <meta property="og:title" content="MathJax Setup in Hugo" />
+  <meta name="twitter:title" content="MathJax Setup in Hugo" />
+  <meta name="description" content="With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts. Luckily, there already exist some excellent approaches for this purpose and MathJax is one of the best among them. I used MathJax before with the previous theme mainroad, but couldn&rsquo;t remember how it was configured in the first place. With a bit duplicate work of digging online, I found the original solution and wanted to share it here in case I forgot it some days later.">
+  <meta property="og:description" content="With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts. Luckily, there already exist some excellent approaches for this purpose and MathJax is one of the best among them. I used MathJax before with the previous theme mainroad, but couldn&rsquo;t remember how it was configured in the first place. With a bit duplicate work of digging online, I found the original solution and wanted to share it here in case I forgot it some days later.">
+  <meta name="twitter:description" content="With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts. Luckily, there already exist some excellent approaches …">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -50,8 +48,8 @@ Java Interface Design of Cplex Concert Let&rsquo;s first take a look of the clas
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2019\/04\/04\/cplex-java-api-design\/",
-          "name": "Cplex java a p i design"
+          "@id": "https:\/\/kunlei.github.io\/2019\/08\/19\/mathjax-setup\/",
+          "name": "Math jax setup in hugo"
         }
     }]
 }
@@ -62,15 +60,15 @@ Java Interface Design of Cplex Concert Let&rsquo;s first take a look of the clas
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Cplex Java API Design",
-  "description" : "I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle \x26ldquo;Programming to the Interface, not Implementation\x26rdquo;. This post tries to show how various components of this API work together to let us build mathematical models.\nJava Interface Design of Cplex Concert Let\x26rsquo;s first take a look of the class diagram, a picture is worth a thousand words, after all.",
+  "headline": "MathJax Setup in Hugo",
+  "description" : "With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts. Luckily, there already exist some excellent approaches for this purpose and MathJax is one of the best among them. I used MathJax before with the previous theme mainroad, but couldn\x26rsquo;t remember how it was configured in the first place. With a bit duplicate work of digging online, I found the original solution and wanted to share it here in case I forgot it some days later.",
   "inLanguage" : "en",
-  "wordCount":  74 ,
-  "datePublished" : "2019-04-04T00:00:00",
-  "dateModified" : "2019-04-04T00:00:00",
+  "wordCount":  461 ,
+  "datePublished" : "2019-08-19T00:00:00",
+  "dateModified" : "2019-08-19T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/myAvatar.png",
-  "keywords" : [ "cplex, Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2019\/04\/04\/cplex-java-api-design\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2019\/08\/19\/mathjax-setup\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -84,23 +82,22 @@ Java Interface Design of Cplex Concert Let&rsquo;s first take a look of the clas
 }
 </script>
 
-<meta property="og:title" content="Cplex Java API Design" />
-<meta property="og:description" content="I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &ldquo;Programming to the Interface, not Implementation&rdquo;. This post tries to show how various components of this API work together to let us build mathematical models.
-Java Interface Design of Cplex Concert Let&rsquo;s first take a look of the class diagram, a picture is worth a thousand words, after all.">
+<meta property="og:title" content="MathJax Setup in Hugo" />
+<meta property="og:description" content="With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts. Luckily, there already exist some excellent approaches for this purpose and MathJax is one of the best among them. I used MathJax before with the previous theme mainroad, but couldn&rsquo;t remember how it was configured in the first place. With a bit duplicate work of digging online, I found the original solution and wanted to share it here in case I forgot it some days later.">
 <meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
-<meta property="og:url" content="https://kunlei.github.io/2019/04/04/cplex-java-api-design/" />
+<meta property="og:url" content="https://kunlei.github.io/2019/08/19/mathjax-setup/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Cplex Java API Design" />
-  <meta name="twitter:description" content="I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &ldquo;Programming to the Interface, not Implementation&rdquo;. This …">
+  <meta name="twitter:title" content="MathJax Setup in Hugo" />
+  <meta name="twitter:description" content="With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts. Luckily, there already exist some excellent approaches …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/myAvatar.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://kunlei.github.io/img/myAvatar.png" />
   <meta name="twitter:image" content="https://kunlei.github.io/img/myAvatar.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://kunlei.github.io/2019/04/04/cplex-java-api-design/" />
+  <meta property="og:url" content="https://kunlei.github.io/2019/08/19/mathjax-setup/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
@@ -285,7 +282,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Cplex Java API Design</h1>
+                <h1>MathJax Setup in Hugo</h1>
               
               
               
@@ -293,13 +290,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 4, 2019
+  <i class="fas fa-calendar"></i>&nbsp;Posted on August 19, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;74&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;461&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
@@ -324,24 +321,117 @@ if (!doNotTrack) {
       <article role="main" class="blog-post">
         
 
-<p>I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &ldquo;Programming to the Interface, not Implementation&rdquo;.
-This post tries to show how various components of this API work together to let us build mathematical models.</p>
+<p>With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts.
+Luckily, there already exist some excellent approaches for this purpose and MathJax is one of the best among them.
+I used MathJax before with the previous theme <em>mainroad</em>, but couldn&rsquo;t remember how it was configured in the first place.
+With a bit duplicate work of digging online, I found the original solution and wanted to share it here in case I forgot it some days later.</p>
 
-<h3 id="java-interface-design-of-cplex-concert">Java Interface Design of Cplex Concert</h3>
+<h3 id="credits-to-the-original-post">Credits to the Original Post</h3>
 
-<p>Let&rsquo;s first take a look of the class diagram, a picture is worth a thousand words, after all.</p>
+<p>The solution was posted <a href="https://pennbay.github.io/tech/mathjax.with.hugo/">here</a> (with link to the original post shown below). <strong>All credits to this approach should be given to the original author.</strong></p>
 
-<p><img src="/image/cplex-concert-java.png" alt="test image" /></p>
+<pre><code>https://pennbay.github.io/tech/mathjax.with.hugo/
+</code></pre>
+
+<h3 id="solution">Solution</h3>
+
+<p>Below shows all the directories and files within the root directory of this site.
+In my case, the root directory is <em>~/dev/blog/klian-site</em>:</p>
+
+<pre><code>total 16
+drwxr-xr-x   3 klian  74715970    96B Aug 17 13:03 archetypes
+-rw-r--r--   1 klian  74715970   1.5K Aug 19 20:27 config.toml
+drwxr-xr-x   4 klian  74715970   128B Aug 19 08:29 content
+drwxr-xr-x   2 klian  74715970    64B Aug 17 14:26 data
+-rwxrwxrwx   1 klian  74715970   537B Aug 17 15:05 deploy.sh
+drwxr-xr-x   5 klian  74715970   160B Aug 17 13:17 layouts
+drwxr-xr-x  27 klian  74715970   864B Aug 30  1754 public
+drwxr-xr-x   3 klian  74715970    96B Aug 17 13:05 resources
+drwxr-xr-x   4 klian  74715970   128B Aug 17 13:11 static
+drwxr-xr-x   3 klian  74715970    96B Aug 17 13:04 themes
+</code></pre>
+
+<p>Create a <em>partials</em> directory within the <em>layouts</em> directory:</p>
+
+<pre><code> ~/dev/blog/klian-site/layouts ll
+total 0
+drwxr-xr-x  3 klian  74715970    96B Aug 17 13:17 _default
+drwxr-xr-x  4 klian  74715970   128B Aug 19 20:31 partials
+drwxr-xr-x  3 klian  74715970    96B Aug 17 13:17 shortcodes
+</code></pre>
+
+<p>Then create a file <em>mathjax_support.html</em> with content below within the <em>partials</em> directory:</p>
+
+<pre><code>&lt;script type=&quot;text/javascript&quot; async
+  src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; },
+         extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;] }
+  }
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>The last thing to do is to add the <em>mathjax_support.html</em> to the header file:</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/tweaks.css&quot;/&gt;
+
+{{ partial &quot;mathjax_support.html&quot; . }}
+</code></pre>
+
+<p>My partials directory now looks like this:</p>
+
+<pre><code> ~/dev/blog/klian-site/layouts/partials ll
+total 16
+-rw-r--r--  1 klian  74715970    87B Aug 19 20:31 head_custom.html
+-rw-r--r--  1 klian  74715970   553B Aug 19 20:30 mathjax_support.html
+</code></pre>
+
+<p>We&rsquo;ve successfully setup MathJax now!</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>Now let&rsquo;s play with some math symbols.
+To do inline math, the code below</p>
+
+<pre><code>I am an inline variable $x_i$.
+</code></pre>
+
+<p>produces <em>I am an inline variable $x_i$</em>.</p>
+
+<p>For display mode, use double $ mark:</p>
+
+<pre><code>$$
+\begin{align}
+\text{min.} \quad &amp; \sum_{i = 0}^{\infty}x_i \newline
+\text{s.t.} \quad &amp; x_i \in {0, 1}
+\end{align}
+$$
+</code></pre>
+
+<p>renders
+$$
+\begin{align}
+\text{min.} \quad &amp; \sum_{i = 0}^{\infty}x_i \newline
+\text{s.t.} \quad &amp; x_i \in {0, 1}
+\end{align}
+$$.</p>
+
+<h3 id="reference">Reference</h3>
+
+<ol>
+<li>Setting MathJax with Hugo, <a href="https://divadnojnarg.github.io/blog/mathjax/">https://divadnojnarg.github.io/blog/mathjax/</a></li>
+</ol>
 
 
-        
-          <div class="blog-tags">
-            
-              <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
-            
-              <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
-            
-          </div>
         
 
         
@@ -354,49 +444,49 @@ This post tries to show how various components of this API work together to let 
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2019%2f04%2f04%2fcplex-java-api-design%2f&amp;text=Cplex%20Java%20API%20Design&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2019%2f08%2f19%2fmathjax-setup%2f&amp;text=MathJax%20Setup%20in%20Hugo&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//plus.google.com/share?url=https%3a%2f%2fkunlei.github.io%2f2019%2f04%2f04%2fcplex-java-api-design%2f" target="_blank" title="Share on Google Plus">
+        <a href="//plus.google.com/share?url=https%3a%2f%2fkunlei.github.io%2f2019%2f08%2f19%2fmathjax-setup%2f" target="_blank" title="Share on Google Plus">
           <i class="fab fa-google-plus"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2019%2f04%2f04%2fcplex-java-api-design%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2019%2f08%2f19%2fmathjax-setup%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2019%2f04%2f04%2fcplex-java-api-design%2f&amp;title=Cplex%20Java%20API%20Design" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2019%2f08%2f19%2fmathjax-setup%2f&amp;title=MathJax%20Setup%20in%20Hugo" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2019%2f04%2f04%2fcplex-java-api-design%2f&amp;title=Cplex%20Java%20API%20Design" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2019%2f08%2f19%2fmathjax-setup%2f&amp;title=MathJax%20Setup%20in%20Hugo" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2019%2f04%2f04%2fcplex-java-api-design%2f&amp;title=Cplex%20Java%20API%20Design" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2019%2f08%2f19%2fmathjax-setup%2f&amp;title=MathJax%20Setup%20in%20Hugo" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2019%2f04%2f04%2fcplex-java-api-design%2f&amp;description=Cplex%20Java%20API%20Design" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2019%2f08%2f19%2fmathjax-setup%2f&amp;description=MathJax%20Setup%20in%20Hugo" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -410,17 +500,6 @@ This post tries to show how various components of this API work together to let 
         
           
           
-          <h4 class="see-also">See also</h4>
-          <ul>
-          
-            <li><a href="/2019/04/04/cplex-java-ilomodeler/">Cplex Concert Java Modeling Intefaces - IloModeler</a></li>
-          
-            <li><a href="/2019/04/03/cplex-java-setup/">Setup and Run Cplex using Java</a></li>
-          
-            <li><a href="/2019/03/06/cplex-java-constraints/">Cplex Java Concert Technology - Constraints (1)</a></li>
-          
-          </ul>
-          
         
       </article>
 
@@ -428,13 +507,9 @@ This post tries to show how various components of this API work together to let 
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2019/04/03/dissertation/" data-toggle="tooltip" data-placement="top" title="Dissertation - Service Consistency in Vehicle Routing">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2019/08/17/build-site-using-hugo/" data-toggle="tooltip" data-placement="top" title="Recent Updates and Blog Redesign using Hugo">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2019/04/04/cplex-java-ilomodeler/" data-toggle="tooltip" data-placement="top" title="Cplex Concert Java Modeling Intefaces - IloModeler">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -444,12 +519,12 @@ This post tries to show how various components of this API work together to let 
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2019/04/04/cplex-java-api-design">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2019/08/19/mathjax-setup">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2019\/04\/04\/cplex-java-api-design';
+              this.page.url = 'https:\/\/kunlei.github.io\/2019\/08\/19\/mathjax-setup';
             };
 
           </script>
