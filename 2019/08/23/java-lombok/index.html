@@ -93,7 +93,7 @@
   <meta name="twitter:description" content="This is probably one of those &lsquo;everyone knows except me&rsquo; cases in Java world. I recently found a new package called &lsquo;lombok&rsquo; that taught me a fresh lesson about how powerful …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
-  <link href='https://kunlei.github.io/img/myAvatar.png' rel='icon' type='image/x-icon'/>
+  <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
@@ -333,14 +333,14 @@ Most importantly, those methods must be visually present in the class file, whic
 
 <p>I never imagined a Java world before without getters and setters in classes, but apparently someone else did and went ahead inventing it already.
 The magic is adding the below Maven dependency and you are free from writing, even seeing, getters and setters!</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<span class="ln">2</span>	<span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<span class="ln">3</span>		<span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">projectlombok</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<span class="ln">4</span>		<span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">lombok</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<span class="ln">5</span>		<span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="n">1</span><span class="p">.</span><span class="na">18</span><span class="p">.</span><span class="na">8</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<span class="ln">6</span>		<span class="o">&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="n">provided</span><span class="o">&lt;/</span><span class="n">scope</span><span class="o">&gt;</span>
-<span class="ln">7</span>	<span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<span class="ln">8</span><span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="ln">1</span><span class="nt">&lt;dependencies&gt;</span>
+<span class="ln">2</span>  <span class="nt">&lt;dependency&gt;</span>
+<span class="ln">3</span>    <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+<span class="ln">4</span>    <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+<span class="ln">5</span>    <span class="nt">&lt;version&gt;</span>1.18.8<span class="nt">&lt;/version&gt;</span>
+<span class="ln">6</span>    <span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
+<span class="ln">7</span>  <span class="nt">&lt;/dependency&gt;</span>
+<span class="ln">8</span><span class="nt">&lt;/dependencies&gt;</span></code></pre></div>
 <p>It is actually more than that!
 This package provides some other annotations that literally free us from many arduous works.
 Here is the link to the full list of <a href="https://projectlombok.org/features/all">available features</a>:</p>
