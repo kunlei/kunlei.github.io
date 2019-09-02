@@ -10,9 +10,9 @@
   <title>Overview of all pages with the tag #Java - O.R. in Action</title>
   <meta property="og:title" content="Overview of all pages with the tag #Java" />
   <meta name="twitter:title" content="Overview of all pages with the tag #Java" />
-  <meta name="description" content="Overview of all pages with the tag #Java, such as: Cplex Concert Java Modeling Intefaces - IloModeler">
-  <meta property="og:description" content="Overview of all pages with the tag #Java, such as: Cplex Concert Java Modeling Intefaces - IloModeler">
-  <meta name="twitter:description" content="Overview of all pages with the tag #Java, such as: Cplex Concert Java Modeling Intefaces - IloModeler">
+  <meta name="description" content="Overview of all pages with the tag #Java, such as: Cplex Java API Design">
+  <meta property="og:description" content="Overview of all pages with the tag #Java, such as: Cplex Java API Design">
+  <meta name="twitter:description" content="Overview of all pages with the tag #Java, such as: Cplex Java API Design">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -189,162 +189,6 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/04/04/cplex-java-ilomodeler/">
-                <h2 class="post-title">Cplex Concert Java Modeling Intefaces - IloModeler</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on April 4, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    
-
-<p>IloModeler is one of the main modeling interface defined in Cplex Concert Technology.
-It is used to create the three key components of a mathematical model, that are,</p>
-
-<ul>
-<li>decision variables</li>
-<li>constraints</li>
-<li>objective</li>
-</ul>
-
-<h3 id="auxiliary-functions">Auxiliary Functions</h3>
-
-<p>In addition, cplex provides lots of auxiliary functions:</p>
-
-<ul>
-<li>constant
-
-<ul>
-<li>IloIntExpr    constant(int c)</li>
-<li>IloNumExpr    constant(double c)</li>
-</ul></li>
-<li>diff
-
-<ul>
-<li>IloIntExpr    diff(int v, IloIntExpr e1)</li>
-<li>IloIntExpr    diff(IloIntExpr e, int v)</li>
-<li>IloIntExpr    diff(IloIntExpr expr1, IloIntExpr expr2)</li>
-<li>IloNumExpr    diff(double v, IloNumExpr e1)</li>
-<li>IloNumExpr    diff(IloNumExpr e, double v)</li>
-<li>IloNumExpr    diff(IloNumExpr e1, IloNumExpr e2)</li>
-</ul></li>
-<li>max
-
-<ul>
-<li>IloIntExpr    max(IloIntExpr[] e)</li>
-<li>IloIntExpr    max(IloIntExpr e1, IloIntExpr e2)</li>
-<li>IloIntExpr    max(IloIntExpr e1, int val)</li>
-<li>IloIntExpr    max(int val, IloIntExpr e2)</li>
-<li>IloNumExpr    max(IloNumExpr[] e)</li>
-<li>IloNumExpr    max(double val, IloNumExpr e2)</li>
-<li>IloNumExpr    max(IloNumExpr e1, double val)</li>
-<li>IloNumExpr    max(IloNumExpr e1, IloNumExpr e2)</li>
-</ul></li>
-<li>min
-
-<ul>
-<li>IloIntExpr    min(IloIntExpr[] e)</li>
-<li>IloIntExpr    min(IloIntExpr e1, IloIntExpr e2)</li>
-<li>IloIntExpr    min(IloIntExpr e1, int val)</li>
-<li>IloIntExpr    min(int val, IloIntExpr e2)</li>
-<li>IloNumExpr    min(IloNumExpr[] e)</li>
-<li>IloNumExpr    min(IloNumExpr e1, double val)</li>
-<li>IloNumExpr    min(double val, IloNumExpr e2)</li>
-<li>IloNumExpr    min(IloNumExpr e1, IloNumExpr e2)</li>
-</ul></li>
-<li>negative
-
-<ul>
-<li>IloIntExpr    negative(IloIntExpr e)</li>
-<li>IloNumExpr    negative(IloNumExpr e)</li>
-</ul></li>
-<li>prod
-
-<ul>
-<li>IloIntExpr    prod(IloIntExpr e1, IloIntExpr e2)</li>
-<li>IloIntExpr    prod(IloIntExpr e, int v)</li>
-<li>IloIntExpr    prod(int v, IloIntExpr e)</li>
-<li>IloNumExpr    prod(double v, IloNumExpr e1)</li>
-<li>IloNumExpr    prod(IloNumExpr e, double v)</li>
-<li>IloNumExpr    prod(IloNumExpr expr1, IloNumExpr expr2)</li>
-<li>IloNumExpr    prod(double val, IloNumVar var1, IloNumVar var2)</li>
-<li>IloNumExpr    prod(IloNumVar var1, double val, IloNumVar var2)</li>
-<li>IloNumExpr    prod(IloNumVar var1, IloNumVar var2, double val)</li>
-</ul></li>
-<li>scalProd
-
-<ul>
-<li>IloIntExpr    scalProd(IloIntVar[] vars1, IloIntVar[] vars2)</li>
-<li>IloIntExpr    scalProd(IloIntVar[] vars1, IloIntVar[] vars2, int start, int num)</li>
-<li>IloNumExpr    scalProd(IloNumVar[] vars1, IloNumVar[] vars2)</li>
-<li>IloNumExpr    scalProd(IloNumVar[] vars1, IloNumVar[] vars2, int start, int num)</li>
-<li>IloLinearIntExpr  scalProd(IloIntVar[] vars, int[] vals)</li>
-<li>IloLinearIntExpr  scalProd(IloIntVar[] vars, int[] vals, int start, int num)</li>
-<li>IloLinearIntExpr  scalProd(int[] vals, IloIntVar[] vars)</li>
-<li>IloLinearIntExpr  scalProd(int[] vals, IloIntVar[] vars, int start, int num)</li>
-<li>IloLinearNumExpr  scalProd(double[] coefs, IloNumVar[] vars)</li>
-<li>IloLinearNumExpr  scalProd(double[] coefs, IloNumVar[] vars, int start, int num)</li>
-<li>IloLinearNumExpr  scalProd(IloNumVar[] vars, double[] coefs)</li>
-<li>IloLinearNumExpr  scalProd(IloNumVar[] vars, double[] coefs, int start, int num)</li>
-<li>IloLinearNumExpr  scalProd(IloNumVar[] vars, int[] coefs)</li>
-<li>IloLinearNumExpr  scalProd(int[] coefs, IloNumVar[] vars)</li>
-</ul></li>
-<li>square
-
-<ul>
-<li>IloIntExpr    square(IloIntExpr e)</li>
-<li>IloNumExpr    square(IloNumExpr e)</li>
-</ul></li>
-<li>sum
-
-<ul>
-<li>IloIntExpr    sum(IloIntExpr[] expr)</li>
-<li>IloIntExpr    sum(IloIntExpr[] expr, int start, int num)</li>
-<li>IloIntExpr    sum(IloIntExpr e1, IloIntExpr e2)</li>
-<li>IloIntExpr    sum(IloIntExpr e, int v)</li>
-<li>IloIntExpr    sum(int v, IloIntExpr e)</li>
-<li>IloIntExpr    sum(IloIntExpr e1, IloIntExpr e2, IloIntExpr e3)</li>
-<li>IloIntExpr    sum(IloIntExpr e1, IloIntExpr e2, IloIntExpr e3, IloIntExpr e4)</li>
-<li>IloIntExpr    sum(IloIntExpr e1, IloIntExpr e2, IloIntExpr e3, IloIntExpr e4, IloIntExpr e5)</li>
-<li>IloIntExpr    sum(IloIntExpr e1, IloIntExpr e2, IloIntExpr e3, IloIntExpr e4, IloIntExpr e5, IloIntExpr e6)</li>
-<li>IloIntExpr    sum(IloIntExpr e1, IloIntExpr e2, IloIntExpr e3, IloIntExpr e4, IloIntExpr e5, IloIntExpr e6, IloIntExpr e7)</li>
-<li>IloIntExpr    sum(IloIntExpr e1, IloIntExpr e2, IloIntExpr e3, IloIntExpr e4, IloIntExpr e5, IloIntExpr e6, IloIntExpr e7, IloIntExpr e8)</li>
-<li>IloNumExpr    sum(IloNumExpr[] expr)</li>
-<li>IloNumExpr    sum(IloNumExpr[] expr, int start, int num)</li>
-<li>IloNumExpr    sum(IloNumExpr e, double v)</li>
-<li>IloNumExpr    sum(double v, IloNumExpr e)</li>
-<li>IloNumExpr    sum(IloNumExpr e1, IloNumExpr e2)</li>
-<li>IloNumExpr    sum(IloNumExpr e1, IloNumExpr e2, IloNumExpr e3)</li>
-<li>IloNumExpr    sum(IloNumExpr e1, IloNumExpr e2, IloNumExpr e3, IloNumExpr e4)</li>
-<li>IloNumExpr    sum(IloNumExpr e1, IloNumExpr e2, IloNumExpr e3, IloNumExpr e4, IloNumExpr e5)</li>
-<li>IloNumExpr    sum(IloNumExpr e1, IloNumExpr e2, IloNumExpr e3, IloNumExpr e4, IloNumExpr e5, IloNumExpr e6)</li>
-<li>IloNumExpr    sum(IloNumExpr e1, IloNumExpr e2, IloNumExpr e3, IloNumExpr e4, IloNumExpr e5, IloNumExpr e6, IloNumExpr e7)</li>
-<li>IloNumExpr    sum(IloNumExpr e1, IloNumExpr e2, IloNumExpr e3, IloNumExpr e4, IloNumExpr e5, IloNumExpr e6, IloNumExpr e7, IloNumExpr e8)</li>
-</ul></li>
-</ul>
-
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2019/04/04/cplex-java-api-design/">
@@ -604,6 +448,34 @@ Although variables are key components of a mathematical model, Cplex does not pr
                   
                     Chain of Responsibility is one of the behavioral design patterns popularized by the original GoF book. It involves a sender object and potentially multiple receiver objects, and the point of this pattern is to decouple the sender from various receivers. Without this pattern, a sender would have to keep reference to all possible receivers and also define the logic of how the sender is processed by receivers.
 A good example I can think of is the car maintenance service.<a href="https://kunlei.github.io/1/01/01/chain-of-responsibility/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/command-pattern/">
+                <h2 class="post-title">Command Pattern</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 1, 0001
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Command Pattern is one of the behavioral design patterns that consists of four essential components: - Command: this is essentially an interface to be implemented by concrete classes. It decouples the invoker which is the user of various methods provided by receivers, so instead of a invoker directly calling methods provided by receivers, invokers call a common interface. An example of this pattern can be seen in the Runnable interface provided by JDK.<a href="https://kunlei.github.io/1/01/01/command-pattern/" class="post-read-more">[Read More]</a>
                   
                 
               </div>
