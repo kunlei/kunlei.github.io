@@ -104,8 +104,13 @@ if (!doNotTrack) {
       <ul class="nav navbar-nav navbar-right">
         
           
-            <li>
-              <a title="Blog" href="/post">Blog</a>
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/book-list">Reading</a>
+                
+              </div>
             </li>
           
         
@@ -258,6 +263,49 @@ if (!doNotTrack) {
 
         <div class="posts-list">
           
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/04/03/cplex-java-setup/">
+                <h2 class="post-title">Setup and Run Cplex using Java</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 3, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1358&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.
+                  <a href="https://kunlei.github.io/2019/04/03/cplex-java-setup/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
+                  
+                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+                  
+                </div>
+              
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2019/04/02/tutorial1/">
@@ -699,48 +747,6 @@ Although variables are key components of a mathematical model, Cplex does not pr
                 
               </div>
 
-              
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/1/01/01/adapter/">
-                <h2 class="post-title">Adapter Pattern</h2>
-                
-                
-              </a>
-
-              <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;336&nbsp;words
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-  
-  
-</span>
-
-
-              <div class="post-entry">
-                
-                  Adapter Pattern is one of the structural design patterns that connects two otherwise incompatible interfaces. Adapters are often used in real life. Suppose there is a car interface that can run and a vehicle interface that can drive. An adapter is connect these two interfaces so that a car can act like a vehicle. To see this, let&rsquo;s define two interfaces:
-1public interface Car { 2 void run(); 3}1public interface Vehicle { 2 void drive(); 3} Then let&rsquo;s have some implementations:
-                  <a href="https://kunlei.github.io/1/01/01/adapter/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
-                  
-                </div>
               
             </article>
           

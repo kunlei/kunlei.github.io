@@ -104,8 +104,13 @@ if (!doNotTrack) {
       <ul class="nav navbar-nav navbar-right">
         
           
-            <li>
-              <a title="Blog" href="/post">Blog</a>
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/book-list">Reading</a>
+                
+              </div>
             </li>
           
         
@@ -186,6 +191,35 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/1/01/01/adapter/">
+                <h2 class="post-title">Adapter Pattern</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 1, 0001
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Adapter Pattern is one of the structural design patterns that connects two otherwise incompatible interfaces. Adapters are often used in real life. Suppose there is a car interface that can run and a vehicle interface that can drive. An adapter is connect these two interfaces so that a car can act like a vehicle. To see this, let&rsquo;s define two interfaces:
+1public interface Car { 2 void run(); 3}1public interface Vehicle { 2 void drive(); 3} Then let&rsquo;s have some implementations:<a href="https://kunlei.github.io/1/01/01/adapter/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/1/01/01/bridge/">
@@ -430,35 +464,6 @@ Let&rsquo;s define the mediator interface as below.<a href="https://kunlei.githu
                   
                     Memento Pattern is one of the behavioral design patterns defined in the original GoF book. It is useful when we need to save the state of an object and restore it to a saved state at a later time. There are three components in this pattern:
  Originator: this is the class whose state needs to be saved and restored. Memento: this is the class used to capture the state of the originator.<a href="https://kunlei.github.io/1/01/01/memento/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/1/01/01/observer/">
-                <h2 class="post-title">Observer Pattern</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 1, 0001
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Observer Pattern is a behavioral pattern suitable for decoupling objects with one-to-many relations. There are two components in this pattern:
- Subject: this is the object whose state is subject to changes and will affect many following objects. Observer: this is the object which will updates its status based on the status of the subject.  An example is the information updating system used in my daughter&rsquo;s school. Parents get udpates from the class teacher constantly.<a href="https://kunlei.github.io/1/01/01/observer/" class="post-read-more">[Read More]</a>
                   
                 
               </div>
