@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/command-pattern\/",
+          "@id": "https://kunlei.github.io/1/01/01/command-pattern/",
           "name": "Command pattern"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "Command Pattern",
   "description" : "Command Pattern is one of the behavioral design patterns that consists of four essential components: - Command: this is essentially an interface to be implemented by concrete classes. It decouples the invoker which is the user of various methods provided by receivers, so instead of a invoker directly calling methods provided by receivers, invokers call a common interface. An example of this pattern can be seen in the Runnable interface provided by JDK.",
   "inLanguage" : "en",
-  "wordCount":  420 ,
+  "wordCount": 420,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/command-pattern\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/command-pattern/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -101,7 +101,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -339,80 +339,80 @@ if (!doNotTrack) {
 </ul>
 
 <p>Here is an example of the Command interface:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Command</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">execute</span><span class="p">();</span>
-<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Command</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">execute</span><span class="o">();</span>
+<span class="ln">3</span><span class="o">}</span></code></pre></div>
 <p>Let&rsquo;s say you have a car which can speed up and slow down:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Car</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">int</span> <span class="n">speed</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="kt">int</span> <span class="n">speed</span><span class="o">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">Car</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="n">speed</span> <span class="o">=</span> <span class="n">10</span><span class="p">;</span>
-<span class="ln"> 6</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I am running at &#34;</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">+</span> <span class="s">&#34; miles per hour!&#34;</span><span class="p">);</span>
-<span class="ln"> 7</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">Car</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="n">speed</span> <span class="o">=</span> <span class="n">10</span><span class="o">;</span>
+<span class="ln"> 6</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I am running at &#34;</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">+</span> <span class="s">&#34; miles per hour!&#34;</span><span class="o">);</span>
+<span class="ln"> 7</span>    <span class="o">}</span>
 <span class="ln"> 8</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">speedUp</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="n">speed</span><span class="o">++</span><span class="p">;</span>
-<span class="ln">11</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Speeding up... I am now running at &#34;</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">+</span> <span class="s">&#34; miles per hour!&#34;</span><span class="p">);</span>
-<span class="ln">12</span>    <span class="p">}</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speedUp</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="n">speed</span><span class="o">++;</span>
+<span class="ln">11</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Speeding up... I am now running at &#34;</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">+</span> <span class="s">&#34; miles per hour!&#34;</span><span class="o">);</span>
+<span class="ln">12</span>    <span class="o">}</span>
 <span class="ln">13</span>
-<span class="ln">14</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">slowDown</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">15</span>        <span class="n">speed</span><span class="o">--</span><span class="p">;</span>
-<span class="ln">16</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Slowing down... I am now running at &#34;</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">+</span> <span class="s">&#34; miles per hour!&#34;</span><span class="p">);</span>
-<span class="ln">17</span>    <span class="p">}</span>
-<span class="ln">18</span><span class="p">}</span></code></pre></div>
+<span class="ln">14</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">slowDown</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">15</span>        <span class="n">speed</span><span class="o">--;</span>
+<span class="ln">16</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Slowing down... I am now running at &#34;</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">+</span> <span class="s">&#34; miles per hour!&#34;</span><span class="o">);</span>
+<span class="ln">17</span>    <span class="o">}</span>
+<span class="ln">18</span><span class="o">}</span></code></pre></div>
 <p>Now instead of saving a reference to a Car object to directly controlling it to speed up or slow down, we can encapsulate the methods into individual objects:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">SpeedUpCommand</span> <span class="nf">implements</span> <span class="n">Command</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Car</span> <span class="n">car</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpeedUpCommand</span> <span class="kd">implements</span> <span class="n">Command</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Car</span> <span class="n">car</span><span class="o">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">SpeedUpCommand</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">car</span> <span class="o">=</span> <span class="n">car</span><span class="p">;</span>
-<span class="ln"> 6</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">SpeedUpCommand</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">car</span> <span class="o">=</span> <span class="n">car</span><span class="o">;</span>
+<span class="ln"> 6</span>    <span class="o">}</span>
 <span class="ln"> 7</span>
 <span class="ln"> 8</span>    <span class="nd">@Override</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">execute</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="n">car</span><span class="p">.</span><span class="na">speedUp</span><span class="p">();</span>
-<span class="ln">11</span>    <span class="p">}</span>
-<span class="ln">12</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">SlowDownCommand</span> <span class="nf">implements</span> <span class="n">Command</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Car</span> <span class="n">car</span><span class="p">;</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="n">car</span><span class="o">.</span><span class="na">speedUp</span><span class="o">();</span>
+<span class="ln">11</span>    <span class="o">}</span>
+<span class="ln">12</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SlowDownCommand</span> <span class="kd">implements</span> <span class="n">Command</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Car</span> <span class="n">car</span><span class="o">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">SlowDownCommand</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">car</span> <span class="o">=</span> <span class="n">car</span><span class="p">;</span>
-<span class="ln"> 6</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">SlowDownCommand</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">car</span> <span class="o">=</span> <span class="n">car</span><span class="o">;</span>
+<span class="ln"> 6</span>    <span class="o">}</span>
 <span class="ln"> 7</span>
 <span class="ln"> 8</span>    <span class="nd">@Override</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">execute</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="n">car</span><span class="p">.</span><span class="na">slowDown</span><span class="p">();</span>
-<span class="ln">11</span>    <span class="p">}</span>
-<span class="ln">12</span><span class="p">}</span></code></pre></div>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="n">car</span><span class="o">.</span><span class="na">slowDown</span><span class="o">();</span>
+<span class="ln">11</span>    <span class="o">}</span>
+<span class="ln">12</span><span class="o">}</span></code></pre></div>
 <p>The invoker here can be a driver:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Driver</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Command</span> <span class="n">command</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Driver</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Command</span> <span class="n">command</span><span class="o">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setCommand</span><span class="p">(</span><span class="n">Command</span> <span class="nf">command</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">command</span> <span class="o">=</span> <span class="n">command</span><span class="p">;</span>
-<span class="ln"> 6</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setCommand</span><span class="o">(</span><span class="n">Command</span> <span class="n">command</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">command</span> <span class="o">=</span> <span class="n">command</span><span class="o">;</span>
+<span class="ln"> 6</span>    <span class="o">}</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">drive</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 9</span>        <span class="n">command</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
-<span class="ln">10</span>    <span class="p">}</span>
-<span class="ln">11</span><span class="p">}</span></code></pre></div>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 9</span>        <span class="n">command</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln">11</span><span class="o">}</span></code></pre></div>
 <p>Let&rsquo;s now run a demo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">DrivingSim</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DrivingSim</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 4</span>        <span class="n">Car</span> <span class="nf">car</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">();</span>
-<span class="ln"> 5</span>        <span class="n">SpeedUpCommand</span> <span class="nf">speedUpCommand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SpeedUpCommand</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
-<span class="ln"> 6</span>        <span class="n">SlowDownCommand</span> <span class="nf">slowDownCommand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SlowDownCommand</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
-<span class="ln"> 7</span>        <span class="n">Driver</span> <span class="nf">driver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Driver</span><span class="p">();</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 4</span>        <span class="n">Car</span> <span class="n">car</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="o">();</span>
+<span class="ln"> 5</span>        <span class="n">SpeedUpCommand</span> <span class="n">speedUpCommand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SpeedUpCommand</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
+<span class="ln"> 6</span>        <span class="n">SlowDownCommand</span> <span class="n">slowDownCommand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SlowDownCommand</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
+<span class="ln"> 7</span>        <span class="n">Driver</span> <span class="n">driver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Driver</span><span class="o">();</span>
 <span class="ln"> 8</span>
-<span class="ln"> 9</span>        <span class="n">driver</span><span class="p">.</span><span class="na">setCommand</span><span class="p">(</span><span class="n">speedUpCommand</span><span class="p">);</span>
-<span class="ln">10</span>        <span class="n">driver</span><span class="p">.</span><span class="na">drive</span><span class="p">();</span>
+<span class="ln"> 9</span>        <span class="n">driver</span><span class="o">.</span><span class="na">setCommand</span><span class="o">(</span><span class="n">speedUpCommand</span><span class="o">);</span>
+<span class="ln">10</span>        <span class="n">driver</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
 <span class="ln">11</span>
-<span class="ln">12</span>        <span class="n">driver</span><span class="p">.</span><span class="na">setCommand</span><span class="p">(</span><span class="n">slowDownCommand</span><span class="p">);</span>
-<span class="ln">13</span>        <span class="n">driver</span><span class="p">.</span><span class="na">drive</span><span class="p">();</span>
-<span class="ln">14</span>    <span class="p">}</span>
-<span class="ln">15</span><span class="p">}</span></code></pre></div>
+<span class="ln">12</span>        <span class="n">driver</span><span class="o">.</span><span class="na">setCommand</span><span class="o">(</span><span class="n">slowDownCommand</span><span class="o">);</span>
+<span class="ln">13</span>        <span class="n">driver</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
+<span class="ln">14</span>    <span class="o">}</span>
+<span class="ln">15</span><span class="o">}</span></code></pre></div>
 <p>{{ template &ldquo;_internal/disqus.html&rdquo; . }}</p>
 
 
@@ -603,7 +603,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

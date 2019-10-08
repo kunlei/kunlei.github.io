@@ -21,14 +21,14 @@ In the example below, let&rsquo;s say there are five possible colors associated 
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@ In the example below, let&rsquo;s say there are five possible colors associated 
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/proxy\/",
+          "@id": "https://kunlei.github.io/1/01/01/proxy/",
           "name": "Proxy pattern"
         }
     }]
@@ -63,20 +63,21 @@ In the example below, let&rsquo;s say there are five possible colors associated 
     "name" : "Kunlei Lian"
   },
   "headline": "Proxy Pattern",
-  "description" : "Flyweight Pattern is one of the structural design patterns that are popularized by the original GoF book. This pattern is useful if one has to create a large number of objects and they share some invariants, so instead of duplicating the shared information and consuming large amount of memories, one can just keep one copy of each shared state.\nIn the example below, let\x26rsquo;s say there are five possible colors associated with a circle shape, however, the size of the circle can be different.",
+  "description" : "Flyweight Pattern is one of the structural design patterns that are popularized by the original GoF book. This pattern is useful if one has to create a large number of objects and they share some invariants, so instead of duplicating the shared information and consuming large amount of memories, one can just keep one copy of each shared state.
+In the example below, let&amp;rsquo;s say there are five possible colors associated with a circle shape, however, the size of the circle can be different.",
   "inLanguage" : "en",
-  "wordCount":  406 ,
+  "wordCount": 406,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/proxy\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/proxy/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +105,7 @@ In the example below, let&rsquo;s say there are five possible colors associated 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -336,100 +337,100 @@ This pattern is useful if one has to create a large number of objects and they s
 
 <p>In the example below, let&rsquo;s say there are five possible colors associated with a circle shape, however, the size of the circle can be different.
 Let&rsquo;s first define the color enum and circle class:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">enum</span> <span class="n">Color</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="n">YELLO</span><span class="p">,</span>
-<span class="ln">3</span>    <span class="n">BLUE</span><span class="p">,</span>
-<span class="ln">4</span>    <span class="n">GREEN</span><span class="p">,</span>
-<span class="ln">5</span>    <span class="n">BLACK</span><span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">enum</span> <span class="n">Color</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="n">YELLO</span><span class="o">,</span>
+<span class="ln">3</span>    <span class="n">BLUE</span><span class="o">,</span>
+<span class="ln">4</span>    <span class="n">GREEN</span><span class="o">,</span>
+<span class="ln">5</span>    <span class="n">BLACK</span><span class="o">,</span>
 <span class="ln">6</span>    <span class="n">WHITE</span>
-<span class="ln">7</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Circle</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Color</span> <span class="n">color</span><span class="p">;</span>
-<span class="ln"> 3</span>    <span class="kd">private</span> <span class="nf">int</span> <span class="n">size</span><span class="p">;</span>
+<span class="ln">7</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Circle</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Color</span> <span class="n">color</span><span class="o">;</span>
+<span class="ln"> 3</span>    <span class="kd">private</span> <span class="kt">int</span> <span class="n">size</span><span class="o">;</span>
 <span class="ln"> 4</span>
-<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">Circle</span><span class="p">(</span><span class="n">Color</span> <span class="nf">color</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 6</span>        <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
-<span class="ln"> 7</span>        <span class="n">size</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
-<span class="ln"> 8</span>    <span class="p">}</span>
+<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">Circle</span><span class="o">(</span><span class="n">Color</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 6</span>        <span class="k">this</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">;</span>
+<span class="ln"> 7</span>        <span class="n">size</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
+<span class="ln"> 8</span>    <span class="o">}</span>
 <span class="ln"> 9</span>
-<span class="ln">10</span>    <span class="kd">public</span> <span class="nf">int</span> <span class="n">getSize</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">11</span>        <span class="k">return</span> <span class="n">size</span><span class="p">;</span>
-<span class="ln">12</span>    <span class="p">}</span>
+<span class="ln">10</span>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSize</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">11</span>        <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+<span class="ln">12</span>    <span class="o">}</span>
 <span class="ln">13</span>
-<span class="ln">14</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setSize</span><span class="p">(</span><span class="kt">int</span> <span class="nf">size</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">15</span>        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
-<span class="ln">16</span>    <span class="p">}</span>
+<span class="ln">14</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSize</span><span class="o">(</span><span class="kt">int</span> <span class="n">size</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">15</span>        <span class="k">this</span><span class="o">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">size</span><span class="o">;</span>
+<span class="ln">16</span>    <span class="o">}</span>
 <span class="ln">17</span>
 <span class="ln">18</span>    <span class="nd">@Override</span>
-<span class="ln">19</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">19</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
 <span class="ln">20</span>        <span class="k">return</span> <span class="s">&#34;Circle{&#34;</span> <span class="o">+</span>
 <span class="ln">21</span>                <span class="s">&#34;color=&#34;</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span>
 <span class="ln">22</span>                <span class="s">&#34;, size=&#34;</span> <span class="o">+</span> <span class="n">size</span> <span class="o">+</span>
-<span class="ln">23</span>                <span class="sc">&#39;}&#39;</span><span class="p">;</span>
-<span class="ln">24</span>    <span class="p">}</span>
-<span class="ln">25</span><span class="p">}</span></code></pre></div>
+<span class="ln">23</span>                <span class="sc">&#39;}&#39;</span><span class="o">;</span>
+<span class="ln">24</span>    <span class="o">}</span>
+<span class="ln">25</span><span class="o">}</span></code></pre></div>
 <p>We also need a circle factory to return a circle when needed:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">CircleFactory</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">static</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">Color</span><span class="p">,</span> <span class="n">Circle</span><span class="o">&gt;</span> <span class="nf">circles</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CircleFactory</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">Color</span><span class="o">,</span> <span class="n">Circle</span><span class="o">&gt;</span> <span class="n">circles</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="n">Circle</span> <span class="nf">getCircle</span><span class="p">(</span><span class="n">Color</span> <span class="nf">color</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="n">Circle</span> <span class="nf">circle</span><span class="p">;</span>
-<span class="ln"> 6</span>        <span class="k">if</span> <span class="p">(</span><span class="n">circles</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">color</span><span class="p">))</span> <span class="p">{</span>
-<span class="ln"> 7</span>            <span class="n">circle</span> <span class="o">=</span> <span class="n">circles</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
-<span class="ln"> 8</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="ln"> 9</span>            <span class="n">circle</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Circle</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
-<span class="ln">10</span>            <span class="n">circles</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">circle</span><span class="p">);</span>
-<span class="ln">11</span>        <span class="p">}</span>
-<span class="ln">12</span>        <span class="k">return</span> <span class="n">circle</span><span class="p">;</span>
-<span class="ln">13</span>    <span class="p">}</span>
-<span class="ln">14</span><span class="p">}</span></code></pre></div>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Circle</span> <span class="nf">getCircle</span><span class="o">(</span><span class="n">Color</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="n">Circle</span> <span class="n">circle</span><span class="o">;</span>
+<span class="ln"> 6</span>        <span class="k">if</span> <span class="o">(</span><span class="n">circles</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="n">color</span><span class="o">))</span> <span class="o">{</span>
+<span class="ln"> 7</span>            <span class="n">circle</span> <span class="o">=</span> <span class="n">circles</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">color</span><span class="o">);</span>
+<span class="ln"> 8</span>        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+<span class="ln"> 9</span>            <span class="n">circle</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Circle</span><span class="o">(</span><span class="n">color</span><span class="o">);</span>
+<span class="ln">10</span>            <span class="n">circles</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">color</span><span class="o">,</span> <span class="n">circle</span><span class="o">);</span>
+<span class="ln">11</span>        <span class="o">}</span>
+<span class="ln">12</span>        <span class="k">return</span> <span class="n">circle</span><span class="o">;</span>
+<span class="ln">13</span>    <span class="o">}</span>
+<span class="ln">14</span><span class="o">}</span></code></pre></div>
 <p>Below is a demo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">FlyweightDemo</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FlyweightDemo</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 4</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">i</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>            <span class="n">Circle</span> <span class="nf">circle</span> <span class="o">=</span> <span class="n">CircleFactory</span><span class="p">.</span><span class="na">getCircle</span><span class="p">(</span><span class="n">getRandColor</span><span class="p">());</span>
-<span class="ln"> 6</span>            <span class="n">circle</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="ln"> 7</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">circle</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln"> 8</span>        <span class="p">}</span>
-<span class="ln"> 9</span>    <span class="p">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 4</span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">20</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+<span class="ln"> 5</span>            <span class="n">Circle</span> <span class="n">circle</span> <span class="o">=</span> <span class="n">CircleFactory</span><span class="o">.</span><span class="na">getCircle</span><span class="o">(</span><span class="n">getRandColor</span><span class="o">());</span>
+<span class="ln"> 6</span>            <span class="n">circle</span><span class="o">.</span><span class="na">setSize</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="ln"> 7</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">circle</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln"> 8</span>        <span class="o">}</span>
+<span class="ln"> 9</span>    <span class="o">}</span>
 <span class="ln">10</span>
-<span class="ln">11</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="n">Color</span> <span class="nf">getRandColor</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">12</span>        <span class="n">Random</span> <span class="nf">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
-<span class="ln">13</span>        <span class="kt">int</span> <span class="nf">randInt</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">5</span><span class="p">);</span>
-<span class="ln">14</span>        <span class="k">if</span> <span class="p">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">0</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">15</span>            <span class="k">return</span> <span class="n">Color</span><span class="p">.</span><span class="na">BLACK</span><span class="p">;</span>
-<span class="ln">16</span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">1</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">17</span>            <span class="k">return</span> <span class="n">Color</span><span class="p">.</span><span class="na">BLUE</span><span class="p">;</span>
-<span class="ln">18</span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">2</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">19</span>            <span class="k">return</span> <span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">;</span>
-<span class="ln">20</span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">3</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">21</span>            <span class="k">return</span> <span class="n">Color</span><span class="p">.</span><span class="na">WHITE</span><span class="p">;</span>
-<span class="ln">22</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="ln">23</span>            <span class="k">return</span> <span class="n">Color</span><span class="p">.</span><span class="na">YELLO</span><span class="p">;</span>
-<span class="ln">24</span>        <span class="p">}</span>
-<span class="ln">25</span>    <span class="p">}</span>
-<span class="ln">26</span><span class="p">}</span></code></pre></div>
+<span class="ln">11</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Color</span> <span class="nf">getRandColor</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">12</span>        <span class="n">Random</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
+<span class="ln">13</span>        <span class="kt">int</span> <span class="n">randInt</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="n">5</span><span class="o">);</span>
+<span class="ln">14</span>        <span class="k">if</span> <span class="o">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">15</span>            <span class="k">return</span> <span class="n">Color</span><span class="o">.</span><span class="na">BLACK</span><span class="o">;</span>
+<span class="ln">16</span>        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">1</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">17</span>            <span class="k">return</span> <span class="n">Color</span><span class="o">.</span><span class="na">BLUE</span><span class="o">;</span>
+<span class="ln">18</span>        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">2</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">19</span>            <span class="k">return</span> <span class="n">Color</span><span class="o">.</span><span class="na">GREEN</span><span class="o">;</span>
+<span class="ln">20</span>        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">randInt</span> <span class="o">==</span> <span class="n">3</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">21</span>            <span class="k">return</span> <span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">;</span>
+<span class="ln">22</span>        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+<span class="ln">23</span>            <span class="k">return</span> <span class="n">Color</span><span class="o">.</span><span class="na">YELLO</span><span class="o">;</span>
+<span class="ln">24</span>        <span class="o">}</span>
+<span class="ln">25</span>    <span class="o">}</span>
+<span class="ln">26</span><span class="o">}</span></code></pre></div>
 <p>and the results:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">0</span><span class="p">}</span>
-<span class="ln"> 2</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">1</span><span class="p">}</span>
-<span class="ln"> 3</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">2</span><span class="p">}</span>
-<span class="ln"> 4</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">3</span><span class="p">}</span>
-<span class="ln"> 5</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">4</span><span class="p">}</span>
-<span class="ln"> 6</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">5</span><span class="p">}</span>
-<span class="ln"> 7</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">6</span><span class="p">}</span>
-<span class="ln"> 8</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">7</span><span class="p">}</span>
-<span class="ln"> 9</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">8</span><span class="p">}</span>
-<span class="ln">10</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">9</span><span class="p">}</span>
-<span class="ln">11</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">10</span><span class="p">}</span>
-<span class="ln">12</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">11</span><span class="p">}</span>
-<span class="ln">13</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">12</span><span class="p">}</span>
-<span class="ln">14</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">13</span><span class="p">}</span>
-<span class="ln">15</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">14</span><span class="p">}</span>
-<span class="ln">16</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">15</span><span class="p">}</span>
-<span class="ln">17</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">16</span><span class="p">}</span>
-<span class="ln">18</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">17</span><span class="p">}</span>
-<span class="ln">19</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">18</span><span class="p">}</span>
-<span class="ln">20</span><span class="n">Circle</span><span class="p">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">19</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">0</span><span class="o">}</span>
+<span class="ln"> 2</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">1</span><span class="o">}</span>
+<span class="ln"> 3</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">2</span><span class="o">}</span>
+<span class="ln"> 4</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">3</span><span class="o">}</span>
+<span class="ln"> 5</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">4</span><span class="o">}</span>
+<span class="ln"> 6</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">5</span><span class="o">}</span>
+<span class="ln"> 7</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">6</span><span class="o">}</span>
+<span class="ln"> 8</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">7</span><span class="o">}</span>
+<span class="ln"> 9</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">8</span><span class="o">}</span>
+<span class="ln">10</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">9</span><span class="o">}</span>
+<span class="ln">11</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">10</span><span class="o">}</span>
+<span class="ln">12</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">11</span><span class="o">}</span>
+<span class="ln">13</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">12</span><span class="o">}</span>
+<span class="ln">14</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">13</span><span class="o">}</span>
+<span class="ln">15</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">14</span><span class="o">}</span>
+<span class="ln">16</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">YELLO</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">15</span><span class="o">}</span>
+<span class="ln">17</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">16</span><span class="o">}</span>
+<span class="ln">18</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">17</span><span class="o">}</span>
+<span class="ln">19</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">GREEN</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">18</span><span class="o">}</span>
+<span class="ln">20</span><span class="n">Circle</span><span class="o">{</span><span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="o">,</span> <span class="n">size</span><span class="o">=</span><span class="n">19</span><span class="o">}</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -618,7 +619,7 @@ Let&rsquo;s first define the color enum and circle class:</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

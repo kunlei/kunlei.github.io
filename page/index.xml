@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on O.R. in Action</title>
+    <link>https://kunlei.github.io/page/</link>
+    <description>Recent content in Pages on O.R. in Action</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
+    <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
+    <lastBuildDate>Mon, 30 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kunlei.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reading</title>
+      <link>https://kunlei.github.io/page/book-list/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/book-list/</guid>
+      <description> I am an avid reader and below compiles the books I read or am reading&amp;hellip;
+2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it! Quiet power: the secret strengths of introverts The simple path to wealth Bad blood: secrets and lies in a silicon valley startup Army of none: autonomous weapons and the future of war The subtle art of not giving a f*ck: a counterintuitive approach to living a good life Me before you The little prince Becoming Deep work The one thing The kite runner The shallows: what the internet is doing to our brains The road less traveled Irrational exuberance Educated Far from the tree The psychology of wealth Someday is not a day in the week Anonymous Limitless mind: learn, lead and live without barriers  </description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://kunlei.github.io/page/resume/</link>
+      <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/resume/</guid>
+      <description>Summary Currently Sr. Data Scientist (Operations Research) working at Walmart Labs.
+Education  Ph.D. in Industrial Engineering  University of Arkansas, 2012 - 2017 Dissertation: service consistency in vehicle routing  M.S. in Industrial Engineering  Huazhong University of Science and Technology, 2009 - 2012 Thesis topic: manufacturing system optimization  B.S. in Industrial Engineering  Huazhong University of Science and Technology, 2005 - 2009 Thesis topic: process planning optimization   Experience  Sr.</description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://kunlei.github.io/page/java-index/</link>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/java-index/</guid>
+      <description>This is an index page for all Java-related posts.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://kunlei.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/about/</guid>
+      <description>Hello! My name is Kunlei Lian, and I&amp;rsquo;m a Sr. Data Scientist currently working for Walmart Labs.
+My History Prior to working for Walmart Labs, I spent four years studying Industrial Engineering at University of Arkansas and got my Ph.D. in 2017. My dissertation, titled in Service Consistency in Vehicle Routing, centers on studying service consistency in vehicle routing problems spanning over multiple days. Previously, I got my Masters and Bachelors, both in industrial engineering, from Huazhong University of Science and Technology in 2012 and 2009, respectively.</description>
+    </item>
+    
+  </channel>
+</rss>

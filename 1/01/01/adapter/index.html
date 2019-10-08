@@ -21,14 +21,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/adapter\/",
+          "@id": "https://kunlei.github.io/1/01/01/adapter/",
           "name": "Adapter pattern"
         }
     }]
@@ -63,20 +63,21 @@
     "name" : "Kunlei Lian"
   },
   "headline": "Adapter Pattern",
-  "description" : "Adapter Pattern is one of the structural design patterns that connects two otherwise incompatible interfaces. Adapters are often used in real life. Suppose there is a car interface that can run and a vehicle interface that can drive. An adapter is connect these two interfaces so that a car can act like a vehicle. To see this, let\x26rsquo;s define two interfaces:\n1public interface Car { 2 void run(); 3}1public interface Vehicle { 2 void drive(); 3} Then let\x26rsquo;s have some implementations:",
+  "description" : "Adapter Pattern is one of the structural design patterns that connects two otherwise incompatible interfaces. Adapters are often used in real life. Suppose there is a car interface that can run and a vehicle interface that can drive. An adapter is connect these two interfaces so that a car can act like a vehicle. To see this, let&amp;rsquo;s define two interfaces:
+1public interface Car { 2 void run(); 3}1public interface Vehicle { 2 void drive(); 3} Then let&amp;rsquo;s have some implementations:",
   "inLanguage" : "en",
-  "wordCount":  336 ,
+  "wordCount": 336,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/adapter\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/adapter/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +105,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -336,74 +337,74 @@ Adapters are often used in real life.
 Suppose there is a car interface that can run and a vehicle interface that can drive.
 An adapter is connect these two interfaces so that a car can act like a vehicle.
 To see this, let&rsquo;s define two interfaces:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Car</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">run</span><span class="p">();</span>
-<span class="ln">3</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Vehicle</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">drive</span><span class="p">();</span>
-<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Car</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">run</span><span class="o">();</span>
+<span class="ln">3</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Vehicle</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">drive</span><span class="o">();</span>
+<span class="ln">3</span><span class="o">}</span></code></pre></div>
 <p>Then let&rsquo;s have some implementations:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Nissan</span> <span class="nf">implements</span> <span class="n">Car</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Nissan</span> <span class="kd">implements</span> <span class="n">Car</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">run</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;A nissan running on the road!&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Toyota</span> <span class="nf">implements</span> <span class="n">Car</span> <span class="p">{</span>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;A nissan running on the road!&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Toyota</span> <span class="kd">implements</span> <span class="n">Car</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">run</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;A toyota running on the road!&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Bike</span> <span class="nf">implements</span> <span class="n">Vehicle</span> <span class="p">{</span>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;A toyota running on the road!&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bike</span> <span class="kd">implements</span> <span class="n">Vehicle</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">drive</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;A bike is moving on the road!&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Sled</span> <span class="nf">implements</span> <span class="n">Vehicle</span> <span class="p">{</span>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;A bike is moving on the road!&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sled</span> <span class="kd">implements</span> <span class="n">Vehicle</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">drive</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I see a sled!&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I see a sled!&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div>
 <p>Suppose now we want to treat a car as an vehicle, we just need to define an adapter class:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">CarAdapter</span> <span class="nf">implements</span> <span class="n">Vehicle</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Car</span> <span class="n">car</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CarAdapter</span> <span class="kd">implements</span> <span class="n">Vehicle</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Car</span> <span class="n">car</span><span class="o">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">CarAdapter</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">car</span> <span class="o">=</span> <span class="n">car</span><span class="p">;</span>
-<span class="ln"> 6</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">CarAdapter</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">car</span> <span class="o">=</span> <span class="n">car</span><span class="o">;</span>
+<span class="ln"> 6</span>    <span class="o">}</span>
 <span class="ln"> 7</span>
 <span class="ln"> 8</span>    <span class="nd">@Override</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">drive</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="n">car</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
-<span class="ln">11</span>    <span class="p">}</span>
-<span class="ln">12</span><span class="p">}</span></code></pre></div>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="n">car</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+<span class="ln">11</span>    <span class="o">}</span>
+<span class="ln">12</span><span class="o">}</span></code></pre></div>
 <p>Let&rsquo;s run a demo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">AdapterDemo</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AdapterDemo</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 4</span>        <span class="n">Car</span> <span class="nf">nissan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Nissan</span><span class="p">();</span>
-<span class="ln"> 5</span>        <span class="n">Car</span> <span class="nf">toyota</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Toyota</span><span class="p">();</span>
-<span class="ln"> 6</span>        <span class="n">nissan</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
-<span class="ln"> 7</span>        <span class="n">toyota</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 4</span>        <span class="n">Car</span> <span class="n">nissan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Nissan</span><span class="o">();</span>
+<span class="ln"> 5</span>        <span class="n">Car</span> <span class="n">toyota</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Toyota</span><span class="o">();</span>
+<span class="ln"> 6</span>        <span class="n">nissan</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+<span class="ln"> 7</span>        <span class="n">toyota</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
 <span class="ln"> 8</span>
-<span class="ln"> 9</span>        <span class="n">Vehicle</span> <span class="nf">bike</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bike</span><span class="p">();</span>
-<span class="ln">10</span>        <span class="n">Vehicle</span> <span class="nf">sled</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bike</span><span class="p">();</span>
-<span class="ln">11</span>        <span class="n">bike</span><span class="p">.</span><span class="na">drive</span><span class="p">();</span>
-<span class="ln">12</span>        <span class="n">sled</span><span class="p">.</span><span class="na">drive</span><span class="p">();</span>
+<span class="ln"> 9</span>        <span class="n">Vehicle</span> <span class="n">bike</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bike</span><span class="o">();</span>
+<span class="ln">10</span>        <span class="n">Vehicle</span> <span class="n">sled</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bike</span><span class="o">();</span>
+<span class="ln">11</span>        <span class="n">bike</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
+<span class="ln">12</span>        <span class="n">sled</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
 <span class="ln">13</span>
-<span class="ln">14</span>        <span class="n">Vehicle</span> <span class="nf">nissanAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CarAdapter</span><span class="p">(</span><span class="n">nissan</span><span class="p">);</span>
-<span class="ln">15</span>        <span class="n">nissanAdapter</span><span class="p">.</span><span class="na">drive</span><span class="p">();</span>
+<span class="ln">14</span>        <span class="n">Vehicle</span> <span class="n">nissanAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CarAdapter</span><span class="o">(</span><span class="n">nissan</span><span class="o">);</span>
+<span class="ln">15</span>        <span class="n">nissanAdapter</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
 <span class="ln">16</span>
-<span class="ln">17</span>        <span class="n">Vehicle</span> <span class="nf">toyotaAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CarAdapter</span><span class="p">(</span><span class="n">toyota</span><span class="p">);</span>
-<span class="ln">18</span>        <span class="n">toyotaAdapter</span><span class="p">.</span><span class="na">drive</span><span class="p">();</span>
-<span class="ln">19</span>    <span class="p">}</span>
-<span class="ln">20</span><span class="p">}</span></code></pre></div>
+<span class="ln">17</span>        <span class="n">Vehicle</span> <span class="n">toyotaAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CarAdapter</span><span class="o">(</span><span class="n">toyota</span><span class="o">);</span>
+<span class="ln">18</span>        <span class="n">toyotaAdapter</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
+<span class="ln">19</span>    <span class="o">}</span>
+<span class="ln">20</span><span class="o">}</span></code></pre></div>
 <p>and here are the results:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">A</span> <span class="nf">nissan</span> <span class="n">running</span> <span class="nf">on</span> <span class="n">the</span> <span class="nf">road</span><span class="o">!</span>
-<span class="ln">2</span><span class="n">A</span> <span class="nf">toyota</span> <span class="n">running</span> <span class="nf">on</span> <span class="n">the</span> <span class="nf">road</span><span class="o">!</span>
-<span class="ln">3</span><span class="n">A</span> <span class="nf">bike</span> <span class="n">is</span> <span class="nf">moving</span> <span class="n">on</span> <span class="nf">the</span> <span class="n">road</span><span class="o">!</span>
-<span class="ln">4</span><span class="n">A</span> <span class="nf">bike</span> <span class="n">is</span> <span class="nf">moving</span> <span class="n">on</span> <span class="nf">the</span> <span class="n">road</span><span class="o">!</span>
-<span class="ln">5</span><span class="n">A</span> <span class="nf">nissan</span> <span class="n">running</span> <span class="nf">on</span> <span class="n">the</span> <span class="nf">road</span><span class="o">!</span>
-<span class="ln">6</span><span class="n">A</span> <span class="nf">toyota</span> <span class="n">running</span> <span class="nf">on</span> <span class="n">the</span> <span class="nf">road</span><span class="o">!</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">A</span> <span class="n">nissan</span> <span class="n">running</span> <span class="n">on</span> <span class="n">the</span> <span class="n">road</span><span class="o">!</span>
+<span class="ln">2</span><span class="n">A</span> <span class="n">toyota</span> <span class="n">running</span> <span class="n">on</span> <span class="n">the</span> <span class="n">road</span><span class="o">!</span>
+<span class="ln">3</span><span class="n">A</span> <span class="n">bike</span> <span class="n">is</span> <span class="n">moving</span> <span class="n">on</span> <span class="n">the</span> <span class="n">road</span><span class="o">!</span>
+<span class="ln">4</span><span class="n">A</span> <span class="n">bike</span> <span class="n">is</span> <span class="n">moving</span> <span class="n">on</span> <span class="n">the</span> <span class="n">road</span><span class="o">!</span>
+<span class="ln">5</span><span class="n">A</span> <span class="n">nissan</span> <span class="n">running</span> <span class="n">on</span> <span class="n">the</span> <span class="n">road</span><span class="o">!</span>
+<span class="ln">6</span><span class="n">A</span> <span class="n">toyota</span> <span class="n">running</span> <span class="n">on</span> <span class="n">the</span> <span class="n">road</span><span class="o">!</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -592,7 +593,7 @@ To see this, let&rsquo;s define two interfaces:</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

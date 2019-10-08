@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on O.R. in Action</title>
+    <link>https://kunlei.github.io/categories/optimization/</link>
+    <description>Recent content in Optimization on O.R. in Action</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
+    <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
+    <lastBuildDate>Wed, 03 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kunlei.github.io/categories/optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dissertation - Service Consistency in Vehicle Routing</title>
+      <link>https://kunlei.github.io/2019/04/03/dissertation/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/04/03/dissertation/</guid>
+      <description>This thesis studies service consistency in the context of multi-period vehicle routing problems (VRP) in which customers require repeatable services over a planning horizon of multiple days. Two types of service consistency are considered, namely, driver consistency and time consistency. Driver consistency refers to using the fewest number of different drivers to perform all of the visits required by a customer over a planning horizon and time consistency refers to visiting a customer at roughly the same time on each day he/she needs service.</description>
+    </item>
+    
+  </channel>
+</rss>

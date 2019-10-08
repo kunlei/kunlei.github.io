@@ -21,14 +21,14 @@ This pattern is better explained through an example. Imagine we are tasked to mo
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@ This pattern is better explained through an example. Imagine we are tasked to mo
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/strategy\/",
+          "@id": "https://kunlei.github.io/1/01/01/strategy/",
           "name": "Strategy pattern"
         }
     }]
@@ -63,20 +63,21 @@ This pattern is better explained through an example. Imagine we are tasked to mo
     "name" : "Kunlei Lian"
   },
   "headline": "Strategy Pattern",
-  "description" : "Strategy Pattern, also known as policy pattern, is one of the behavioral design patterns that promote software flexibility and reusability. It features in allowing classes to select algorithms at runtime by encapsulating algorithms and making them interchangable.\nThis pattern is better explained through an example. Imagine we are tasked to model a group of kids within a preschool. Everyone can sing and jump, but naturally the way they sing and jump vary kid by kid.",
+  "description" : "Strategy Pattern, also known as policy pattern, is one of the behavioral design patterns that promote software flexibility and reusability. It features in allowing classes to select algorithms at runtime by encapsulating algorithms and making them interchangable.
+This pattern is better explained through an example. Imagine we are tasked to model a group of kids within a preschool. Everyone can sing and jump, but naturally the way they sing and jump vary kid by kid.",
   "inLanguage" : "en",
-  "wordCount":  640 ,
+  "wordCount": 640,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/strategy\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/strategy/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +105,7 @@ This pattern is better explained through an example. Imagine we are tasked to mo
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -339,133 +340,133 @@ Imagine we are tasked to model a group of kids within a preschool.
 Everyone can sing and jump, but naturally the way they sing and jump vary kid by kid.
 For simplicity, let&rsquo;s say a child can either sing loudly or quietly, and either jump high or low.
 The strategy pattern defines separate interfaces for these behaviors:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Sing</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">sing</span><span class="p">();</span>
-<span class="ln">3</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Jump</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">jump</span><span class="p">();</span>
-<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Sing</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">sing</span><span class="o">();</span>
+<span class="ln">3</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Jump</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">jump</span><span class="o">();</span>
+<span class="ln">3</span><span class="o">}</span></code></pre></div>
 <p>Based on the possible ways of singing and jumping, various implementations can be possible:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">SingAloud</span> <span class="nf">implements</span> <span class="n">Sing</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SingAloud</span> <span class="kd">implements</span> <span class="n">Sing</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">sing</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I am singing aloud!&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">SingQuiet</span> <span class="nf">implements</span> <span class="n">Sing</span> <span class="p">{</span>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sing</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I am singing aloud!&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SingQuiet</span> <span class="kd">implements</span> <span class="n">Sing</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">sing</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I am singing quietly...&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sing</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I am singing quietly...&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div>
 <p>The same is true for jumping:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">JumpHigh</span> <span class="nf">implements</span> <span class="n">Jump</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">JumpHigh</span> <span class="kd">implements</span> <span class="n">Jump</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">jump</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I can jump very high!&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">JumpLow</span> <span class="nf">implements</span> <span class="n">Jump</span> <span class="p">{</span>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">jump</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I can jump very high!&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">JumpLow</span> <span class="kd">implements</span> <span class="n">Jump</span> <span class="o">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">jump</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I can only jump low...&#34;</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="p">}</span>
-<span class="ln">6</span><span class="p">}</span></code></pre></div>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">jump</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I can only jump low...&#34;</span><span class="o">);</span>
+<span class="ln">5</span>    <span class="o">}</span>
+<span class="ln">6</span><span class="o">}</span></code></pre></div>
 <p>Having defined the possible behaviors, we can go ahead and create a base class for children within the group:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">abstract</span> <span class="kd">class</span> <span class="nf">Child</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">protected</span> <span class="nf">String</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln"> 3</span>    <span class="kd">protected</span> <span class="nf">Sing</span> <span class="n">sing</span><span class="p">;</span>
-<span class="ln"> 4</span>    <span class="kd">protected</span> <span class="nf">Jump</span> <span class="n">jump</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Child</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">protected</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+<span class="ln"> 3</span>    <span class="kd">protected</span> <span class="n">Sing</span> <span class="n">sing</span><span class="o">;</span>
+<span class="ln"> 4</span>    <span class="kd">protected</span> <span class="n">Jump</span> <span class="n">jump</span><span class="o">;</span>
 <span class="ln"> 5</span>
-<span class="ln"> 6</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setSing</span><span class="p">(</span><span class="n">Sing</span> <span class="nf">sing</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 7</span>        <span class="k">this</span><span class="p">.</span><span class="na">sing</span> <span class="o">=</span> <span class="n">sing</span><span class="p">;</span>
-<span class="ln"> 8</span>    <span class="p">}</span>
+<span class="ln"> 6</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSing</span><span class="o">(</span><span class="n">Sing</span> <span class="n">sing</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 7</span>        <span class="k">this</span><span class="o">.</span><span class="na">sing</span> <span class="o">=</span> <span class="n">sing</span><span class="o">;</span>
+<span class="ln"> 8</span>    <span class="o">}</span>
 <span class="ln"> 9</span>
-<span class="ln">10</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setJump</span><span class="p">(</span><span class="n">Jump</span> <span class="nf">jump</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">11</span>        <span class="k">this</span><span class="p">.</span><span class="na">jump</span> <span class="o">=</span> <span class="n">jump</span><span class="p">;</span>
-<span class="ln">12</span>    <span class="p">}</span>
+<span class="ln">10</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJump</span><span class="o">(</span><span class="n">Jump</span> <span class="n">jump</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">11</span>        <span class="k">this</span><span class="o">.</span><span class="na">jump</span> <span class="o">=</span> <span class="n">jump</span><span class="o">;</span>
+<span class="ln">12</span>    <span class="o">}</span>
 <span class="ln">13</span>
-<span class="ln">14</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">sing</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">15</span>        <span class="n">sing</span><span class="p">.</span><span class="na">sing</span><span class="p">();</span>
-<span class="ln">16</span>    <span class="p">}</span>
-<span class="ln">17</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">jump</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">18</span>        <span class="n">jump</span><span class="p">.</span><span class="na">jump</span><span class="p">();</span>
-<span class="ln">19</span>    <span class="p">}</span>
-<span class="ln">20</span><span class="p">}</span></code></pre></div>
+<span class="ln">14</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sing</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">15</span>        <span class="n">sing</span><span class="o">.</span><span class="na">sing</span><span class="o">();</span>
+<span class="ln">16</span>    <span class="o">}</span>
+<span class="ln">17</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">jump</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">18</span>        <span class="n">jump</span><span class="o">.</span><span class="na">jump</span><span class="o">();</span>
+<span class="ln">19</span>    <span class="o">}</span>
+<span class="ln">20</span><span class="o">}</span></code></pre></div>
 <p>Note that this base class is decoupled fron concrete behaviors, it only stores a reference to the singing behavior and jumping behavior.
 In other words, it lets its subclasses to decide which algorithm to use at runtime.
 Let&rsquo;s look at some examples:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">XiaoMing</span> <span class="nf">extends</span> <span class="n">Child</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kd">public</span> <span class="nf">XiaoMing</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">3</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Xiao Ming&#34;</span><span class="p">;</span>
-<span class="ln">4</span>        <span class="n">setSing</span><span class="p">(</span><span class="k">new</span> <span class="n">SingAloud</span><span class="p">());</span>
-<span class="ln">5</span>        <span class="n">setJump</span><span class="p">(</span><span class="k">new</span> <span class="n">JumpHigh</span><span class="p">());</span>
-<span class="ln">6</span>    <span class="p">}</span>
-<span class="ln">7</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">GouDan</span> <span class="nf">extends</span> <span class="n">Child</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kd">public</span> <span class="nf">GouDan</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">3</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Gou Dan&#34;</span><span class="p">;</span>
-<span class="ln">4</span>        <span class="n">setSing</span><span class="p">(</span><span class="k">new</span> <span class="n">SingQuiet</span><span class="p">());</span>
-<span class="ln">5</span>        <span class="n">setJump</span><span class="p">(</span><span class="k">new</span> <span class="n">JumpLow</span><span class="p">());</span>
-<span class="ln">6</span>    <span class="p">}</span>
-<span class="ln">7</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ErWa</span> <span class="nf">extends</span> <span class="n">Child</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kd">public</span> <span class="nf">ErWa</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">3</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Er Wa&#34;</span><span class="p">;</span>
-<span class="ln">4</span>        <span class="n">setSing</span><span class="p">(</span><span class="k">new</span> <span class="n">SingQuiet</span><span class="p">());</span>
-<span class="ln">5</span>        <span class="n">setJump</span><span class="p">(</span><span class="k">new</span> <span class="n">JumpHigh</span><span class="p">());</span>
-<span class="ln">6</span>    <span class="p">}</span>
-<span class="ln">7</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">XiaoMing</span> <span class="kd">extends</span> <span class="n">Child</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kd">public</span> <span class="nf">XiaoMing</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">3</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Xiao Ming&#34;</span><span class="o">;</span>
+<span class="ln">4</span>        <span class="n">setSing</span><span class="o">(</span><span class="k">new</span> <span class="n">SingAloud</span><span class="o">());</span>
+<span class="ln">5</span>        <span class="n">setJump</span><span class="o">(</span><span class="k">new</span> <span class="n">JumpHigh</span><span class="o">());</span>
+<span class="ln">6</span>    <span class="o">}</span>
+<span class="ln">7</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GouDan</span> <span class="kd">extends</span> <span class="n">Child</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kd">public</span> <span class="nf">GouDan</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">3</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Gou Dan&#34;</span><span class="o">;</span>
+<span class="ln">4</span>        <span class="n">setSing</span><span class="o">(</span><span class="k">new</span> <span class="n">SingQuiet</span><span class="o">());</span>
+<span class="ln">5</span>        <span class="n">setJump</span><span class="o">(</span><span class="k">new</span> <span class="n">JumpLow</span><span class="o">());</span>
+<span class="ln">6</span>    <span class="o">}</span>
+<span class="ln">7</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ErWa</span> <span class="kd">extends</span> <span class="n">Child</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kd">public</span> <span class="nf">ErWa</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">3</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Er Wa&#34;</span><span class="o">;</span>
+<span class="ln">4</span>        <span class="n">setSing</span><span class="o">(</span><span class="k">new</span> <span class="n">SingQuiet</span><span class="o">());</span>
+<span class="ln">5</span>        <span class="n">setJump</span><span class="o">(</span><span class="k">new</span> <span class="n">JumpHigh</span><span class="o">());</span>
+<span class="ln">6</span>    <span class="o">}</span>
+<span class="ln">7</span><span class="o">}</span></code></pre></div>
 <p>Now let&rsquo;s watch children playing in the classroom.
 Note that each child has his/her own default singing/jumping behavior at initialization.
 The interesting part is that they can change their minds at runtime!</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ChildrenAtPlay</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ChildrenAtPlay</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 <span class="ln"> 4</span>        <span class="c1">// let&#39;s first define singing and jumping algorithms
-</span><span class="ln"> 5</span><span class="c1"></span>        <span class="n">SingAloud</span> <span class="nf">singAloud</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SingAloud</span><span class="p">();</span>
-<span class="ln"> 6</span>        <span class="n">SingQuiet</span> <span class="nf">singQuiet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SingQuiet</span><span class="p">();</span>
-<span class="ln"> 7</span>        <span class="n">JumpHigh</span> <span class="nf">jumpHigh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JumpHigh</span><span class="p">();</span>
-<span class="ln"> 8</span>        <span class="n">JumpLow</span> <span class="nf">jumpLow</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JumpLow</span><span class="p">();</span>
+</span><span class="ln"> 5</span><span class="c1"></span>        <span class="n">SingAloud</span> <span class="n">singAloud</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SingAloud</span><span class="o">();</span>
+<span class="ln"> 6</span>        <span class="n">SingQuiet</span> <span class="n">singQuiet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SingQuiet</span><span class="o">();</span>
+<span class="ln"> 7</span>        <span class="n">JumpHigh</span> <span class="n">jumpHigh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JumpHigh</span><span class="o">();</span>
+<span class="ln"> 8</span>        <span class="n">JumpLow</span> <span class="n">jumpLow</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JumpLow</span><span class="o">();</span>
 <span class="ln"> 9</span>
 <span class="ln">10</span>        <span class="c1">// here are some kids in the group
-</span><span class="ln">11</span><span class="c1"></span>        <span class="n">XiaoMing</span> <span class="nf">xiaoMing</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XiaoMing</span><span class="p">();</span>
-<span class="ln">12</span>        <span class="n">GouDan</span> <span class="nf">gouDan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GouDan</span><span class="p">();</span>
-<span class="ln">13</span>        <span class="n">ErWa</span> <span class="nf">erWa</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ErWa</span><span class="p">();</span>
+</span><span class="ln">11</span><span class="c1"></span>        <span class="n">XiaoMing</span> <span class="n">xiaoMing</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XiaoMing</span><span class="o">();</span>
+<span class="ln">12</span>        <span class="n">GouDan</span> <span class="n">gouDan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GouDan</span><span class="o">();</span>
+<span class="ln">13</span>        <span class="n">ErWa</span> <span class="n">erWa</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ErWa</span><span class="o">();</span>
 <span class="ln">14</span>
 <span class="ln">15</span>        <span class="c1">// children at play
-</span><span class="ln">16</span><span class="c1"></span>        <span class="n">xiaoMing</span><span class="p">.</span><span class="na">sing</span><span class="p">();</span>
-<span class="ln">17</span>        <span class="n">xiaoMing</span><span class="p">.</span><span class="na">jump</span><span class="p">();</span>
-<span class="ln">18</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">sing</span><span class="p">();</span>
-<span class="ln">19</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">jump</span><span class="p">();</span>
-<span class="ln">20</span>        <span class="n">erWa</span><span class="p">.</span><span class="na">sing</span><span class="p">();</span>
-<span class="ln">21</span>        <span class="n">erWa</span><span class="p">.</span><span class="na">jump</span><span class="p">();</span>
+</span><span class="ln">16</span><span class="c1"></span>        <span class="n">xiaoMing</span><span class="o">.</span><span class="na">sing</span><span class="o">();</span>
+<span class="ln">17</span>        <span class="n">xiaoMing</span><span class="o">.</span><span class="na">jump</span><span class="o">();</span>
+<span class="ln">18</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">sing</span><span class="o">();</span>
+<span class="ln">19</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">jump</span><span class="o">();</span>
+<span class="ln">20</span>        <span class="n">erWa</span><span class="o">.</span><span class="na">sing</span><span class="o">();</span>
+<span class="ln">21</span>        <span class="n">erWa</span><span class="o">.</span><span class="na">jump</span><span class="o">();</span>
 <span class="ln">22</span>
 <span class="ln">23</span>        <span class="c1">// children change their minds all the time
-</span><span class="ln">24</span><span class="c1"></span>        <span class="n">xiaoMing</span><span class="p">.</span><span class="na">setSing</span><span class="p">(</span><span class="n">singQuiet</span><span class="p">);</span>
-<span class="ln">25</span>        <span class="n">xiaoMing</span><span class="p">.</span><span class="na">setJump</span><span class="p">(</span><span class="n">jumpLow</span><span class="p">);</span>
-<span class="ln">26</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">setSing</span><span class="p">(</span><span class="n">singAloud</span><span class="p">);</span>
-<span class="ln">27</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">setJump</span><span class="p">(</span><span class="n">jumpHigh</span><span class="p">);</span>
+</span><span class="ln">24</span><span class="c1"></span>        <span class="n">xiaoMing</span><span class="o">.</span><span class="na">setSing</span><span class="o">(</span><span class="n">singQuiet</span><span class="o">);</span>
+<span class="ln">25</span>        <span class="n">xiaoMing</span><span class="o">.</span><span class="na">setJump</span><span class="o">(</span><span class="n">jumpLow</span><span class="o">);</span>
+<span class="ln">26</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">setSing</span><span class="o">(</span><span class="n">singAloud</span><span class="o">);</span>
+<span class="ln">27</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">setJump</span><span class="o">(</span><span class="n">jumpHigh</span><span class="o">);</span>
 <span class="ln">28</span>
 <span class="ln">29</span>        <span class="c1">// children at play again
-</span><span class="ln">30</span><span class="c1"></span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-<span class="ln">31</span>        <span class="n">xiaoMing</span><span class="p">.</span><span class="na">sing</span><span class="p">();</span>
-<span class="ln">32</span>        <span class="n">xiaoMing</span><span class="p">.</span><span class="na">jump</span><span class="p">();</span>
-<span class="ln">33</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">sing</span><span class="p">();</span>
-<span class="ln">34</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">jump</span><span class="p">();</span>
-<span class="ln">35</span>        <span class="n">erWa</span><span class="p">.</span><span class="na">sing</span><span class="p">();</span>
-<span class="ln">36</span>        <span class="n">erWa</span><span class="p">.</span><span class="na">jump</span><span class="p">();</span>
-<span class="ln">37</span>    <span class="p">}</span>
-<span class="ln">38</span><span class="p">}</span></code></pre></div>
+</span><span class="ln">30</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="ln">31</span>        <span class="n">xiaoMing</span><span class="o">.</span><span class="na">sing</span><span class="o">();</span>
+<span class="ln">32</span>        <span class="n">xiaoMing</span><span class="o">.</span><span class="na">jump</span><span class="o">();</span>
+<span class="ln">33</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">sing</span><span class="o">();</span>
+<span class="ln">34</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">jump</span><span class="o">();</span>
+<span class="ln">35</span>        <span class="n">erWa</span><span class="o">.</span><span class="na">sing</span><span class="o">();</span>
+<span class="ln">36</span>        <span class="n">erWa</span><span class="o">.</span><span class="na">jump</span><span class="o">();</span>
+<span class="ln">37</span>    <span class="o">}</span>
+<span class="ln">38</span><span class="o">}</span></code></pre></div>
 <p>Here are the simulation results:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="n">I</span> <span class="nf">am</span> <span class="n">singing</span> <span class="nf">aloud</span><span class="o">!</span>
-<span class="ln"> 2</span><span class="n">I</span> <span class="nf">can</span> <span class="n">jump</span> <span class="nf">very</span> <span class="n">high</span><span class="o">!</span>
-<span class="ln"> 3</span><span class="n">I</span> <span class="nf">am</span> <span class="n">singing</span> <span class="nf">quietly</span><span class="p">...</span>
-<span class="ln"> 4</span><span class="n">I</span> <span class="nf">can</span> <span class="n">only</span> <span class="nf">jump</span> <span class="n">low</span><span class="p">...</span>
-<span class="ln"> 5</span><span class="nf">I</span> <span class="n">am</span> <span class="nf">singing</span> <span class="n">quietly</span><span class="p">...</span>
-<span class="ln"> 6</span><span class="nf">I</span> <span class="n">can</span> <span class="nf">jump</span> <span class="n">very</span> <span class="nf">high</span><span class="o">!</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="n">I</span> <span class="n">am</span> <span class="n">singing</span> <span class="n">aloud</span><span class="o">!</span>
+<span class="ln"> 2</span><span class="n">I</span> <span class="n">can</span> <span class="n">jump</span> <span class="n">very</span> <span class="n">high</span><span class="o">!</span>
+<span class="ln"> 3</span><span class="n">I</span> <span class="n">am</span> <span class="n">singing</span> <span class="n">quietly</span><span class="o">...</span>
+<span class="ln"> 4</span><span class="n">I</span> <span class="n">can</span> <span class="n">only</span> <span class="n">jump</span> <span class="n">low</span><span class="o">...</span>
+<span class="ln"> 5</span><span class="n">I</span> <span class="n">am</span> <span class="n">singing</span> <span class="n">quietly</span><span class="o">...</span>
+<span class="ln"> 6</span><span class="n">I</span> <span class="n">can</span> <span class="n">jump</span> <span class="n">very</span> <span class="n">high</span><span class="o">!</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span><span class="n">I</span> <span class="nf">am</span> <span class="n">singing</span> <span class="nf">quietly</span><span class="p">...</span>
-<span class="ln"> 9</span><span class="n">I</span> <span class="nf">can</span> <span class="n">only</span> <span class="nf">jump</span> <span class="n">low</span><span class="p">...</span>
-<span class="ln">10</span><span class="nf">I</span> <span class="n">am</span> <span class="nf">singing</span> <span class="n">aloud</span><span class="o">!</span>
-<span class="ln">11</span><span class="n">I</span> <span class="nf">can</span> <span class="n">jump</span> <span class="nf">very</span> <span class="n">high</span><span class="o">!</span>
-<span class="ln">12</span><span class="n">I</span> <span class="nf">am</span> <span class="n">singing</span> <span class="nf">quietly</span><span class="p">...</span>
-<span class="ln">13</span><span class="n">I</span> <span class="nf">can</span> <span class="n">jump</span> <span class="nf">very</span> <span class="n">high</span><span class="o">!</span></code></pre></div>
+<span class="ln"> 8</span><span class="n">I</span> <span class="n">am</span> <span class="n">singing</span> <span class="n">quietly</span><span class="o">...</span>
+<span class="ln"> 9</span><span class="n">I</span> <span class="n">can</span> <span class="n">only</span> <span class="n">jump</span> <span class="n">low</span><span class="o">...</span>
+<span class="ln">10</span><span class="n">I</span> <span class="n">am</span> <span class="n">singing</span> <span class="n">aloud</span><span class="o">!</span>
+<span class="ln">11</span><span class="n">I</span> <span class="n">can</span> <span class="n">jump</span> <span class="n">very</span> <span class="n">high</span><span class="o">!</span>
+<span class="ln">12</span><span class="n">I</span> <span class="n">am</span> <span class="n">singing</span> <span class="n">quietly</span><span class="o">...</span>
+<span class="ln">13</span><span class="n">I</span> <span class="n">can</span> <span class="n">jump</span> <span class="n">very</span> <span class="n">high</span><span class="o">!</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -654,7 +655,7 @@ The interesting part is that they can change their minds at runtime!</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

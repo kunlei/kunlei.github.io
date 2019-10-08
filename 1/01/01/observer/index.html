@@ -22,14 +22,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -44,14 +44,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/observer\/",
+          "@id": "https://kunlei.github.io/1/01/01/observer/",
           "name": "Observer pattern"
         }
     }]
@@ -64,20 +64,21 @@
     "name" : "Kunlei Lian"
   },
   "headline": "Observer Pattern",
-  "description" : "Observer Pattern is a behavioral pattern suitable for decoupling objects with one-to-many relations. There are two components in this pattern:\n Subject: this is the object whose state is subject to changes and will affect many following objects. Observer: this is the object which will updates its status based on the status of the subject.  An example is the information updating system used in my daughter\x26rsquo;s school. Parents get udpates from the class teacher constantly.",
+  "description" : "Observer Pattern is a behavioral pattern suitable for decoupling objects with one-to-many relations. There are two components in this pattern:
+ Subject: this is the object whose state is subject to changes and will affect many following objects. Observer: this is the object which will updates its status based on the status of the subject.  An example is the information updating system used in my daughter&amp;rsquo;s school. Parents get udpates from the class teacher constantly.",
   "inLanguage" : "en",
-  "wordCount":  557 ,
+  "wordCount": 555,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/observer\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/observer/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -106,7 +107,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -308,7 +309,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;557&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;555&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
@@ -343,125 +344,125 @@ There are two components in this pattern:</p>
 
 <p>An example is the information updating system used in my daughter&rsquo;s school.
 Parents get udpates from the class teacher constantly.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Subject</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">registerObserver</span><span class="p">(</span><span class="n">Observer</span> <span class="nf">o</span><span class="p">);</span>
-<span class="ln">3</span>    <span class="kt">void</span> <span class="nf">removeObserver</span><span class="p">(</span><span class="n">Observer</span> <span class="nf">o</span><span class="p">);</span>
-<span class="ln">4</span>    <span class="kt">void</span> <span class="nf">notifyObservers</span><span class="p">();</span>
-<span class="ln">5</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Observer</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="n">String</span> <span class="nf">status</span><span class="p">);</span>
-<span class="ln">3</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Subject</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">registerObserver</span><span class="o">(</span><span class="n">Observer</span> <span class="n">o</span><span class="o">);</span>
+<span class="ln">3</span>    <span class="kt">void</span> <span class="nf">removeObserver</span><span class="o">(</span><span class="n">Observer</span> <span class="n">o</span><span class="o">);</span>
+<span class="ln">4</span>    <span class="kt">void</span> <span class="nf">notifyObservers</span><span class="o">();</span>
+<span class="ln">5</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Observer</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="n">String</span> <span class="n">status</span><span class="o">);</span>
+<span class="ln">3</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Subject implementation
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Teacher</span> <span class="nf">implements</span> <span class="n">Subject</span> <span class="p">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">classStatus</span><span class="p">;</span>
-<span class="ln"> 7</span>    <span class="kd">private</span> <span class="nf">List</span><span class="o">&lt;</span><span class="n">Observer</span><span class="o">&gt;</span> <span class="nf">observers</span><span class="p">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">implements</span> <span class="n">Subject</span> <span class="o">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">String</span> <span class="n">classStatus</span><span class="o">;</span>
+<span class="ln"> 7</span>    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Observer</span><span class="o">&gt;</span> <span class="n">observers</span><span class="o">;</span>
 <span class="ln"> 8</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">Teacher</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="n">observers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="ln">11</span>    <span class="p">}</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">Teacher</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="n">observers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="ln">11</span>    <span class="o">}</span>
 <span class="ln">12</span>
-<span class="ln">13</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">updateClassStatus</span><span class="p">(</span><span class="n">String</span> <span class="nf">time</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">14</span>        <span class="k">switch</span> <span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">13</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateClassStatus</span><span class="o">(</span><span class="n">String</span> <span class="n">time</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">14</span>        <span class="k">switch</span> <span class="o">(</span><span class="n">time</span><span class="o">)</span> <span class="o">{</span>
 <span class="ln">15</span>            <span class="k">case</span> <span class="s">&#34;morning&#34;</span><span class="o">:</span>
-<span class="ln">16</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are playing in classroom!&#34;</span><span class="p">;</span>
-<span class="ln">17</span>                <span class="k">break</span><span class="p">;</span>
+<span class="ln">16</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are playing in classroom!&#34;</span><span class="o">;</span>
+<span class="ln">17</span>                <span class="k">break</span><span class="o">;</span>
 <span class="ln">18</span>            <span class="k">case</span> <span class="s">&#34;noon&#34;</span><span class="o">:</span>
-<span class="ln">19</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are having nap time!&#34;</span><span class="p">;</span>
-<span class="ln">20</span>                <span class="k">break</span><span class="p">;</span>
+<span class="ln">19</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are having nap time!&#34;</span><span class="o">;</span>
+<span class="ln">20</span>                <span class="k">break</span><span class="o">;</span>
 <span class="ln">21</span>            <span class="k">case</span> <span class="s">&#34;afternoon&#34;</span><span class="o">:</span>
-<span class="ln">22</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are having fun on playground!&#34;</span><span class="p">;</span>
-<span class="ln">23</span>                <span class="k">break</span><span class="p">;</span>
-<span class="ln">24</span>            <span class="k">default</span><span class="o">:</span>
-<span class="ln">25</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are idle....&#34;</span><span class="p">;</span>
-<span class="ln">26</span>                <span class="k">break</span><span class="p">;</span>
-<span class="ln">27</span>        <span class="p">}</span>
-<span class="ln">28</span>        <span class="n">notifyObservers</span><span class="p">();</span>
-<span class="ln">29</span>    <span class="p">}</span>
+<span class="ln">22</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are having fun on playground!&#34;</span><span class="o">;</span>
+<span class="ln">23</span>                <span class="k">break</span><span class="o">;</span><span class="nl">
+</span><span class="ln">24</span><span class="nl">            default:</span>
+<span class="ln">25</span>                <span class="n">classStatus</span> <span class="o">=</span> <span class="s">&#34;Kids are idle....&#34;</span><span class="o">;</span>
+<span class="ln">26</span>                <span class="k">break</span><span class="o">;</span>
+<span class="ln">27</span>        <span class="o">}</span>
+<span class="ln">28</span>        <span class="n">notifyObservers</span><span class="o">();</span>
+<span class="ln">29</span>    <span class="o">}</span>
 <span class="ln">30</span>
 <span class="ln">31</span>    <span class="nd">@Override</span>
-<span class="ln">32</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">registerObserver</span><span class="p">(</span><span class="n">Observer</span> <span class="nf">o</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">33</span>        <span class="n">observers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
-<span class="ln">34</span>    <span class="p">}</span>
+<span class="ln">32</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">registerObserver</span><span class="o">(</span><span class="n">Observer</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">33</span>        <span class="n">observers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">o</span><span class="o">);</span>
+<span class="ln">34</span>    <span class="o">}</span>
 <span class="ln">35</span>
 <span class="ln">36</span>    <span class="nd">@Override</span>
-<span class="ln">37</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">removeObserver</span><span class="p">(</span><span class="n">Observer</span> <span class="nf">o</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">38</span>        <span class="n">observers</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
-<span class="ln">39</span>    <span class="p">}</span>
+<span class="ln">37</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeObserver</span><span class="o">(</span><span class="n">Observer</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">38</span>        <span class="n">observers</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">o</span><span class="o">);</span>
+<span class="ln">39</span>    <span class="o">}</span>
 <span class="ln">40</span>
 <span class="ln">41</span>    <span class="nd">@Override</span>
-<span class="ln">42</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">notifyObservers</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">43</span>        <span class="k">for</span> <span class="p">(</span><span class="n">Observer</span> <span class="nf">o</span> <span class="o">:</span> <span class="n">observers</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">44</span>            <span class="n">o</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">classStatus</span><span class="p">);</span>
-<span class="ln">45</span>        <span class="p">}</span>
-<span class="ln">46</span>    <span class="p">}</span>
-<span class="ln">47</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
+<span class="ln">42</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">notifyObservers</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">43</span>        <span class="k">for</span> <span class="o">(</span><span class="n">Observer</span> <span class="n">o</span> <span class="o">:</span> <span class="n">observers</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">44</span>            <span class="n">o</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">classStatus</span><span class="o">);</span>
+<span class="ln">45</span>        <span class="o">}</span>
+<span class="ln">46</span>    <span class="o">}</span>
+<span class="ln">47</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Observer implementation
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Parent</span> <span class="nf">implements</span> <span class="n">Observer</span> <span class="p">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln"> 7</span>    <span class="kd">private</span> <span class="nf">Subject</span> <span class="n">teacher</span><span class="p">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Parent</span> <span class="kd">implements</span> <span class="n">Observer</span> <span class="o">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+<span class="ln"> 7</span>    <span class="kd">private</span> <span class="n">Subject</span> <span class="n">teacher</span><span class="o">;</span>
 <span class="ln"> 8</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">Parent</span><span class="p">(</span><span class="n">String</span> <span class="nf">name</span><span class="p">,</span> <span class="n">Subject</span> <span class="nf">teacher</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln">11</span>        <span class="k">this</span><span class="p">.</span><span class="na">teacher</span> <span class="o">=</span> <span class="n">teacher</span><span class="p">;</span>
-<span class="ln">12</span>        <span class="k">this</span><span class="p">.</span><span class="na">teacher</span><span class="p">.</span><span class="na">registerObserver</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<span class="ln">13</span>    <span class="p">}</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">Parent</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">Subject</span> <span class="n">teacher</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+<span class="ln">11</span>        <span class="k">this</span><span class="o">.</span><span class="na">teacher</span> <span class="o">=</span> <span class="n">teacher</span><span class="o">;</span>
+<span class="ln">12</span>        <span class="k">this</span><span class="o">.</span><span class="na">teacher</span><span class="o">.</span><span class="na">registerObserver</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+<span class="ln">13</span>    <span class="o">}</span>
 <span class="ln">14</span>
 <span class="ln">15</span>    <span class="nd">@Override</span>
-<span class="ln">16</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">update</span><span class="p">(</span><span class="n">String</span> <span class="nf">status</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">17</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">&#34; got update from Teacher: &#34;</span> <span class="o">+</span> <span class="n">status</span><span class="p">);</span>
-<span class="ln">18</span>    <span class="p">}</span>
+<span class="ln">16</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="n">String</span> <span class="n">status</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">17</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">&#34; got update from Teacher: &#34;</span> <span class="o">+</span> <span class="n">status</span><span class="o">);</span>
+<span class="ln">18</span>    <span class="o">}</span>
 <span class="ln">19</span>
-<span class="ln">20</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">exitProgram</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">21</span>        <span class="n">teacher</span><span class="p">.</span><span class="na">removeObserver</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<span class="ln">22</span>    <span class="p">}</span>
-<span class="ln">23</span><span class="p">}</span></code></pre></div>
+<span class="ln">20</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">exitProgram</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">21</span>        <span class="n">teacher</span><span class="o">.</span><span class="na">removeObserver</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+<span class="ln">22</span>    <span class="o">}</span>
+<span class="ln">23</span><span class="o">}</span></code></pre></div>
 <p>Let&rsquo;s run a demo:</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Preschool information updating system demo
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ObserverDemo</span> <span class="p">{</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ObserverDemo</span> <span class="o">{</span>
 <span class="ln"> 6</span>
-<span class="ln"> 7</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 7</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 <span class="ln"> 8</span>        <span class="c1">// a subject with two observers
-</span><span class="ln"> 9</span><span class="c1"></span>        <span class="n">Teacher</span> <span class="nf">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">();</span>
-<span class="ln">10</span>        <span class="n">Parent</span> <span class="nf">parenta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="p">(</span><span class="s">&#34;Parent AA&#34;</span><span class="p">,</span> <span class="n">teacher</span><span class="p">);</span>
-<span class="ln">11</span>        <span class="n">Parent</span> <span class="nf">parentb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="p">(</span><span class="s">&#34;Parent BB&#34;</span><span class="p">,</span> <span class="n">teacher</span><span class="p">);</span>
+</span><span class="ln"> 9</span><span class="c1"></span>        <span class="n">Teacher</span> <span class="n">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="o">();</span>
+<span class="ln">10</span>        <span class="n">Parent</span> <span class="n">parenta</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="o">(</span><span class="s">&#34;Parent AA&#34;</span><span class="o">,</span> <span class="n">teacher</span><span class="o">);</span>
+<span class="ln">11</span>        <span class="n">Parent</span> <span class="n">parentb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="o">(</span><span class="s">&#34;Parent BB&#34;</span><span class="o">,</span> <span class="n">teacher</span><span class="o">);</span>
 <span class="ln">12</span>
 <span class="ln">13</span>        <span class="c1">// subject broadcasts events to observers
-</span><span class="ln">14</span><span class="c1"></span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-<span class="ln">15</span>        <span class="n">teacher</span><span class="p">.</span><span class="na">updateClassStatus</span><span class="p">(</span><span class="s">&#34;morning&#34;</span><span class="p">);</span>
-<span class="ln">16</span>        <span class="n">teacher</span><span class="p">.</span><span class="na">updateClassStatus</span><span class="p">(</span><span class="s">&#34;noon&#34;</span><span class="p">);</span>
-<span class="ln">17</span>        <span class="n">teacher</span><span class="p">.</span><span class="na">updateClassStatus</span><span class="p">(</span><span class="s">&#34;afternoon&#34;</span><span class="p">);</span>
+</span><span class="ln">14</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="ln">15</span>        <span class="n">teacher</span><span class="o">.</span><span class="na">updateClassStatus</span><span class="o">(</span><span class="s">&#34;morning&#34;</span><span class="o">);</span>
+<span class="ln">16</span>        <span class="n">teacher</span><span class="o">.</span><span class="na">updateClassStatus</span><span class="o">(</span><span class="s">&#34;noon&#34;</span><span class="o">);</span>
+<span class="ln">17</span>        <span class="n">teacher</span><span class="o">.</span><span class="na">updateClassStatus</span><span class="o">(</span><span class="s">&#34;afternoon&#34;</span><span class="o">);</span>
 <span class="ln">18</span>
 <span class="ln">19</span>        <span class="c1">// new observer
-</span><span class="ln">20</span><span class="c1"></span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-<span class="ln">21</span>        <span class="n">Parent</span> <span class="nf">parentc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="p">(</span><span class="s">&#34;Parent CC&#34;</span><span class="p">,</span> <span class="n">teacher</span><span class="p">);</span>
-<span class="ln">22</span>        <span class="n">teacher</span><span class="p">.</span><span class="na">updateClassStatus</span><span class="p">(</span><span class="s">&#34;morning&#34;</span><span class="p">);</span>
+</span><span class="ln">20</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="ln">21</span>        <span class="n">Parent</span> <span class="n">parentc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="o">(</span><span class="s">&#34;Parent CC&#34;</span><span class="o">,</span> <span class="n">teacher</span><span class="o">);</span>
+<span class="ln">22</span>        <span class="n">teacher</span><span class="o">.</span><span class="na">updateClassStatus</span><span class="o">(</span><span class="s">&#34;morning&#34;</span><span class="o">);</span>
 <span class="ln">23</span>
 <span class="ln">24</span>        <span class="c1">// existing observer stop observing
-</span><span class="ln">25</span><span class="c1"></span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-<span class="ln">26</span>        <span class="n">parentb</span><span class="p">.</span><span class="na">exitProgram</span><span class="p">();</span>
-<span class="ln">27</span>        <span class="n">teacher</span><span class="p">.</span><span class="na">updateClassStatus</span><span class="p">(</span><span class="s">&#34;noon&#34;</span><span class="p">);</span>
-<span class="ln">28</span>    <span class="p">}</span>
-<span class="ln">29</span><span class="p">}</span></code></pre></div>
+</span><span class="ln">25</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="ln">26</span>        <span class="n">parentb</span><span class="o">.</span><span class="na">exitProgram</span><span class="o">();</span>
+<span class="ln">27</span>        <span class="n">teacher</span><span class="o">.</span><span class="na">updateClassStatus</span><span class="o">(</span><span class="s">&#34;noon&#34;</span><span class="o">);</span>
+<span class="ln">28</span>    <span class="o">}</span>
+<span class="ln">29</span><span class="o">}</span></code></pre></div>
 <p>Here are the outputs:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="n">Parent</span> <span class="nf">AA</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">playing</span> <span class="nf">in</span> <span class="n">classroom</span><span class="o">!</span>
-<span class="ln"> 2</span><span class="n">Parent</span> <span class="nf">BB</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">playing</span> <span class="nf">in</span> <span class="n">classroom</span><span class="o">!</span>
-<span class="ln"> 3</span><span class="n">Parent</span> <span class="nf">AA</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">having</span> <span class="nf">nap</span> <span class="n">time</span><span class="o">!</span>
-<span class="ln"> 4</span><span class="n">Parent</span> <span class="nf">BB</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">having</span> <span class="nf">nap</span> <span class="n">time</span><span class="o">!</span>
-<span class="ln"> 5</span><span class="n">Parent</span> <span class="nf">AA</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">having</span> <span class="nf">fun</span> <span class="n">on</span> <span class="nf">playground</span><span class="o">!</span>
-<span class="ln"> 6</span><span class="n">Parent</span> <span class="nf">BB</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">having</span> <span class="nf">fun</span> <span class="n">on</span> <span class="nf">playground</span><span class="o">!</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="n">Parent</span> <span class="n">AA</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">playing</span> <span class="n">in</span> <span class="n">classroom</span><span class="o">!</span>
+<span class="ln"> 2</span><span class="n">Parent</span> <span class="n">BB</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">playing</span> <span class="n">in</span> <span class="n">classroom</span><span class="o">!</span>
+<span class="ln"> 3</span><span class="n">Parent</span> <span class="n">AA</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">having</span> <span class="n">nap</span> <span class="n">time</span><span class="o">!</span>
+<span class="ln"> 4</span><span class="n">Parent</span> <span class="n">BB</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">having</span> <span class="n">nap</span> <span class="n">time</span><span class="o">!</span>
+<span class="ln"> 5</span><span class="n">Parent</span> <span class="n">AA</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">having</span> <span class="n">fun</span> <span class="n">on</span> <span class="n">playground</span><span class="o">!</span>
+<span class="ln"> 6</span><span class="n">Parent</span> <span class="n">BB</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">having</span> <span class="n">fun</span> <span class="n">on</span> <span class="n">playground</span><span class="o">!</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span><span class="n">Parent</span> <span class="nf">AA</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">playing</span> <span class="nf">in</span> <span class="n">classroom</span><span class="o">!</span>
-<span class="ln"> 9</span><span class="n">Parent</span> <span class="nf">BB</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">playing</span> <span class="nf">in</span> <span class="n">classroom</span><span class="o">!</span>
-<span class="ln">10</span><span class="n">Parent</span> <span class="nf">CC</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">playing</span> <span class="nf">in</span> <span class="n">classroom</span><span class="o">!</span>
+<span class="ln"> 8</span><span class="n">Parent</span> <span class="n">AA</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">playing</span> <span class="n">in</span> <span class="n">classroom</span><span class="o">!</span>
+<span class="ln"> 9</span><span class="n">Parent</span> <span class="n">BB</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">playing</span> <span class="n">in</span> <span class="n">classroom</span><span class="o">!</span>
+<span class="ln">10</span><span class="n">Parent</span> <span class="n">CC</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">playing</span> <span class="n">in</span> <span class="n">classroom</span><span class="o">!</span>
 <span class="ln">11</span>
-<span class="ln">12</span><span class="n">Parent</span> <span class="nf">AA</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">having</span> <span class="nf">nap</span> <span class="n">time</span><span class="o">!</span>
-<span class="ln">13</span><span class="n">Parent</span> <span class="nf">CC</span> <span class="n">got</span> <span class="nf">update</span> <span class="n">from</span> <span class="nf">Teacher</span><span class="o">:</span> <span class="n">Kids</span> <span class="nf">are</span> <span class="n">having</span> <span class="nf">nap</span> <span class="n">time</span><span class="o">!</span></code></pre></div>
+<span class="ln">12</span><span class="n">Parent</span> <span class="n">AA</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">having</span> <span class="n">nap</span> <span class="n">time</span><span class="o">!</span>
+<span class="ln">13</span><span class="n">Parent</span> <span class="n">CC</span> <span class="n">got</span> <span class="n">update</span> <span class="n">from</span> <span class="nl">Teacher:</span> <span class="n">Kids</span> <span class="n">are</span> <span class="n">having</span> <span class="n">nap</span> <span class="n">time</span><span class="o">!</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -650,7 +651,7 @@ Parents get udpates from the class teacher constantly.</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

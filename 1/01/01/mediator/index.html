@@ -21,14 +21,14 @@ Let&rsquo;s define the mediator interface as below.">
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@ Let&rsquo;s define the mediator interface as below.">
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/mediator\/",
+          "@id": "https://kunlei.github.io/1/01/01/mediator/",
           "name": "Mediator pattern"
         }
     }]
@@ -63,20 +63,21 @@ Let&rsquo;s define the mediator interface as below.">
     "name" : "Kunlei Lian"
   },
   "headline": "Mediator Pattern",
-  "description" : "Mediator Pattern is one of the behavioral patterns and it aims to decouple some related objects by using a separate object to manage their communications. This may better be explained by an example. Think of the stock trading system as a mediator to manage buying and selling of stocks. Individual investors do not talk to other tradres directly, instead they interact with the trading system directly.\nLet\x26rsquo;s define the mediator interface as below.",
+  "description" : "Mediator Pattern is one of the behavioral patterns and it aims to decouple some related objects by using a separate object to manage their communications. This may better be explained by an example. Think of the stock trading system as a mediator to manage buying and selling of stocks. Individual investors do not talk to other tradres directly, instead they interact with the trading system directly.
+Let&amp;rsquo;s define the mediator interface as below.",
   "inLanguage" : "en",
-  "wordCount":  442 ,
+  "wordCount": 442,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/mediator\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/mediator/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +105,7 @@ Let&rsquo;s define the mediator interface as below.">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -337,123 +338,123 @@ Think of the stock trading system as a mediator to manage buying and selling of 
 Individual investors do not talk to other tradres directly, instead they interact with the trading system directly.</p>
 
 <p>Let&rsquo;s define the mediator interface as below.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Mediator</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">addTrader</span><span class="p">(</span><span class="n">Trader</span> <span class="nf">trader</span><span class="p">);</span>
-<span class="ln">3</span>    <span class="kt">void</span> <span class="nf">buy</span><span class="p">(</span><span class="kt">double</span> <span class="nf">amount</span><span class="p">);</span>
-<span class="ln">4</span>    <span class="kt">void</span> <span class="nf">sell</span><span class="p">(</span><span class="kt">double</span> <span class="nf">amount</span><span class="p">);</span>
-<span class="ln">5</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Mediator</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">addTrader</span><span class="o">(</span><span class="n">Trader</span> <span class="n">trader</span><span class="o">);</span>
+<span class="ln">3</span>    <span class="kt">void</span> <span class="nf">buy</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">);</span>
+<span class="ln">4</span>    <span class="kt">void</span> <span class="nf">sell</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">);</span>
+<span class="ln">5</span><span class="o">}</span></code></pre></div>
 <p>and the trading system implements the interface:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Market</span> <span class="nf">implements</span> <span class="n">Mediator</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">List</span><span class="o">&lt;</span><span class="n">Trader</span><span class="o">&gt;</span> <span class="nf">traders</span><span class="p">;</span>
-<span class="ln"> 3</span>    <span class="kd">private</span> <span class="nf">double</span> <span class="n">value</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Market</span> <span class="kd">implements</span> <span class="n">Mediator</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Trader</span><span class="o">&gt;</span> <span class="n">traders</span><span class="o">;</span>
+<span class="ln"> 3</span>    <span class="kd">private</span> <span class="kt">double</span> <span class="n">value</span><span class="o">;</span>
 <span class="ln"> 4</span>
-<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">Market</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 6</span>        <span class="n">traders</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="ln"> 7</span>        <span class="n">value</span> <span class="o">=</span> <span class="n">10000</span><span class="p">;</span>
-<span class="ln"> 8</span>    <span class="p">}</span>
+<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">Market</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 6</span>        <span class="n">traders</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="ln"> 7</span>        <span class="n">value</span> <span class="o">=</span> <span class="n">10000</span><span class="o">;</span>
+<span class="ln"> 8</span>    <span class="o">}</span>
 <span class="ln"> 9</span>
 <span class="ln">10</span>    <span class="nd">@Override</span>
-<span class="ln">11</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">addTrader</span><span class="p">(</span><span class="n">Trader</span> <span class="nf">trader</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">12</span>        <span class="n">traders</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">trader</span><span class="p">);</span>
-<span class="ln">13</span>    <span class="p">}</span>
+<span class="ln">11</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addTrader</span><span class="o">(</span><span class="n">Trader</span> <span class="n">trader</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">12</span>        <span class="n">traders</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">trader</span><span class="o">);</span>
+<span class="ln">13</span>    <span class="o">}</span>
 <span class="ln">14</span>
 <span class="ln">15</span>    <span class="nd">@Override</span>
-<span class="ln">16</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">buy</span><span class="p">(</span><span class="kt">double</span> <span class="nf">amount</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">17</span>        <span class="n">value</span> <span class="o">-=</span> <span class="n">amount</span><span class="p">;</span>
-<span class="ln">18</span>    <span class="p">}</span>
+<span class="ln">16</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">buy</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">17</span>        <span class="n">value</span> <span class="o">-=</span> <span class="n">amount</span><span class="o">;</span>
+<span class="ln">18</span>    <span class="o">}</span>
 <span class="ln">19</span>
 <span class="ln">20</span>    <span class="nd">@Override</span>
-<span class="ln">21</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">sell</span><span class="p">(</span><span class="kt">double</span> <span class="nf">amount</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">22</span>        <span class="n">value</span> <span class="o">+=</span> <span class="n">amount</span><span class="p">;</span>
-<span class="ln">23</span>    <span class="p">}</span>
+<span class="ln">21</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sell</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">22</span>        <span class="n">value</span> <span class="o">+=</span> <span class="n">amount</span><span class="o">;</span>
+<span class="ln">23</span>    <span class="o">}</span>
 <span class="ln">24</span>
 <span class="ln">25</span>    <span class="nd">@Override</span>
-<span class="ln">26</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">26</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
 <span class="ln">27</span>        <span class="k">return</span> <span class="s">&#34;Market{&#34;</span> <span class="o">+</span>
 <span class="ln">28</span>                <span class="s">&#34;value=&#34;</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span>
-<span class="ln">29</span>                <span class="sc">&#39;}&#39;</span><span class="p">;</span>
-<span class="ln">30</span>    <span class="p">}</span>
-<span class="ln">31</span><span class="p">}</span></code></pre></div>
+<span class="ln">29</span>                <span class="sc">&#39;}&#39;</span><span class="o">;</span>
+<span class="ln">30</span>    <span class="o">}</span>
+<span class="ln">31</span><span class="o">}</span></code></pre></div>
 <p>Now we have investors ready to trade in the market:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Trader</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">protected</span> <span class="nf">Mediator</span> <span class="n">mediator</span><span class="p">;</span>
-<span class="ln"> 3</span>    <span class="kd">protected</span> <span class="nf">double</span> <span class="n">cash</span><span class="p">;</span>
-<span class="ln"> 4</span>    <span class="kd">protected</span> <span class="nf">double</span> <span class="n">stock</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Trader</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">protected</span> <span class="n">Mediator</span> <span class="n">mediator</span><span class="o">;</span>
+<span class="ln"> 3</span>    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">cash</span><span class="o">;</span>
+<span class="ln"> 4</span>    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">stock</span><span class="o">;</span>
 <span class="ln"> 5</span>
-<span class="ln"> 6</span>    <span class="kd">public</span> <span class="nf">Trader</span><span class="p">(</span><span class="n">Mediator</span> <span class="nf">mediator</span><span class="p">,</span> <span class="kt">double</span> <span class="nf">cash</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 7</span>        <span class="k">this</span><span class="p">.</span><span class="na">mediator</span> <span class="o">=</span> <span class="n">mediator</span><span class="p">;</span>
-<span class="ln"> 8</span>        <span class="k">this</span><span class="p">.</span><span class="na">cash</span> <span class="o">=</span> <span class="n">cash</span><span class="p">;</span>
-<span class="ln"> 9</span>        <span class="n">stock</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
-<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln"> 6</span>    <span class="kd">public</span> <span class="nf">Trader</span><span class="o">(</span><span class="n">Mediator</span> <span class="n">mediator</span><span class="o">,</span> <span class="kt">double</span> <span class="n">cash</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 7</span>        <span class="k">this</span><span class="o">.</span><span class="na">mediator</span> <span class="o">=</span> <span class="n">mediator</span><span class="o">;</span>
+<span class="ln"> 8</span>        <span class="k">this</span><span class="o">.</span><span class="na">cash</span> <span class="o">=</span> <span class="n">cash</span><span class="o">;</span>
+<span class="ln"> 9</span>        <span class="n">stock</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
+<span class="ln">10</span>    <span class="o">}</span>
 <span class="ln">11</span>
-<span class="ln">12</span>    <span class="kt">void</span> <span class="nf">buy</span><span class="p">(</span><span class="kt">double</span> <span class="nf">amount</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">13</span>        <span class="k">if</span> <span class="p">(</span><span class="n">amount</span> <span class="o">&gt;</span> <span class="n">cash</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">14</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;You don&#39;t have that much money!&#34;</span><span class="p">);</span>
-<span class="ln">15</span>            <span class="k">return</span><span class="p">;</span>
-<span class="ln">16</span>        <span class="p">}</span>
-<span class="ln">17</span>        <span class="n">mediator</span><span class="p">.</span><span class="na">buy</span><span class="p">(</span><span class="n">amount</span><span class="p">);</span>
-<span class="ln">18</span>        <span class="n">cash</span> <span class="o">-=</span> <span class="n">amount</span><span class="p">;</span>
-<span class="ln">19</span>        <span class="n">stock</span> <span class="o">+=</span> <span class="n">amount</span><span class="p">;</span>
-<span class="ln">20</span>    <span class="p">}</span>
+<span class="ln">12</span>    <span class="kt">void</span> <span class="nf">buy</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">13</span>        <span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">&gt;</span> <span class="n">cash</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">14</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;You don&#39;t have that much money!&#34;</span><span class="o">);</span>
+<span class="ln">15</span>            <span class="k">return</span><span class="o">;</span>
+<span class="ln">16</span>        <span class="o">}</span>
+<span class="ln">17</span>        <span class="n">mediator</span><span class="o">.</span><span class="na">buy</span><span class="o">(</span><span class="n">amount</span><span class="o">);</span>
+<span class="ln">18</span>        <span class="n">cash</span> <span class="o">-=</span> <span class="n">amount</span><span class="o">;</span>
+<span class="ln">19</span>        <span class="n">stock</span> <span class="o">+=</span> <span class="n">amount</span><span class="o">;</span>
+<span class="ln">20</span>    <span class="o">}</span>
 <span class="ln">21</span>
-<span class="ln">22</span>    <span class="kt">void</span> <span class="nf">sell</span><span class="p">(</span><span class="kt">double</span> <span class="nf">amount</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">23</span>        <span class="k">if</span> <span class="p">(</span><span class="n">amount</span> <span class="o">&gt;</span> <span class="n">stock</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">24</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;You don&#39;t have that much stock to sell!&#34;</span><span class="p">);</span>
-<span class="ln">25</span>            <span class="k">return</span><span class="p">;</span>
-<span class="ln">26</span>        <span class="p">}</span>
-<span class="ln">27</span>        <span class="n">mediator</span><span class="p">.</span><span class="na">sell</span><span class="p">(</span><span class="n">amount</span><span class="p">);</span>
-<span class="ln">28</span>        <span class="n">cash</span> <span class="o">+=</span> <span class="n">amount</span><span class="p">;</span>
-<span class="ln">29</span>        <span class="n">stock</span> <span class="o">-=</span> <span class="n">amount</span><span class="p">;</span>
-<span class="ln">30</span>    <span class="p">}</span>
+<span class="ln">22</span>    <span class="kt">void</span> <span class="nf">sell</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">23</span>        <span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">&gt;</span> <span class="n">stock</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">24</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;You don&#39;t have that much stock to sell!&#34;</span><span class="o">);</span>
+<span class="ln">25</span>            <span class="k">return</span><span class="o">;</span>
+<span class="ln">26</span>        <span class="o">}</span>
+<span class="ln">27</span>        <span class="n">mediator</span><span class="o">.</span><span class="na">sell</span><span class="o">(</span><span class="n">amount</span><span class="o">);</span>
+<span class="ln">28</span>        <span class="n">cash</span> <span class="o">+=</span> <span class="n">amount</span><span class="o">;</span>
+<span class="ln">29</span>        <span class="n">stock</span> <span class="o">-=</span> <span class="n">amount</span><span class="o">;</span>
+<span class="ln">30</span>    <span class="o">}</span>
 <span class="ln">31</span>
 <span class="ln">32</span>    <span class="nd">@Override</span>
-<span class="ln">33</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">33</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
 <span class="ln">34</span>        <span class="k">return</span> <span class="s">&#34;Trader{&#34;</span> <span class="o">+</span>
 <span class="ln">35</span>                <span class="s">&#34;cash=&#34;</span> <span class="o">+</span> <span class="n">cash</span> <span class="o">+</span>
 <span class="ln">36</span>                <span class="s">&#34;, stock=&#34;</span> <span class="o">+</span> <span class="n">stock</span> <span class="o">+</span>
-<span class="ln">37</span>                <span class="sc">&#39;}&#39;</span><span class="p">;</span>
-<span class="ln">38</span>    <span class="p">}</span>
-<span class="ln">39</span><span class="p">}</span></code></pre></div>
+<span class="ln">37</span>                <span class="sc">&#39;}&#39;</span><span class="o">;</span>
+<span class="ln">38</span>    <span class="o">}</span>
+<span class="ln">39</span><span class="o">}</span></code></pre></div>
 <p>Let the game begin:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">TradingSystem</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TradingSystem</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 4</span>        <span class="n">Market</span> <span class="nf">market</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Market</span><span class="p">();</span>
-<span class="ln"> 5</span>        <span class="n">Trader</span> <span class="nf">xiaoMing</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Trader</span><span class="p">(</span><span class="n">market</span><span class="p">,</span> <span class="n">1000</span><span class="p">);</span>
-<span class="ln"> 6</span>        <span class="n">Trader</span> <span class="nf">gouDan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Trader</span><span class="p">(</span><span class="n">market</span><span class="p">,</span> <span class="n">500</span><span class="p">);</span>
-<span class="ln"> 7</span>        <span class="n">Trader</span> <span class="nf">sanMao</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Trader</span><span class="p">(</span><span class="n">market</span><span class="p">,</span> <span class="n">1300</span><span class="p">);</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 4</span>        <span class="n">Market</span> <span class="n">market</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Market</span><span class="o">();</span>
+<span class="ln"> 5</span>        <span class="n">Trader</span> <span class="n">xiaoMing</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Trader</span><span class="o">(</span><span class="n">market</span><span class="o">,</span> <span class="n">1000</span><span class="o">);</span>
+<span class="ln"> 6</span>        <span class="n">Trader</span> <span class="n">gouDan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Trader</span><span class="o">(</span><span class="n">market</span><span class="o">,</span> <span class="n">500</span><span class="o">);</span>
+<span class="ln"> 7</span>        <span class="n">Trader</span> <span class="n">sanMao</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Trader</span><span class="o">(</span><span class="n">market</span><span class="o">,</span> <span class="n">1300</span><span class="o">);</span>
 <span class="ln"> 8</span>
-<span class="ln"> 9</span>        <span class="n">market</span><span class="p">.</span><span class="na">addTrader</span><span class="p">(</span><span class="n">xiaoMing</span><span class="p">);</span>
-<span class="ln">10</span>        <span class="n">market</span><span class="p">.</span><span class="na">addTrader</span><span class="p">(</span><span class="n">gouDan</span><span class="p">);</span>
-<span class="ln">11</span>        <span class="n">market</span><span class="p">.</span><span class="na">addTrader</span><span class="p">(</span><span class="n">sanMao</span><span class="p">);</span>
+<span class="ln"> 9</span>        <span class="n">market</span><span class="o">.</span><span class="na">addTrader</span><span class="o">(</span><span class="n">xiaoMing</span><span class="o">);</span>
+<span class="ln">10</span>        <span class="n">market</span><span class="o">.</span><span class="na">addTrader</span><span class="o">(</span><span class="n">gouDan</span><span class="o">);</span>
+<span class="ln">11</span>        <span class="n">market</span><span class="o">.</span><span class="na">addTrader</span><span class="o">(</span><span class="n">sanMao</span><span class="o">);</span>
 <span class="ln">12</span>
-<span class="ln">13</span>        <span class="n">xiaoMing</span><span class="p">.</span><span class="na">buy</span><span class="p">(</span><span class="n">200</span><span class="p">);</span>
-<span class="ln">14</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">buy</span><span class="p">(</span><span class="n">300</span><span class="p">);</span>
-<span class="ln">15</span>        <span class="n">sanMao</span><span class="p">.</span><span class="na">buy</span><span class="p">(</span><span class="n">500</span><span class="p">);</span>
-<span class="ln">16</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">market</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">17</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">xiaoMing</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">18</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">gouDan</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">19</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sanMao</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="ln">13</span>        <span class="n">xiaoMing</span><span class="o">.</span><span class="na">buy</span><span class="o">(</span><span class="n">200</span><span class="o">);</span>
+<span class="ln">14</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">buy</span><span class="o">(</span><span class="n">300</span><span class="o">);</span>
+<span class="ln">15</span>        <span class="n">sanMao</span><span class="o">.</span><span class="na">buy</span><span class="o">(</span><span class="n">500</span><span class="o">);</span>
+<span class="ln">16</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">market</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">17</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">xiaoMing</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">18</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gouDan</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">19</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sanMao</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
 <span class="ln">20</span>
-<span class="ln">21</span>        <span class="n">gouDan</span><span class="p">.</span><span class="na">sell</span><span class="p">(</span><span class="n">100</span><span class="p">);</span>
-<span class="ln">22</span>        <span class="n">sanMao</span><span class="p">.</span><span class="na">sell</span><span class="p">(</span><span class="n">200</span><span class="p">);</span>
-<span class="ln">23</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-<span class="ln">24</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">market</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">25</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">xiaoMing</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">26</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">gouDan</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">27</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sanMao</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">28</span>    <span class="p">}</span>
-<span class="ln">29</span><span class="p">}</span></code></pre></div>
+<span class="ln">21</span>        <span class="n">gouDan</span><span class="o">.</span><span class="na">sell</span><span class="o">(</span><span class="n">100</span><span class="o">);</span>
+<span class="ln">22</span>        <span class="n">sanMao</span><span class="o">.</span><span class="na">sell</span><span class="o">(</span><span class="n">200</span><span class="o">);</span>
+<span class="ln">23</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="ln">24</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">market</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">25</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">xiaoMing</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">26</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gouDan</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">27</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sanMao</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">28</span>    <span class="o">}</span>
+<span class="ln">29</span><span class="o">}</span></code></pre></div>
 <p>Here is the output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">Market</span><span class="p">{</span><span class="n">value</span><span class="o">=</span><span class="n">9000</span><span class="p">.</span><span class="na">0</span><span class="p">}</span>
-<span class="ln">2</span><span class="n">Trader</span><span class="p">{</span><span class="n">cash</span><span class="o">=</span><span class="n">800</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">200</span><span class="p">.</span><span class="na">0</span><span class="p">}</span>
-<span class="ln">3</span><span class="n">Trader</span><span class="p">{</span><span class="n">cash</span><span class="o">=</span><span class="n">200</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">300</span><span class="p">.</span><span class="na">0</span><span class="p">}</span>
-<span class="ln">4</span><span class="n">Trader</span><span class="p">{</span><span class="n">cash</span><span class="o">=</span><span class="n">800</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">500</span><span class="p">.</span><span class="na">0</span><span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">Market</span><span class="o">{</span><span class="n">value</span><span class="o">=</span><span class="n">9000</span><span class="o">.</span><span class="na">0</span><span class="o">}</span>
+<span class="ln">2</span><span class="n">Trader</span><span class="o">{</span><span class="n">cash</span><span class="o">=</span><span class="n">800</span><span class="o">.</span><span class="na">0</span><span class="o">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">200</span><span class="o">.</span><span class="na">0</span><span class="o">}</span>
+<span class="ln">3</span><span class="n">Trader</span><span class="o">{</span><span class="n">cash</span><span class="o">=</span><span class="n">200</span><span class="o">.</span><span class="na">0</span><span class="o">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">300</span><span class="o">.</span><span class="na">0</span><span class="o">}</span>
+<span class="ln">4</span><span class="n">Trader</span><span class="o">{</span><span class="n">cash</span><span class="o">=</span><span class="n">800</span><span class="o">.</span><span class="na">0</span><span class="o">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">500</span><span class="o">.</span><span class="na">0</span><span class="o">}</span>
 <span class="ln">5</span>
-<span class="ln">6</span><span class="n">Market</span><span class="p">{</span><span class="n">value</span><span class="o">=</span><span class="n">9300</span><span class="p">.</span><span class="na">0</span><span class="p">}</span>
-<span class="ln">7</span><span class="n">Trader</span><span class="p">{</span><span class="n">cash</span><span class="o">=</span><span class="n">800</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">200</span><span class="p">.</span><span class="na">0</span><span class="p">}</span>
-<span class="ln">8</span><span class="n">Trader</span><span class="p">{</span><span class="n">cash</span><span class="o">=</span><span class="n">300</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">200</span><span class="p">.</span><span class="na">0</span><span class="p">}</span>
-<span class="ln">9</span><span class="n">Trader</span><span class="p">{</span><span class="n">cash</span><span class="o">=</span><span class="n">1000</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">300</span><span class="p">.</span><span class="na">0</span><span class="p">}</span></code></pre></div>
+<span class="ln">6</span><span class="n">Market</span><span class="o">{</span><span class="n">value</span><span class="o">=</span><span class="n">9300</span><span class="o">.</span><span class="na">0</span><span class="o">}</span>
+<span class="ln">7</span><span class="n">Trader</span><span class="o">{</span><span class="n">cash</span><span class="o">=</span><span class="n">800</span><span class="o">.</span><span class="na">0</span><span class="o">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">200</span><span class="o">.</span><span class="na">0</span><span class="o">}</span>
+<span class="ln">8</span><span class="n">Trader</span><span class="o">{</span><span class="n">cash</span><span class="o">=</span><span class="n">300</span><span class="o">.</span><span class="na">0</span><span class="o">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">200</span><span class="o">.</span><span class="na">0</span><span class="o">}</span>
+<span class="ln">9</span><span class="n">Trader</span><span class="o">{</span><span class="n">cash</span><span class="o">=</span><span class="n">1000</span><span class="o">.</span><span class="na">0</span><span class="o">,</span> <span class="n">stock</span><span class="o">=</span><span class="n">300</span><span class="o">.</span><span class="na">0</span><span class="o">}</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -642,7 +643,7 @@ Individual investors do not talk to other tradres directly, instead they interac
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

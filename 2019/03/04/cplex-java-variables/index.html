@@ -21,14 +21,14 @@ Although variables are key components of a mathematical model, Cplex does not pr
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@ Although variables are key components of a mathematical model, Cplex does not pr
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2019\/03\/04\/cplex-java-variables\/",
+          "@id": "https://kunlei.github.io/2019/03/04/cplex-java-variables/",
           "name": "Cplex java concert technology variables"
         }
     }]
@@ -63,20 +63,21 @@ Although variables are key components of a mathematical model, Cplex does not pr
     "name" : "Kunlei Lian"
   },
   "headline": "Cplex Java Concert Technology - Variables",
-  "description" : "Cplex provides three types of decision variables, which are defined by class IloNumVarType. There are two key information about a variable: bound and type, the former can be changed after a variable is created, but the latter remains the same throughout the lifetime of the object. Also, a variable bound consists of lower bound and upper bound, defined by class IloNumVarBoundType.\nAlthough variables are key components of a mathematical model, Cplex does not provide function to explicitly add variables to a model, instead, variables are added implicitly.",
+  "description" : "Cplex provides three types of decision variables, which are defined by class IloNumVarType. There are two key information about a variable: bound and type, the former can be changed after a variable is created, but the latter remains the same throughout the lifetime of the object. Also, a variable bound consists of lower bound and upper bound, defined by class IloNumVarBoundType.
+Although variables are key components of a mathematical model, Cplex does not provide function to explicitly add variables to a model, instead, variables are added implicitly.",
   "inLanguage" : "en",
-  "wordCount":  833 ,
+  "wordCount": 833,
   "datePublished" : "2019-03-04T00:00:00",
   "dateModified" : "2019-03-04T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "cplex, Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2019\/03\/04\/cplex-java-variables\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/2019/03/04/cplex-java-variables/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +105,7 @@ Although variables are key components of a mathematical model, Cplex does not pr
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -472,48 +473,48 @@ Let&rsquo;s look individually how each variable is created.</p>
 This post examines at how this class is defined, and how objects of this class are created using concert technology.</p>
 
 <p>Initially I thought <strong>IloNumVarType</strong> was implemented using as enumeration, something like below:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">enum</span> <span class="n">VarType</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="n">AAA</span><span class="p">(</span><span class="n">0</span><span class="p">,</span> <span class="s">&#34;AAA&#34;</span><span class="p">);</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">enum</span> <span class="n">VarType</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="n">AAA</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="s">&#34;AAA&#34;</span><span class="o">);</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln"> 5</span>    <span class="kd">private</span> <span class="nf">int</span> <span class="n">value</span><span class="p">;</span>
+<span class="ln"> 4</span>    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+<span class="ln"> 5</span>    <span class="kd">private</span> <span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
 <span class="ln"> 6</span>
-<span class="ln"> 7</span>    <span class="n">VarType</span><span class="p">(</span><span class="kt">int</span> <span class="nf">value</span><span class="p">,</span> <span class="n">String</span> <span class="nf">name</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 8</span>        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln"> 9</span>        <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
-<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln"> 7</span>    <span class="n">VarType</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">,</span> <span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 8</span>        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+<span class="ln"> 9</span>        <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+<span class="ln">10</span>    <span class="o">}</span>
 <span class="ln">11</span>
-<span class="ln">12</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">13</span>        <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln">14</span>    <span class="p">}</span>
+<span class="ln">12</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">13</span>        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+<span class="ln">14</span>    <span class="o">}</span>
 <span class="ln">15</span>
-<span class="ln">16</span>    <span class="kd">public</span> <span class="nf">int</span> <span class="n">getValue</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">17</span>        <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
-<span class="ln">18</span>    <span class="p">}</span>
-<span class="ln">19</span><span class="p">}</span></code></pre></div>
+<span class="ln">16</span>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getValue</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">17</span>        <span class="k">return</span> <span class="n">value</span><span class="o">;</span>
+<span class="ln">18</span>    <span class="o">}</span>
+<span class="ln">19</span><span class="o">}</span></code></pre></div>
 <p>Surprisingly, it was actually implemented using abstract class with static final fields.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">abstract</span> <span class="kd">class</span> <span class="nf">VarType</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kd">final</span> <span class="nf">VarType</span> <span class="n">AAA</span> <span class="o">=</span> <span class="k">new</span> <span class="n">_AAA</span><span class="p">();</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">VarType</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">VarType</span> <span class="n">AAA</span> <span class="o">=</span> <span class="k">new</span> <span class="n">_AAA</span><span class="o">();</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">VarType</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 5</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">VarType</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 5</span>    <span class="o">}</span>
 <span class="ln"> 6</span>
-<span class="ln"> 7</span>    <span class="kd">public</span> <span class="nf">abstract</span> <span class="kt">int</span> <span class="nf">getTypeValue</span><span class="p">();</span>
+<span class="ln"> 7</span>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">int</span> <span class="nf">getTypeValue</span><span class="o">();</span>
 <span class="ln"> 8</span>
-<span class="ln"> 9</span>    <span class="kd">private</span> <span class="nf">static</span> <span class="kd">class</span> <span class="nf">_AAA</span> <span class="kd">extends</span> <span class="nf">VarType</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="kd">private</span>  <span class="nf">_AAA</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">11</span>        <span class="p">}</span>
+<span class="ln"> 9</span>    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">_AAA</span> <span class="kd">extends</span> <span class="n">VarType</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="kd">private</span>  <span class="nf">_AAA</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">11</span>        <span class="o">}</span>
 <span class="ln">12</span>
-<span class="ln">13</span>        <span class="kd">public</span> <span class="nf">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">14</span>            <span class="k">return</span> <span class="s">&#34;AAA&#34;</span><span class="p">;</span>
-<span class="ln">15</span>        <span class="p">}</span>
+<span class="ln">13</span>        <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">14</span>            <span class="k">return</span> <span class="s">&#34;AAA&#34;</span><span class="o">;</span>
+<span class="ln">15</span>        <span class="o">}</span>
 <span class="ln">16</span>
 <span class="ln">17</span>        <span class="nd">@Override</span>
-<span class="ln">18</span>        <span class="kd">public</span> <span class="nf">int</span> <span class="n">getTypeValue</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">19</span>            <span class="k">return</span> <span class="n">0</span><span class="p">;</span>
-<span class="ln">20</span>        <span class="p">}</span>
-<span class="ln">21</span>    <span class="p">}</span>
-<span class="ln">22</span><span class="p">}</span></code></pre></div>
+<span class="ln">18</span>        <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTypeValue</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">19</span>            <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
+<span class="ln">20</span>        <span class="o">}</span>
+<span class="ln">21</span>    <span class="o">}</span>
+<span class="ln">22</span><span class="o">}</span></code></pre></div>
 <p>As I think about it now, it seems the intention is to only expose interface, instead of implementation, to users, just like other interfaces defined in the concert package.
 Two other enumeration-like classes also use this strategy:</p>
 
@@ -606,7 +607,7 @@ Two other enumeration-like classes also use this strategy:</p>
           
             <li><a href="/1/01/01/adapter/">Adapter Pattern</a></li>
           
-            <li><a href="/1/01/01/bridge/">Bridge Pattern</a></li>
+            <li><a href="/1/01/01/command-pattern/">Command Pattern</a></li>
           
           </ul>
           
@@ -712,7 +713,7 @@ Two other enumeration-like classes also use this strategy:</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

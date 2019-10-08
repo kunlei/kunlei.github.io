@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Excel on O.R. in Action</title>
+    <link>https://kunlei.github.io/tags/excel/</link>
+    <description>Recent content in Excel on O.R. in Action</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
+    <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
+    <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kunlei.github.io/tags/excel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Apache POI - Excel</title>
+      <link>https://kunlei.github.io/2019/04/02/tutorial1/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/04/02/tutorial1/</guid>
+      <description>I recently worked on a project that required me to interact with Microsoft Excel to obtain input data and present optimization results. It turns out that there is a great package for that purpose and all you need to do is include the following dependencies in the Java project .pom file:
+1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;org.apache.poi&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;poi&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.17&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; 6 7&amp;lt;dependency&amp;gt; 8 &amp;lt;groupId&amp;gt;org.apache.poi&amp;lt;/groupId&amp;gt; 9 &amp;lt;artifactId&amp;gt;poi-ooxml&amp;lt;/artifactId&amp;gt; 10 &amp;lt;version&amp;gt;3.17&amp;lt;/version&amp;gt; 11&amp;lt;/dependency&amp;gt; There are things I do most frequently in my project:</description>
+    </item>
+    
+  </channel>
+</rss>

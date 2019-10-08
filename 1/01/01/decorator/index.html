@@ -21,14 +21,14 @@ Let&rsquo;s see how we can use it in real life. Suppose we go to a restaurant an
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@ Let&rsquo;s see how we can use it in real life. Suppose we go to a restaurant an
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/decorator\/",
+          "@id": "https://kunlei.github.io/1/01/01/decorator/",
           "name": "Decorator pattern"
         }
     }]
@@ -63,20 +63,21 @@ Let&rsquo;s see how we can use it in real life. Suppose we go to a restaurant an
     "name" : "Kunlei Lian"
   },
   "headline": "Decorator Pattern",
-  "description" : "Decorator Pattern is one of the structural design patterns that are popularized by the original GoF book. According to WikiPedia, it \x26ldquo;allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class\x26rdquo;.\nLet\x26rsquo;s see how we can use it in real life. Suppose we go to a restaurant and order either chicken or pork and we can also order soup or noodle on top of the main menu.",
+  "description" : "Decorator Pattern is one of the structural design patterns that are popularized by the original GoF book. According to WikiPedia, it &amp;ldquo;allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class&amp;rdquo;.
+Let&amp;rsquo;s see how we can use it in real life. Suppose we go to a restaurant and order either chicken or pork and we can also order soup or noodle on top of the main menu.",
   "inLanguage" : "en",
-  "wordCount":  415 ,
+  "wordCount": 415,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/decorator\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/decorator/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +105,7 @@ Let&rsquo;s see how we can use it in real life. Suppose we go to a restaurant an
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -337,91 +338,91 @@ According to WikiPedia, it &ldquo;allows behavior to be added to an individual o
 <p>Let&rsquo;s see how we can use it in real life.
 Suppose we go to a restaurant and order either chicken or pork and we can also order soup or noodle on top of the main menu.
 We can define an abstract class for chicken and pork:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">abstract</span> <span class="kd">class</span> <span class="nf">Food</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kd">protected</span> <span class="nf">String</span> <span class="n">name</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Food</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kd">protected</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
 <span class="ln">3</span>
-<span class="ln">4</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">5</span>        <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln">6</span>    <span class="p">}</span>
+<span class="ln">4</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">5</span>        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+<span class="ln">6</span>    <span class="o">}</span>
 <span class="ln">7</span>
-<span class="ln">8</span>    <span class="kd">public</span> <span class="nf">abstract</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="p">();</span>
-<span class="ln">9</span><span class="p">}</span></code></pre></div>
+<span class="ln">8</span>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="o">();</span>
+<span class="ln">9</span><span class="o">}</span></code></pre></div>
 <p>And we define a decorator class for all addon items:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">abstract</span> <span class="kd">class</span> <span class="nf">FoodDecorator</span> <span class="kd">extends</span> <span class="nf">Food</span> <span class="p">{</span>
-<span class="ln">2</span>    <span class="kd">public</span> <span class="nf">abstract</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">();</span>
-<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">FoodDecorator</span> <span class="kd">extends</span> <span class="n">Food</span> <span class="o">{</span>
+<span class="ln">2</span>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">();</span>
+<span class="ln">3</span><span class="o">}</span></code></pre></div>
 <p>Here are the implementations:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Chicken</span> <span class="nf">extends</span> <span class="n">Food</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Chicken</span> <span class="kd">extends</span> <span class="n">Food</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Chicken</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 4</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;chicken&#34;</span><span class="p">;</span>
-<span class="ln"> 5</span>    <span class="p">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Chicken</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 4</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;chicken&#34;</span><span class="o">;</span>
+<span class="ln"> 5</span>    <span class="o">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">double</span> <span class="n">getPrice</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 9</span>        <span class="k">return</span> <span class="n">3</span><span class="p">.</span><span class="na">5</span><span class="p">;</span>
-<span class="ln">10</span>    <span class="p">}</span>
-<span class="ln">11</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Pork</span> <span class="nf">extends</span> <span class="n">Food</span> <span class="p">{</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 9</span>        <span class="k">return</span> <span class="n">3</span><span class="o">.</span><span class="na">5</span><span class="o">;</span>
+<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln">11</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pork</span> <span class="kd">extends</span> <span class="n">Food</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Pork</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 4</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Pork&#34;</span><span class="p">;</span>
-<span class="ln"> 5</span>    <span class="p">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Pork</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 4</span>        <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Pork&#34;</span><span class="o">;</span>
+<span class="ln"> 5</span>    <span class="o">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">double</span> <span class="n">getPrice</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 9</span>        <span class="k">return</span> <span class="n">2</span><span class="p">.</span><span class="na">2</span><span class="p">;</span>
-<span class="ln">10</span>    <span class="p">}</span>
-<span class="ln">11</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Soup</span> <span class="nf">extends</span> <span class="n">FoodDecorator</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Food</span> <span class="n">food</span><span class="p">;</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 9</span>        <span class="k">return</span> <span class="n">2</span><span class="o">.</span><span class="na">2</span><span class="o">;</span>
+<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln">11</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Soup</span> <span class="kd">extends</span> <span class="n">FoodDecorator</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Food</span> <span class="n">food</span><span class="o">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">Soup</span><span class="p">(</span><span class="n">Food</span> <span class="nf">food</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">food</span> <span class="o">=</span> <span class="n">food</span><span class="p">;</span>
-<span class="ln"> 6</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">Soup</span><span class="o">(</span><span class="n">Food</span> <span class="n">food</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">food</span> <span class="o">=</span> <span class="n">food</span><span class="o">;</span>
+<span class="ln"> 6</span>    <span class="o">}</span>
 <span class="ln"> 7</span>
 <span class="ln"> 8</span>    <span class="nd">@Override</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="k">return</span> <span class="n">food</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#34; + soup&#34;</span><span class="p">;</span>
-<span class="ln">11</span>    <span class="p">}</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="k">return</span> <span class="n">food</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34; + soup&#34;</span><span class="o">;</span>
+<span class="ln">11</span>    <span class="o">}</span>
 <span class="ln">12</span>
 <span class="ln">13</span>    <span class="nd">@Override</span>
-<span class="ln">14</span>    <span class="kd">public</span> <span class="nf">double</span> <span class="n">getPrice</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">15</span>        <span class="k">return</span> <span class="n">1</span><span class="p">.</span><span class="na">1</span> <span class="o">+</span> <span class="n">food</span><span class="p">.</span><span class="na">getPrice</span><span class="p">();</span>
-<span class="ln">16</span>    <span class="p">}</span>
-<span class="ln">17</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Noodle</span> <span class="nf">extends</span> <span class="n">FoodDecorator</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Food</span> <span class="n">food</span><span class="p">;</span>
+<span class="ln">14</span>    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">15</span>        <span class="k">return</span> <span class="n">1</span><span class="o">.</span><span class="na">1</span> <span class="o">+</span> <span class="n">food</span><span class="o">.</span><span class="na">getPrice</span><span class="o">();</span>
+<span class="ln">16</span>    <span class="o">}</span>
+<span class="ln">17</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Noodle</span> <span class="kd">extends</span> <span class="n">FoodDecorator</span> <span class="o">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Food</span> <span class="n">food</span><span class="o">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">Noodle</span><span class="p">(</span><span class="n">Food</span> <span class="nf">food</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">food</span> <span class="o">=</span> <span class="n">food</span><span class="p">;</span>
-<span class="ln"> 6</span>    <span class="p">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">Noodle</span><span class="o">(</span><span class="n">Food</span> <span class="n">food</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">food</span> <span class="o">=</span> <span class="n">food</span><span class="o">;</span>
+<span class="ln"> 6</span>    <span class="o">}</span>
 <span class="ln"> 7</span>
 <span class="ln"> 8</span>    <span class="nd">@Override</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="k">return</span> <span class="n">food</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#34; + noodle&#34;</span><span class="p">;</span>
-<span class="ln">11</span>    <span class="p">}</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="k">return</span> <span class="n">food</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34; + noodle&#34;</span><span class="o">;</span>
+<span class="ln">11</span>    <span class="o">}</span>
 <span class="ln">12</span>
 <span class="ln">13</span>    <span class="nd">@Override</span>
-<span class="ln">14</span>    <span class="kd">public</span> <span class="nf">double</span> <span class="n">getPrice</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">15</span>        <span class="k">return</span> <span class="n">0</span><span class="p">.</span><span class="na">8</span> <span class="o">+</span> <span class="n">food</span><span class="p">.</span><span class="na">getPrice</span><span class="p">();</span>
-<span class="ln">16</span>    <span class="p">}</span>
-<span class="ln">17</span><span class="p">}</span></code></pre></div>
+<span class="ln">14</span>    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">15</span>        <span class="k">return</span> <span class="n">0</span><span class="o">.</span><span class="na">8</span> <span class="o">+</span> <span class="n">food</span><span class="o">.</span><span class="na">getPrice</span><span class="o">();</span>
+<span class="ln">16</span>    <span class="o">}</span>
+<span class="ln">17</span><span class="o">}</span></code></pre></div>
 <p>Let&rsquo;s run a demo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">DecoratorDemo</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DecoratorDemo</span> <span class="o">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 4</span>        <span class="n">Food</span> <span class="nf">chicken</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Chicken</span><span class="p">();</span>
-<span class="ln"> 5</span>        <span class="n">Food</span> <span class="nf">pork</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pork</span><span class="p">();</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 4</span>        <span class="n">Food</span> <span class="n">chicken</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Chicken</span><span class="o">();</span>
+<span class="ln"> 5</span>        <span class="n">Food</span> <span class="n">pork</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pork</span><span class="o">();</span>
 <span class="ln"> 6</span>
-<span class="ln"> 7</span>        <span class="n">Food</span> <span class="nf">chickenWithSoup</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Soup</span><span class="p">(</span><span class="n">chicken</span><span class="p">);</span>
-<span class="ln"> 8</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;menu name = &#34;</span> <span class="o">+</span> <span class="n">chickenWithSoup</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#34; : price = &#34;</span> <span class="o">+</span> <span class="n">chickenWithSoup</span><span class="p">.</span><span class="na">getPrice</span><span class="p">());</span>
+<span class="ln"> 7</span>        <span class="n">Food</span> <span class="n">chickenWithSoup</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Soup</span><span class="o">(</span><span class="n">chicken</span><span class="o">);</span>
+<span class="ln"> 8</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;menu name = &#34;</span> <span class="o">+</span> <span class="n">chickenWithSoup</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34; : price = &#34;</span> <span class="o">+</span> <span class="n">chickenWithSoup</span><span class="o">.</span><span class="na">getPrice</span><span class="o">());</span>
 <span class="ln"> 9</span>
-<span class="ln">10</span>        <span class="n">Food</span> <span class="nf">porkWithSoupAndNoodle</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Noodle</span><span class="p">(</span><span class="k">new</span> <span class="n">Soup</span><span class="p">(</span><span class="n">pork</span><span class="p">));</span>
-<span class="ln">11</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;menu name = &#34;</span> <span class="o">+</span> <span class="n">porkWithSoupAndNoodle</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#34; : price = &#34;</span> <span class="o">+</span> <span class="n">porkWithSoupAndNoodle</span><span class="p">.</span><span class="na">getPrice</span><span class="p">());</span>
+<span class="ln">10</span>        <span class="n">Food</span> <span class="n">porkWithSoupAndNoodle</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Noodle</span><span class="o">(</span><span class="k">new</span> <span class="n">Soup</span><span class="o">(</span><span class="n">pork</span><span class="o">));</span>
+<span class="ln">11</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;menu name = &#34;</span> <span class="o">+</span> <span class="n">porkWithSoupAndNoodle</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34; : price = &#34;</span> <span class="o">+</span> <span class="n">porkWithSoupAndNoodle</span><span class="o">.</span><span class="na">getPrice</span><span class="o">());</span>
 <span class="ln">12</span>
-<span class="ln">13</span>    <span class="p">}</span>
-<span class="ln">14</span><span class="p">}</span></code></pre></div>
+<span class="ln">13</span>    <span class="o">}</span>
+<span class="ln">14</span><span class="o">}</span></code></pre></div>
 <p>and below are the results:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">menu</span> <span class="nf">name</span> <span class="o">=</span> <span class="n">chicken</span> <span class="o">+</span> <span class="n">soup</span> <span class="o">:</span> <span class="n">price</span> <span class="o">=</span> <span class="n">4</span><span class="p">.</span><span class="na">6</span>
-<span class="ln">2</span><span class="nf">menu</span> <span class="n">name</span> <span class="o">=</span> <span class="n">Pork</span> <span class="o">+</span> <span class="n">soup</span> <span class="o">+</span> <span class="n">noodle</span> <span class="o">:</span> <span class="n">price</span> <span class="o">=</span> <span class="n">4</span><span class="p">.</span><span class="na">1000000000000005</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">menu</span> <span class="n">name</span> <span class="o">=</span> <span class="n">chicken</span> <span class="o">+</span> <span class="n">soup</span> <span class="o">:</span> <span class="n">price</span> <span class="o">=</span> <span class="n">4</span><span class="o">.</span><span class="na">6</span>
+<span class="ln">2</span><span class="n">menu</span> <span class="n">name</span> <span class="o">=</span> <span class="n">Pork</span> <span class="o">+</span> <span class="n">soup</span> <span class="o">+</span> <span class="n">noodle</span> <span class="o">:</span> <span class="n">price</span> <span class="o">=</span> <span class="n">4</span><span class="o">.</span><span class="na">1000000000000005</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -610,7 +611,7 @@ We can define an abstract class for chicken and pork:</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

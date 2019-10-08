@@ -21,14 +21,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/memento\/",
+          "@id": "https://kunlei.github.io/1/01/01/memento/",
           "name": "Memento pattern"
         }
     }]
@@ -63,20 +63,21 @@
     "name" : "Kunlei Lian"
   },
   "headline": "Memento Pattern",
-  "description" : "Memento Pattern is one of the behavioral design patterns defined in the original GoF book. It is useful when we need to save the state of an object and restore it to a saved state at a later time. There are three components in this pattern:\n Originator: this is the class whose state needs to be saved and restored. Memento: this is the class used to capture the state of the originator.",
+  "description" : "Memento Pattern is one of the behavioral design patterns defined in the original GoF book. It is useful when we need to save the state of an object and restore it to a saved state at a later time. There are three components in this pattern:
+ Originator: this is the class whose state needs to be saved and restored. Memento: this is the class used to capture the state of the originator.",
   "inLanguage" : "en",
-  "wordCount":  626 ,
+  "wordCount": 626,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/memento\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/memento/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +105,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -352,101 +353,101 @@ Our car installs a switch which allows adjustment of driver seat, a pretty nice 
 </span><span class="ln"> 2</span><span class="cm"> * Originator
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">DriverSeat</span> <span class="p">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">position</span><span class="p">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DriverSeat</span> <span class="o">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">String</span> <span class="n">position</span><span class="o">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">DriverSeat</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 9</span>    <span class="p">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">DriverSeat</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 9</span>    <span class="o">}</span>
 <span class="ln">10</span>
-<span class="ln">11</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setPosition</span><span class="p">(</span><span class="n">String</span> <span class="nf">position</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">12</span>        <span class="k">this</span><span class="p">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">position</span><span class="p">;</span>
-<span class="ln">13</span>    <span class="p">}</span>
+<span class="ln">11</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPosition</span><span class="o">(</span><span class="n">String</span> <span class="n">position</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">12</span>        <span class="k">this</span><span class="o">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">position</span><span class="o">;</span>
+<span class="ln">13</span>    <span class="o">}</span>
 <span class="ln">14</span>
 <span class="ln">15</span>    <span class="cm">/**
 </span><span class="ln">16</span><span class="cm">     * Create position memento based on current position
 </span><span class="ln">17</span><span class="cm">     * @return new memento object
 </span><span class="ln">18</span><span class="cm">     */</span>
-<span class="ln">19</span>    <span class="kd">public</span> <span class="nf">Memento</span> <span class="n">createMemento</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">20</span>        <span class="k">return</span> <span class="k">new</span> <span class="n">Memento</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
-<span class="ln">21</span>    <span class="p">}</span>
+<span class="ln">19</span>    <span class="kd">public</span> <span class="n">Memento</span> <span class="nf">createMemento</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">20</span>        <span class="k">return</span> <span class="k">new</span> <span class="n">Memento</span><span class="o">(</span><span class="n">position</span><span class="o">);</span>
+<span class="ln">21</span>    <span class="o">}</span>
 <span class="ln">22</span>
 <span class="ln">23</span>    <span class="cm">/**
 </span><span class="ln">24</span><span class="cm">     * Restore to given position saved in memento
 </span><span class="ln">25</span><span class="cm">     * @param memento input memento
 </span><span class="ln">26</span><span class="cm">     */</span>
-<span class="ln">27</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setMemento</span><span class="p">(</span><span class="n">Memento</span> <span class="nf">memento</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">28</span>        <span class="k">this</span><span class="p">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">memento</span><span class="p">.</span><span class="na">getPosition</span><span class="p">();</span>
-<span class="ln">29</span>    <span class="p">}</span>
+<span class="ln">27</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setMemento</span><span class="o">(</span><span class="n">Memento</span> <span class="n">memento</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">28</span>        <span class="k">this</span><span class="o">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">memento</span><span class="o">.</span><span class="na">getPosition</span><span class="o">();</span>
+<span class="ln">29</span>    <span class="o">}</span>
 <span class="ln">30</span>
 <span class="ln">31</span>    <span class="nd">@Override</span>
-<span class="ln">32</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">32</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
 <span class="ln">33</span>        <span class="k">return</span> <span class="s">&#34;DriverSeat{&#34;</span> <span class="o">+</span>
 <span class="ln">34</span>                <span class="s">&#34;position=&#39;&#34;</span> <span class="o">+</span> <span class="n">position</span> <span class="o">+</span> <span class="sc">&#39;\&#39;&#39;</span> <span class="o">+</span>
-<span class="ln">35</span>                <span class="sc">&#39;}&#39;</span><span class="p">;</span>
-<span class="ln">36</span>    <span class="p">}</span>
-<span class="ln">37</span><span class="p">}</span></code></pre></div>
+<span class="ln">35</span>                <span class="sc">&#39;}&#39;</span><span class="o">;</span>
+<span class="ln">36</span>    <span class="o">}</span>
+<span class="ln">37</span><span class="o">}</span></code></pre></div>
 <p>We also need a class to save a snapshot of the DriverSeat class per user request:</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Memento
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Memento</span> <span class="p">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">position</span><span class="p">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Memento</span> <span class="o">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">String</span> <span class="n">position</span><span class="o">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">Memento</span><span class="p">(</span><span class="n">String</span> <span class="nf">position</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 9</span>        <span class="k">this</span><span class="p">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">position</span><span class="p">;</span>
-<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">Memento</span><span class="o">(</span><span class="n">String</span> <span class="n">position</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln"> 9</span>        <span class="k">this</span><span class="o">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">position</span><span class="o">;</span>
+<span class="ln">10</span>    <span class="o">}</span>
 <span class="ln">11</span>
-<span class="ln">12</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">getPosition</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">13</span>        <span class="k">return</span> <span class="n">position</span><span class="p">;</span>
-<span class="ln">14</span>    <span class="p">}</span>
-<span class="ln">15</span><span class="p">}</span></code></pre></div>
+<span class="ln">12</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getPosition</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">13</span>        <span class="k">return</span> <span class="n">position</span><span class="o">;</span>
+<span class="ln">14</span>    <span class="o">}</span>
+<span class="ln">15</span><span class="o">}</span></code></pre></div>
 <p>The class below simulates part of the car&rsquo;s internal system to save user-defined seat positions, which also includes a demo of the pattern.</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Caretaker
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Caretaker</span> <span class="p">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Memento</span><span class="o">&gt;</span> <span class="nf">positions</span><span class="p">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Caretaker</span> <span class="o">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Memento</span><span class="o">&gt;</span> <span class="n">positions</span><span class="o">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">Caretaker</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 9</span>        <span class="n">positions</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">Caretaker</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln"> 9</span>        <span class="n">positions</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="ln">10</span>    <span class="o">}</span>
 <span class="ln">11</span>
-<span class="ln">12</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">savePosition</span><span class="p">(</span><span class="kt">int</span> <span class="nf">posId</span><span class="p">,</span> <span class="n">Memento</span> <span class="nf">memento</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">13</span>        <span class="n">positions</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">posId</span><span class="p">,</span> <span class="n">memento</span><span class="p">);</span>
-<span class="ln">14</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;DriverSeat position = &#34;</span> <span class="o">+</span> <span class="n">posId</span> <span class="o">+</span> <span class="s">&#34; state = \&#34;&#34;</span> <span class="o">+</span> <span class="n">memento</span><span class="p">.</span><span class="na">getPosition</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#34;\&#34; saved!&#34;</span><span class="p">);</span>
-<span class="ln">15</span>    <span class="p">}</span>
+<span class="ln">12</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">savePosition</span><span class="o">(</span><span class="kt">int</span> <span class="n">posId</span><span class="o">,</span> <span class="n">Memento</span> <span class="n">memento</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">13</span>        <span class="n">positions</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">posId</span><span class="o">,</span> <span class="n">memento</span><span class="o">);</span>
+<span class="ln">14</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;DriverSeat position = &#34;</span> <span class="o">+</span> <span class="n">posId</span> <span class="o">+</span> <span class="s">&#34; state = \&#34;&#34;</span> <span class="o">+</span> <span class="n">memento</span><span class="o">.</span><span class="na">getPosition</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34;\&#34; saved!&#34;</span><span class="o">);</span>
+<span class="ln">15</span>    <span class="o">}</span>
 <span class="ln">16</span>
-<span class="ln">17</span>    <span class="kd">public</span> <span class="nf">Memento</span> <span class="n">getPosition</span><span class="p">(</span><span class="kt">int</span> <span class="nf">posId</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">18</span>        <span class="k">return</span> <span class="n">positions</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">posId</span><span class="p">);</span>
-<span class="ln">19</span>    <span class="p">}</span>
+<span class="ln">17</span>    <span class="kd">public</span> <span class="n">Memento</span> <span class="nf">getPosition</span><span class="o">(</span><span class="kt">int</span> <span class="n">posId</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">18</span>        <span class="k">return</span> <span class="n">positions</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">posId</span><span class="o">);</span>
+<span class="ln">19</span>    <span class="o">}</span>
 <span class="ln">20</span>
-<span class="ln">21</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">22</span>        <span class="n">DriverSeat</span> <span class="nf">driverSeat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DriverSeat</span><span class="p">();</span>
-<span class="ln">23</span>        <span class="n">Caretaker</span> <span class="nf">caretaker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Caretaker</span><span class="p">();</span>
+<span class="ln">21</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">22</span>        <span class="n">DriverSeat</span> <span class="n">driverSeat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DriverSeat</span><span class="o">();</span>
+<span class="ln">23</span>        <span class="n">Caretaker</span> <span class="n">caretaker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Caretaker</span><span class="o">();</span>
 <span class="ln">24</span>
 <span class="ln">25</span>        <span class="c1">// create first seat memento
-</span><span class="ln">26</span><span class="c1"></span>        <span class="n">driverSeat</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="s">&#34;User Position 1&#34;</span><span class="p">);</span>
-<span class="ln">27</span>        <span class="n">caretaker</span><span class="p">.</span><span class="na">savePosition</span><span class="p">(</span><span class="n">1</span><span class="p">,</span> <span class="n">driverSeat</span><span class="p">.</span><span class="na">createMemento</span><span class="p">());</span>
+</span><span class="ln">26</span><span class="c1"></span>        <span class="n">driverSeat</span><span class="o">.</span><span class="na">setPosition</span><span class="o">(</span><span class="s">&#34;User Position 1&#34;</span><span class="o">);</span>
+<span class="ln">27</span>        <span class="n">caretaker</span><span class="o">.</span><span class="na">savePosition</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">driverSeat</span><span class="o">.</span><span class="na">createMemento</span><span class="o">());</span>
 <span class="ln">28</span>
 <span class="ln">29</span>        <span class="c1">// create second seat memento
-</span><span class="ln">30</span><span class="c1"></span>        <span class="n">driverSeat</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="s">&#34;User Position 2&#34;</span><span class="p">);</span>
-<span class="ln">31</span>        <span class="n">caretaker</span><span class="p">.</span><span class="na">savePosition</span><span class="p">(</span><span class="n">2</span><span class="p">,</span> <span class="n">driverSeat</span><span class="p">.</span><span class="na">createMemento</span><span class="p">());</span>
+</span><span class="ln">30</span><span class="c1"></span>        <span class="n">driverSeat</span><span class="o">.</span><span class="na">setPosition</span><span class="o">(</span><span class="s">&#34;User Position 2&#34;</span><span class="o">);</span>
+<span class="ln">31</span>        <span class="n">caretaker</span><span class="o">.</span><span class="na">savePosition</span><span class="o">(</span><span class="n">2</span><span class="o">,</span> <span class="n">driverSeat</span><span class="o">.</span><span class="na">createMemento</span><span class="o">());</span>
 <span class="ln">32</span>
 <span class="ln">33</span>        <span class="c1">// restore to designated user position
-</span><span class="ln">34</span><span class="c1"></span>        <span class="n">driverSeat</span><span class="p">.</span><span class="na">setMemento</span><span class="p">(</span><span class="n">caretaker</span><span class="p">.</span><span class="na">getPosition</span><span class="p">(</span><span class="n">1</span><span class="p">));</span>
-<span class="ln">35</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">driverSeat</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</span><span class="ln">34</span><span class="c1"></span>        <span class="n">driverSeat</span><span class="o">.</span><span class="na">setMemento</span><span class="o">(</span><span class="n">caretaker</span><span class="o">.</span><span class="na">getPosition</span><span class="o">(</span><span class="n">1</span><span class="o">));</span>
+<span class="ln">35</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">driverSeat</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
 <span class="ln">36</span>
-<span class="ln">37</span>        <span class="n">driverSeat</span><span class="p">.</span><span class="na">setMemento</span><span class="p">(</span><span class="n">caretaker</span><span class="p">.</span><span class="na">getPosition</span><span class="p">(</span><span class="n">2</span><span class="p">));</span>
-<span class="ln">38</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">driverSeat</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="ln">39</span>    <span class="p">}</span>
-<span class="ln">40</span><span class="p">}</span></code></pre></div>
+<span class="ln">37</span>        <span class="n">driverSeat</span><span class="o">.</span><span class="na">setMemento</span><span class="o">(</span><span class="n">caretaker</span><span class="o">.</span><span class="na">getPosition</span><span class="o">(</span><span class="n">2</span><span class="o">));</span>
+<span class="ln">38</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">driverSeat</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="ln">39</span>    <span class="o">}</span>
+<span class="ln">40</span><span class="o">}</span></code></pre></div>
 <p>Simulation results:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">DriverSeat</span> <span class="nf">position</span> <span class="o">=</span> <span class="n">1</span> <span class="nf">state</span> <span class="o">=</span> <span class="s">&#34;User Position 1&#34;</span> <span class="n">saved</span><span class="o">!</span>
-<span class="ln">2</span><span class="n">DriverSeat</span> <span class="nf">position</span> <span class="o">=</span> <span class="n">2</span> <span class="nf">state</span> <span class="o">=</span> <span class="s">&#34;User Position 2&#34;</span> <span class="n">saved</span><span class="o">!</span>
-<span class="ln">3</span><span class="n">DriverSeat</span><span class="p">{</span><span class="n">position</span><span class="o">=</span><span class="err">&#39;</span><span class="n">User</span> <span class="nf">Position</span> <span class="n">1</span><span class="err">&#39;</span><span class="p">}</span>
-<span class="ln">4</span><span class="n">DriverSeat</span><span class="p">{</span><span class="n">position</span><span class="o">=</span><span class="err">&#39;</span><span class="n">User</span> <span class="nf">Position</span> <span class="n">2</span><span class="err">&#39;</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">DriverSeat</span> <span class="n">position</span> <span class="o">=</span> <span class="n">1</span> <span class="n">state</span> <span class="o">=</span> <span class="s">&#34;User Position 1&#34;</span> <span class="n">saved</span><span class="o">!</span>
+<span class="ln">2</span><span class="n">DriverSeat</span> <span class="n">position</span> <span class="o">=</span> <span class="n">2</span> <span class="n">state</span> <span class="o">=</span> <span class="s">&#34;User Position 2&#34;</span> <span class="n">saved</span><span class="o">!</span>
+<span class="ln">3</span><span class="n">DriverSeat</span><span class="o">{</span><span class="n">position</span><span class="o">=</span><span class="err">&#39;</span><span class="n">User</span> <span class="n">Position</span> <span class="n">1</span><span class="err">&#39;</span><span class="o">}</span>
+<span class="ln">4</span><span class="n">DriverSeat</span><span class="o">{</span><span class="n">position</span><span class="o">=</span><span class="err">&#39;</span><span class="n">User</span> <span class="n">Position</span> <span class="n">2</span><span class="err">&#39;</span><span class="o">}</span></code></pre></div>
 <p>I think the idea of this pattern is to allow the caretaker saving previous states of the originator without knowing its internal representation.
 Also, the originator may just save part of its state.
 A good example of this pattern used in JDK can be found in classes implementing the <strong>Serializable</strong> interface.
@@ -640,7 +641,7 @@ Object serialization is the process of converting an object&rsquo;s state to a s
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https:\/\/kunlei.github.io"
+    "url": "https://kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/kunlei.github.io"
+  "url": "https://kunlei.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/kunlei.github.io",
+          "@id": "https://kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2019\/04\/03\/cplex-java-setup\/",
+          "@id": "https://kunlei.github.io/2019/04/03/cplex-java-setup/",
           "name": "Setup and run cplex using java"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "Setup and Run Cplex using Java",
   "description" : "I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.",
   "inLanguage" : "en",
-  "wordCount":  1358 ,
+  "wordCount": 1358,
   "datePublished" : "2019-04-03T00:00:00",
   "dateModified" : "2019-04-03T00:00:00",
-  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "image" : "https://kunlei.github.io/img/logo.png",
   "keywords" : [ "cplex, Java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2019\/04\/03\/cplex-java-setup\/",
+  "mainEntityOfPage" : "https://kunlei.github.io/2019/04/03/cplex-java-setup/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/kunlei.github.io",
+    "name" : "https://kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "url" : "https://kunlei.github.io/img/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -101,7 +101,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -404,46 +404,46 @@ $$</p>
 Note that I used IntelliJ as my IDE and it automatically created a project directory that follows that Maven file structory.
 As a starting point, you can put the source file wherever you want if you don&rsquo;t want to use Maven yet.
 The block below shows the source code in <em>TestSetup.java</em>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">learn</span><span class="p">.</span><span class="na">cplex</span><span class="p">.</span><span class="na">setup</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kn">package</span> <span class="nn">com.learn.cplex.setup</span><span class="o">;</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloException</span><span class="p">;</span>
-<span class="ln"> 4</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloLinearNumExpr</span><span class="p">;</span>
-<span class="ln"> 5</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloNumVar</span><span class="p">;</span>
-<span class="ln"> 6</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">cplex</span><span class="p">.</span><span class="na">IloCplex</span><span class="p">;</span>
+<span class="ln"> 3</span><span class="kn">import</span> <span class="nn">ilog.concert.IloException</span><span class="o">;</span>
+<span class="ln"> 4</span><span class="kn">import</span> <span class="nn">ilog.concert.IloLinearNumExpr</span><span class="o">;</span>
+<span class="ln"> 5</span><span class="kn">import</span> <span class="nn">ilog.concert.IloNumVar</span><span class="o">;</span>
+<span class="ln"> 6</span><span class="kn">import</span> <span class="nn">ilog.cplex.IloCplex</span><span class="o">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">TestSetup</span> <span class="p">{</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="k">try</span> <span class="p">{</span>
+<span class="ln"> 8</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestSetup</span> <span class="o">{</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">10</span>        <span class="k">try</span> <span class="o">{</span>
 <span class="ln">11</span>            <span class="c1">// create cplex environment
-</span><span class="ln">12</span><span class="c1"></span>            <span class="n">IloCplex</span> <span class="nf">cplex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IloCplex</span><span class="p">();</span>
+</span><span class="ln">12</span><span class="c1"></span>            <span class="n">IloCplex</span> <span class="n">cplex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IloCplex</span><span class="o">();</span>
 <span class="ln">13</span>
 <span class="ln">14</span>            <span class="c1">// create decision variables
-</span><span class="ln">15</span><span class="c1"></span>            <span class="n">IloNumVar</span> <span class="nf">x</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">numVar</span><span class="p">(</span><span class="n">0</span><span class="p">,</span> <span class="n">Double</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">,</span> <span class="s">&#34;x&#34;</span><span class="p">);</span>
-<span class="ln">16</span>            <span class="n">IloNumVar</span> <span class="nf">y</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">numVar</span><span class="p">(</span><span class="n">0</span><span class="p">,</span> <span class="n">Double</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">,</span> <span class="s">&#34;y&#34;</span><span class="p">);</span>
+</span><span class="ln">15</span><span class="c1"></span>            <span class="n">IloNumVar</span> <span class="n">x</span> <span class="o">=</span> <span class="n">cplex</span><span class="o">.</span><span class="na">numVar</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">Double</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">,</span> <span class="s">&#34;x&#34;</span><span class="o">);</span>
+<span class="ln">16</span>            <span class="n">IloNumVar</span> <span class="n">y</span> <span class="o">=</span> <span class="n">cplex</span><span class="o">.</span><span class="na">numVar</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">Double</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">,</span> <span class="s">&#34;y&#34;</span><span class="o">);</span>
 <span class="ln">17</span>
 <span class="ln">18</span>            <span class="c1">// create constraint
-</span><span class="ln">19</span><span class="c1"></span>            <span class="n">IloLinearNumExpr</span> <span class="nf">expr</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">linearNumExpr</span><span class="p">();</span>
-<span class="ln">20</span>            <span class="n">expr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">1</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
-<span class="ln">21</span>            <span class="n">expr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">1</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
-<span class="ln">22</span>            <span class="n">cplex</span><span class="p">.</span><span class="na">addLe</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">1</span><span class="p">);</span>
+</span><span class="ln">19</span><span class="c1"></span>            <span class="n">IloLinearNumExpr</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">cplex</span><span class="o">.</span><span class="na">linearNumExpr</span><span class="o">();</span>
+<span class="ln">20</span>            <span class="n">expr</span><span class="o">.</span><span class="na">addTerm</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
+<span class="ln">21</span>            <span class="n">expr</span><span class="o">.</span><span class="na">addTerm</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+<span class="ln">22</span>            <span class="n">cplex</span><span class="o">.</span><span class="na">addLe</span><span class="o">(</span><span class="n">expr</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
 <span class="ln">23</span>
 <span class="ln">24</span>            <span class="c1">// add objective
-</span><span class="ln">25</span><span class="c1"></span>            <span class="n">IloLinearNumExpr</span> <span class="nf">objExpr</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">linearNumExpr</span><span class="p">();</span>
-<span class="ln">26</span>            <span class="n">objExpr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">2</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
-<span class="ln">27</span>            <span class="n">objExpr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">3</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
-<span class="ln">28</span>            <span class="n">cplex</span><span class="p">.</span><span class="na">addMaximize</span><span class="p">(</span><span class="n">objExpr</span><span class="p">);</span>
+</span><span class="ln">25</span><span class="c1"></span>            <span class="n">IloLinearNumExpr</span> <span class="n">objExpr</span> <span class="o">=</span> <span class="n">cplex</span><span class="o">.</span><span class="na">linearNumExpr</span><span class="o">();</span>
+<span class="ln">26</span>            <span class="n">objExpr</span><span class="o">.</span><span class="na">addTerm</span><span class="o">(</span><span class="n">2</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
+<span class="ln">27</span>            <span class="n">objExpr</span><span class="o">.</span><span class="na">addTerm</span><span class="o">(</span><span class="n">3</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+<span class="ln">28</span>            <span class="n">cplex</span><span class="o">.</span><span class="na">addMaximize</span><span class="o">(</span><span class="n">objExpr</span><span class="o">);</span>
 <span class="ln">29</span>
 <span class="ln">30</span>            <span class="c1">// solve and retrieve optimal solution
-</span><span class="ln">31</span><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="n">cplex</span><span class="p">.</span><span class="na">solve</span><span class="p">())</span> <span class="p">{</span>
-<span class="ln">32</span>                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Optimal value = &#34;</span> <span class="o">+</span> <span class="n">cplex</span><span class="p">.</span><span class="na">getObjValue</span><span class="p">());</span>
-<span class="ln">33</span>                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;x = &#34;</span> <span class="o">+</span> <span class="n">cplex</span><span class="p">.</span><span class="na">getValue</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
-<span class="ln">34</span>                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;y = &#34;</span> <span class="o">+</span> <span class="n">cplex</span><span class="p">.</span><span class="na">getValue</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
-<span class="ln">35</span>            <span class="p">}</span>
-<span class="ln">36</span>        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IloException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">37</span>            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-<span class="ln">38</span>        <span class="p">}</span>
-<span class="ln">39</span>    <span class="p">}</span>
-<span class="ln">40</span><span class="p">}</span></code></pre></div>
+</span><span class="ln">31</span><span class="c1"></span>            <span class="k">if</span> <span class="o">(</span><span class="n">cplex</span><span class="o">.</span><span class="na">solve</span><span class="o">())</span> <span class="o">{</span>
+<span class="ln">32</span>                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Optimal value = &#34;</span> <span class="o">+</span> <span class="n">cplex</span><span class="o">.</span><span class="na">getObjValue</span><span class="o">());</span>
+<span class="ln">33</span>                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;x = &#34;</span> <span class="o">+</span> <span class="n">cplex</span><span class="o">.</span><span class="na">getValue</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+<span class="ln">34</span>                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;y = &#34;</span> <span class="o">+</span> <span class="n">cplex</span><span class="o">.</span><span class="na">getValue</span><span class="o">(</span><span class="n">y</span><span class="o">));</span>
+<span class="ln">35</span>            <span class="o">}</span>
+<span class="ln">36</span>        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IloException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+<span class="ln">37</span>            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="ln">38</span>        <span class="o">}</span>
+<span class="ln">39</span>    <span class="o">}</span>
+<span class="ln">40</span><span class="o">}</span></code></pre></div>
 <hr />
 
 <h3 id="mac">Mac</h3>
@@ -518,7 +518,7 @@ All we need to do is</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
 <span class="ln">2</span>    <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">cplex</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
 <span class="ln">3</span>    <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">cplex</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<span class="ln">4</span>    <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="n">12</span><span class="p">.</span><span class="na">8</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+<span class="ln">4</span>    <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="n">12</span><span class="o">.</span><span class="na">8</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
 <span class="ln">5</span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span></code></pre></div>
 <p>However, you still need to manually add the native library location even if you use Maven.</p>
 
@@ -651,9 +651,9 @@ On a Linux machine, most likely we have to run it via terminal:</p>
           
             <li><a href="/2019/03/06/cplex-java-constraints/">Cplex Java Concert Technology - Constraints (1)</a></li>
           
-            <li><a href="/2019/03/04/cplex-java-objectives/">Cplex Java Concert Technology - Objectives</a></li>
-          
             <li><a href="/2019/03/04/cplex-java-variables/">Cplex Java Concert Technology - Variables</a></li>
+          
+            <li><a href="/2019/03/04/cplex-java-objectives/">Cplex Java Concert Technology - Objectives</a></li>
           
           </ul>
           
@@ -759,7 +759,7 @@ On a Linux machine, most likely we have to run it via terminal:</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
