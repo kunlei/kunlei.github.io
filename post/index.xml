@@ -8,10 +8,29 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Dive into CPLEX Java API (1)</title>
+      <link>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</guid>
+      <description>I have been using CPLEX for a while but haven&amp;rsquo;t paid much attention to how its various components are woven together to enable users building and solving optimization models. It is time to dive deeper into CPLEX&amp;rsquo;s design principle and see how it works internally. This is an attempt to improve my knowledge about CPLEX, and the random notes below are just my thinking aloud.
+IloAddable IloAddable is the base interface implemented by most classes in the package.</description>
+    </item>
+    
+    <item>
+      <title>Setup and Run CPLEX using Java</title>
+      <link>https://kunlei.github.io/2019/10/11/cplex-java-setup/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/10/11/cplex-java-setup/</guid>
+      <description>I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.</description>
+    </item>
     
     <item>
       <title>MultiKeyMap in Java</title>
@@ -38,7 +57,7 @@
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/2019/09/15/psychology-of-wealth/</guid>
-      <description>I picked up this book, The Psychology of Wealth, randomly from a library shelf, with the hope to peek at the perspective of how financially successful people look at wealth. It turned out to be a boring read. It seems that author tries to use some anecdotes to convey a point, which is still cryptic to me after I finish reading the book. In the first some chapters, the author repeatedly refers to stories of one or two successful people, which makes it more like a biography.</description>
+      <description>boring read</description>
     </item>
     
     <item>
@@ -114,31 +133,12 @@
     </item>
     
     <item>
-      <title>Cplex Java API Design</title>
-      <link>https://kunlei.github.io/2019/04/04/cplex-java-api-design/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/04/04/cplex-java-api-design/</guid>
-      <description>I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &amp;ldquo;Programming to the Interface, not Implementation&amp;rdquo;. This post tries to show how various components of this API work together to let us build mathematical models.
-Java Interface Design of Cplex Concert Let&amp;rsquo;s first take a look of the class diagram, a picture is worth a thousand words, after all.</description>
-    </item>
-    
-    <item>
       <title>Dissertation - Service Consistency in Vehicle Routing</title>
       <link>https://kunlei.github.io/2019/04/03/dissertation/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/2019/04/03/dissertation/</guid>
       <description>This thesis studies service consistency in the context of multi-period vehicle routing problems (VRP) in which customers require repeatable services over a planning horizon of multiple days. Two types of service consistency are considered, namely, driver consistency and time consistency. Driver consistency refers to using the fewest number of different drivers to perform all of the visits required by a customer over a planning horizon and time consistency refers to visiting a customer at roughly the same time on each day he/she needs service.</description>
-    </item>
-    
-    <item>
-      <title>Setup and Run Cplex using Java</title>
-      <link>https://kunlei.github.io/2019/04/03/cplex-java-setup/</link>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/04/03/cplex-java-setup/</guid>
-      <description>I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.</description>
     </item>
     
     <item>
@@ -197,27 +197,6 @@ Others It&amp;rsquo;s hard to describe what I got most from this book, other tha
 知识和技能 书中提到了一个观点我觉着很有道理，那就是学习中获得了知识并不等于掌握了使用它的技能。 比如说我了解了面向对象的知识比如继承封装多态，这并不意味着我能够在实际的项目中正确的使用它们。 又或者说我学习了设计模式的知识，但是有些时候并没有了解在什么场景下应该使用什么样的模式。 刻意练习注重的习得技能，特别是熟练运用知识的技能。
 刻意练习的核心追求 书中提到了一个概念，我姑且称之为“思维模式”，刻意练习的终极追求就是建立某个领域内的正确有效的思维模式。 我觉着作者的观察总结很深刻，就像围棋大师看一眼棋盘就能了解对弈的现状并分析可能的走势，这都离不开思维模式。 这让我联想起了现在火起来的神经网络，通过对大量数据样本的训练-“刻意练习”，一个神经网络模型就能够对新的数据作出有效的判断，其中的黑盒模型就类似作者说的思维模式。 现在做运筹优化的项目，基本上遇到一个新的问题大脑就会自动归类，这也是长时间专业学习形成的思维模式的结果。
 启示 现在的工作学习中很多地方可以运用刻意练习的方法。 运筹优化的理论学习要注重形成并补充思维模式，并且要着重训练解决实际问题的能力。 编程技能的提高也要注重思维模式的训练，不能只学习零散的知识点。</description>
-    </item>
-    
-    <item>
-      <title>Cplex Java Concert Technology - Constraints (1)</title>
-      <link>https://kunlei.github.io/2019/03/06/cplex-java-constraints/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/03/06/cplex-java-constraints/</guid>
-      <description>Constraint is an essential part of an optimization model, and Cplex provides various ways of defining constraints in a model. All constraints in Cplex have a base interface IloConstraint, from which other constraint types are derived. Probably the most commonly used constraint types are IloRange and IloLPMatrix.
-IloConstraint IloConstraint is a marker interface which extends from IloAddable and IloIntExpr, both are marker interfaces themselves. The fact that IloConstraint being a IloAddable indicates that an object of classes implementing this interface can be added to a model.</description>
-    </item>
-    
-    <item>
-      <title>Cplex Java Concert Technology - Objectives</title>
-      <link>https://kunlei.github.io/2019/03/04/cplex-java-objectives/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/03/04/cplex-java-objectives/</guid>
-      <description>IloModeler Objectives can be added to the model in multiple ways:
- IloObjective addMinimize(IloNumExpr expr) IloObjective addMinimize(IloNumExpr expr, java.lang.String name) IloObjective addMaximize(IloNumExpr expr) IloObjective addMaximize(IloNumExpr expr, java.lang.String name) IloObjective addObjective(IloObjectiveSense sense, IloNumExpr expr) IloObjective addObjective(IloObjectiveSense sense, IloNumExpr expr, java.lang.String name)  or they can be defined without being added to the model:
- IloObjective minimize(IloNumExpr expr) IloObjective minimize(IloNumExpr expr, java.lang.String name) IloObjective maximize(IloNumExpr expr) IloObjective maximize(IloNumExpr expr, java.lang.String name) IloObjective objective(IloObjectiveSense sense, IloNumExpr expr) IloObjective objective(IloObjectiveSense sense, IloNumExpr expr, java.</description>
     </item>
     
     <item>

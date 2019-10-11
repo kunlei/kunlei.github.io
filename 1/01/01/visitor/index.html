@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https://kunlei.github.io"
+    "url": "https:\/\/kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://kunlei.github.io"
+  "url": "https:\/\/kunlei.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://kunlei.github.io",
+          "@id": "https:\/\/kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://kunlei.github.io/1/01/01/visitor/",
+          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/visitor\/",
           "name": "Visitor pattern"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "Visitor Pattern",
   "description" : "Visitor Pattern is one of the behavioral patterns defined in the original GoF book. It is used to decouple computations from the objects they operate on. Say you have a group of classes that are related somehow and you have computations defined on top of them, instead of including the computation process inside the classes, visitor pattern lets you define separate computation classes that are unware of the internal representations of the classes they are going to work on.",
   "inLanguage" : "en",
-  "wordCount": 681,
+  "wordCount":  681 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https://kunlei.github.io/img/logo.png",
+  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/visitor/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/visitor\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://kunlei.github.io",
+    "name" : "https:\/\/kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://kunlei.github.io/img/logo.png",
+        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -101,7 +101,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.57.1" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -334,174 +334,174 @@ Say you have a group of classes that are related somehow and you have computatio
 
 <p>This pattern needs to interfaces - Visitor and Visitable.
 Below is an example to compute the average weight and height of a family (assume size of 4).</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Visitor</span> <span class="o">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Father</span> <span class="n">father</span><span class="o">);</span>
-<span class="ln">3</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Mother</span> <span class="n">mother</span><span class="o">);</span>
-<span class="ln">4</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Daughter</span> <span class="n">daughter</span><span class="o">);</span>
-<span class="ln">5</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Son</span> <span class="n">son</span><span class="o">);</span>
-<span class="ln">6</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Visitable</span> <span class="o">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">Visitor</span> <span class="n">visitor</span><span class="o">);</span>
-<span class="ln">3</span><span class="o">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Visitor</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="p">(</span><span class="n">Father</span> <span class="nf">father</span><span class="p">);</span>
+<span class="ln">3</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="p">(</span><span class="n">Mother</span> <span class="nf">mother</span><span class="p">);</span>
+<span class="ln">4</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="p">(</span><span class="n">Daughter</span> <span class="nf">daughter</span><span class="p">);</span>
+<span class="ln">5</span>    <span class="kt">void</span> <span class="nf">visit</span><span class="p">(</span><span class="n">Son</span> <span class="nf">son</span><span class="p">);</span>
+<span class="ln">6</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Visitable</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">accept</span><span class="p">(</span><span class="n">Visitor</span> <span class="nf">visitor</span><span class="p">);</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
 <p>Here is the base class:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Mother</span> <span class="kd">extends</span> <span class="n">Member</span> <span class="kd">implements</span> <span class="n">Visitable</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Mother</span> <span class="nf">extends</span> <span class="n">Member</span> <span class="nf">implements</span> <span class="n">Visitable</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Mother</span><span class="o">(</span><span class="kt">double</span> <span class="n">height</span><span class="o">,</span> <span class="kt">double</span> <span class="n">weight</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="kd">super</span><span class="o">(</span><span class="n">height</span><span class="o">,</span> <span class="n">weight</span><span class="o">);</span>
-<span class="ln"> 5</span>    <span class="o">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Mother</span><span class="p">(</span><span class="kt">double</span> <span class="nf">height</span><span class="p">,</span> <span class="kt">double</span> <span class="nf">weight</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="kd">super</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+<span class="ln"> 5</span>    <span class="p">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">Visitor</span> <span class="n">visitor</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">visitor</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-<span class="ln">10</span>    <span class="o">}</span>
-<span class="ln">11</span><span class="o">}</span></code></pre></div>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">accept</span><span class="p">(</span><span class="n">Visitor</span> <span class="nf">visitor</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">visitor</span><span class="p">.</span><span class="na">visit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln">11</span><span class="p">}</span></code></pre></div>
 <p>Here are the family members:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Father</span> <span class="kd">extends</span> <span class="n">Member</span> <span class="kd">implements</span> <span class="n">Visitable</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Father</span> <span class="nf">extends</span> <span class="n">Member</span> <span class="nf">implements</span> <span class="n">Visitable</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Father</span><span class="o">(</span><span class="kt">double</span> <span class="n">height</span><span class="o">,</span> <span class="kt">double</span> <span class="n">weight</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="kd">super</span><span class="o">(</span><span class="n">height</span><span class="o">,</span> <span class="n">weight</span><span class="o">);</span>
-<span class="ln"> 5</span>    <span class="o">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Father</span><span class="p">(</span><span class="kt">double</span> <span class="nf">height</span><span class="p">,</span> <span class="kt">double</span> <span class="nf">weight</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="kd">super</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+<span class="ln"> 5</span>    <span class="p">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">Visitor</span> <span class="n">visitor</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">visitor</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-<span class="ln">10</span>    <span class="o">}</span>
-<span class="ln">11</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Mother</span> <span class="kd">extends</span> <span class="n">Member</span> <span class="kd">implements</span> <span class="n">Visitable</span> <span class="o">{</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">accept</span><span class="p">(</span><span class="n">Visitor</span> <span class="nf">visitor</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">visitor</span><span class="p">.</span><span class="na">visit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln">11</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Mother</span> <span class="nf">extends</span> <span class="n">Member</span> <span class="nf">implements</span> <span class="n">Visitable</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Mother</span><span class="o">(</span><span class="kt">double</span> <span class="n">height</span><span class="o">,</span> <span class="kt">double</span> <span class="n">weight</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="kd">super</span><span class="o">(</span><span class="n">height</span><span class="o">,</span> <span class="n">weight</span><span class="o">);</span>
-<span class="ln"> 5</span>    <span class="o">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Mother</span><span class="p">(</span><span class="kt">double</span> <span class="nf">height</span><span class="p">,</span> <span class="kt">double</span> <span class="nf">weight</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="kd">super</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+<span class="ln"> 5</span>    <span class="p">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">Visitor</span> <span class="n">visitor</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">visitor</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-<span class="ln">10</span>    <span class="o">}</span>
-<span class="ln">11</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Daughter</span> <span class="kd">extends</span> <span class="n">Member</span> <span class="kd">implements</span> <span class="n">Visitable</span> <span class="o">{</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">accept</span><span class="p">(</span><span class="n">Visitor</span> <span class="nf">visitor</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">visitor</span><span class="p">.</span><span class="na">visit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln">11</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Daughter</span> <span class="nf">extends</span> <span class="n">Member</span> <span class="nf">implements</span> <span class="n">Visitable</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Daughter</span><span class="o">(</span><span class="kt">double</span> <span class="n">height</span><span class="o">,</span> <span class="kt">double</span> <span class="n">weight</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="kd">super</span><span class="o">(</span><span class="n">height</span><span class="o">,</span> <span class="n">weight</span><span class="o">);</span>
-<span class="ln"> 5</span>    <span class="o">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Daughter</span><span class="p">(</span><span class="kt">double</span> <span class="nf">height</span><span class="p">,</span> <span class="kt">double</span> <span class="nf">weight</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="kd">super</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+<span class="ln"> 5</span>    <span class="p">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">Visitor</span> <span class="n">visitor</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">visitor</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-<span class="ln">10</span>    <span class="o">}</span>
-<span class="ln">11</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Son</span> <span class="kd">extends</span> <span class="n">Member</span> <span class="kd">implements</span> <span class="n">Visitable</span> <span class="o">{</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">accept</span><span class="p">(</span><span class="n">Visitor</span> <span class="nf">visitor</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">visitor</span><span class="p">.</span><span class="na">visit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln">11</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Son</span> <span class="nf">extends</span> <span class="n">Member</span> <span class="nf">implements</span> <span class="n">Visitable</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Son</span><span class="o">(</span><span class="kt">double</span> <span class="n">height</span><span class="o">,</span> <span class="kt">double</span> <span class="n">weight</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="kd">super</span><span class="o">(</span><span class="n">height</span><span class="o">,</span> <span class="n">weight</span><span class="o">);</span>
-<span class="ln"> 5</span>    <span class="o">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">Son</span><span class="p">(</span><span class="kt">double</span> <span class="nf">height</span><span class="p">,</span> <span class="kt">double</span> <span class="nf">weight</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="kd">super</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">);</span>
+<span class="ln"> 5</span>    <span class="p">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">Visitor</span> <span class="n">visitor</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">visitor</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-<span class="ln">10</span>    <span class="o">}</span>
-<span class="ln">11</span><span class="o">}</span></code></pre></div>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">accept</span><span class="p">(</span><span class="n">Visitor</span> <span class="nf">visitor</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">visitor</span><span class="p">.</span><span class="na">visit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln">11</span><span class="p">}</span></code></pre></div>
 <p>Now we can define a class responsible to compute family average height:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AvgHeightVisitor</span> <span class="kd">implements</span> <span class="n">Visitor</span> <span class="o">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="kt">double</span> <span class="n">avgHeight</span><span class="o">;</span>
-<span class="ln"> 3</span>    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numMembers</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">AvgHeightVisitor</span> <span class="nf">implements</span> <span class="n">Visitor</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">double</span> <span class="n">avgHeight</span><span class="p">;</span>
+<span class="ln"> 3</span>    <span class="kd">private</span> <span class="nf">int</span> <span class="n">numMembers</span><span class="p">;</span>
 <span class="ln"> 4</span>
-<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">AvgHeightVisitor</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 6</span>        <span class="n">avgHeight</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
-<span class="ln"> 7</span>        <span class="n">numMembers</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
-<span class="ln"> 8</span>    <span class="o">}</span>
+<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">AvgHeightVisitor</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 6</span>        <span class="n">avgHeight</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln"> 7</span>        <span class="n">numMembers</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln"> 8</span>    <span class="p">}</span>
 <span class="ln"> 9</span>
 <span class="ln">10</span>    <span class="nd">@Override</span>
-<span class="ln">11</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Father</span> <span class="n">father</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">12</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">father</span><span class="o">.</span><span class="na">getHeight</span><span class="o">();</span>
-<span class="ln">13</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">14</span>    <span class="o">}</span>
+<span class="ln">11</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Father</span> <span class="nf">father</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">12</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">father</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span>
+<span class="ln">13</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">14</span>    <span class="p">}</span>
 <span class="ln">15</span>
 <span class="ln">16</span>    <span class="nd">@Override</span>
-<span class="ln">17</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Mother</span> <span class="n">mother</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">18</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">mother</span><span class="o">.</span><span class="na">getHeight</span><span class="o">();</span>
-<span class="ln">19</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">20</span>    <span class="o">}</span>
+<span class="ln">17</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Mother</span> <span class="nf">mother</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">18</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">mother</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span>
+<span class="ln">19</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">20</span>    <span class="p">}</span>
 <span class="ln">21</span>
 <span class="ln">22</span>    <span class="nd">@Override</span>
-<span class="ln">23</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Daughter</span> <span class="n">daughter</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">24</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">daughter</span><span class="o">.</span><span class="na">getHeight</span><span class="o">();</span>
-<span class="ln">25</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">26</span>    <span class="o">}</span>
+<span class="ln">23</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Daughter</span> <span class="nf">daughter</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">24</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">daughter</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span>
+<span class="ln">25</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">26</span>    <span class="p">}</span>
 <span class="ln">27</span>
 <span class="ln">28</span>    <span class="nd">@Override</span>
-<span class="ln">29</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Son</span> <span class="n">son</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">30</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">son</span><span class="o">.</span><span class="na">getHeight</span><span class="o">();</span>
-<span class="ln">31</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">32</span>    <span class="o">}</span>
+<span class="ln">29</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Son</span> <span class="nf">son</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">30</span>        <span class="n">avgHeight</span> <span class="o">+=</span> <span class="n">son</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span>
+<span class="ln">31</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">32</span>    <span class="p">}</span>
 <span class="ln">33</span>
-<span class="ln">34</span>    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getAvgHeight</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">35</span>        <span class="k">if</span> <span class="o">(</span><span class="n">numMembers</span> <span class="o">&lt;</span> <span class="n">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
-<span class="ln">36</span>        <span class="k">return</span> <span class="n">avgHeight</span> <span class="o">/</span> <span class="n">numMembers</span><span class="o">;</span>
-<span class="ln">37</span>    <span class="o">}</span>
-<span class="ln">38</span><span class="o">}</span></code></pre></div>
+<span class="ln">34</span>    <span class="kd">public</span> <span class="nf">double</span> <span class="n">getAvgHeight</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">35</span>        <span class="k">if</span> <span class="p">(</span><span class="n">numMembers</span> <span class="o">&lt;</span> <span class="n">1</span><span class="p">)</span> <span class="k">return</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln">36</span>        <span class="k">return</span> <span class="n">avgHeight</span> <span class="o">/</span> <span class="n">numMembers</span><span class="p">;</span>
+<span class="ln">37</span>    <span class="p">}</span>
+<span class="ln">38</span><span class="p">}</span></code></pre></div>
 <p>and weight:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AvgWeightVisitor</span> <span class="kd">implements</span> <span class="n">Visitor</span> <span class="o">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="kt">double</span> <span class="n">avgWeight</span><span class="o">;</span>
-<span class="ln"> 3</span>    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numMembers</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">AvgWeightVisitor</span> <span class="nf">implements</span> <span class="n">Visitor</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">double</span> <span class="n">avgWeight</span><span class="p">;</span>
+<span class="ln"> 3</span>    <span class="kd">private</span> <span class="nf">int</span> <span class="n">numMembers</span><span class="p">;</span>
 <span class="ln"> 4</span>
-<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">AvgWeightVisitor</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 6</span>        <span class="n">avgWeight</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
-<span class="ln"> 7</span>        <span class="n">numMembers</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
-<span class="ln"> 8</span>    <span class="o">}</span>
+<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">AvgWeightVisitor</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 6</span>        <span class="n">avgWeight</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln"> 7</span>        <span class="n">numMembers</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln"> 8</span>    <span class="p">}</span>
 <span class="ln"> 9</span>
 <span class="ln">10</span>    <span class="nd">@Override</span>
-<span class="ln">11</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Father</span> <span class="n">father</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">12</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">father</span><span class="o">.</span><span class="na">getWeight</span><span class="o">();</span>
-<span class="ln">13</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">14</span>    <span class="o">}</span>
+<span class="ln">11</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Father</span> <span class="nf">father</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">12</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">father</span><span class="p">.</span><span class="na">getWeight</span><span class="p">();</span>
+<span class="ln">13</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">14</span>    <span class="p">}</span>
 <span class="ln">15</span>
 <span class="ln">16</span>    <span class="nd">@Override</span>
-<span class="ln">17</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Mother</span> <span class="n">mother</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">18</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">mother</span><span class="o">.</span><span class="na">getWeight</span><span class="o">();</span>
-<span class="ln">19</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">20</span>    <span class="o">}</span>
+<span class="ln">17</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Mother</span> <span class="nf">mother</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">18</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">mother</span><span class="p">.</span><span class="na">getWeight</span><span class="p">();</span>
+<span class="ln">19</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">20</span>    <span class="p">}</span>
 <span class="ln">21</span>
 <span class="ln">22</span>    <span class="nd">@Override</span>
-<span class="ln">23</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Daughter</span> <span class="n">daughter</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">24</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">daughter</span><span class="o">.</span><span class="na">getWeight</span><span class="o">();</span>
-<span class="ln">25</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">26</span>    <span class="o">}</span>
+<span class="ln">23</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Daughter</span> <span class="nf">daughter</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">24</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">daughter</span><span class="p">.</span><span class="na">getWeight</span><span class="p">();</span>
+<span class="ln">25</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">26</span>    <span class="p">}</span>
 <span class="ln">27</span>
 <span class="ln">28</span>    <span class="nd">@Override</span>
-<span class="ln">29</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">visit</span><span class="o">(</span><span class="n">Son</span> <span class="n">son</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">30</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">son</span><span class="o">.</span><span class="na">getWeight</span><span class="o">();</span>
-<span class="ln">31</span>        <span class="n">numMembers</span><span class="o">++;</span>
-<span class="ln">32</span>    <span class="o">}</span>
+<span class="ln">29</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">visit</span><span class="p">(</span><span class="n">Son</span> <span class="nf">son</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">30</span>        <span class="n">avgWeight</span> <span class="o">+=</span> <span class="n">son</span><span class="p">.</span><span class="na">getWeight</span><span class="p">();</span>
+<span class="ln">31</span>        <span class="n">numMembers</span><span class="o">++</span><span class="p">;</span>
+<span class="ln">32</span>    <span class="p">}</span>
 <span class="ln">33</span>
-<span class="ln">34</span>    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getAvgWeight</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">35</span>        <span class="k">if</span> <span class="o">(</span><span class="n">numMembers</span> <span class="o">&lt;</span> <span class="n">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
-<span class="ln">36</span>        <span class="k">return</span> <span class="n">avgWeight</span> <span class="o">/</span> <span class="n">numMembers</span><span class="o">;</span>
-<span class="ln">37</span>    <span class="o">}</span>
-<span class="ln">38</span><span class="o">}</span></code></pre></div>
+<span class="ln">34</span>    <span class="kd">public</span> <span class="nf">double</span> <span class="n">getAvgWeight</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">35</span>        <span class="k">if</span> <span class="p">(</span><span class="n">numMembers</span> <span class="o">&lt;</span> <span class="n">1</span><span class="p">)</span> <span class="k">return</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln">36</span>        <span class="k">return</span> <span class="n">avgWeight</span> <span class="o">/</span> <span class="n">numMembers</span><span class="p">;</span>
+<span class="ln">37</span>    <span class="p">}</span>
+<span class="ln">38</span><span class="p">}</span></code></pre></div>
 <p>Let&rsquo;s run a demo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">VisitorDemo</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">VisitorDemo</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="n">List</span><span class="o">&lt;</span><span class="n">Visitable</span><span class="o">&gt;</span> <span class="n">family</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
-<span class="ln"> 5</span>        <span class="n">family</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Father</span><span class="o">(</span><span class="n">5</span><span class="o">.</span><span class="na">6</span><span class="o">,</span> <span class="n">150</span><span class="o">));</span>
-<span class="ln"> 6</span>        <span class="n">family</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Mother</span><span class="o">(</span><span class="n">5</span><span class="o">.</span><span class="na">3</span><span class="o">,</span> <span class="n">120</span><span class="o">));</span>
-<span class="ln"> 7</span>        <span class="n">family</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Daughter</span><span class="o">(</span><span class="n">2</span><span class="o">.</span><span class="na">5</span><span class="o">,</span> <span class="n">40</span><span class="o">));</span>
-<span class="ln"> 8</span>        <span class="n">family</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Son</span><span class="o">(</span><span class="n">1</span><span class="o">.</span><span class="na">5</span><span class="o">,</span> <span class="n">20</span><span class="o">));</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="n">List</span><span class="o">&lt;</span><span class="n">Visitable</span><span class="o">&gt;</span> <span class="nf">family</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="ln"> 5</span>        <span class="n">family</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Father</span><span class="p">(</span><span class="n">5</span><span class="p">.</span><span class="na">6</span><span class="p">,</span> <span class="n">150</span><span class="p">));</span>
+<span class="ln"> 6</span>        <span class="n">family</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Mother</span><span class="p">(</span><span class="n">5</span><span class="p">.</span><span class="na">3</span><span class="p">,</span> <span class="n">120</span><span class="p">));</span>
+<span class="ln"> 7</span>        <span class="n">family</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Daughter</span><span class="p">(</span><span class="n">2</span><span class="p">.</span><span class="na">5</span><span class="p">,</span> <span class="n">40</span><span class="p">));</span>
+<span class="ln"> 8</span>        <span class="n">family</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Son</span><span class="p">(</span><span class="n">1</span><span class="p">.</span><span class="na">5</span><span class="p">,</span> <span class="n">20</span><span class="p">));</span>
 <span class="ln"> 9</span>
 <span class="ln">10</span>        <span class="c1">// compute average height
-</span><span class="ln">11</span><span class="c1"></span>        <span class="n">AvgHeightVisitor</span> <span class="n">avgHeightVisitor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AvgHeightVisitor</span><span class="o">();</span>
-<span class="ln">12</span>        <span class="k">for</span> <span class="o">(</span><span class="n">Visitable</span> <span class="n">member</span> <span class="o">:</span> <span class="n">family</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">13</span>            <span class="n">member</span><span class="o">.</span><span class="na">accept</span><span class="o">(</span><span class="n">avgHeightVisitor</span><span class="o">);</span>
-<span class="ln">14</span>        <span class="o">}</span>
-<span class="ln">15</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Average height = &#34;</span> <span class="o">+</span> <span class="n">avgHeightVisitor</span><span class="o">.</span><span class="na">getAvgHeight</span><span class="o">());</span>
+</span><span class="ln">11</span><span class="c1"></span>        <span class="n">AvgHeightVisitor</span> <span class="nf">avgHeightVisitor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AvgHeightVisitor</span><span class="p">();</span>
+<span class="ln">12</span>        <span class="k">for</span> <span class="p">(</span><span class="n">Visitable</span> <span class="nf">member</span> <span class="o">:</span> <span class="n">family</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">13</span>            <span class="n">member</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="n">avgHeightVisitor</span><span class="p">);</span>
+<span class="ln">14</span>        <span class="p">}</span>
+<span class="ln">15</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Average height = &#34;</span> <span class="o">+</span> <span class="n">avgHeightVisitor</span><span class="p">.</span><span class="na">getAvgHeight</span><span class="p">());</span>
 <span class="ln">16</span>
 <span class="ln">17</span>        <span class="c1">// compute average weight
-</span><span class="ln">18</span><span class="c1"></span>        <span class="n">AvgWeightVisitor</span> <span class="n">avgWeightVisitor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AvgWeightVisitor</span><span class="o">();</span>
-<span class="ln">19</span>        <span class="k">for</span> <span class="o">(</span><span class="n">Visitable</span> <span class="n">member</span> <span class="o">:</span> <span class="n">family</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">20</span>            <span class="n">member</span><span class="o">.</span><span class="na">accept</span><span class="o">(</span><span class="n">avgWeightVisitor</span><span class="o">);</span>
-<span class="ln">21</span>        <span class="o">}</span>
-<span class="ln">22</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Average weight = &#34;</span> <span class="o">+</span> <span class="n">avgWeightVisitor</span><span class="o">.</span><span class="na">getAvgWeight</span><span class="o">());</span>
-<span class="ln">23</span>    <span class="o">}</span>
-<span class="ln">24</span><span class="o">}</span></code></pre></div>
+</span><span class="ln">18</span><span class="c1"></span>        <span class="n">AvgWeightVisitor</span> <span class="nf">avgWeightVisitor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AvgWeightVisitor</span><span class="p">();</span>
+<span class="ln">19</span>        <span class="k">for</span> <span class="p">(</span><span class="n">Visitable</span> <span class="nf">member</span> <span class="o">:</span> <span class="n">family</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">20</span>            <span class="n">member</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="n">avgWeightVisitor</span><span class="p">);</span>
+<span class="ln">21</span>        <span class="p">}</span>
+<span class="ln">22</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Average weight = &#34;</span> <span class="o">+</span> <span class="n">avgWeightVisitor</span><span class="p">.</span><span class="na">getAvgWeight</span><span class="p">());</span>
+<span class="ln">23</span>    <span class="p">}</span>
+<span class="ln">24</span><span class="p">}</span></code></pre></div>
 <p>and here are the results:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">Average</span> <span class="n">height</span> <span class="o">=</span> <span class="n">3</span><span class="o">.</span><span class="na">7249999999999996</span>
-<span class="ln">2</span><span class="n">Average</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">82</span><span class="o">.</span><span class="na">5</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">Average</span> <span class="nf">height</span> <span class="o">=</span> <span class="n">3</span><span class="p">.</span><span class="na">7249999999999996</span>
+<span class="ln">2</span><span class="nf">Average</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">82</span><span class="p">.</span><span class="na">5</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -580,11 +580,11 @@ Below is an example to compute the average weight and height of a family (assume
           <h4 class="see-also">See also</h4>
           <ul>
           
-            <li><a href="/2019/04/04/cplex-java-api-design/">Cplex Java API Design</a></li>
-          
-            <li><a href="/2019/04/03/cplex-java-setup/">Setup and Run Cplex using Java</a></li>
+            <li><a href="/2019/10/11/cplex-java-api-deep-dive-1/">Deep Dive into CPLEX Java API (1)</a></li>
           
             <li><a href="/2019/04/02/tutorial1/">Apache POI - Excel</a></li>
+          
+            <li><a href="/2019/03/04/cplex-java-variables/">Cplex Java Concert Technology - Variables</a></li>
           
           </ul>
           
@@ -690,7 +690,7 @@ Below is an example to compute the average weight and height of a family (assume
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

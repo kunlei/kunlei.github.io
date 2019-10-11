@@ -21,14 +21,14 @@ A good example I can think of is the car maintenance service.">
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https://kunlei.github.io"
+    "url": "https:\/\/kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://kunlei.github.io"
+  "url": "https:\/\/kunlei.github.io"
   
   
   
@@ -43,14 +43,14 @@ A good example I can think of is the car maintenance service.">
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://kunlei.github.io",
+          "@id": "https:\/\/kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://kunlei.github.io/1/01/01/chain-of-responsibility/",
+          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/chain-of-responsibility\/",
           "name": "Chain of responsibility"
         }
     }]
@@ -63,21 +63,20 @@ A good example I can think of is the car maintenance service.">
     "name" : "Kunlei Lian"
   },
   "headline": "Chain of Responsibility",
-  "description" : "Chain of Responsibility is one of the behavioral design patterns popularized by the original GoF book. It involves a sender object and potentially multiple receiver objects, and the point of this pattern is to decouple the sender from various receivers. Without this pattern, a sender would have to keep reference to all possible receivers and also define the logic of how the sender is processed by receivers.
-A good example I can think of is the car maintenance service.",
+  "description" : "Chain of Responsibility is one of the behavioral design patterns popularized by the original GoF book. It involves a sender object and potentially multiple receiver objects, and the point of this pattern is to decouple the sender from various receivers. Without this pattern, a sender would have to keep reference to all possible receivers and also define the logic of how the sender is processed by receivers.\nA good example I can think of is the car maintenance service.",
   "inLanguage" : "en",
-  "wordCount": 903,
+  "wordCount":  907 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https://kunlei.github.io/img/logo.png",
+  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/chain-of-responsibility/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/chain-of-responsibility\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://kunlei.github.io",
+    "name" : "https:\/\/kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://kunlei.github.io/img/logo.png",
+        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -105,7 +104,7 @@ A good example I can think of is the car maintenance service.">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.57.1" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -307,7 +306,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;903&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;907&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
@@ -345,224 +344,224 @@ In this example, a customer is natually decoupled with maintenance mechanics.</p
 </span><span class="ln"> 2</span><span class="cm"> * Car object to be serviced
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">serviced</span><span class="o">;</span>
-<span class="ln"> 7</span>    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">needAir</span><span class="o">;</span>
-<span class="ln"> 8</span>    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">needOilChange</span><span class="o">;</span>
-<span class="ln"> 9</span>    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">needNewBattery</span><span class="o">;</span>
-<span class="ln">10</span>    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">needNewWiper</span><span class="o">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Car</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">boolean</span> <span class="n">serviced</span><span class="p">;</span>
+<span class="ln"> 7</span>    <span class="kd">private</span> <span class="nf">boolean</span> <span class="n">needAir</span><span class="p">;</span>
+<span class="ln"> 8</span>    <span class="kd">private</span> <span class="nf">boolean</span> <span class="n">needOilChange</span><span class="p">;</span>
+<span class="ln"> 9</span>    <span class="kd">private</span> <span class="nf">boolean</span> <span class="n">needNewBattery</span><span class="p">;</span>
+<span class="ln">10</span>    <span class="kd">private</span> <span class="nf">boolean</span> <span class="n">needNewWiper</span><span class="p">;</span>
 <span class="ln">11</span>
-<span class="ln">12</span>    <span class="kd">public</span> <span class="nf">Car</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">13</span>        <span class="n">serviced</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="ln">14</span>        <span class="n">needAir</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-<span class="ln">15</span>        <span class="n">needOilChange</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-<span class="ln">16</span>        <span class="n">needNewBattery</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="ln">17</span>        <span class="n">needNewWiper</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-<span class="ln">18</span>    <span class="o">}</span>
+<span class="ln">12</span>    <span class="kd">public</span> <span class="nf">Car</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">13</span>        <span class="n">serviced</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="ln">14</span>        <span class="n">needAir</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="ln">15</span>        <span class="n">needOilChange</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="ln">16</span>        <span class="n">needNewBattery</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="ln">17</span>        <span class="n">needNewWiper</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="ln">18</span>    <span class="p">}</span>
 <span class="ln">19</span>
-<span class="ln">20</span>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isServiced</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">21</span>        <span class="k">return</span> <span class="n">serviced</span><span class="o">;</span>
-<span class="ln">22</span>    <span class="o">}</span>
+<span class="ln">20</span>    <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">isServiced</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">21</span>        <span class="k">return</span> <span class="n">serviced</span><span class="p">;</span>
+<span class="ln">22</span>    <span class="p">}</span>
 <span class="ln">23</span>
-<span class="ln">24</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setServiced</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">serviced</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">25</span>        <span class="k">this</span><span class="o">.</span><span class="na">serviced</span> <span class="o">=</span> <span class="n">serviced</span><span class="o">;</span>
-<span class="ln">26</span>    <span class="o">}</span>
+<span class="ln">24</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setServiced</span><span class="p">(</span><span class="kt">boolean</span> <span class="nf">serviced</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">25</span>        <span class="k">this</span><span class="p">.</span><span class="na">serviced</span> <span class="o">=</span> <span class="n">serviced</span><span class="p">;</span>
+<span class="ln">26</span>    <span class="p">}</span>
 <span class="ln">27</span>
-<span class="ln">28</span>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">needAir</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">29</span>        <span class="k">return</span> <span class="n">needAir</span><span class="o">;</span>
-<span class="ln">30</span>    <span class="o">}</span>
+<span class="ln">28</span>    <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">needAir</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">29</span>        <span class="k">return</span> <span class="n">needAir</span><span class="p">;</span>
+<span class="ln">30</span>    <span class="p">}</span>
 <span class="ln">31</span>
-<span class="ln">32</span>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">needOilChange</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">33</span>        <span class="k">return</span> <span class="n">needOilChange</span><span class="o">;</span>
-<span class="ln">34</span>    <span class="o">}</span>
+<span class="ln">32</span>    <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">needOilChange</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">33</span>        <span class="k">return</span> <span class="n">needOilChange</span><span class="p">;</span>
+<span class="ln">34</span>    <span class="p">}</span>
 <span class="ln">35</span>
-<span class="ln">36</span>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">needNewBattery</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">37</span>        <span class="k">return</span> <span class="n">needNewBattery</span><span class="o">;</span>
-<span class="ln">38</span>    <span class="o">}</span>
+<span class="ln">36</span>    <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">needNewBattery</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">37</span>        <span class="k">return</span> <span class="n">needNewBattery</span><span class="p">;</span>
+<span class="ln">38</span>    <span class="p">}</span>
 <span class="ln">39</span>
-<span class="ln">40</span>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">needNewWiper</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">41</span>        <span class="k">return</span> <span class="n">needNewWiper</span><span class="o">;</span>
-<span class="ln">42</span>    <span class="o">}</span>
+<span class="ln">40</span>    <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">needNewWiper</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">41</span>        <span class="k">return</span> <span class="n">needNewWiper</span><span class="p">;</span>
+<span class="ln">42</span>    <span class="p">}</span>
 <span class="ln">43</span>
 <span class="ln">44</span>    <span class="nd">@Override</span>
-<span class="ln">45</span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+<span class="ln">45</span>    <span class="kd">public</span> <span class="nf">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
 <span class="ln">46</span>        <span class="k">return</span> <span class="s">&#34;Car{&#34;</span> <span class="o">+</span>
 <span class="ln">47</span>                <span class="s">&#34;needAir=&#34;</span> <span class="o">+</span> <span class="n">needAir</span> <span class="o">+</span>
 <span class="ln">48</span>                <span class="s">&#34;, needOilChange=&#34;</span> <span class="o">+</span> <span class="n">needOilChange</span> <span class="o">+</span>
 <span class="ln">49</span>                <span class="s">&#34;, needNewBattery=&#34;</span> <span class="o">+</span> <span class="n">needNewBattery</span> <span class="o">+</span>
 <span class="ln">50</span>                <span class="s">&#34;, needNewWiper=&#34;</span> <span class="o">+</span> <span class="n">needNewWiper</span> <span class="o">+</span>
-<span class="ln">51</span>                <span class="sc">&#39;}&#39;</span><span class="o">;</span>
-<span class="ln">52</span>    <span class="o">}</span>
-<span class="ln">53</span><span class="o">}</span></code></pre></div>
+<span class="ln">51</span>                <span class="sc">&#39;}&#39;</span><span class="p">;</span>
+<span class="ln">52</span>    <span class="p">}</span>
+<span class="ln">53</span><span class="p">}</span></code></pre></div>
 <p>Next, we define a Service interface to be implemented by all possible receivers of a car.</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="cm">/**
 </span><span class="ln">2</span><span class="cm"> * Service interface
 </span><span class="ln">3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln">4</span><span class="cm"> */</span>
-<span class="ln">5</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Service</span> <span class="o">{</span>
-<span class="ln">6</span>    <span class="kt">void</span> <span class="nf">setNext</span><span class="o">(</span><span class="n">Service</span> <span class="n">service</span><span class="o">);</span>
-<span class="ln">7</span>    <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">);</span>
-<span class="ln">8</span><span class="o">}</span></code></pre></div>
+<span class="ln">5</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Service</span> <span class="p">{</span>
+<span class="ln">6</span>    <span class="kt">void</span> <span class="nf">setNext</span><span class="p">(</span><span class="n">Service</span> <span class="nf">service</span><span class="p">);</span>
+<span class="ln">7</span>    <span class="kt">void</span> <span class="nf">process</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">);</span>
+<span class="ln">8</span><span class="p">}</span></code></pre></div>
 <p>Then, we define various receivers:</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Front desk is the only receiver that interacts with a customer
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FrontDesk</span> <span class="kd">implements</span> <span class="n">Service</span> <span class="o">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">Service</span> <span class="n">nextService</span><span class="o">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">FrontDesk</span> <span class="nf">implements</span> <span class="n">Service</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">Service</span> <span class="n">nextService</span><span class="p">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">FrontDesk</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">FrontDesk</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln">10</span>    <span class="p">}</span>
 <span class="ln">11</span>
 <span class="ln">12</span>    <span class="nd">@Override</span>
-<span class="ln">13</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNext</span><span class="o">(</span><span class="n">Service</span> <span class="n">service</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="o">;</span>
-<span class="ln">15</span>    <span class="o">}</span>
+<span class="ln">13</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setNext</span><span class="p">(</span><span class="n">Service</span> <span class="nf">service</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="p">;</span>
+<span class="ln">15</span>    <span class="p">}</span>
 <span class="ln">16</span>
 <span class="ln">17</span>    <span class="nd">@Override</span>
-<span class="ln">18</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">19</span>        <span class="k">if</span> <span class="o">(</span><span class="n">car</span><span class="o">.</span><span class="na">isServiced</span><span class="o">())</span> <span class="o">{</span>
-<span class="ln">20</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;FrontDestk: all necessary services performed, see you next time!&#34;</span><span class="o">);</span>
-<span class="ln">21</span>        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-<span class="ln">22</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;FrontDesk: new car service request received, checking condition: &#34;</span><span class="o">);</span>
-<span class="ln">23</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;\t&#34;</span> <span class="o">+</span> <span class="n">car</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-<span class="ln">24</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;FrontDesk: sending car to service queue: &#34;</span><span class="o">);</span>
+<span class="ln">18</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">process</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">19</span>        <span class="k">if</span> <span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">isServiced</span><span class="p">())</span> <span class="p">{</span>
+<span class="ln">20</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;FrontDestk: all necessary services performed, see you next time!&#34;</span><span class="p">);</span>
+<span class="ln">21</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">22</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;FrontDesk: new car service request received, checking condition: &#34;</span><span class="p">);</span>
+<span class="ln">23</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\t&#34;</span> <span class="o">+</span> <span class="n">car</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="ln">24</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;FrontDesk: sending car to service queue: &#34;</span><span class="p">);</span>
 <span class="ln">25</span>
-<span class="ln">26</span>            <span class="n">nextService</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
-<span class="ln">27</span>        <span class="o">}</span>
-<span class="ln">28</span>    <span class="o">}</span>
-<span class="ln">29</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
+<span class="ln">26</span>            <span class="n">nextService</span><span class="p">.</span><span class="na">process</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+<span class="ln">27</span>        <span class="p">}</span>
+<span class="ln">28</span>    <span class="p">}</span>
+<span class="ln">29</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * TireService class adds air if needed
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TireService</span> <span class="kd">implements</span> <span class="n">Service</span> <span class="o">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">Service</span> <span class="n">nextService</span><span class="o">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">TireService</span> <span class="nf">implements</span> <span class="n">Service</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">Service</span> <span class="n">nextService</span><span class="p">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">TireService</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">TireService</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln">10</span>    <span class="p">}</span>
 <span class="ln">11</span>
 <span class="ln">12</span>    <span class="nd">@Override</span>
-<span class="ln">13</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNext</span><span class="o">(</span><span class="n">Service</span> <span class="n">service</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="o">;</span>
-<span class="ln">15</span>    <span class="o">}</span>
+<span class="ln">13</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setNext</span><span class="p">(</span><span class="n">Service</span> <span class="nf">service</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="p">;</span>
+<span class="ln">15</span>    <span class="p">}</span>
 <span class="ln">16</span>
 <span class="ln">17</span>    <span class="nd">@Override</span>
-<span class="ln">18</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">19</span>        <span class="k">if</span> <span class="o">(</span><span class="n">car</span><span class="o">.</span><span class="na">needAir</span><span class="o">())</span> <span class="o">{</span>
-<span class="ln">20</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;TireService: Adding air to car!&#34;</span><span class="o">);</span>
-<span class="ln">21</span>        <span class="o">}</span>
-<span class="ln">22</span>        <span class="n">car</span><span class="o">.</span><span class="na">setServiced</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-<span class="ln">23</span>        <span class="n">nextService</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
-<span class="ln">24</span>    <span class="o">}</span>
-<span class="ln">25</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
+<span class="ln">18</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">process</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">19</span>        <span class="k">if</span> <span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">needAir</span><span class="p">())</span> <span class="p">{</span>
+<span class="ln">20</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;TireService: Adding air to car!&#34;</span><span class="p">);</span>
+<span class="ln">21</span>        <span class="p">}</span>
+<span class="ln">22</span>        <span class="n">car</span><span class="p">.</span><span class="na">setServiced</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="ln">23</span>        <span class="n">nextService</span><span class="p">.</span><span class="na">process</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+<span class="ln">24</span>    <span class="p">}</span>
+<span class="ln">25</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * OilService performs oil change if necessary
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OilService</span> <span class="kd">implements</span> <span class="n">Service</span> <span class="o">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">Service</span> <span class="n">nextService</span><span class="o">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">OilService</span> <span class="nf">implements</span> <span class="n">Service</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">Service</span> <span class="n">nextService</span><span class="p">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">OilService</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">OilService</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln">10</span>    <span class="p">}</span>
 <span class="ln">11</span>
 <span class="ln">12</span>    <span class="nd">@Override</span>
-<span class="ln">13</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNext</span><span class="o">(</span><span class="n">Service</span> <span class="n">service</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="o">;</span>
-<span class="ln">15</span>    <span class="o">}</span>
+<span class="ln">13</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setNext</span><span class="p">(</span><span class="n">Service</span> <span class="nf">service</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="p">;</span>
+<span class="ln">15</span>    <span class="p">}</span>
 <span class="ln">16</span>
 <span class="ln">17</span>    <span class="nd">@Override</span>
-<span class="ln">18</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">19</span>        <span class="k">if</span> <span class="o">(</span><span class="n">car</span><span class="o">.</span><span class="na">needOilChange</span><span class="o">())</span> <span class="o">{</span>
-<span class="ln">20</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;OilService: performing oil change!&#34;</span><span class="o">);</span>
-<span class="ln">21</span>        <span class="o">}</span>
-<span class="ln">22</span>        <span class="n">car</span><span class="o">.</span><span class="na">setServiced</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-<span class="ln">23</span>        <span class="n">nextService</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
-<span class="ln">24</span>    <span class="o">}</span>
-<span class="ln">25</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
+<span class="ln">18</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">process</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">19</span>        <span class="k">if</span> <span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">needOilChange</span><span class="p">())</span> <span class="p">{</span>
+<span class="ln">20</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;OilService: performing oil change!&#34;</span><span class="p">);</span>
+<span class="ln">21</span>        <span class="p">}</span>
+<span class="ln">22</span>        <span class="n">car</span><span class="p">.</span><span class="na">setServiced</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="ln">23</span>        <span class="n">nextService</span><span class="p">.</span><span class="na">process</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+<span class="ln">24</span>    <span class="p">}</span>
+<span class="ln">25</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Install new battery if necessary
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BatteryService</span> <span class="kd">implements</span> <span class="n">Service</span> <span class="o">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">Service</span> <span class="n">nextService</span><span class="o">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">BatteryService</span> <span class="nf">implements</span> <span class="n">Service</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">Service</span> <span class="n">nextService</span><span class="p">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">BatteryService</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">BatteryService</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln">10</span>    <span class="p">}</span>
 <span class="ln">11</span>
 <span class="ln">12</span>    <span class="nd">@Override</span>
-<span class="ln">13</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNext</span><span class="o">(</span><span class="n">Service</span> <span class="n">service</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="o">;</span>
-<span class="ln">15</span>    <span class="o">}</span>
+<span class="ln">13</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setNext</span><span class="p">(</span><span class="n">Service</span> <span class="nf">service</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="p">;</span>
+<span class="ln">15</span>    <span class="p">}</span>
 <span class="ln">16</span>
 <span class="ln">17</span>    <span class="nd">@Override</span>
-<span class="ln">18</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">19</span>        <span class="k">if</span> <span class="o">(</span><span class="n">car</span><span class="o">.</span><span class="na">needNewBattery</span><span class="o">())</span> <span class="o">{</span>
-<span class="ln">20</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;BatteryService: installing new battery!&#34;</span><span class="o">);</span>
-<span class="ln">21</span>        <span class="o">}</span>
-<span class="ln">22</span>        <span class="n">car</span><span class="o">.</span><span class="na">setServiced</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-<span class="ln">23</span>        <span class="n">nextService</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
-<span class="ln">24</span>    <span class="o">}</span>
-<span class="ln">25</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
+<span class="ln">18</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">process</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">19</span>        <span class="k">if</span> <span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">needNewBattery</span><span class="p">())</span> <span class="p">{</span>
+<span class="ln">20</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;BatteryService: installing new battery!&#34;</span><span class="p">);</span>
+<span class="ln">21</span>        <span class="p">}</span>
+<span class="ln">22</span>        <span class="n">car</span><span class="p">.</span><span class="na">setServiced</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="ln">23</span>        <span class="n">nextService</span><span class="p">.</span><span class="na">process</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+<span class="ln">24</span>    <span class="p">}</span>
+<span class="ln">25</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Wiper service
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WiperService</span> <span class="kd">implements</span> <span class="n">Service</span> <span class="o">{</span>
-<span class="ln"> 6</span>    <span class="kd">private</span> <span class="n">Service</span> <span class="n">nextService</span><span class="o">;</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">WiperService</span> <span class="nf">implements</span> <span class="n">Service</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="kd">private</span> <span class="nf">Service</span> <span class="n">nextService</span><span class="p">;</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">WiperService</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="ln">10</span>    <span class="o">}</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">WiperService</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln">10</span>    <span class="p">}</span>
 <span class="ln">11</span>
 <span class="ln">12</span>    <span class="nd">@Override</span>
-<span class="ln">13</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNext</span><span class="o">(</span><span class="n">Service</span> <span class="n">service</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="o">;</span>
-<span class="ln">15</span>    <span class="o">}</span>
+<span class="ln">13</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setNext</span><span class="p">(</span><span class="n">Service</span> <span class="nf">service</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">14</span>        <span class="n">nextService</span> <span class="o">=</span> <span class="n">service</span><span class="p">;</span>
+<span class="ln">15</span>    <span class="p">}</span>
 <span class="ln">16</span>
 <span class="ln">17</span>    <span class="nd">@Override</span>
-<span class="ln">18</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Car</span> <span class="n">car</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">19</span>        <span class="k">if</span> <span class="o">(</span><span class="n">car</span><span class="o">.</span><span class="na">needNewWiper</span><span class="o">())</span> <span class="o">{</span>
-<span class="ln">20</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;WiperService: installing new windshield wiper!&#34;</span><span class="o">);</span>
-<span class="ln">21</span>        <span class="o">}</span>
-<span class="ln">22</span>        <span class="n">car</span><span class="o">.</span><span class="na">setServiced</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-<span class="ln">23</span>        <span class="n">nextService</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
-<span class="ln">24</span>    <span class="o">}</span>
-<span class="ln">25</span><span class="o">}</span></code></pre></div>
+<span class="ln">18</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">process</span><span class="p">(</span><span class="n">Car</span> <span class="nf">car</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">19</span>        <span class="k">if</span> <span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">needNewWiper</span><span class="p">())</span> <span class="p">{</span>
+<span class="ln">20</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;WiperService: installing new windshield wiper!&#34;</span><span class="p">);</span>
+<span class="ln">21</span>        <span class="p">}</span>
+<span class="ln">22</span>        <span class="n">car</span><span class="p">.</span><span class="na">setServiced</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="ln">23</span>        <span class="n">nextService</span><span class="p">.</span><span class="na">process</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+<span class="ln">24</span>    <span class="p">}</span>
+<span class="ln">25</span><span class="p">}</span></code></pre></div>
 <p>Last, we run a demo of the system:</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="cm">/**
 </span><span class="ln"> 2</span><span class="cm"> * Car dealership with free services :)
 </span><span class="ln"> 3</span><span class="cm"> * @author Kunlei Lian
 </span><span class="ln"> 4</span><span class="cm"> */</span>
-<span class="ln"> 5</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServiceCenter</span> <span class="o">{</span>
+<span class="ln"> 5</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ServiceCenter</span> <span class="p">{</span>
 <span class="ln"> 6</span>
-<span class="ln"> 7</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 8</span>        <span class="n">Car</span> <span class="n">car</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="o">();</span>
-<span class="ln"> 9</span>        <span class="n">FrontDesk</span> <span class="n">frontDesk</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrontDesk</span><span class="o">();</span>
-<span class="ln">10</span>        <span class="n">TireService</span> <span class="n">tireService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TireService</span><span class="o">();</span>
-<span class="ln">11</span>        <span class="n">OilService</span> <span class="n">oilService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OilService</span><span class="o">();</span>
-<span class="ln">12</span>        <span class="n">BatteryService</span> <span class="n">batteryService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BatteryService</span><span class="o">();</span>
-<span class="ln">13</span>        <span class="n">WiperService</span> <span class="n">wiperService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WiperService</span><span class="o">();</span>
+<span class="ln"> 7</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 8</span>        <span class="n">Car</span> <span class="nf">car</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">();</span>
+<span class="ln"> 9</span>        <span class="n">FrontDesk</span> <span class="nf">frontDesk</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrontDesk</span><span class="p">();</span>
+<span class="ln">10</span>        <span class="n">TireService</span> <span class="nf">tireService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TireService</span><span class="p">();</span>
+<span class="ln">11</span>        <span class="n">OilService</span> <span class="nf">oilService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OilService</span><span class="p">();</span>
+<span class="ln">12</span>        <span class="n">BatteryService</span> <span class="nf">batteryService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BatteryService</span><span class="p">();</span>
+<span class="ln">13</span>        <span class="n">WiperService</span> <span class="nf">wiperService</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WiperService</span><span class="p">();</span>
 <span class="ln">14</span>
 <span class="ln">15</span>        <span class="c1">// setup chain of responsibility
-</span><span class="ln">16</span><span class="c1"></span>        <span class="n">frontDesk</span><span class="o">.</span><span class="na">setNext</span><span class="o">(</span><span class="n">tireService</span><span class="o">);</span>
-<span class="ln">17</span>        <span class="n">tireService</span><span class="o">.</span><span class="na">setNext</span><span class="o">(</span><span class="n">oilService</span><span class="o">);</span>
-<span class="ln">18</span>        <span class="n">oilService</span><span class="o">.</span><span class="na">setNext</span><span class="o">(</span><span class="n">batteryService</span><span class="o">);</span>
-<span class="ln">19</span>        <span class="n">batteryService</span><span class="o">.</span><span class="na">setNext</span><span class="o">(</span><span class="n">wiperService</span><span class="o">);</span>
-<span class="ln">20</span>        <span class="n">wiperService</span><span class="o">.</span><span class="na">setNext</span><span class="o">(</span><span class="n">frontDesk</span><span class="o">);</span>
+</span><span class="ln">16</span><span class="c1"></span>        <span class="n">frontDesk</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">tireService</span><span class="p">);</span>
+<span class="ln">17</span>        <span class="n">tireService</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">oilService</span><span class="p">);</span>
+<span class="ln">18</span>        <span class="n">oilService</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">batteryService</span><span class="p">);</span>
+<span class="ln">19</span>        <span class="n">batteryService</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">wiperService</span><span class="p">);</span>
+<span class="ln">20</span>        <span class="n">wiperService</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">frontDesk</span><span class="p">);</span>
 <span class="ln">21</span>
 <span class="ln">22</span>        <span class="c1">// start processing
-</span><span class="ln">23</span><span class="c1"></span>        <span class="n">frontDesk</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">car</span><span class="o">);</span>
-<span class="ln">24</span>    <span class="o">}</span>
-<span class="ln">25</span><span class="o">}</span></code></pre></div>
+</span><span class="ln">23</span><span class="c1"></span>        <span class="n">frontDesk</span><span class="p">.</span><span class="na">process</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+<span class="ln">24</span>    <span class="p">}</span>
+<span class="ln">25</span><span class="p">}</span></code></pre></div>
 <p>Here is the output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="nl">FrontDesk:</span> <span class="k">new</span> <span class="n">car</span> <span class="n">service</span> <span class="n">request</span> <span class="n">received</span><span class="o">,</span> <span class="n">checking</span> <span class="nl">condition:</span> 
-<span class="ln">2</span>	<span class="n">Car</span><span class="o">{</span><span class="n">needAir</span><span class="o">=</span><span class="kc">true</span><span class="o">,</span> <span class="n">needOilChange</span><span class="o">=</span><span class="kc">true</span><span class="o">,</span> <span class="n">needNewBattery</span><span class="o">=</span><span class="kc">false</span><span class="o">,</span> <span class="n">needNewWiper</span><span class="o">=</span><span class="kc">true</span><span class="o">}</span><span class="nl">
-</span><span class="ln">3</span><span class="nl">FrontDesk:</span> <span class="n">sending</span> <span class="n">car</span> <span class="n">to</span> <span class="n">service</span> <span class="nl">queue:</span> <span class="nl">
-</span><span class="ln">4</span><span class="nl">TireService:</span> <span class="n">Adding</span> <span class="n">air</span> <span class="n">to</span> <span class="n">car</span><span class="o">!</span><span class="nl">
-</span><span class="ln">5</span><span class="nl">OilService:</span> <span class="n">performing</span> <span class="n">oil</span> <span class="n">change</span><span class="o">!</span><span class="nl">
-</span><span class="ln">6</span><span class="nl">WiperService:</span> <span class="n">installing</span> <span class="k">new</span> <span class="n">windshield</span> <span class="n">wiper</span><span class="o">!</span><span class="nl">
-</span><span class="ln">7</span><span class="nl">FrontDestk:</span> <span class="n">all</span> <span class="n">necessary</span> <span class="n">services</span> <span class="n">performed</span><span class="o">,</span> <span class="n">see</span> <span class="n">you</span> <span class="n">next</span> <span class="n">time</span><span class="o">!</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="nl">FrontDesk:</span> <span class="k">new</span> <span class="n">car</span> <span class="nf">service</span> <span class="n">request</span> <span class="nf">received</span><span class="p">,</span> <span class="n">checking</span> <span class="nf">condition</span><span class="o">:</span> 
+<span class="ln">2</span>	<span class="n">Car</span><span class="p">{</span><span class="n">needAir</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="n">needOilChange</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="n">needNewBattery</span><span class="o">=</span><span class="kc">false</span><span class="p">,</span> <span class="n">needNewWiper</span><span class="o">=</span><span class="kc">true</span><span class="p">}</span>
+<span class="ln">3</span><span class="nl">FrontDesk:</span> <span class="n">sending</span> <span class="nf">car</span> <span class="n">to</span> <span class="nf">service</span> <span class="n">queue</span><span class="o">:</span> 
+<span class="ln">4</span><span class="nl">TireService:</span> <span class="n">Adding</span> <span class="nf">air</span> <span class="n">to</span> <span class="nf">car</span><span class="o">!</span>
+<span class="ln">5</span><span class="nl">OilService:</span> <span class="n">performing</span> <span class="nf">oil</span> <span class="n">change</span><span class="o">!</span>
+<span class="ln">6</span><span class="nl">WiperService:</span> <span class="n">installing</span> <span class="nf">new</span> <span class="n">windshield</span> <span class="nf">wiper</span><span class="o">!</span>
+<span class="ln">7</span><span class="nl">FrontDestk:</span> <span class="n">all</span> <span class="nf">necessary</span> <span class="n">services</span> <span class="nf">performed</span><span class="p">,</span> <span class="n">see</span> <span class="nf">you</span> <span class="n">next</span> <span class="nf">time</span><span class="o">!</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -641,11 +640,11 @@ In this example, a customer is natually decoupled with maintenance mechanics.</p
           <h4 class="see-also">See also</h4>
           <ul>
           
-            <li><a href="/2019/04/04/cplex-java-api-design/">Cplex Java API Design</a></li>
-          
-            <li><a href="/2019/04/03/cplex-java-setup/">Setup and Run Cplex using Java</a></li>
+            <li><a href="/2019/10/11/cplex-java-api-deep-dive-1/">Deep Dive into CPLEX Java API (1)</a></li>
           
             <li><a href="/2019/04/02/tutorial1/">Apache POI - Excel</a></li>
+          
+            <li><a href="/2019/03/04/cplex-java-variables/">Cplex Java Concert Technology - Variables</a></li>
           
           </ul>
           
@@ -751,7 +750,7 @@ In this example, a customer is natually decoupled with maintenance mechanics.</p
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

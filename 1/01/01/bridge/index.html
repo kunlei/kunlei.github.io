@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https://kunlei.github.io"
+    "url": "https:\/\/kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://kunlei.github.io"
+  "url": "https:\/\/kunlei.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://kunlei.github.io",
+          "@id": "https:\/\/kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://kunlei.github.io/1/01/01/bridge/",
+          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/bridge\/",
           "name": "Bridge pattern"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "Bridge Pattern",
   "description" : "Bridge Pattern is one of the structural design patterns and it aims to separate abstractions from implementations by allowing them to be developed independently. This may better be explained by an example. Think of a company with two types of employees: onsite and remote. Naturally, the way they attend meetings differ based on the location they work. An onsite employee can join meetings either online or in person, while a remote employee can only call in meeting online.",
   "inLanguage" : "en",
-  "wordCount": 341,
+  "wordCount":  341 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https://kunlei.github.io/img/logo.png",
+  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/bridge/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/bridge\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://kunlei.github.io",
+    "name" : "https:\/\/kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://kunlei.github.io/img/logo.png",
+        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -101,7 +101,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.57.1" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -335,74 +335,74 @@ Naturally, the way they attend meetings differ based on the location they work.
 An onsite employee can join meetings either online or in person, while a remote employee can only call in meeting online.</p>
 
 <p>Let&rsquo;s define the meeting interface as below.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Meeting</span> <span class="o">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">meet</span><span class="o">();</span>
-<span class="ln">3</span><span class="o">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Meeting</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">meet</span><span class="p">();</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
 <p>and two meeting behaviors:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MeetingInPerson</span> <span class="kd">implements</span> <span class="n">Meeting</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">MeetingInPerson</span> <span class="nf">implements</span> <span class="n">Meeting</span> <span class="p">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">meet</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I am attending meetings in person!&#34;</span><span class="o">);</span>
-<span class="ln">5</span>    <span class="o">}</span>
-<span class="ln">6</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MeetingOnline</span> <span class="kd">implements</span> <span class="n">Meeting</span> <span class="o">{</span>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">meet</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I am attending meetings in person!&#34;</span><span class="p">);</span>
+<span class="ln">5</span>    <span class="p">}</span>
+<span class="ln">6</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">MeetingOnline</span> <span class="nf">implements</span> <span class="n">Meeting</span> <span class="p">{</span>
 <span class="ln">2</span>    <span class="nd">@Override</span>
-<span class="ln">3</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">meet</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">4</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;I am attending meetings by calling in online!&#34;</span><span class="o">);</span>
-<span class="ln">5</span>    <span class="o">}</span>
-<span class="ln">6</span><span class="o">}</span></code></pre></div>
+<span class="ln">3</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">meet</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">4</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;I am attending meetings by calling in online!&#34;</span><span class="p">);</span>
+<span class="ln">5</span>    <span class="p">}</span>
+<span class="ln">6</span><span class="p">}</span></code></pre></div>
 <p>Now we define the base class for employee which constains a reference to the meeting interface:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-<span class="ln">2</span>    <span class="kd">protected</span> <span class="n">Meeting</span> <span class="n">meeting</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">abstract</span> <span class="kd">class</span> <span class="nf">Employee</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kd">protected</span> <span class="nf">Meeting</span> <span class="n">meeting</span><span class="p">;</span>
 <span class="ln">3</span>
-<span class="ln">4</span>    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">Meeting</span> <span class="n">meeting</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">5</span>        <span class="k">this</span><span class="o">.</span><span class="na">meeting</span> <span class="o">=</span> <span class="n">meeting</span><span class="o">;</span>
-<span class="ln">6</span>    <span class="o">}</span>
+<span class="ln">4</span>    <span class="kd">public</span> <span class="nf">Employee</span><span class="p">(</span><span class="n">Meeting</span> <span class="nf">meeting</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">5</span>        <span class="k">this</span><span class="p">.</span><span class="na">meeting</span> <span class="o">=</span> <span class="n">meeting</span><span class="p">;</span>
+<span class="ln">6</span>    <span class="p">}</span>
 <span class="ln">7</span>
-<span class="ln">8</span>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">meeting</span><span class="o">();</span>
-<span class="ln">9</span><span class="o">}</span></code></pre></div>
+<span class="ln">8</span>    <span class="kd">public</span> <span class="nf">abstract</span> <span class="kt">void</span> <span class="nf">meeting</span><span class="p">();</span>
+<span class="ln">9</span><span class="p">}</span></code></pre></div>
 <p>and we have two types of employees:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OnsiteEmployee</span> <span class="kd">extends</span> <span class="n">Employee</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">OnsiteEmployee</span> <span class="nf">extends</span> <span class="n">Employee</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">OnsiteEmployee</span><span class="o">(</span><span class="n">Meeting</span> <span class="n">meeting</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="kd">super</span><span class="o">(</span><span class="n">meeting</span><span class="o">);</span>
-<span class="ln"> 5</span>    <span class="o">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">OnsiteEmployee</span><span class="p">(</span><span class="n">Meeting</span> <span class="nf">meeting</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="kd">super</span><span class="p">(</span><span class="n">meeting</span><span class="p">);</span>
+<span class="ln"> 5</span>    <span class="p">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">meeting</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello, I am working onsite!&#34;</span><span class="o">);</span>
-<span class="ln">10</span>        <span class="n">meeting</span><span class="o">.</span><span class="na">meet</span><span class="o">();</span>
-<span class="ln">11</span>    <span class="o">}</span>
-<span class="ln">12</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RemoteEmployee</span> <span class="kd">extends</span> <span class="n">Employee</span> <span class="o">{</span>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">meeting</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Hello, I am working onsite!&#34;</span><span class="p">);</span>
+<span class="ln">10</span>        <span class="n">meeting</span><span class="p">.</span><span class="na">meet</span><span class="p">();</span>
+<span class="ln">11</span>    <span class="p">}</span>
+<span class="ln">12</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">RemoteEmployee</span> <span class="nf">extends</span> <span class="n">Employee</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">RemoteEmployee</span><span class="o">(</span><span class="n">Meeting</span> <span class="n">meeting</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="kd">super</span><span class="o">(</span><span class="n">meeting</span><span class="o">);</span>
-<span class="ln"> 5</span>    <span class="o">}</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">RemoteEmployee</span><span class="p">(</span><span class="n">Meeting</span> <span class="nf">meeting</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="kd">super</span><span class="p">(</span><span class="n">meeting</span><span class="p">);</span>
+<span class="ln"> 5</span>    <span class="p">}</span>
 <span class="ln"> 6</span>
 <span class="ln"> 7</span>    <span class="nd">@Override</span>
-<span class="ln"> 8</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">meeting</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 9</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello, I am working remotely!&#34;</span><span class="o">);</span>
-<span class="ln">10</span>        <span class="n">meeting</span><span class="o">.</span><span class="na">meet</span><span class="o">();</span>
-<span class="ln">11</span>    <span class="o">}</span>
-<span class="ln">12</span><span class="o">}</span></code></pre></div>
+<span class="ln"> 8</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">meeting</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 9</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Hello, I am working remotely!&#34;</span><span class="p">);</span>
+<span class="ln">10</span>        <span class="n">meeting</span><span class="p">.</span><span class="na">meet</span><span class="p">();</span>
+<span class="ln">11</span>    <span class="p">}</span>
+<span class="ln">12</span><span class="p">}</span></code></pre></div>
 <p>Let the compnay run:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BridgeDemo</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">BridgeDemo</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="n">Meeting</span> <span class="n">meetingOnline</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MeetingOnline</span><span class="o">();</span>
-<span class="ln"> 5</span>        <span class="n">Meeting</span> <span class="n">meetingInPerson</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MeetingInPerson</span><span class="o">();</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="n">Meeting</span> <span class="nf">meetingOnline</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MeetingOnline</span><span class="p">();</span>
+<span class="ln"> 5</span>        <span class="n">Meeting</span> <span class="nf">meetingInPerson</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MeetingInPerson</span><span class="p">();</span>
 <span class="ln"> 6</span>
-<span class="ln"> 7</span>        <span class="n">Employee</span> <span class="n">onsiteEmployee</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OnsiteEmployee</span><span class="o">(</span><span class="n">meetingInPerson</span><span class="o">);</span>
-<span class="ln"> 8</span>        <span class="n">Employee</span> <span class="n">remoteEmployee</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RemoteEmployee</span><span class="o">(</span><span class="n">meetingOnline</span><span class="o">);</span>
+<span class="ln"> 7</span>        <span class="n">Employee</span> <span class="nf">onsiteEmployee</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OnsiteEmployee</span><span class="p">(</span><span class="n">meetingInPerson</span><span class="p">);</span>
+<span class="ln"> 8</span>        <span class="n">Employee</span> <span class="nf">remoteEmployee</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RemoteEmployee</span><span class="p">(</span><span class="n">meetingOnline</span><span class="p">);</span>
 <span class="ln"> 9</span>
-<span class="ln">10</span>        <span class="n">onsiteEmployee</span><span class="o">.</span><span class="na">meeting</span><span class="o">();</span>
-<span class="ln">11</span>        <span class="n">remoteEmployee</span><span class="o">.</span><span class="na">meeting</span><span class="o">();</span>
-<span class="ln">12</span>    <span class="o">}</span>
-<span class="ln">13</span><span class="o">}</span></code></pre></div>
+<span class="ln">10</span>        <span class="n">onsiteEmployee</span><span class="p">.</span><span class="na">meeting</span><span class="p">();</span>
+<span class="ln">11</span>        <span class="n">remoteEmployee</span><span class="p">.</span><span class="na">meeting</span><span class="p">();</span>
+<span class="ln">12</span>    <span class="p">}</span>
+<span class="ln">13</span><span class="p">}</span></code></pre></div>
 <p>Here is the output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">Hello</span><span class="o">,</span> <span class="n">I</span> <span class="n">am</span> <span class="n">working</span> <span class="n">onsite</span><span class="o">!</span>
-<span class="ln">2</span><span class="n">I</span> <span class="n">am</span> <span class="n">attending</span> <span class="n">meetings</span> <span class="n">in</span> <span class="n">person</span><span class="o">!</span>
-<span class="ln">3</span><span class="n">Hello</span><span class="o">,</span> <span class="n">I</span> <span class="n">am</span> <span class="n">working</span> <span class="n">remotely</span><span class="o">!</span>
-<span class="ln">4</span><span class="n">I</span> <span class="n">am</span> <span class="n">attending</span> <span class="n">meetings</span> <span class="n">by</span> <span class="n">calling</span> <span class="n">in</span> <span class="n">online</span><span class="o">!</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">Hello</span><span class="p">,</span> <span class="n">I</span> <span class="nf">am</span> <span class="n">working</span> <span class="nf">onsite</span><span class="o">!</span>
+<span class="ln">2</span><span class="n">I</span> <span class="nf">am</span> <span class="n">attending</span> <span class="nf">meetings</span> <span class="n">in</span> <span class="nf">person</span><span class="o">!</span>
+<span class="ln">3</span><span class="n">Hello</span><span class="p">,</span> <span class="n">I</span> <span class="nf">am</span> <span class="n">working</span> <span class="nf">remotely</span><span class="o">!</span>
+<span class="ln">4</span><span class="n">I</span> <span class="nf">am</span> <span class="n">attending</span> <span class="nf">meetings</span> <span class="n">by</span> <span class="nf">calling</span> <span class="n">in</span> <span class="nf">online</span><span class="o">!</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -481,11 +481,11 @@ An onsite employee can join meetings either online or in person, while a remote 
           <h4 class="see-also">See also</h4>
           <ul>
           
-            <li><a href="/2019/04/04/cplex-java-api-design/">Cplex Java API Design</a></li>
-          
-            <li><a href="/2019/04/03/cplex-java-setup/">Setup and Run Cplex using Java</a></li>
+            <li><a href="/2019/10/11/cplex-java-api-deep-dive-1/">Deep Dive into CPLEX Java API (1)</a></li>
           
             <li><a href="/2019/04/02/tutorial1/">Apache POI - Excel</a></li>
+          
+            <li><a href="/2019/03/04/cplex-java-variables/">Cplex Java Concert Technology - Variables</a></li>
           
           </ul>
           
@@ -591,7 +591,7 @@ An onsite employee can join meetings either online or in person, while a remote 
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

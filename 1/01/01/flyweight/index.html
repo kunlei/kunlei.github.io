@@ -23,14 +23,14 @@ In the example below, a computer implements the computing interface to carry out
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https://kunlei.github.io"
+    "url": "https:\/\/kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://kunlei.github.io"
+  "url": "https:\/\/kunlei.github.io"
   
   
   
@@ -45,14 +45,14 @@ In the example below, a computer implements the computing interface to carry out
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://kunlei.github.io",
+          "@id": "https:\/\/kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://kunlei.github.io/1/01/01/flyweight/",
+          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/flyweight\/",
           "name": "Flyweight pattern"
         }
     }]
@@ -65,22 +65,20 @@ In the example below, a computer implements the computing interface to carry out
     "name" : "Kunlei Lian"
   },
   "headline": "Flyweight Pattern",
-  "description" : "Proxy Pattern is one of the structural design patterns that are popularized by the original GoF book. In this pattern, a class can function as an interface to some other class. To achieve this, the proxy class and the original class must implement the same interface.
-In the example below, a computer implements the computing interface to carry out computation tasks.
-1public interface Computing { 2 void compute(int value); 3} The computer class just accepts a value and prints it.",
+  "description" : "Proxy Pattern is one of the structural design patterns that are popularized by the original GoF book. In this pattern, a class can function as an interface to some other class. To achieve this, the proxy class and the original class must implement the same interface.\nIn the example below, a computer implements the computing interface to carry out computation tasks.\n1public interface Computing { 2 void compute(int value); 3} The computer class just accepts a value and prints it.",
   "inLanguage" : "en",
-  "wordCount": 226,
+  "wordCount":  226 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https://kunlei.github.io/img/logo.png",
+  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/flyweight/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/flyweight\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://kunlei.github.io",
+    "name" : "https:\/\/kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://kunlei.github.io/img/logo.png",
+        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -109,7 +107,7 @@ In the example below, a computer implements the computing interface to carry out
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.57.1" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -341,48 +339,48 @@ In this pattern, a class can function as an interface to some other class.
 To achieve this, the proxy class and the original class must implement the same interface.</p>
 
 <p>In the example below, a computer implements the computing interface to carry out computation tasks.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Computing</span> <span class="o">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">compute</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">);</span>
-<span class="ln">3</span><span class="o">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Computing</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">compute</span><span class="p">(</span><span class="kt">int</span> <span class="nf">value</span><span class="p">);</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
 <p>The computer class just accepts a value and prints it.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Computer</span> <span class="kd">implements</span> <span class="n">Computing</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Computer</span> <span class="nf">implements</span> <span class="n">Computing</span> <span class="p">{</span>
 <span class="ln">2</span>
 <span class="ln">3</span>    <span class="nd">@Override</span>
-<span class="ln">4</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">compute</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">5</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;value = &#34;</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span>
-<span class="ln">6</span>    <span class="o">}</span>
-<span class="ln">7</span><span class="o">}</span></code></pre></div>
+<span class="ln">4</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">compute</span><span class="p">(</span><span class="kt">int</span> <span class="nf">value</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">5</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;value = &#34;</span> <span class="o">+</span> <span class="n">value</span><span class="p">);</span>
+<span class="ln">6</span>    <span class="p">}</span>
+<span class="ln">7</span><span class="p">}</span></code></pre></div>
 <p>The proxy defined below provides the same function with the computer class, and it provides additional operations:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ComputerProxy</span> <span class="kd">implements</span> <span class="n">Computing</span> <span class="o">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">Computing</span> <span class="n">computing</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ComputerProxy</span> <span class="nf">implements</span> <span class="n">Computing</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">Computing</span> <span class="n">computing</span><span class="p">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">ComputerProxy</span><span class="o">(</span><span class="n">Computing</span> <span class="n">computing</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">computing</span> <span class="o">=</span> <span class="n">computing</span><span class="o">;</span>
-<span class="ln"> 6</span>    <span class="o">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">ComputerProxy</span><span class="p">(</span><span class="n">Computing</span> <span class="nf">computing</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">computing</span> <span class="o">=</span> <span class="n">computing</span><span class="p">;</span>
+<span class="ln"> 6</span>    <span class="p">}</span>
 <span class="ln"> 7</span>
 <span class="ln"> 8</span>    <span class="nd">@Override</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">compute</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">10</span>        <span class="k">if</span> <span class="o">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">0</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">11</span>            <span class="n">computing</span><span class="o">.</span><span class="na">compute</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
-<span class="ln">12</span>        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-<span class="ln">13</span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;value = &#34;</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">&#34; is negative!&#34;</span><span class="o">);</span>
-<span class="ln">14</span>        <span class="o">}</span>
-<span class="ln">15</span>    <span class="o">}</span>
-<span class="ln">16</span><span class="o">}</span></code></pre></div>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">compute</span><span class="p">(</span><span class="kt">int</span> <span class="nf">value</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">10</span>        <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">11</span>            <span class="n">computing</span><span class="p">.</span><span class="na">compute</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="ln">12</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">13</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;value = &#34;</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">&#34; is negative!&#34;</span><span class="p">);</span>
+<span class="ln">14</span>        <span class="p">}</span>
+<span class="ln">15</span>    <span class="p">}</span>
+<span class="ln">16</span><span class="p">}</span></code></pre></div>
 <p>Below is a demo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProxyDemo</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ProxyDemo</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="n">Computing</span> <span class="n">computer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Computer</span><span class="o">();</span>
-<span class="ln"> 5</span>        <span class="n">Computing</span> <span class="n">proxy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ComputerProxy</span><span class="o">(</span><span class="n">computer</span><span class="o">);</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="n">Computing</span> <span class="nf">computer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Computer</span><span class="p">();</span>
+<span class="ln"> 5</span>        <span class="n">Computing</span> <span class="nf">proxy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ComputerProxy</span><span class="p">(</span><span class="n">computer</span><span class="p">);</span>
 <span class="ln"> 6</span>
-<span class="ln"> 7</span>        <span class="n">proxy</span><span class="o">.</span><span class="na">compute</span><span class="o">(</span><span class="n">10</span><span class="o">);</span>
-<span class="ln"> 8</span>        <span class="n">proxy</span><span class="o">.</span><span class="na">compute</span><span class="o">(-</span><span class="n">10</span><span class="o">);</span>
-<span class="ln"> 9</span>    <span class="o">}</span>
-<span class="ln">10</span><span class="o">}</span></code></pre></div>
+<span class="ln"> 7</span>        <span class="n">proxy</span><span class="p">.</span><span class="na">compute</span><span class="p">(</span><span class="n">10</span><span class="p">);</span>
+<span class="ln"> 8</span>        <span class="n">proxy</span><span class="p">.</span><span class="na">compute</span><span class="p">(</span><span class="o">-</span><span class="n">10</span><span class="p">);</span>
+<span class="ln"> 9</span>    <span class="p">}</span>
+<span class="ln">10</span><span class="p">}</span></code></pre></div>
 <p>and the results:</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">value</span> <span class="o">=</span> <span class="n">10</span>
-<span class="ln">2</span><span class="n">value</span> <span class="o">=</span> <span class="o">-</span><span class="n">10</span> <span class="n">is</span> <span class="n">negative</span><span class="o">!</span></code></pre></div>
+<span class="ln">2</span><span class="nf">value</span> <span class="o">=</span> <span class="o">-</span><span class="n">10</span> <span class="nf">is</span> <span class="n">negative</span><span class="o">!</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -461,11 +459,11 @@ To achieve this, the proxy class and the original class must implement the same 
           <h4 class="see-also">See also</h4>
           <ul>
           
-            <li><a href="/2019/04/04/cplex-java-api-design/">Cplex Java API Design</a></li>
-          
-            <li><a href="/2019/04/03/cplex-java-setup/">Setup and Run Cplex using Java</a></li>
+            <li><a href="/2019/10/11/cplex-java-api-deep-dive-1/">Deep Dive into CPLEX Java API (1)</a></li>
           
             <li><a href="/2019/04/02/tutorial1/">Apache POI - Excel</a></li>
+          
+            <li><a href="/2019/03/04/cplex-java-variables/">Cplex Java Concert Technology - Variables</a></li>
           
           </ul>
           
@@ -571,7 +569,7 @@ To achieve this, the proxy class and the original class must implement the same 
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

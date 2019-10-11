@@ -8,10 +8,29 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Dive into CPLEX Java API (1)</title>
+      <link>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</guid>
+      <description>I have been using CPLEX for a while but haven&amp;rsquo;t paid much attention to how its various components are woven together to enable users building and solving optimization models. It is time to dive deeper into CPLEX&amp;rsquo;s design principle and see how it works internally. This is an attempt to improve my knowledge about CPLEX, and the random notes below are just my thinking aloud.
+IloAddable IloAddable is the base interface implemented by most classes in the package.</description>
+    </item>
+    
+    <item>
+      <title>Setup and Run CPLEX using Java</title>
+      <link>https://kunlei.github.io/2019/10/11/cplex-java-setup/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/10/11/cplex-java-setup/</guid>
+      <description>I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.</description>
+    </item>
     
     <item>
       <title>MultiKeyMap in Java</title>
@@ -33,25 +52,6 @@
     </item>
     
     <item>
-      <title>Cplex Java API Design</title>
-      <link>https://kunlei.github.io/2019/04/04/cplex-java-api-design/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/04/04/cplex-java-api-design/</guid>
-      <description>I recently look into how the Java API of Cplex Concert is designed and find that it is a great example of the programming principle &amp;ldquo;Programming to the Interface, not Implementation&amp;rdquo;. This post tries to show how various components of this API work together to let us build mathematical models.
-Java Interface Design of Cplex Concert Let&amp;rsquo;s first take a look of the class diagram, a picture is worth a thousand words, after all.</description>
-    </item>
-    
-    <item>
-      <title>Setup and Run Cplex using Java</title>
-      <link>https://kunlei.github.io/2019/04/03/cplex-java-setup/</link>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/04/03/cplex-java-setup/</guid>
-      <description>I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.</description>
-    </item>
-    
-    <item>
       <title>Apache POI - Excel</title>
       <link>https://kunlei.github.io/2019/04/02/tutorial1/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
@@ -59,27 +59,6 @@ Java Interface Design of Cplex Concert Let&amp;rsquo;s first take a look of the 
       <guid>https://kunlei.github.io/2019/04/02/tutorial1/</guid>
       <description>I recently worked on a project that required me to interact with Microsoft Excel to obtain input data and present optimization results. It turns out that there is a great package for that purpose and all you need to do is include the following dependencies in the Java project .pom file:
 1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;org.apache.poi&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;poi&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.17&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; 6 7&amp;lt;dependency&amp;gt; 8 &amp;lt;groupId&amp;gt;org.apache.poi&amp;lt;/groupId&amp;gt; 9 &amp;lt;artifactId&amp;gt;poi-ooxml&amp;lt;/artifactId&amp;gt; 10 &amp;lt;version&amp;gt;3.17&amp;lt;/version&amp;gt; 11&amp;lt;/dependency&amp;gt; There are things I do most frequently in my project:</description>
-    </item>
-    
-    <item>
-      <title>Cplex Java Concert Technology - Constraints (1)</title>
-      <link>https://kunlei.github.io/2019/03/06/cplex-java-constraints/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/03/06/cplex-java-constraints/</guid>
-      <description>Constraint is an essential part of an optimization model, and Cplex provides various ways of defining constraints in a model. All constraints in Cplex have a base interface IloConstraint, from which other constraint types are derived. Probably the most commonly used constraint types are IloRange and IloLPMatrix.
-IloConstraint IloConstraint is a marker interface which extends from IloAddable and IloIntExpr, both are marker interfaces themselves. The fact that IloConstraint being a IloAddable indicates that an object of classes implementing this interface can be added to a model.</description>
-    </item>
-    
-    <item>
-      <title>Cplex Java Concert Technology - Objectives</title>
-      <link>https://kunlei.github.io/2019/03/04/cplex-java-objectives/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
-      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/03/04/cplex-java-objectives/</guid>
-      <description>IloModeler Objectives can be added to the model in multiple ways:
- IloObjective addMinimize(IloNumExpr expr) IloObjective addMinimize(IloNumExpr expr, java.lang.String name) IloObjective addMaximize(IloNumExpr expr) IloObjective addMaximize(IloNumExpr expr, java.lang.String name) IloObjective addObjective(IloObjectiveSense sense, IloNumExpr expr) IloObjective addObjective(IloObjectiveSense sense, IloNumExpr expr, java.lang.String name)  or they can be defined without being added to the model:
- IloObjective minimize(IloNumExpr expr) IloObjective minimize(IloNumExpr expr, java.lang.String name) IloObjective maximize(IloNumExpr expr) IloObjective maximize(IloNumExpr expr, java.lang.String name) IloObjective objective(IloObjectiveSense sense, IloNumExpr expr) IloObjective objective(IloObjectiveSense sense, IloNumExpr expr, java.</description>
     </item>
     
     <item>

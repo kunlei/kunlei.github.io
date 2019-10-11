@@ -22,14 +22,14 @@
     "@type": "WebSite",
     "name": "O.R. in Action",
     
-    "url": "https://kunlei.github.io"
+    "url": "https:\/\/kunlei.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://kunlei.github.io"
+  "url": "https:\/\/kunlei.github.io"
   
   
   
@@ -44,14 +44,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://kunlei.github.io",
+          "@id": "https:\/\/kunlei.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://kunlei.github.io/1/01/01/composite/",
+          "@id": "https:\/\/kunlei.github.io\/1\/01\/01\/composite\/",
           "name": "Composite pattern"
         }
     }]
@@ -64,21 +64,20 @@
     "name" : "Kunlei Lian"
   },
   "headline": "Composite Pattern",
-  "description" : "Composite Pattern is one of the structural design patterns and it has three main components:
- Component: this is an interface to be implemented by either a leaf or a composite Leaf: an end node of a tree object structure Composite: a composite has multiple leaves  An example of composite pattern can be found in companies, which normally have two types of employees, individual contributors and managers. We can therefore represent them in a tree structure and the common component interface allow uniform treatment of these two types of workers.",
+  "description" : "Composite Pattern is one of the structural design patterns and it has three main components:\n Component: this is an interface to be implemented by either a leaf or a composite Leaf: an end node of a tree object structure Composite: a composite has multiple leaves  An example of composite pattern can be found in companies, which normally have two types of employees, individual contributors and managers. We can therefore represent them in a tree structure and the common component interface allow uniform treatment of these two types of workers.",
   "inLanguage" : "en",
-  "wordCount": 355,
+  "wordCount":  355 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https://kunlei.github.io/img/logo.png",
+  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "Java" ],
-  "mainEntityOfPage" : "https://kunlei.github.io/1/01/01/composite/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/1\/01\/01\/composite\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://kunlei.github.io",
+    "name" : "https:\/\/kunlei.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://kunlei.github.io/img/logo.png",
+        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
         "height" :  60 ,
         "width" :  60
     }
@@ -107,7 +106,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.57.1" />
   <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -345,67 +344,67 @@ if (!doNotTrack) {
 <p>An example of composite pattern can be found in companies, which normally have two types of employees, individual contributors and managers.
 We can therefore represent them in a tree structure and the common component interface allow uniform treatment of these two types of workers.
 Let&rsquo;s define the component interface as below.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Employee</span> <span class="o">{</span>
-<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">work</span><span class="o">();</span>
-<span class="ln">3</span><span class="o">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">interface</span> <span class="n">Employee</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kt">void</span> <span class="nf">work</span><span class="p">();</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
 <p>and a leaf and composite:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">IndividualContributor</span> <span class="kd">implements</span> <span class="n">Employee</span> <span class="o">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">IndividualContributor</span> <span class="nf">implements</span> <span class="n">Employee</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">name</span><span class="p">;</span>
 <span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">IndividualContributor</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 5</span>        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
-<span class="ln"> 6</span>    <span class="o">}</span>
+<span class="ln"> 4</span>    <span class="kd">public</span> <span class="nf">IndividualContributor</span><span class="p">(</span><span class="n">String</span> <span class="nf">name</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 5</span>        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+<span class="ln"> 6</span>    <span class="p">}</span>
 <span class="ln"> 7</span>
 <span class="ln"> 8</span>    <span class="nd">@Override</span>
-<span class="ln"> 9</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">10</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;My name is &#34;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&#34; and I am working as individual contributor!&#34;</span><span class="o">);</span>
-<span class="ln">11</span>    <span class="o">}</span>
-<span class="ln">12</span><span class="o">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">implements</span> <span class="n">Employee</span> <span class="o">{</span>
-<span class="ln"> 2</span>    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-<span class="ln"> 3</span>    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">team</span><span class="o">;</span>
+<span class="ln"> 9</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">work</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">10</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;My name is &#34;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&#34; and I am working as individual contributor!&#34;</span><span class="p">);</span>
+<span class="ln">11</span>    <span class="p">}</span>
+<span class="ln">12</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Manager</span> <span class="nf">implements</span> <span class="n">Employee</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">name</span><span class="p">;</span>
+<span class="ln"> 3</span>    <span class="kd">private</span> <span class="nf">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">team</span><span class="p">;</span>
 <span class="ln"> 4</span>
-<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">Manager</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 6</span>        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
-<span class="ln"> 7</span>        <span class="n">team</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
-<span class="ln"> 8</span>    <span class="o">}</span>
+<span class="ln"> 5</span>    <span class="kd">public</span> <span class="nf">Manager</span><span class="p">(</span><span class="n">String</span> <span class="nf">name</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 6</span>        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+<span class="ln"> 7</span>        <span class="n">team</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="ln"> 8</span>    <span class="p">}</span>
 <span class="ln"> 9</span>
-<span class="ln">10</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMember</span><span class="o">(</span><span class="n">Employee</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">11</span>        <span class="n">team</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
-<span class="ln">12</span>    <span class="o">}</span>
+<span class="ln">10</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">addMember</span><span class="p">(</span><span class="n">Employee</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">11</span>        <span class="n">team</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="ln">12</span>    <span class="p">}</span>
 <span class="ln">13</span>
 <span class="ln">14</span>    <span class="nd">@Override</span>
-<span class="ln">15</span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln">16</span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;My name is &#34;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&#34; and I am leading a team below:&#34;</span><span class="o">);</span>
-<span class="ln">17</span>        <span class="k">for</span> <span class="o">(</span><span class="n">Employee</span> <span class="n">e</span> <span class="o">:</span> <span class="n">team</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">18</span>            <span class="n">e</span><span class="o">.</span><span class="na">work</span><span class="o">();</span>
-<span class="ln">19</span>        <span class="o">}</span>
-<span class="ln">20</span>    <span class="o">}</span>
-<span class="ln">21</span><span class="o">}</span></code></pre></div>
+<span class="ln">15</span>    <span class="kd">public</span> <span class="nf">void</span> <span class="n">work</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">16</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;My name is &#34;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&#34; and I am leading a team below:&#34;</span><span class="p">);</span>
+<span class="ln">17</span>        <span class="k">for</span> <span class="p">(</span><span class="n">Employee</span> <span class="nf">e</span> <span class="o">:</span> <span class="n">team</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">18</span>            <span class="n">e</span><span class="p">.</span><span class="na">work</span><span class="p">();</span>
+<span class="ln">19</span>        <span class="p">}</span>
+<span class="ln">20</span>    <span class="p">}</span>
+<span class="ln">21</span><span class="p">}</span></code></pre></div>
 <p>Let&rsquo;s run a demo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CompositeDemo</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">CompositeDemo</span> <span class="p">{</span>
 <span class="ln"> 2</span>
-<span class="ln"> 3</span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln"> 4</span>        <span class="n">IndividualContributor</span> <span class="n">john</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IndividualContributor</span><span class="o">(</span><span class="s">&#34;John&#34;</span><span class="o">);</span>
-<span class="ln"> 5</span>        <span class="n">IndividualContributor</span> <span class="n">mike</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IndividualContributor</span><span class="o">(</span><span class="s">&#34;Mike&#34;</span><span class="o">);</span>
-<span class="ln"> 6</span>        <span class="n">IndividualContributor</span> <span class="n">kai</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IndividualContributor</span><span class="o">(</span><span class="s">&#34;Kai&#34;</span><span class="o">);</span>
+<span class="ln"> 3</span>    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 4</span>        <span class="n">IndividualContributor</span> <span class="nf">john</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IndividualContributor</span><span class="p">(</span><span class="s">&#34;John&#34;</span><span class="p">);</span>
+<span class="ln"> 5</span>        <span class="n">IndividualContributor</span> <span class="nf">mike</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IndividualContributor</span><span class="p">(</span><span class="s">&#34;Mike&#34;</span><span class="p">);</span>
+<span class="ln"> 6</span>        <span class="n">IndividualContributor</span> <span class="nf">kai</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IndividualContributor</span><span class="p">(</span><span class="s">&#34;Kai&#34;</span><span class="p">);</span>
 <span class="ln"> 7</span>
-<span class="ln"> 8</span>        <span class="n">Manager</span> <span class="n">manager</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Manager</span><span class="o">(</span><span class="s">&#34;Joe&#34;</span><span class="o">);</span>
-<span class="ln"> 9</span>        <span class="n">manager</span><span class="o">.</span><span class="na">addMember</span><span class="o">(</span><span class="n">john</span><span class="o">);</span>
-<span class="ln">10</span>        <span class="n">manager</span><span class="o">.</span><span class="na">addMember</span><span class="o">(</span><span class="n">mike</span><span class="o">);</span>
+<span class="ln"> 8</span>        <span class="n">Manager</span> <span class="nf">manager</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Manager</span><span class="p">(</span><span class="s">&#34;Joe&#34;</span><span class="p">);</span>
+<span class="ln"> 9</span>        <span class="n">manager</span><span class="p">.</span><span class="na">addMember</span><span class="p">(</span><span class="n">john</span><span class="p">);</span>
+<span class="ln">10</span>        <span class="n">manager</span><span class="p">.</span><span class="na">addMember</span><span class="p">(</span><span class="n">mike</span><span class="p">);</span>
 <span class="ln">11</span>
-<span class="ln">12</span>        <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">org</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
-<span class="ln">13</span>        <span class="n">org</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">kai</span><span class="o">);</span>
-<span class="ln">14</span>        <span class="n">org</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">manager</span><span class="o">);</span>
-<span class="ln">15</span>        <span class="k">for</span> <span class="o">(</span><span class="n">Employee</span> <span class="n">e</span> <span class="o">:</span> <span class="n">org</span><span class="o">)</span> <span class="o">{</span>
-<span class="ln">16</span>            <span class="n">e</span><span class="o">.</span><span class="na">work</span><span class="o">();</span>
-<span class="ln">17</span>        <span class="o">}</span>
-<span class="ln">18</span>    <span class="o">}</span>
-<span class="ln">19</span><span class="o">}</span></code></pre></div>
+<span class="ln">12</span>        <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">org</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="ln">13</span>        <span class="n">org</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">kai</span><span class="p">);</span>
+<span class="ln">14</span>        <span class="n">org</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">manager</span><span class="p">);</span>
+<span class="ln">15</span>        <span class="k">for</span> <span class="p">(</span><span class="n">Employee</span> <span class="nf">e</span> <span class="o">:</span> <span class="n">org</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">16</span>            <span class="n">e</span><span class="p">.</span><span class="na">work</span><span class="p">();</span>
+<span class="ln">17</span>        <span class="p">}</span>
+<span class="ln">18</span>    <span class="p">}</span>
+<span class="ln">19</span><span class="p">}</span></code></pre></div>
 <p>Here is the output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">My</span> <span class="n">name</span> <span class="n">is</span> <span class="n">Kai</span> <span class="n">and</span> <span class="n">I</span> <span class="n">am</span> <span class="n">working</span> <span class="n">as</span> <span class="n">individual</span> <span class="n">contributor</span><span class="o">!</span>
-<span class="ln">2</span><span class="n">My</span> <span class="n">name</span> <span class="n">is</span> <span class="n">Joe</span> <span class="n">and</span> <span class="n">I</span> <span class="n">am</span> <span class="n">leading</span> <span class="n">a</span> <span class="n">team</span> <span class="nl">below:</span>
-<span class="ln">3</span><span class="n">My</span> <span class="n">name</span> <span class="n">is</span> <span class="n">John</span> <span class="n">and</span> <span class="n">I</span> <span class="n">am</span> <span class="n">working</span> <span class="n">as</span> <span class="n">individual</span> <span class="n">contributor</span><span class="o">!</span>
-<span class="ln">4</span><span class="n">My</span> <span class="n">name</span> <span class="n">is</span> <span class="n">Mike</span> <span class="n">and</span> <span class="n">I</span> <span class="n">am</span> <span class="n">working</span> <span class="n">as</span> <span class="n">individual</span> <span class="n">contributor</span><span class="o">!</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">My</span> <span class="nf">name</span> <span class="n">is</span> <span class="nf">Kai</span> <span class="n">and</span> <span class="nf">I</span> <span class="n">am</span> <span class="nf">working</span> <span class="n">as</span> <span class="nf">individual</span> <span class="n">contributor</span><span class="o">!</span>
+<span class="ln">2</span><span class="n">My</span> <span class="nf">name</span> <span class="n">is</span> <span class="nf">Joe</span> <span class="n">and</span> <span class="nf">I</span> <span class="n">am</span> <span class="nf">leading</span> <span class="n">a</span> <span class="nf">team</span> <span class="n">below</span><span class="o">:</span>
+<span class="ln">3</span><span class="n">My</span> <span class="nf">name</span> <span class="n">is</span> <span class="nf">John</span> <span class="n">and</span> <span class="nf">I</span> <span class="n">am</span> <span class="nf">working</span> <span class="n">as</span> <span class="nf">individual</span> <span class="n">contributor</span><span class="o">!</span>
+<span class="ln">4</span><span class="n">My</span> <span class="nf">name</span> <span class="n">is</span> <span class="nf">Mike</span> <span class="n">and</span> <span class="nf">I</span> <span class="n">am</span> <span class="nf">working</span> <span class="n">as</span> <span class="nf">individual</span> <span class="n">contributor</span><span class="o">!</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -484,11 +483,11 @@ Let&rsquo;s define the component interface as below.</p>
           <h4 class="see-also">See also</h4>
           <ul>
           
-            <li><a href="/2019/04/04/cplex-java-api-design/">Cplex Java API Design</a></li>
-          
-            <li><a href="/2019/04/03/cplex-java-setup/">Setup and Run Cplex using Java</a></li>
+            <li><a href="/2019/10/11/cplex-java-api-deep-dive-1/">Deep Dive into CPLEX Java API (1)</a></li>
           
             <li><a href="/2019/04/02/tutorial1/">Apache POI - Excel</a></li>
+          
+            <li><a href="/2019/03/04/cplex-java-variables/">Cplex Java Concert Technology - Variables</a></li>
           
           </ul>
           
@@ -594,7 +593,7 @@ Let&rsquo;s define the component interface as below.</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

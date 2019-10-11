@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kunlei.github.io/tags/cplex/</loc>
+    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</loc>
+    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/java/</loc>
+    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/post/</loc>
+    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2019/10/11/cplex-java-setup/</loc>
+    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/</loc>
+    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kunlei.github.io/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
@@ -13,8 +43,18 @@
   </url>
   
   <url>
+    <loc>https://kunlei.github.io/page/</loc>
+    <lastmod>2019-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kunlei.github.io/page/book-list/</loc>
     <lastmod>2019-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/books/</loc>
+    <lastmod>2019-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -58,6 +98,16 @@
   </url>
   
   <url>
+    <loc>https://kunlei.github.io/categories/blog/</loc>
+    <lastmod>2019-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/categories/</loc>
+    <lastmod>2019-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kunlei.github.io/2019/05/14/road-less-travelled/</loc>
     <lastmod>2019-05-14T00:00:00+00:00</lastmod>
   </url>
@@ -78,22 +128,27 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/04/04/cplex-java-api-design/</loc>
-    <lastmod>2019-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kunlei.github.io/2019/04/03/dissertation/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/04/03/cplex-java-setup/</loc>
+    <loc>https://kunlei.github.io/categories/optimization/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/2019/04/02/tutorial1/</loc>
+    <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/excel/</loc>
+    <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/categories/java/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -118,12 +173,7 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/03/06/cplex-java-constraints/</loc>
-    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/2019/03/04/cplex-java-objectives/</loc>
+    <loc>https://kunlei.github.io/categories/cplex/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -134,6 +184,7 @@
   
   <url>
     <loc>https://kunlei.github.io/1/01/01/cplex-java-conversion/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -145,25 +196,7 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/categories/blog/</loc>
-    <lastmod>2019-05-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/books/</loc>
-    <lastmod>2019-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kunlei.github.io/1/01/01/bridge/</loc>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/categories/</loc>
-    <lastmod>2019-05-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -179,46 +212,15 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/categories/cplex/</loc>
-    <lastmod>2019-04-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/cplex/</loc>
-    <lastmod>2019-04-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kunlei.github.io/1/01/01/decorator/</loc>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/categories/design-pattern/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/excel/</loc>
-    <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/1/01/01/flyweight/</loc>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/categories/java/</loc>
-    <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/java/</loc>
-    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -234,35 +236,11 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/categories/optimization/</loc>
-    <lastmod>2019-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/page/</loc>
-    <lastmod>2019-09-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/post/</loc>
-    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kunlei.github.io/1/01/01/proxy/</loc>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/1/01/01/strategy/</loc>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/</loc>
-    <lastmod>2019-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
