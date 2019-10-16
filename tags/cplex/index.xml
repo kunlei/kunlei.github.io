@@ -8,10 +8,21 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/tags/cplex/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Build Optimization Models by Row using CPLEX Java API</title>
+      <link>https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/</link>
+      <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/</guid>
+      <description>The CPLEX Java API separates model building from solving algorithms by defining various interfaces in the Concert package. There are two ways in constructing a mathematical model regarding how constraints are added to the model:
+ by row by column  An illustrative example This post looks at how to build models by row. Assuming we have a small mathematical formulation as below:
+$$ \begin{align} \text{max.} \quad &amp;amp; 20 x_1 + 15 x_2 \newline \text{s.</description>
+    </item>
     
     <item>
       <title>Deep Dive into CPLEX Java API (1)</title>
