@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Tue, 15 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Build Optimization Models by Column using CPLEX Java API</title>
+      <link>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/</guid>
+      <description>In a previous post, we looked at how to build models by adding rows sequentially. It starts with creating decision variables, with which the objective function is defined. Constraints are then created sequentially and incorporated into the model. In optimization textbooks, mathematical models are usually represented in matrix format, and in CPLEX, it is indeed possible to build models column-wise. This post aims to demystify the process of building models by adding columns sequentially.</description>
+    </item>
     
     <item>
       <title>Build Optimization Models by Row using CPLEX Java API</title>
