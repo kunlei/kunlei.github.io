@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #java - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #java, such as: Build Optimization Models by Column using CPLEX Java API">
+  <meta name="description" content="Overview of all pages with the tag #java, such as: Build Optimization Models by Column with IloLPMatrix using CPLEX Java API">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -183,6 +183,69 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/10/21/cplex-java-build-model-by-column-lpmatrix/">
+                <h2 class="post-title">Build Optimization Models by Column with IloLPMatrix using CPLEX Java API</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on October 21, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    This post explains how to use IloLPMatrix to build models by column. IloLPMatrix is commonly used in building large-scale optimization models.
+An illustrative example The same example used in a previous post is repeated here for clarity.
+$$ \begin{align} \text{min.} \quad &amp; 2 x_1 + x_2 + 3x_3 + 2x_4 + 5x_5 \newline \text{s.t.} \quad &amp; x_1 + x_3 \geq 2 \newline \quad &amp; x_2 + x_4 + x_5 \geq 3 \newline \quad &amp; x_1 + x_2 + x_4 \geq 1 \newline \quad &amp; 0 \leq x_i \leq 100,\ \forall i \in { 1, \cdots, 5 } \end{align} $$<a href="https://kunlei.github.io/2019/10/21/cplex-java-build-model-by-column-lpmatrix/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/cplex">cplex</a>&nbsp;
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/10/21/cplex-java-build-model-by-row-lpmatrix/">
+                <h2 class="post-title">Build Optimization Models by Row with IloLPMatrix using CPLEX Java API</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on October 21, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    In a previous post, we examined how to build optimization models row-wise, in which decision variables and constraints are directly created and managed by an IloCplex object. It turns out that there is another, more powerful in certain cases, way to build and manage constraints in CPLEX and, in this post, we&rsquo;ll look at how to utilize IloLPMatrix to build models by row.
+An illustrative example As usual, let&rsquo;s use a small example to show the case.<a href="https://kunlei.github.io/2019/10/21/cplex-java-build-model-by-row-lpmatrix/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/cplex">cplex</a>&nbsp;
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/">
@@ -387,66 +450,6 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
                 <span class="post-meta">
                   
                     #<a href="/tags/excel">excel</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/03/04/cplex-java-variables/">
-                <h2 class="post-title">Cplex Java Concert Technology - Variables</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on March 4, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Cplex provides three types of decision variables, which are defined by class IloNumVarType. There are two key information about a variable: bound and type, the former can be changed after a variable is created, but the latter remains the same throughout the lifetime of the object. Also, a variable bound consists of lower bound and upper bound, defined by class IloNumVarBoundType.
-Although variables are key components of a mathematical model, Cplex does not provide function to explicitly add variables to a model, instead, variables are added implicitly.<a href="https://kunlei.github.io/2019/03/04/cplex-java-variables/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/1/01/01/adapter/">
-                <h2 class="post-title">Adapter Pattern</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 1, 0001
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Adapter Pattern is one of the structural design patterns that connects two otherwise incompatible interfaces. Adapters are often used in real life. Suppose there is a car interface that can run and a vehicle interface that can drive. An adapter is connect these two interfaces so that a car can act like a vehicle. To see this, let&rsquo;s define two interfaces:
-1public interface Car { 2 void run(); 3}1public interface Vehicle { 2 void drive(); 3} Then let&rsquo;s have some implementations:<a href="https://kunlei.github.io/1/01/01/adapter/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
                   
                     #<a href="/tags/java">Java</a>&nbsp;
                   
