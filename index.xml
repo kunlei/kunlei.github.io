@@ -128,12 +128,22 @@ Education  Ph.D. in Industrial Engineering  University of Arkansas, 2012 - 2017 
     </item>
     
     <item>
+      <title>CPLEX</title>
+      <link>https://kunlei.github.io/page/cplex-index/</link>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/cplex-index/</guid>
+      <description> This is an index page for all CPLEX-related posts. CPLEX Java API  Setup API deep dive  IloAddable, IloModel and IloModeler IloLPMatrix  Model building  By row  without IloLPMatrix with IloLPMatirx  By column  without IloLPMatrix with IloLPMatrix    </description>
+    </item>
+    
+    <item>
       <title>Java</title>
       <link>https://kunlei.github.io/page/java-index/</link>
       <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/java-index/</guid>
-      <description>This is an index page for all Java-related posts.</description>
+      <description>This is an index page for all Java-related posts.
+ poi lombok MultiKeyMap  </description>
     </item>
     
     <item>

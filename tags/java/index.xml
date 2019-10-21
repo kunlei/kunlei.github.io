@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java on O.R. in Action</title>
+    <title>java on O.R. in Action</title>
     <link>https://kunlei.github.io/tags/java/</link>
-    <description>Recent content in Java on O.R. in Action</description>
+    <description>Recent content in java on O.R. in Action</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
@@ -69,6 +69,15 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/2019/08/23/java-lombok/</guid>
       <description>This is probably one of those &amp;lsquo;everyone knows except me&amp;rsquo; cases in Java world. I recently found a new package called &amp;lsquo;lombok&amp;rsquo; that taught me a fresh lesson about how powerful Java annotations could be. There is something depressing with my short tenure of extensively using Java in daily works. For often times I find myself doing repetitive works, writing getter/setter methods being one of them (toString(), I am not forgetting you).</description>
+    </item>
+    
+    <item>
+      <title>CPLEX</title>
+      <link>https://kunlei.github.io/page/cplex-index/</link>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/cplex-index/</guid>
+      <description> This is an index page for all CPLEX-related posts. CPLEX Java API  Setup API deep dive  IloAddable, IloModel and IloModeler IloLPMatrix  Model building  By row  without IloLPMatrix with IloLPMatirx  By column  without IloLPMatrix with IloLPMatrix    </description>
     </item>
     
     <item>
