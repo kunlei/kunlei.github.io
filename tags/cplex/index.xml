@@ -79,7 +79,7 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/cplex-index/</guid>
-      <description> This is an index page for all CPLEX-related posts. CPLEX Java API  Setup API deep dive  IloAddable, IloModel and IloModeler IloLPMatrix  Model building  By row  without IloLPMatrix with IloLPMatirx  By column  without IloLPMatrix [with IloLPMatrix(https://kunlei.github.io/2019/10/21/cplex-java-build-model-by-column-lpmatrix/)]    </description>
+      <description> This is an index page for all CPLEX-related posts. CPLEX Java API  Setup API deep dive  IloAddable, IloModel and IloModeler IloLPMatrix  Model building  By row  without IloLPMatrix with IloLPMatirx  By column  without IloLPMatrix with IloLPMatrix    </description>
     </item>
     
     <item>
