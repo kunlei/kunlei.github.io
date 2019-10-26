@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #java - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #java, such as: Build Optimization Models by Column using CPLEX Java API">
+  <meta name="description" content="Overview of all pages with the tag #java, such as: Using ContinuousCallback">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -124,7 +124,7 @@ if (!doNotTrack) {
               <a class="navlinks-parent">About</a>
               <div class="navlinks-children">
                 
-                  <a href="/page/resume">Resume</a>
+                  <a href="/pagedown-resume">Resume</a>
                 
                   <a href="/page/about">About</a>
                 
@@ -183,6 +183,37 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2019/04/02/tutorial1/">
+                <h2 class="post-title">Apache POI - Excel</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on April 2, 2019
+              </p>
+              <div class="post-entry">
+                
+                  
+                    I recently worked on a project that required me to interact with Microsoft Excel to obtain input data and present optimization results. It turns out that there is a great package for that purpose and all you need to do is include the following dependencies in the Java project .pom file:
+1&lt;dependency&gt; 2 &lt;groupId&gt;org.apache.poi&lt;/groupId&gt; 3 &lt;artifactId&gt;poi&lt;/artifactId&gt; 4 &lt;version&gt;3.17&lt;/version&gt; 5&lt;/dependency&gt; 6 7&lt;dependency&gt; 8 &lt;groupId&gt;org.apache.poi&lt;/groupId&gt; 9 &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt; 10 &lt;version&gt;3.17&lt;/version&gt; 11&lt;/dependency&gt; There are things I do most frequently in my project:<a href="https://kunlei.github.io/2019/04/02/tutorial1/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/excel">excel</a>&nbsp;
+                  
+                    #<a href="/tags/java">Java</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2019/03/04/cplex-java-variables/">
@@ -432,35 +463,6 @@ In the example below, a computer implements the computing interface to carry out
                   
                     Mediator Pattern is one of the behavioral patterns and it aims to decouple some related objects by using a separate object to manage their communications. This may better be explained by an example. Think of the stock trading system as a mediator to manage buying and selling of stocks. Individual investors do not talk to other tradres directly, instead they interact with the trading system directly.
 Let&rsquo;s define the mediator interface as below.<a href="https://kunlei.github.io/1/01/01/mediator/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/1/01/01/memento/">
-                <h2 class="post-title">Memento Pattern</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 1, 0001
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Memento Pattern is one of the behavioral design patterns defined in the original GoF book. It is useful when we need to save the state of an object and restore it to a saved state at a later time. There are three components in this pattern:
- Originator: this is the class whose state needs to be saved and restored. Memento: this is the class used to capture the state of the originator.<a href="https://kunlei.github.io/1/01/01/memento/" class="post-read-more">[Read More]</a>
                   
                 
               </div>
