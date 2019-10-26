@@ -14,6 +14,15 @@
     
     
     <item>
+      <title>All the Wrong Moves</title>
+      <link>https://kunlei.github.io/2019/10/26/all-the-wrong-moves/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/10/26/all-the-wrong-moves/</guid>
+      <description>All the Wrong moves is a delightful book in which the author enthuses about his passion and failure of playing chess. It&amp;rsquo;s a fun read even for someone, like me, who has no chess experience. The author experience epitomizes an old Chinese proverb that goes something like &amp;lsquo;a man is doomed to fail if he chooses to compete in the wrong field&amp;rsquo;. The author is clearly very enthusiastic about playing chess but eventually has to accept the fact that he can never be a master player.</description>
+    </item>
+    
+    <item>
       <title>Using ContinuousCallback</title>
       <link>https://kunlei.github.io/2019/10/26/cplex-java-continuous-callback/</link>
       <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
@@ -99,7 +108,7 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/book-list/</guid>
       <description> I am an avid reader and below compiles the books I read or am reading&amp;hellip;
-2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it! Quiet power: the secret strengths of introverts The simple path to wealth Bad blood: secrets and lies in a silicon valley startup Army of none: autonomous weapons and the future of war The subtle art of not giving a f*ck: a counterintuitive approach to living a good life Me before you The little prince Becoming Deep work The one thing The kite runner The shallows: what the internet is doing to our brains The road less traveled Irrational exuberance Educated Far from the tree The psychology of wealth Someday is not a day in the week Anonymous Limitless mind: learn, lead and live without barriers No Hard Feelings: The Secret Power of Embracing Emotions at Work by Liz Fosslien and West Duffy, Mollie  </description>
+2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it! Quiet power: the secret strengths of introverts The simple path to wealth Bad blood: secrets and lies in a silicon valley startup Army of none: autonomous weapons and the future of war The subtle art of not giving a f*ck: a counterintuitive approach to living a good life Me before you The little prince Becoming Deep work The one thing The kite runner The shallows: what the internet is doing to our brains The road less traveled Irrational exuberance Educated Far from the tree The psychology of wealth Someday is not a day in the week Anonymous Limitless mind: learn, lead and live without barriers No Hard Feelings: The Secret Power of Embracing Emotions at Work by Liz Fosslien and West Duffy, Mollie All the Wrong Moves: A Memoir About Chess, Love, and Ruining Everything by Sasha Chapin  </description>
     </item>
     
     <item>
@@ -163,7 +172,7 @@ Education  Ph.D. in Industrial Engineering  University of Arkansas, 2012 - 2017 
       <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/cplex-index/</guid>
-      <description> This is an index page for all CPLEX-related posts. CPLEX Java API  Setup API deep dive  IloAddable, IloModel and IloModeler IloLPMatrix  Model building  By row  without IloLPMatrix with IloLPMatirx  By column  without IloLPMatrix with IloLPMatrix    </description>
+      <description> This is an index page for all CPLEX-related posts. CPLEX Java API  Setup API deep dive  IloAddable, IloModel and IloModeler IloLPMatrix  Model building  By row  without IloLPMatrix with IloLPMatirx  By column  without IloLPMatrix with IloLPMatrix   Callback  Optimization callback  Continuous callback  Tuning callback   </description>
     </item>
     
     <item>
@@ -313,7 +322,7 @@ Although variables are key components of a mathematical model, Cplex does not pr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/about/</guid>
-      <description>Hello! My name is Kunlei Lian, and I&amp;rsquo;m a Sr. Data Scientist currently working for Walmart Labs.
+      <description>Hello! My name is Kunlei Lian, and I&amp;rsquo;m a Sr. Data Scientist working at Walmart Labs.
 My History Prior to working for Walmart Labs, I spent four years studying Industrial Engineering at University of Arkansas and got my Ph.D. in 2017. My dissertation, titled in Service Consistency in Vehicle Routing, centers on studying service consistency in vehicle routing problems spanning over multiple days. Previously, I got my Masters and Bachelors, both in industrial engineering, from Huazhong University of Science and Technology in 2012 and 2009, respectively.</description>
     </item>
     
