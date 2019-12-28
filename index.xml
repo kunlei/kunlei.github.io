@@ -14,6 +14,15 @@
     
     
     <item>
+      <title>C&#43;&#43; - Data Types</title>
+      <link>https://kunlei.github.io/2019/12/28/cpp-data-types/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/12/28/cpp-data-types/</guid>
+      <description>Data type is probably the most fundamental topic pertinent to a programming language. There is a plethora of online resources explaining all the available data types in C++, and the intend of this post is to serve as a quick reference for my future lookup because I used to check times and again some of the items in this post. It&amp;rsquo;s time to avoid all that hassles and put them all in one place.</description>
+    </item>
+    
+    <item>
       <title>New Year Resolution</title>
       <link>https://kunlei.github.io/2019/12/26/resolution-2020/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
@@ -183,6 +192,16 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <guid>https://kunlei.github.io/page/resume/</guid>
       <description>Summary Currently Sr. Data Scientist (Operations Research) working at Walmart Labs.
 Education  Ph.D. in Industrial Engineering  University of Arkansas, 2012 - 2017 Dissertation: service consistency in vehicle routing  M.S. in Industrial Engineering  Huazhong University of Science and Technology, 2009 - 2012 Thesis topic: manufacturing system optimization  B.S. in Industrial Engineering  Huazhong University of Science and Technology, 2005 - 2009 Thesis topic: process planning optimization   Experience  Sr.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://kunlei.github.io/page/cpp-index/</link>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/cpp-index/</guid>
+      <description>This page lists all the C++-related posts.
+ Data types  </description>
     </item>
     
     <item>
