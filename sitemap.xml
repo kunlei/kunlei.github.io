@@ -3,22 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kunlei.github.io/tags/book/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/post/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2020/01/01/book-liberated-mind/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kunlei.github.io/tags/c&#43;&#43;/</loc>
     <lastmod>2019-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/2019/12/28/cpp-data-types/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/post/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/</loc>
     <lastmod>2019-12-28T00:00:00+00:00</lastmod>
   </url>
   
