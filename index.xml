@@ -14,6 +14,16 @@
     
     
     <item>
+      <title>C&#43;&#43; - Expressions</title>
+      <link>https://kunlei.github.io/2020/01/08/cpp-expressions/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/08/cpp-expressions/</guid>
+      <description>Expressions are the building blocks in C++ programs. They consist of one or more operands connected by one or more operators.
+Precedence and Associativity When multiple operators show up in the same expression, one need to heed the precedence rules defined by the language. Fortunately, we can always use parentheses to manually override these rules, which saves us the efforts of memorizing them. One caveat is that, within the same precedence, order of evaluation is undefined.</description>
+    </item>
+    
+    <item>
       <title>Wandering Mind</title>
       <link>https://kunlei.github.io/2020/01/07/book-liberated-mind/</link>
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
@@ -209,8 +219,8 @@ Education  Ph.D. in Industrial Engineering  University of Arkansas, 2012 - 2017 
       <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/cpp-index/</guid>
-      <description>This page lists all the C++-related posts.
- Data types  </description>
+      <description> This page lists all the C++-related posts.
+ Data types  Study Log  C++ Primer  </description>
     </item>
     
     <item>
@@ -352,6 +362,16 @@ Others It&amp;rsquo;s hard to describe what I got most from this book, other tha
       <guid>https://kunlei.github.io/2019/03/04/cplex-java-variables/</guid>
       <description>Cplex provides three types of decision variables, which are defined by class IloNumVarType. There are two key information about a variable: bound and type, the former can be changed after a variable is created, but the latter remains the same throughout the lifetime of the object. Also, a variable bound consists of lower bound and upper bound, defined by class IloNumVarBoundType.
 Although variables are key components of a mathematical model, Cplex does not provide function to explicitly add variables to a model, instead, variables are added implicitly.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Primer Study Log</title>
+      <link>https://kunlei.github.io/2019/01/01/cpp-book-primer-log/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2019/01/01/cpp-book-primer-log/</guid>
+      <description> This post is used to keep track of my progress in studying C++ Primer. I tend to forget things if I don&amp;rsquo;t use them for a while, but this book is really a good read.
+First Round &amp;ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part I: the Basics Chapter 2: Variables and Basic Types Chapter 3: Strings, Vectors and Arrays Chapter 4: Expressions Chapter 5: Statements Chapter 6: Functions Chapter 7: Classes  Part II: the C++ Library Chapter 8: the IO Library Chapter 9: Sequential Containers Chapter 10: Generic Algorithms Chapter 11: Associative Containers Chapter 12: Dynamic Memory  Part III: Tools for Class Authors Chapter 13: Copy Control Chapter 14: Overloaded Operations and Conversions Chapter 15: Object-oriented Programming Chapter 16: Templates and Generic Programming  Part IV: Advanced Topics Chapter 17: Specialized Library Facilities Chapter 18: Tools for Large Programs Chapter 19: Specialized Tools and Techniques  </description>
     </item>
     
     <item>
