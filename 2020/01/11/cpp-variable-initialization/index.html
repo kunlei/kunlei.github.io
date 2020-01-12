@@ -7,9 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>C&#43;&#43; - Expressions - O.R. in Action</title>
-  <meta name="description" content="Expressions are the building blocks in C&#43;&#43; programs. They consist of one or more operands connected by one or more operators.
-Precedence and Associativity When multiple operators show up in the same expression, one need to heed the precedence rules defined by the language. Fortunately, we can always use parentheses to manually override these rules, which saves us the efforts of memorizing them. One caveat is that, within the same precedence, order of evaluation is undefined.">
+  <title>C&#43;&#43; - Variable Initialization - O.R. in Action</title>
+  <meta name="description" content="Programming in C&#43;&#43; boils down to creating and manipulating variables of either built-in or class types. It&rsquo;s therefore imperative to understand how variables are initialized upon creation.
+Primitive Types There are a number of ways to give value to newly created variables,
+1int a(1); // option 1 2int a = 1; // option 2 3int a{3}; // option 3 4int a = {4}; // option 4  Options 3 and 4 are called list initialization.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,8 +46,8 @@ Precedence and Associativity When multiple operators show up in the same express
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/01\/08\/cpp-expressions\/",
-          "name": "C\x2b\x2b expressions"
+          "@id": "https:\/\/kunlei.github.io\/2020\/01\/11\/cpp-variable-initialization\/",
+          "name": "C\x2b\x2b variable initialization"
         }
     }]
 }
@@ -57,15 +58,15 @@ Precedence and Associativity When multiple operators show up in the same express
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "C\x2b\x2b - Expressions",
-  "description" : "Expressions are the building blocks in C\x2b\x2b programs. They consist of one or more operands connected by one or more operators.\nPrecedence and Associativity When multiple operators show up in the same expression, one need to heed the precedence rules defined by the language. Fortunately, we can always use parentheses to manually override these rules, which saves us the efforts of memorizing them. One caveat is that, within the same precedence, order of evaluation is undefined.",
+  "headline": "C\x2b\x2b - Variable Initialization",
+  "description" : "Programming in C\x2b\x2b boils down to creating and manipulating variables of either built-in or class types. It\x26rsquo;s therefore imperative to understand how variables are initialized upon creation.\nPrimitive Types There are a number of ways to give value to newly created variables,\n1int a(1); \/\/ option 1 2int a = 1; \/\/ option 2 3int a{3}; \/\/ option 3 4int a = {4}; \/\/ option 4  Options 3 and 4 are called list initialization.",
   "inLanguage" : "en",
-  "wordCount":  352 ,
-  "datePublished" : "2020-01-08T00:00:00",
-  "dateModified" : "2020-01-08T00:00:00",
+  "wordCount":  201 ,
+  "datePublished" : "2020-01-11T00:00:00",
+  "dateModified" : "2020-01-11T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "c\x2b\x2b" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/08\/cpp-expressions\/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/11\/cpp-variable-initialization\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -79,17 +80,17 @@ Precedence and Associativity When multiple operators show up in the same express
 }
 </script>
 
-<meta property="og:title" content="C&#43;&#43; - Expressions" />
-<meta property="og:description" content="Expressions are the building blocks in C&#43;&#43; programs. They consist of one or more operands connected by one or more operators.
-Precedence and Associativity When multiple operators show up in the same expression, one need to heed the precedence rules defined by the language. Fortunately, we can always use parentheses to manually override these rules, which saves us the efforts of memorizing them. One caveat is that, within the same precedence, order of evaluation is undefined.">
+<meta property="og:title" content="C&#43;&#43; - Variable Initialization" />
+<meta property="og:description" content="Programming in C&#43;&#43; boils down to creating and manipulating variables of either built-in or class types. It&rsquo;s therefore imperative to understand how variables are initialized upon creation.
+Primitive Types There are a number of ways to give value to newly created variables,
+1int a(1); // option 1 2int a = 1; // option 2 3int a{3}; // option 3 4int a = {4}; // option 4  Options 3 and 4 are called list initialization.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/01/08/cpp-expressions/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="C&#43;&#43; - Expressions" />
-  <meta name="twitter:description" content="Expressions are the building blocks in C&#43;&#43; programs. They consist of one or more operands connected by one or more operators.
-Precedence and Associativity When multiple operators show up in the same …">
+  <meta name="twitter:title" content="C&#43;&#43; - Variable Initialization" />
+  <meta name="twitter:description" content="Programming in C&#43;&#43; boils down to creating and manipulating variables of either built-in or class types. It&rsquo;s therefore imperative to understand how variables are initialized upon creation. …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -289,7 +290,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>C&#43;&#43; - Expressions</h1>
+                <h1>C&#43;&#43; - Variable Initialization</h1>
               
               
               
@@ -297,13 +298,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 8, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 11, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;352&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;201&nbsp;words
   
   
     
@@ -332,49 +333,48 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#precedence-and-associativity">Precedence and Associativity</a></li>
-<li><a href="#short-circuit-evaluation">Short-circuit Evaluation</a></li>
-<li><a href="#increment-and-decrement">Increment and Decrement</a></li>
+<li><a href="#primitive-types">Primitive Types</a></li>
+<li><a href="#class-types">Class Types</a></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>Expressions are the building blocks in C++ programs.
-They consist of one or more operands connected by one or more operators.</p>
+<p>Programming in C++ boils down to creating and manipulating variables of either built-in or class types.
+It&rsquo;s therefore imperative to understand how variables are initialized upon creation.</p>
 
-<h2 id="precedence-and-associativity">Precedence and Associativity</h2>
+<h2 id="primitive-types">Primitive Types</h2>
 
-<p>When multiple operators show up in the same expression, one need to heed the precedence rules defined by the language.
-Fortunately, we can always use parentheses to manually override these rules, which saves us the efforts of memorizing them.
-One caveat is that, within the same precedence, order of evaluation is undefined.
-Below is an example,</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">func1</span><span class="p">()</span> <span class="o">+</span> <span class="n">func2</span><span class="p">()</span> <span class="o">*</span> <span class="n">func3</span><span class="p">()</span>
-</code></pre></div>
-<p>The precedence rule defined by C++ makes sure that the results of <code>func2()</code> and <code>func3()</code> are multiplied before adding to the result of <code>func1()</code>, but it says nothing about which of the three functions is evaluated first, meaning one cannot depend the logic on the order of evaluation.</p>
-
-<h2 id="short-circuit-evaluation">Short-circuit Evaluation</h2>
-
-<p>This always happen during operand evaluations involving logical <code>&amp;&amp;</code> and <code>||</code> operators.
-Specifically, the left operand of these two operators is always evaluated first and the evaluation of the right operand might be skipped based on the evaluation result of the left operand.
-In the example below, evaluation of <code>exp2()</code> is skipped if <code>exp1()</code> is <code>false</code> in the first case or <code>true</code> in the second case.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">exp1</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">exp2</span><span class="p">()</span> <span class="c1">// case 1
-</span><span class="ln">2</span><span class="c1"></span><span class="n">exp1</span><span class="p">()</span> <span class="o">||</span> <span class="n">exp2</span><span class="p">()</span> <span class="c1">// case 2
+<p>There are a number of ways to give value to newly created variables,</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="nf">a</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// option 1
+</span><span class="ln">2</span><span class="c1"></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// option 2
+</span><span class="ln">3</span><span class="c1"></span><span class="kt">int</span> <span class="n">a</span><span class="p">{</span><span class="mi">3</span><span class="p">};</span> <span class="c1">// option 3
+</span><span class="ln">4</span><span class="c1"></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">};</span> <span class="c1">// option 4
 </span></code></pre></div>
-<h2 id="increment-and-decrement">Increment and Decrement</h2>
+<p>Options 3 and 4 are called <code>list initialization</code>.</p>
 
-<p>There is a subtle difference between the prefix (<code>++</code>) and postfix (<code>--</code>) operators: the former yields a lvalue and the latter returns a rvalue.
-Note that a lvalue can appear on the left of an assignment, so the first case in the code below is legal.
-On the other hand, postfix operator return a rvalue that can only be put on the right of an assignment, so the case 2 is not allowed by C++.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span>  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-<span class="ln">2</span>  <span class="o">++</span><span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span> <span class="c1">// case 1: correct
-</span><span class="ln">3</span><span class="c1"></span>  <span class="n">i</span><span class="o">++</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span> <span class="c1">// case 2: error
-</span></code></pre></div>
-<p>Note: the prefix and postfix operators have a higher precedence than the deference operator, which means that the <code>*ptr++</code> in the code below is equivalent to <code>*(ptr++)</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">;</span>
-<span class="ln">2</span><span class="o">*</span><span class="n">ptr</span><span class="o">++</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<p>What happens if we don&rsquo;t explicitly specify a value when we create a variable?
+It depends:</p>
+
+<ul>
+<li>If the variable is outside any function body, it&rsquo;s automatically initialized to 0.</li>
+<li>If the variable is within a function body, its value is undefined.</li>
+</ul>
+
+<p>I almost always use the second form of initialization, which resembles an assignment but is actually not.</p>
+
+<h2 id="class-types">Class Types</h2>
+
+<p>The way we initialize variables of class types should follow their corresponding constructor definitions, which also decides whether they can be default initialized.
+For example, a <code>std::string</code> variable can be defined as below,</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// default initialized to empty string
+</span><span class="ln">2</span><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">b</span><span class="p">(</span><span class="s">&#34;empty&#34;</span><span class="p">);</span>
 </code></pre></div>
+<p>On the other hand, a class may ask for explicit initialization.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span> <span class="n">car</span><span class="p">;</span> <span class="c1">// error
+</span><span class="ln">2</span><span class="c1"></span><span class="n">Car</span> <span class="nf">car</span><span class="p">(</span><span class="s">&#34;red&#34;</span><span class="p">);</span> <span class="c1">// must provide a color upon definition
+</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -394,42 +394,42 @@ On the other hand, postfix operator return a rvalue that can only be put on the 
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f08%2fcpp-expressions%2f&amp;text=C%2b%2b%20-%20Expressions&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f11%2fcpp-variable-initialization%2f&amp;text=C%2b%2b%20-%20Variable%20Initialization&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f08%2fcpp-expressions%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f11%2fcpp-variable-initialization%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f08%2fcpp-expressions%2f&amp;title=C%2b%2b%20-%20Expressions" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f11%2fcpp-variable-initialization%2f&amp;title=C%2b%2b%20-%20Variable%20Initialization" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f08%2fcpp-expressions%2f&amp;title=C%2b%2b%20-%20Expressions" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f11%2fcpp-variable-initialization%2f&amp;title=C%2b%2b%20-%20Variable%20Initialization" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f08%2fcpp-expressions%2f&amp;title=C%2b%2b%20-%20Expressions" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f11%2fcpp-variable-initialization%2f&amp;title=C%2b%2b%20-%20Variable%20Initialization" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f08%2fcpp-expressions%2f&amp;description=C%2b%2b%20-%20Expressions" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f11%2fcpp-variable-initialization%2f&amp;description=C%2b%2b%20-%20Variable%20Initialization" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -447,6 +447,8 @@ On the other hand, postfix operator return a rvalue that can only be put on the 
           <h4 class="see-also">See also</h4>
           <ul>
           
+            <li><a href="/2020/01/08/cpp-expressions/">C&#43;&#43; - Expressions</a></li>
+          
             <li><a href="/2019/12/28/cpp-data-types/">C&#43;&#43; - Data Types</a></li>
           
             <li><a href="/2019/01/01/cpp-book-primer-log/">C&#43;&#43; Primer Study Log</a></li>
@@ -460,12 +462,12 @@ On the other hand, postfix operator return a rvalue that can only be put on the 
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/01/07/book-liberated-mind/" data-toggle="tooltip" data-placement="top" title="Wandering Mind">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/01/08/cpp-expressions/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Expressions">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Variable Initialization">Next Post &rarr;</a>
+              <a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Exceptions">Next Post &rarr;</a>
             </li>
           
         </ul>
@@ -476,12 +478,12 @@ On the other hand, postfix operator return a rvalue that can only be put on the 
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/08/cpp-expressions">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/11/cpp-variable-initialization">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/08\/cpp-expressions';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/11\/cpp-variable-initialization';
             };
 
           </script>

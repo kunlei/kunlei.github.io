@@ -14,6 +14,28 @@
     
     
     <item>
+      <title>C&#43;&#43; - Exceptions</title>
+      <link>https://kunlei.github.io/2020/01/12/cpp-exceptions/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/12/cpp-exceptions/</guid>
+      <description>Any program ought to have mechanism to deal with run time errors, for which C++ use exception handling technique to throw and process. The exception handling process consists of three components:
+ A throw expression that indicates an error occurs. A try block to encompass the statements that might throw exceptions. One or more catch clauses to address exceptions.
+1try { 2throw runtime_error(&amp;#34;error&amp;#34;); 3} catch (runtime_error err) { 4std::cout &amp;lt;&amp;lt; err.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; - Variable Initialization</title>
+      <link>https://kunlei.github.io/2020/01/11/cpp-variable-initialization/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/11/cpp-variable-initialization/</guid>
+      <description>Programming in C++ boils down to creating and manipulating variables of either built-in or class types. It&amp;rsquo;s therefore imperative to understand how variables are initialized upon creation.
+Primitive Types There are a number of ways to give value to newly created variables,
+1int a(1); // option 1 2int a = 1; // option 2 3int a{3}; // option 3 4int a = {4}; // option 4  Options 3 and 4 are called list initialization.</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; - Expressions</title>
       <link>https://kunlei.github.io/2020/01/08/cpp-expressions/</link>
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
@@ -220,7 +242,7 @@ Education  Ph.D. in Industrial Engineering  University of Arkansas, 2012 - 2017 
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/cpp-index/</guid>
       <description> This page lists all the C++-related posts.
- Data types  Study Log  C++ Primer  </description>
+ Data types Variable initialization  Study Log  C++ Primer  </description>
     </item>
     
     <item>

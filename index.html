@@ -273,6 +273,104 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/">
+        <h2 class="post-title">C&#43;&#43; - Exceptions</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 12, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;126&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        Any program ought to have mechanism to deal with run time errors, for which C++ use exception handling technique to throw and process. The exception handling process consists of three components:
+ A throw expression that indicates an error occurs. A try block to encompass the statements that might throw exceptions. One or more catch clauses to address exceptions.
+1try { 2throw runtime_error(&#34;error&#34;); 3} catch (runtime_error err) { 4std::cout &lt;&lt; err.
+        <a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/">
+        <h2 class="post-title">C&#43;&#43; - Variable Initialization</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 11, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;201&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        Programming in C++ boils down to creating and manipulating variables of either built-in or class types. It&rsquo;s therefore imperative to understand how variables are initialized upon creation.
+Primitive Types There are a number of ways to give value to newly created variables,
+1int a(1); // option 1 2int a = 1; // option 2 3int a{3}; // option 3 4int a = {4}; // option 4  Options 3 and 4 are called list initialization.
+        <a href="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://kunlei.github.io/2020/01/08/cpp-expressions/">
         <h2 class="post-title">C&#43;&#43; - Expressions</h2>
         
@@ -621,107 +719,6 @@ Reading Reading is a noble thing, but too high a target spells the failure from 
         
         In a previous post, we looked at how to build models by adding rows sequentially. It starts with creating decision variables, with which the objective function is defined. Constraints are then created sequentially and incorporated into the model. In optimization textbooks, mathematical models are usually represented in matrix format, and in CPLEX, it is indeed possible to build models column-wise. This post aims to demystify the process of building models by adding columns sequentially.
         <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
-        
-        <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/">
-        <h2 class="post-title">Build Optimization Models by Column with IloLPMatrix using CPLEX Java API</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on October 20, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;382&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        This post explains how to use IloLPMatrix to build models by column. IloLPMatrix is commonly used in building large-scale optimization models.
-An illustrative example The same example used in a previous post is repeated here for clarity.
-$$ \begin{align} \text{min.} \quad &amp; 2 x_1 + x_2 + 3x_3 + 2x_4 + 5x_5 \newline \text{s.t.} \quad &amp; x_1 + x_3 \geq 2 \newline \quad &amp; x_2 + x_4 + x_5 \geq 3 \newline \quad &amp; x_1 + x_2 + x_4 \geq 1 \newline \quad &amp; 0 \leq x_i \leq 100,\ \forall i \in { 1, \cdots, 5 } \end{align} $$
-        <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
-        
-        <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/">
-        <h2 class="post-title">Build Optimization Models by Row with IloLPMatrix using CPLEX Java API</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on October 19, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;811&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        In a previous post, we examined how to build optimization models row-wise, in which decision variables and constraints are directly created and managed by an IloCplex object. It turns out that there is another, more powerful in certain cases, way to build and manage constraints in CPLEX and, in this post, we&rsquo;ll look at how to utilize IloLPMatrix to build models by row.
-An illustrative example As usual, let&rsquo;s use a small example to show the case.
-        <a href="https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/" class="post-read-more">[Read More]</a>
         
     </div>
 

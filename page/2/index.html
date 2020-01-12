@@ -273,6 +273,107 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
+    <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/">
+        <h2 class="post-title">Build Optimization Models by Column with IloLPMatrix using CPLEX Java API</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 20, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;382&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        This post explains how to use IloLPMatrix to build models by column. IloLPMatrix is commonly used in building large-scale optimization models.
+An illustrative example The same example used in a previous post is repeated here for clarity.
+$$ \begin{align} \text{min.} \quad &amp; 2 x_1 + x_2 + 3x_3 + 2x_4 + 5x_5 \newline \text{s.t.} \quad &amp; x_1 + x_3 \geq 2 \newline \quad &amp; x_2 + x_4 + x_5 \geq 3 \newline \quad &amp; x_1 + x_2 + x_4 \geq 1 \newline \quad &amp; 0 \leq x_i \leq 100,\ \forall i \in { 1, \cdots, 5 } \end{align} $$
+        <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
+        
+        <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/">
+        <h2 class="post-title">Build Optimization Models by Row with IloLPMatrix using CPLEX Java API</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 19, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;811&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        In a previous post, we examined how to build optimization models row-wise, in which decision variables and constraints are directly created and managed by an IloCplex object. It turns out that there is another, more powerful in certain cases, way to build and manage constraints in CPLEX and, in this post, we&rsquo;ll look at how to utilize IloLPMatrix to build models by row.
+An illustrative example As usual, let&rsquo;s use a small example to show the case.
+        <a href="https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
+        
+        <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/">
         <h2 class="post-title">Build Optimization Models by Row using CPLEX Java API</h2>
         
@@ -660,88 +761,6 @@ Anyway, stay way from the book and don&rsquo;t randomly pick books anymore.</p>
         <a href="https://kunlei.github.io/tags/java/">java</a>&nbsp;
         
     </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2019/08/19/mathjax-setup/">
-        <h2 class="post-title">MathJax Setup in Hugo</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on August 19, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;461&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        With the intention to share my learnings related to operations research, I have to find a way to render mathematical formulas inside my posts. Luckily, there already exist some excellent approaches for this purpose and MathJax is one of the best among them. I used MathJax before with the previous theme mainroad, but couldn&rsquo;t remember how it was configured in the first place. With a bit duplicate work of digging online, I found the original solution and wanted to share it here in case I forgot it some days later.
-        <a href="https://kunlei.github.io/2019/08/19/mathjax-setup/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2019/08/17/build-site-using-hugo/">
-        <h2 class="post-title">Recent Updates and Blog Redesign using Hugo</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on August 17, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1112&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Recent updates I have a blog setup using Hugo with the theme called mainroad and it has been working fine, functionally, but I always feel something missing from that design. All the contents, including the navigation menu and posts, are centered on a paper-like area, which looks great at first impression. On the other hand, much of the screen space seems wasted, which is especially true when I have to big monitors and the design only takes up a small portion of the screen.
-        <a href="https://kunlei.github.io/2019/08/17/build-site-using-hugo/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
     
 
 </article>
