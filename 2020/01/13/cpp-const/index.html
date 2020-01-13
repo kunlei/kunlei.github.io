@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>C&#43;&#43; - const - O.R. in Action</title>
+  <meta name="description" content="Normally operations performed on a variable can be put into two categories:
+ operations that retrieve the value of the variable. operations that modify the value of the variable.  We can prohibit a variable being changed by type 2 operations using the qualifier const, as in the code below.
+1const int var = 1;  Here, the base type of variable var is still int, the const keyword just deprives the variable of certain operations that are allowed by its nonconst version.">
+  <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "O.R. in Action",
+    
+    "url": "https:\/\/kunlei.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kunlei.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kunlei.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kunlei.github.io\/2020\/01\/13\/cpp-const\/",
+          "name": "C\x2b\x2b const"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Kunlei Lian"
+  },
+  "headline": "C\x2b\x2b - const",
+  "description" : "Normally operations performed on a variable can be put into two categories:\n operations that retrieve the value of the variable. operations that modify the value of the variable.  We can prohibit a variable being changed by type 2 operations using the qualifier const, as in the code below.\n1const int var = 1;  Here, the base type of variable var is still int, the const keyword just deprives the variable of certain operations that are allowed by its nonconst version.",
+  "inLanguage" : "en",
+  "wordCount":  842 ,
+  "datePublished" : "2020-01-13T00:00:00",
+  "dateModified" : "2020-01-13T00:00:00",
+  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "keywords" : [ "c\x2b\x2b" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/13\/cpp-const\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kunlei.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="C&#43;&#43; - const" />
+<meta property="og:description" content="Normally operations performed on a variable can be put into two categories:
+ operations that retrieve the value of the variable. operations that modify the value of the variable.  We can prohibit a variable being changed by type 2 operations using the qualifier const, as in the code below.
+1const int var = 1;  Here, the base type of variable var is still int, the const keyword just deprives the variable of certain operations that are allowed by its nonconst version.">
+<meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
+<meta property="og:url" content="https://kunlei.github.io/2020/01/13/cpp-const/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="O.R. in Action" />
+
+  <meta name="twitter:title" content="C&#43;&#43; - const" />
+  <meta name="twitter:description" content="Normally operations performed on a variable can be put into two categories:
+ operations that retrieve the value of the variable. operations that modify the value of the variable.  We can prohibit a …">
+  <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.57.1" />
+  <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://kunlei.github.io/css/syntax.css" /><link rel="stylesheet" href="https://kunlei.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="/css/tweaks.css"/>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+    extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-124241468-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kunlei.github.io">O.R. in Action</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/book-list">Reading</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Coding</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/java-index">Java</a>
+                
+                  <a href="/page/cpp-index">C&#43;&#43;</a>
+                
+                  <a href="/page/cplex-index">CPLEX</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">About</a>
+              <div class="navlinks-children">
+                
+                  <a href="/pagedown-resume">Resume</a>
+                
+                  <a href="/page/about">About</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="中文" href="/blog-cn">中文</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="O.R. in Action" href="https://kunlei.github.io">
+            <img class="avatar-img" src="https://kunlei.github.io/img/logo.png" alt="O.R. in Action" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>C&#43;&#43; - const</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 13, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;842&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#const-variable-used-across-files">const variable used across files</a></li>
+<li><a href="#const-reference">const reference</a></li>
+<li><a href="#const-pointer">const pointer</a>
+<ul>
+<li><a href="#top-level-const-vs-low-level-const">Top-level const vs. low-level const</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+        
+
+<p>Normally operations performed on a variable can be put into two categories:</p>
+
+<ol>
+<li>operations that retrieve the value of the variable.</li>
+<li>operations that modify the value of the variable.</li>
+</ol>
+
+<p>We can prohibit a variable being changed by type 2 operations using the qualifier <code>const</code>, as in the code below.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">var</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Here, the base type of variable <code>var</code> is still <code>int</code>, the <code>const</code> keyword just deprives the variable of certain operations that are allowed by its non<code>const</code> version.
+As the intention of <code>const</code> is to prevent its value from unintended changes, a <code>const</code> variable must be initialized upon creation.</p>
+
+<h2 id="const-variable-used-across-files">const variable used across files</h2>
+
+<p>Variables defined as <code>const</code> are treated as separate variables even if they have the same name, like the variable <code>var1</code> in the code below.
+This is because the compiler will substitute all the <code>const</code> variable with its initialized value and the initializer must be visible to the compiler for this purpose.
+In other words, if a <code>const</code> variable is just declared, the compiler has no way to retrieve its value to do the substitution.</p>
+
+<p>To use the same <code>const</code> variable across multiple files, the correct way is to add the <code>extern</code> keyword in both the file where it&rsquo;s defined and all the other files where it&rsquo;s used, as illustrated by the variable <code>var2</code> below.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="c1">// file1.cpp
+</span><span class="ln">2</span><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">var1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="ln">3</span><span class="k">extern</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">var2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="c1">// file2.cpp
+</span><span class="ln">2</span><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">var1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="ln">3</span><span class="k">extern</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">var2</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="const-reference">const reference</h2>
+
+<p>Since reference is not an object, there is no <code>const</code> reference; however, a reference can refer to a <code>const</code> object.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">rnum</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
+</code></pre></div>
+<p>Actually it doesn&rsquo;t matter whether the variable <code>num</code> is const or not, meaning the code below is also common:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">ri</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</code></pre></div>
+<p>This is an important property of reference to const &ndash; we can use a const reference to refer to both the const and non<code>const</code> versions of the same variable.
+<code>Declaring a reference to const only limits what we can do the bound object through the reference</code>.
+In other words, the bound object can change through other means, it&rsquo;s just that the const reference won&rsquo;t be able to do so, as shown in the code below.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">i</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="c1">// okay, i is just a plain int variable, not const
+</span><span class="ln">2</span><span class="c1"></span><span class="n">ri</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// error, we cannot use ri to change i
+</span></code></pre></div>
+<h2 id="const-pointer">const pointer</h2>
+
+<p>The interaction between const and pointer is more interesting, mainly due to the fact that a pointer itself is an object.
+Similar to references, we can use a pointer to const to refer to both the const and nonconst versions of a variable:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">pa</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+</code></pre></div>
+<p>Here, we cannot use the pointer <code>pa</code> to modify the value of variable <code>a</code> even though it is not const itself.</p>
+
+<p>On the other hand, we can only use a pointer to const to point to a const variable:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">pb</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">;</span> <span class="c1">// okay
+</span><span class="ln">3</span><span class="c1"></span><span class="kt">int</span> <span class="o">*</span><span class="n">pbb</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">;</span> <span class="c1">// wrong
+</span></code></pre></div>
+<p>This is easy to understand as we cannot use a plain pointer to change a const variable.</p>
+
+<p>Unlike references, a pointer itself can be const, which means that it must be initialized upon creation and cannot be updated after that.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">cc</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+<span class="ln">2</span><span class="kt">int</span> <span class="o">*</span> <span class="k">const</span> <span class="n">pc</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span>
+<span class="ln">3</span><span class="o">*</span><span class="n">pc</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// okay
+</span><span class="ln">4</span><span class="c1"></span><span class="n">pc</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">cc</span><span class="p">;</span> <span class="c1">// error
+</span></code></pre></div>
+<p>Declaring a const pointer only means that the pointer itself cannot be modified, but we might still modify the object that the pointer points to.
+The line 3 in the code above is perfectly legal, while line 4 is not.</p>
+
+<p>Now look at the code snippet below, pointer <code>pd</code> is a pointer to const, meaning that we cannot use <code>pd</code> to modify the value of variable <code>d</code>; however, <code>pd</code> can point to another variable, as long as the new variable is still marked with <code>const</code>.
+After all <code>pd</code> is just a pointer that saves the address of an const integer variable &ndash; it doesn&rsquo;t care which variable it points to.
+On the other hand, the pointer <code>pdd</code> is declared as <code>const</code> itself and the variable it points to is also declared as <code>const</code>, which restrict that the pointer can only point to <code>d</code> and cannot modify the value of <code>d</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span> <span class="n">pd</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">d</span><span class="p">;</span>
+<span class="ln">3</span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span> <span class="k">const</span> <span class="n">pdd</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">d</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="top-level-const-vs-low-level-const">Top-level const vs. low-level const</h3>
+
+<p>The const declared on most types, including primitive types, classes and pointers, is called top-level const, which prevents the object itself from being modified.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// top-level const
+</span><span class="ln">2</span><span class="c1"></span><span class="k">const</span> <span class="n">Car</span> <span class="nf">car</span><span class="p">(</span><span class="s">&#34;red&#34;</span><span class="p">);</span> <span class="c1">// top-level const
+</span><span class="ln">3</span><span class="c1"></span><span class="kt">int</span> <span class="o">*</span> <span class="k">const</span> <span class="n">ptr</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span> <span class="c1">// top-level const
+</span></code></pre></div>
+<p>Low-level const shows up in the base type of compound types:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span> <span class="n">pa</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span> <span class="c1">// low-level const
+</span><span class="ln">2</span><span class="c1"></span><span class="kt">int</span> <span class="o">*</span> <span class="k">const</span> <span class="n">pb</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span> <span class="c1">// top-level const
+</span><span class="ln">3</span><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span> <span class="k">const</span> <span class="n">pc</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span> <span class="c1">// both low- and top- level const
+</span></code></pre></div>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f13%2fcpp-const%2f&amp;text=C%2b%2b%20-%20const&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f13%2fcpp-const%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f13%2fcpp-const%2f&amp;title=C%2b%2b%20-%20const" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f13%2fcpp-const%2f&amp;title=C%2b%2b%20-%20const" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f13%2fcpp-const%2f&amp;title=C%2b%2b%20-%20const" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f13%2fcpp-const%2f&amp;description=C%2b%2b%20-%20const" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+          
+          <h4 class="see-also">See also</h4>
+          <ul>
+          
+            <li><a href="/2020/01/12/cpp-exceptions/">C&#43;&#43; - Exceptions</a></li>
+          
+            <li><a href="/2020/01/12/cpp-pointer/">C&#43;&#43; - Pointer</a></li>
+          
+            <li><a href="/2020/01/12/cpp-reference/">C&#43;&#43; - Reference</a></li>
+          
+          </ul>
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Exceptions">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">                  
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/13/cpp-const">comments</span></button>
+            <div id="disqus_thread"></div>
+
+            <script type="text/javascript">
+              var disqus_config = function () {
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/13\/cpp-const';
+            };
+
+          </script>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:kunlei1987@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/kunlei" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/kunlei-lian-ba55a73b" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://kunlei.github.io">Kunlei Lian</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kunlei.github.io">O.R. in Action</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kunlei.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kunlei.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+  $('#show-comments').on('click', function(){
+    var disqus_shortname = 'orinaction';
+      
+    (function() {
+      var disqus = document.createElement('script'); 
+      disqus.type = 'text/javascript'; 
+      disqus.async = true;
+      disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+    })();
+      
+    $(this).hide(); 
+    });
+  });
+      
+</script>
+<script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
+
+
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
+
+    
+  </body>
+</html>
+

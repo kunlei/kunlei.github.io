@@ -14,6 +14,17 @@
     
     
     <item>
+      <title>C&#43;&#43; - const</title>
+      <link>https://kunlei.github.io/2020/01/13/cpp-const/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/13/cpp-const/</guid>
+      <description>Normally operations performed on a variable can be put into two categories:
+ operations that retrieve the value of the variable. operations that modify the value of the variable.  We can prohibit a variable being changed by type 2 operations using the qualifier const, as in the code below.
+1const int var = 1;  Here, the base type of variable var is still int, the const keyword just deprives the variable of certain operations that are allowed by its nonconst version.</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; - Exceptions</title>
       <link>https://kunlei.github.io/2020/01/12/cpp-exceptions/</link>
       <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
