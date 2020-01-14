@@ -14,6 +14,18 @@
     
     
     <item>
+      <title>C&#43;&#43; - string</title>
+      <link>https://kunlei.github.io/2020/01/14/cpp-string/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/14/cpp-string/</guid>
+      <description>The string is a library class defined by C++ to represent and manipulate characters. It&amp;rsquo;s defined in header string and included in namespace std:
+1#include &amp;lt;string&amp;gt;2using std::string;  We&amp;rsquo;ll look at some of the most useful operations for string.
+Creation There exist a number of constructors for string.
+1string(); // default constructor 2string(const string &amp;amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&amp;#34;hello world&amp;#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; - const</title>
       <link>https://kunlei.github.io/2020/01/13/cpp-const/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>

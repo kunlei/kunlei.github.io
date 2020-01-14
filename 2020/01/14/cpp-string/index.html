@@ -7,9 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>C&#43;&#43; Primer Study Log - O.R. in Action</title>
-  <meta name="description" content=" This post is used to keep track of my progress in studying C&#43;&#43; Primer. I tend to forget things if I don&rsquo;t use them for a while, but this book is really a good read.
-First Round &ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part I: the Basics Chapter 2: Variables and Basic Types Chapter 3: Strings, Vectors and Arrays Chapter 4: Expressions Chapter 5: Statements Chapter 6: Functions Chapter 7: Classes  Part II: the C&#43;&#43; Library Chapter 8: the IO Library Chapter 9: Sequential Containers Chapter 10: Generic Algorithms Chapter 11: Associative Containers Chapter 12: Dynamic Memory  Part III: Tools for Class Authors Chapter 13: Copy Control Chapter 14: Overloaded Operations and Conversions Chapter 15: Object-oriented Programming Chapter 16: Templates and Generic Programming  Part IV: Advanced Topics Chapter 17: Specialized Library Facilities Chapter 18: Tools for Large Programs Chapter 19: Specialized Tools and Techniques  ">
+  <title>C&#43;&#43; - string - O.R. in Action</title>
+  <meta name="description" content="The string is a library class defined by C&#43;&#43; to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
+1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
+Creation There exist a number of constructors for string.
+1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,8 +47,8 @@ First Round &ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part I: 
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2019\/01\/01\/cpp-book-primer-log\/",
-          "name": "C\x2b\x2b primer study log"
+          "@id": "https:\/\/kunlei.github.io\/2020\/01\/14\/cpp-string\/",
+          "name": "C\x2b\x2b string"
         }
     }]
 }
@@ -57,15 +59,15 @@ First Round &ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part I: 
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "C\x2b\x2b Primer Study Log",
-  "description" : " This post is used to keep track of my progress in studying C\x2b\x2b Primer. I tend to forget things if I don\x26rsquo;t use them for a while, but this book is really a good read.\nFirst Round \x26ndash; 2020\/01\/01 Introduction Chapter 1: Getting Started  Part I: the Basics Chapter 2: Variables and Basic Types Chapter 3: Strings, Vectors and Arrays Chapter 4: Expressions Chapter 5: Statements Chapter 6: Functions Chapter 7: Classes  Part II: the C\x2b\x2b Library Chapter 8: the IO Library Chapter 9: Sequential Containers Chapter 10: Generic Algorithms Chapter 11: Associative Containers Chapter 12: Dynamic Memory  Part III: Tools for Class Authors Chapter 13: Copy Control Chapter 14: Overloaded Operations and Conversions Chapter 15: Object-oriented Programming Chapter 16: Templates and Generic Programming  Part IV: Advanced Topics Chapter 17: Specialized Library Facilities Chapter 18: Tools for Large Programs Chapter 19: Specialized Tools and Techniques  ",
+  "headline": "C\x2b\x2b - string",
+  "description" : "The string is a library class defined by C\x2b\x2b to represent and manipulate characters. It\x26rsquo;s defined in header string and included in namespace std:\n1#include \x26lt;string\x26gt;2using std::string;  We\x26rsquo;ll look at some of the most useful operations for string.\nCreation There exist a number of constructors for string.\n1string(); \/\/ default constructor 2string(const string \x26amp;str); \/\/ copy constructor 3string(const char * c); \/\/ c-string constructor 4string(size_t n, char c); \/\/ fill constructor 1string a; \/\/ define empty string using default constructor 2string b(a); \/\/ copy construction 3string c(\x26#34;hello world\x26#34;); \/\/ c-string constructor 4string d(10, d); \/\/ fill construction  Access The library defines a number of iterators to iterate through a string object.",
   "inLanguage" : "en",
-  "wordCount":  145 ,
-  "datePublished" : "2019-01-01T00:00:00",
-  "dateModified" : "2019-01-01T00:00:00",
+  "wordCount":  232 ,
+  "datePublished" : "2020-01-14T00:00:00",
+  "dateModified" : "2020-01-14T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "c\x2b\x2b" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2019\/01\/01\/cpp-book-primer-log\/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/14\/cpp-string\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -79,17 +81,19 @@ First Round &ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part I: 
 }
 </script>
 
-<meta property="og:title" content="C&#43;&#43; Primer Study Log" />
-<meta property="og:description" content=" This post is used to keep track of my progress in studying C&#43;&#43; Primer. I tend to forget things if I don&rsquo;t use them for a while, but this book is really a good read.
-First Round &ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part I: the Basics Chapter 2: Variables and Basic Types Chapter 3: Strings, Vectors and Arrays Chapter 4: Expressions Chapter 5: Statements Chapter 6: Functions Chapter 7: Classes  Part II: the C&#43;&#43; Library Chapter 8: the IO Library Chapter 9: Sequential Containers Chapter 10: Generic Algorithms Chapter 11: Associative Containers Chapter 12: Dynamic Memory  Part III: Tools for Class Authors Chapter 13: Copy Control Chapter 14: Overloaded Operations and Conversions Chapter 15: Object-oriented Programming Chapter 16: Templates and Generic Programming  Part IV: Advanced Topics Chapter 17: Specialized Library Facilities Chapter 18: Tools for Large Programs Chapter 19: Specialized Tools and Techniques  ">
+<meta property="og:title" content="C&#43;&#43; - string" />
+<meta property="og:description" content="The string is a library class defined by C&#43;&#43; to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
+1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
+Creation There exist a number of constructors for string.
+1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2019/01/01/cpp-book-primer-log/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/01/14/cpp-string/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="C&#43;&#43; Primer Study Log" />
-  <meta name="twitter:description" content=" This post is used to keep track of my progress in studying C&#43;&#43; Primer. I tend to forget things if I don&rsquo;t use them for a while, but this book is really a good read.
-First Round &ndash; …">
+  <meta name="twitter:title" content="C&#43;&#43; - string" />
+  <meta name="twitter:description" content="The string is a library class defined by C&#43;&#43; to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
+1#include &lt;string&gt;2using std::string; …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -289,7 +293,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>C&#43;&#43; Primer Study Log</h1>
+                <h1>C&#43;&#43; - string</h1>
               
               
               
@@ -297,13 +301,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 2019
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 14, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;145&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;232&nbsp;words
   
   
     
@@ -332,69 +336,67 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#first-round-2020-01-01">First Round &ndash; 2020/01/01</a>
-<ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#part-i-the-basics">Part I: the Basics</a></li>
-<li><a href="#part-ii-the-c-library">Part II: the C++ Library</a></li>
-<li><a href="#part-iii-tools-for-class-authors">Part III: Tools for Class Authors</a></li>
-<li><a href="#part-iv-advanced-topics">Part IV: Advanced Topics</a></li>
-</ul></li>
+<li><a href="#creation">Creation</a></li>
+<li><a href="#access">Access</a></li>
+<li><a href="#capacity">Capacity</a></li>
+<li><a href="#getline"><code>getline()</code></a></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>This post is used to keep track of my progress in studying <em>C++ Primer</em>.
-I tend to forget things if I don&rsquo;t use them for a while, but this book is really a good read.</p>
+<p>The <code>string</code> is a library class defined by C++ to represent and manipulate characters.
+It&rsquo;s defined in header <code>string</code> and included in namespace <code>std</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="ln">2</span><span class="cp"></span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
+</code></pre></div>
+<p>We&rsquo;ll look at some of the most useful operations for string.</p>
 
-<h2 id="first-round-2020-01-01">First Round &ndash; 2020/01/01</h2>
+<h2 id="creation">Creation</h2>
 
-<h3 id="introduction">Introduction</h3>
+<p>There exist a number of constructors for string.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span><span class="p">();</span> <span class="c1">// default constructor
+</span><span class="ln">2</span><span class="c1"></span><span class="n">string</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">);</span> <span class="c1">// copy constructor
+</span><span class="ln">3</span><span class="c1"></span><span class="n">string</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">c</span><span class="p">);</span> <span class="c1">// c-string constructor
+</span><span class="ln">4</span><span class="c1"></span><span class="n">string</span><span class="p">(</span><span class="n">size_t</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">);</span> <span class="c1">// fill constructor
+</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// define empty string using default constructor
+</span><span class="ln">2</span><span class="c1"></span><span class="n">string</span> <span class="nf">b</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="c1">// copy construction
+</span><span class="ln">3</span><span class="c1"></span><span class="n">string</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;hello world&#34;</span><span class="p">);</span> <span class="c1">// c-string constructor
+</span><span class="ln">4</span><span class="c1"></span><span class="n">string</span> <span class="nf">d</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span> <span class="c1">// fill construction
+</span></code></pre></div>
+<h2 id="access">Access</h2>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Chapter 1: Getting Started</label></li>
-</ul>
+<p>The library defines a number of iterators to iterate through a string object.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&#34;hello word&#34;</span><span class="p">);</span>
+<span class="ln">2</span><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">itr</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">itr</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">3</span>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">itr</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="ln">4</span><span class="p">}</span>
+</code></pre></div>
+<p>Elements in a string can also be accessed directly.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="sc">&#39;a&#39;</span><span class="p">);</span>
+<span class="ln">2</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="ln">3</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div>
+<p>Other available iterators include <code>rbegin()</code>, <code>rend()</code>, <code>cbegin()</code>, <code>cend()</code>, <code>crbegin()</code> and <code>crend()</code>.</p>
 
-<h3 id="part-i-the-basics">Part I: the Basics</h3>
+<h2 id="capacity">Capacity</h2>
 
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Chapter 2: Variables and Basic Types</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 3: Strings, Vectors and Arrays</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Chapter 4: Expressions</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Chapter 5: Statements</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 6: Functions</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 7: Classes</label></li>
-</ul>
+<p>We can use functions to inquiry the capacity of a string.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&#34;string&#34;</span><span class="p">);</span>
+<span class="ln">2</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="ln">3</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="getline"><code>getline()</code></h2>
 
-<h3 id="part-ii-the-c-library">Part II: the C++ Library</h3>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 8: the IO Library</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 9: Sequential Containers</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 10: Generic Algorithms</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 11: Associative Containers</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 12: Dynamic Memory</label></li>
-</ul>
-
-<h3 id="part-iii-tools-for-class-authors">Part III: Tools for Class Authors</h3>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 13: Copy Control</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 14: Overloaded Operations and Conversions</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 15: Object-oriented Programming</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 16: Templates and Generic Programming</label></li>
-</ul>
-
-<h3 id="part-iv-advanced-topics">Part IV: Advanced Topics</h3>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 17: Specialized Library Facilities</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 18: Tools for Large Programs</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 19: Specialized Tools and Techniques</label></li>
-</ul>
-
+<p><code>getline()</code> is a useful function to retrieve string from input stream.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">istrm</span><span class="p">,</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+</code></pre></div>
+<p>For example, the following code reads one line from the input stream and saves it into a string.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+<span class="ln">2</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+<span class="ln">3</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div>
 
         
           <div class="blog-tags">
@@ -414,42 +416,42 @@ I tend to forget things if I don&rsquo;t use them for a while, but this book is 
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2019%2f01%2f01%2fcpp-book-primer-log%2f&amp;text=C%2b%2b%20Primer%20Study%20Log&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;text=C%2b%2b%20-%20string&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2019%2f01%2f01%2fcpp-book-primer-log%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2019%2f01%2f01%2fcpp-book-primer-log%2f&amp;title=C%2b%2b%20Primer%20Study%20Log" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;title=C%2b%2b%20-%20string" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2019%2f01%2f01%2fcpp-book-primer-log%2f&amp;title=C%2b%2b%20Primer%20Study%20Log" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;title=C%2b%2b%20-%20string" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2019%2f01%2f01%2fcpp-book-primer-log%2f&amp;title=C%2b%2b%20Primer%20Study%20Log" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;title=C%2b%2b%20-%20string" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2019%2f01%2f01%2fcpp-book-primer-log%2f&amp;description=C%2b%2b%20Primer%20Study%20Log" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;description=C%2b%2b%20-%20string" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -464,6 +466,17 @@ I tend to forget things if I don&rsquo;t use them for a while, but this book is 
         
           
           
+          <h4 class="see-also">See also</h4>
+          <ul>
+          
+            <li><a href="/2020/01/13/cpp-const/">C&#43;&#43; - const</a></li>
+          
+            <li><a href="/2020/01/12/cpp-exceptions/">C&#43;&#43; - Exceptions</a></li>
+          
+            <li><a href="/2020/01/12/cpp-pointer/">C&#43;&#43; - Pointer</a></li>
+          
+          </ul>
+          
         
       </article>
 
@@ -471,13 +484,9 @@ I tend to forget things if I don&rsquo;t use them for a while, but this book is 
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/1/01/01/cplex-java-conversion/" data-toggle="tooltip" data-placement="top" title="">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/01/13/cpp-const/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - const">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2019/03/04/cplex-java-variables/" data-toggle="tooltip" data-placement="top" title="Cplex Java Concert Technology - Variables">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -487,12 +496,12 @@ I tend to forget things if I don&rsquo;t use them for a while, but this book is 
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2019/01/01/cpp-book-primer-log">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/14/cpp-string">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2019\/01\/01\/cpp-book-primer-log';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/14\/cpp-string';
             };
 
           </script>

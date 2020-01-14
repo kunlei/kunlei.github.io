@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #c&#43;&#43; - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - const">
+  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - string">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -191,6 +191,37 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/14/cpp-string/">
+                <h2 class="post-title">C&#43;&#43; - string</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 14, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    The string is a library class defined by C++ to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
+1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
+Creation There exist a number of constructors for string.
+1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.<a href="https://kunlei.github.io/2020/01/14/cpp-string/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2020/01/13/cpp-const/">
@@ -427,7 +458,7 @@ I tend to forget things if I don&rsquo;t use them for a while, but this book is 
 <h3 id="part-i-the-basics">Part I: the Basics</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Chapter 2: Variables and Basic Types</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Chapter 2: Variables and Basic Types</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> Chapter 3: Strings, Vectors and Arrays</label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> Chapter 4: Expressions</label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> Chapter 5: Statements</label></li>
