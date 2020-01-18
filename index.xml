@@ -14,6 +14,29 @@
     
     
     <item>
+      <title>C&#43;&#43; - auto</title>
+      <link>https://kunlei.github.io/2020/01/18/cpp-auto/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/18/cpp-auto/</guid>
+      <description>The C++ new standard introduces the keyword auto to help us deduce the type of a variable that&amp;rsquo;s assigned to the value of an expression.
+1int a = 1, b = 2; 2int c = a + b; // old way 3auto d = a + b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
+1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; - decltype</title>
+      <link>https://kunlei.github.io/2020/01/18/cpp-decltype/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/18/cpp-decltype/</guid>
+      <description>The keyword decltype is similar to auto in that it also helps us to deduce variable type, but there are some subtle differences.
+For one, decltype does not ignore top-level const.
+1const int a = 10; 2decltype(a) aa = 20; // aa is defined as const int, not int  For two, decltype sometimes returns a reference type.
+1int a = 1, *pa = &amp;amp;a, &amp;amp;ra = a; 2decltype(*pa) = a; // int&amp;amp; 3decltype(ra) = a; // int&amp;amp; </description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; - string</title>
       <link>https://kunlei.github.io/2020/01/14/cpp-string/</link>
       <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>

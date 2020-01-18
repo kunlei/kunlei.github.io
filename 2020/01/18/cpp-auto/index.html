@@ -7,11 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>C&#43;&#43; - string - O.R. in Action</title>
-  <meta name="description" content="The string is a library class defined by C&#43;&#43; to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
-1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
-Creation There exist a number of constructors for string.
-1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.">
+  <title>C&#43;&#43; - auto - O.R. in Action</title>
+  <meta name="description" content="The C&#43;&#43; new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
+1int a = 1, b = 2; 2int c = a &#43; b; // old way 3auto d = a &#43; b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
+1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -47,8 +46,8 @@ Creation There exist a number of constructors for string.
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/01\/14\/cpp-string\/",
-          "name": "C\x2b\x2b string"
+          "@id": "https:\/\/kunlei.github.io\/2020\/01\/18\/cpp-auto\/",
+          "name": "C\x2b\x2b auto"
         }
     }]
 }
@@ -59,15 +58,15 @@ Creation There exist a number of constructors for string.
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "C\x2b\x2b - string",
-  "description" : "The string is a library class defined by C\x2b\x2b to represent and manipulate characters. It\x26rsquo;s defined in header string and included in namespace std:\n1#include \x26lt;string\x26gt;2using std::string;  We\x26rsquo;ll look at some of the most useful operations for string.\nCreation There exist a number of constructors for string.\n1string(); \/\/ default constructor 2string(const string \x26amp;str); \/\/ copy constructor 3string(const char * c); \/\/ c-string constructor 4string(size_t n, char c); \/\/ fill constructor 1string a; \/\/ define empty string using default constructor 2string b(a); \/\/ copy construction 3string c(\x26#34;hello world\x26#34;); \/\/ c-string constructor 4string d(10, d); \/\/ fill construction  Access The library defines a number of iterators to iterate through a string object.",
+  "headline": "C\x2b\x2b - auto",
+  "description" : "The C\x2b\x2b new standard introduces the keyword auto to help us deduce the type of a variable that\x26rsquo;s assigned to the value of an expression.\n1int a = 1, b = 2; 2int c = a \x2b b; \/\/ old way 3auto d = a \x2b b; \/\/ new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:\n1const int a = 3; 2auto aa = a; \/\/ aa is an int, not const int  However, the top-level const is not ignored when we define a reference:",
   "inLanguage" : "en",
-  "wordCount":  232 ,
-  "datePublished" : "2020-01-14T00:00:00",
-  "dateModified" : "2020-01-14T00:00:00",
+  "wordCount":  112 ,
+  "datePublished" : "2020-01-18T00:00:00",
+  "dateModified" : "2020-01-18T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "c\x2b\x2b" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/14\/cpp-string\/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/18\/cpp-auto\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -81,19 +80,18 @@ Creation There exist a number of constructors for string.
 }
 </script>
 
-<meta property="og:title" content="C&#43;&#43; - string" />
-<meta property="og:description" content="The string is a library class defined by C&#43;&#43; to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
-1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
-Creation There exist a number of constructors for string.
-1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.">
+<meta property="og:title" content="C&#43;&#43; - auto" />
+<meta property="og:description" content="The C&#43;&#43; new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
+1int a = 1, b = 2; 2int c = a &#43; b; // old way 3auto d = a &#43; b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
+1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/01/14/cpp-string/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/01/18/cpp-auto/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="C&#43;&#43; - string" />
-  <meta name="twitter:description" content="The string is a library class defined by C&#43;&#43; to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
-1#include &lt;string&gt;2using std::string; …">
+  <meta name="twitter:title" content="C&#43;&#43; - auto" />
+  <meta name="twitter:description" content="The C&#43;&#43; new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
+1int a = 1, b = 2; 2int c = a &#43; b; // old way 3auto d = a …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -293,7 +291,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>C&#43;&#43; - string</h1>
+                <h1>C&#43;&#43; - auto</h1>
               
               
               
@@ -301,13 +299,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 14, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 18, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;232&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;112&nbsp;words
   
   
     
@@ -332,71 +330,21 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#creation">Creation</a></li>
-<li><a href="#access">Access</a></li>
-<li><a href="#capacity">Capacity</a></li>
-<li><a href="#getline"><code>getline()</code></a></li>
-</ul></li>
-</ul>
-</nav>
-
         
 
-<p>The <code>string</code> is a library class defined by C++ to represent and manipulate characters.
-It&rsquo;s defined in header <code>string</code> and included in namespace <code>std</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-</span><span class="ln">2</span><span class="cp"></span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
-</code></pre></div>
-<p>We&rsquo;ll look at some of the most useful operations for string.</p>
-
-<h2 id="creation">Creation</h2>
-
-<p>There exist a number of constructors for string.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span><span class="p">();</span> <span class="c1">// default constructor
-</span><span class="ln">2</span><span class="c1"></span><span class="n">string</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">);</span> <span class="c1">// copy constructor
-</span><span class="ln">3</span><span class="c1"></span><span class="n">string</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">c</span><span class="p">);</span> <span class="c1">// c-string constructor
-</span><span class="ln">4</span><span class="c1"></span><span class="n">string</span><span class="p">(</span><span class="n">size_t</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">);</span> <span class="c1">// fill constructor
-</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// define empty string using default constructor
-</span><span class="ln">2</span><span class="c1"></span><span class="n">string</span> <span class="nf">b</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="c1">// copy construction
-</span><span class="ln">3</span><span class="c1"></span><span class="n">string</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;hello world&#34;</span><span class="p">);</span> <span class="c1">// c-string constructor
-</span><span class="ln">4</span><span class="c1"></span><span class="n">string</span> <span class="nf">d</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span> <span class="c1">// fill construction
+        <p>The C++ new standard introduces the keyword <code>auto</code> to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="ln">2</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// old way
+</span><span class="ln">3</span><span class="c1"></span><span class="k">auto</span> <span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// new way
 </span></code></pre></div>
-<h2 id="access">Access</h2>
-
-<p>The library defines a number of iterators to iterate through a string object.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&#34;hello word&#34;</span><span class="p">);</span>
-<span class="ln">2</span><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">itr</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">itr</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">3</span>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">itr</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="ln">4</span><span class="p">}</span>
-</code></pre></div>
-<p>Elements in a string can also be accessed directly.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="sc">&#39;a&#39;</span><span class="p">);</span>
-<span class="ln">2</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="ln">3</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</code></pre></div>
-<p>Other available iterators include <code>rbegin()</code>, <code>rend()</code>, <code>cbegin()</code>, <code>cend()</code>, <code>crbegin()</code> and <code>crend()</code>.</p>
-
-<h2 id="capacity">Capacity</h2>
-
-<p>We can use functions to inquiry the capacity of a string.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&#34;string&#34;</span><span class="p">);</span>
-<span class="ln">2</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="ln">3</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</code></pre></div>
-<h2 id="getline"><code>getline()</code></h2>
-
-<p><code>getline()</code> is a useful function to retrieve string from input stream.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">istrm</span><span class="p">,</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
-</code></pre></div>
-<p>For example, the following code reads one line from the input stream and saves it into a string.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
-<span class="ln">2</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
-<span class="ln">3</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</code></pre></div>
+<p>One thing to keep in mind is that the top-level const is normally ignored during the type deduction:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">auto</span> <span class="n">aa</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// aa is an int, not const int
+</span></code></pre></div>
+<p>However, the top-level const is not ignored when we define a reference:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">aa</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// aa is a const int
+</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -416,42 +364,42 @@ It&rsquo;s defined in header <code>string</code> and included in namespace <code
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;text=C%2b%2b%20-%20string&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;text=C%2b%2b%20-%20auto&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;title=C%2b%2b%20-%20string" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;title=C%2b%2b%20-%20auto" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;title=C%2b%2b%20-%20string" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;title=C%2b%2b%20-%20auto" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;title=C%2b%2b%20-%20string" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;title=C%2b%2b%20-%20auto" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f14%2fcpp-string%2f&amp;description=C%2b%2b%20-%20string" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;description=C%2b%2b%20-%20auto" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -469,11 +417,11 @@ It&rsquo;s defined in header <code>string</code> and included in namespace <code
           <h4 class="see-also">See also</h4>
           <ul>
           
+            <li><a href="/2020/01/18/cpp-decltype/">C&#43;&#43; - decltype</a></li>
+          
+            <li><a href="/2020/01/14/cpp-string/">C&#43;&#43; - string</a></li>
+          
             <li><a href="/2020/01/13/cpp-const/">C&#43;&#43; - const</a></li>
-          
-            <li><a href="/2020/01/12/cpp-exceptions/">C&#43;&#43; - Exceptions</a></li>
-          
-            <li><a href="/2020/01/12/cpp-pointer/">C&#43;&#43; - Pointer</a></li>
           
           </ul>
           
@@ -484,13 +432,9 @@ It&rsquo;s defined in header <code>string</code> and included in namespace <code
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/01/13/cpp-const/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - const">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/01/18/cpp-decltype/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - decltype">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/01/18/cpp-decltype/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - decltype">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -500,12 +444,12 @@ It&rsquo;s defined in header <code>string</code> and included in namespace <code
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/14/cpp-string">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/18/cpp-auto">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/14\/cpp-string';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/18\/cpp-auto';
             };
 
           </script>
