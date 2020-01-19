@@ -7,10 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>C&#43;&#43; - auto - O.R. in Action</title>
-  <meta name="description" content="The C&#43;&#43; new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
-1int a = 1, b = 2; 2int c = a &#43; b; // old way 3auto d = a &#43; b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
-1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:">
+  <title>C&#43;&#43; - const member functions - O.R. in Action</title>
+  <meta name="description" content="I used to find the usage of const after the parameter list of a member function within a class confusing &ndash; the code snippet below shows an example in which getSize() is followed by a const specifier. It turns out that making sense of the const usage here requires a deep understanding of another keyword &ndash; this.
+What is this? (pun intended) The specifier this is a reserved keyword in C&#43;&#43; that is commonly used in the definitions of class member functions to refer to the current object on which the functions are operating on.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -46,8 +45,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/01\/18\/cpp-auto\/",
-          "name": "C\x2b\x2b auto"
+          "@id": "https:\/\/kunlei.github.io\/2020\/01\/19\/cpp-const-member-function\/",
+          "name": "C\x2b\x2b const member functions"
         }
     }]
 }
@@ -58,15 +57,15 @@
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "C\x2b\x2b - auto",
-  "description" : "The C\x2b\x2b new standard introduces the keyword auto to help us deduce the type of a variable that\x26rsquo;s assigned to the value of an expression.\n1int a = 1, b = 2; 2int c = a \x2b b; \/\/ old way 3auto d = a \x2b b; \/\/ new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:\n1const int a = 3; 2auto aa = a; \/\/ aa is an int, not const int  However, the top-level const is not ignored when we define a reference:",
+  "headline": "C\x2b\x2b - const member functions",
+  "description" : "I used to find the usage of const after the parameter list of a member function within a class confusing \x26ndash; the code snippet below shows an example in which getSize() is followed by a const specifier. It turns out that making sense of the const usage here requires a deep understanding of another keyword \x26ndash; this.\nWhat is this? (pun intended) The specifier this is a reserved keyword in C\x2b\x2b that is commonly used in the definitions of class member functions to refer to the current object on which the functions are operating on.",
   "inLanguage" : "en",
-  "wordCount":  112 ,
-  "datePublished" : "2020-01-18T00:00:00",
-  "dateModified" : "2020-01-18T00:00:00",
+  "wordCount":  696 ,
+  "datePublished" : "2020-01-19T00:00:00",
+  "dateModified" : "2020-01-19T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "c\x2b\x2b" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/18\/cpp-auto\/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/01\/19\/cpp-const-member-function\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -80,18 +79,16 @@
 }
 </script>
 
-<meta property="og:title" content="C&#43;&#43; - auto" />
-<meta property="og:description" content="The C&#43;&#43; new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
-1int a = 1, b = 2; 2int c = a &#43; b; // old way 3auto d = a &#43; b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
-1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:">
+<meta property="og:title" content="C&#43;&#43; - const member functions" />
+<meta property="og:description" content="I used to find the usage of const after the parameter list of a member function within a class confusing &ndash; the code snippet below shows an example in which getSize() is followed by a const specifier. It turns out that making sense of the const usage here requires a deep understanding of another keyword &ndash; this.
+What is this? (pun intended) The specifier this is a reserved keyword in C&#43;&#43; that is commonly used in the definitions of class member functions to refer to the current object on which the functions are operating on.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/01/18/cpp-auto/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/01/19/cpp-const-member-function/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="C&#43;&#43; - auto" />
-  <meta name="twitter:description" content="The C&#43;&#43; new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
-1int a = 1, b = 2; 2int c = a &#43; b; // old way 3auto d = a …">
+  <meta name="twitter:title" content="C&#43;&#43; - const member functions" />
+  <meta name="twitter:description" content="I used to find the usage of const after the parameter list of a member function within a class confusing &ndash; the code snippet below shows an example in which getSize() is followed by a const …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -291,7 +288,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>C&#43;&#43; - auto</h1>
+                <h1>C&#43;&#43; - const member functions</h1>
               
               
               
@@ -299,13 +296,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 18, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 19, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;112&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;696&nbsp;words
   
   
     
@@ -330,21 +327,97 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-this-pun-intended">What is <code>this</code>? (pun intended)</a></li>
+<li><a href="#how-to-prevent-this-from-modifying-the-underlying-object">How to prevent <code>this</code> from modifying the underlying object?</a></li>
+<li><a href="#what-is-really-this">What is really <code>this</code>?</a></li>
+</ul></li>
+</ul>
+</nav>
+
         
 
-        <p>The C++ new standard introduces the keyword <code>auto</code> to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="ln">2</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// old way
-</span><span class="ln">3</span><span class="c1"></span><span class="k">auto</span> <span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// new way
+<p>I used to find the usage of <code>const</code> after the parameter list of a member function within a class confusing &ndash; the code snippet below shows an example in which <code>getSize()</code> is followed by a const specifier.
+It turns out that making sense of the <code>const</code> usage here requires a deep understanding of another keyword &ndash; <code>this</code>.</p>
+
+<h2 id="what-is-this-pun-intended">What is <code>this</code>? (pun intended)</h2>
+
+<p>The specifier <code>this</code> is a reserved keyword in C++ that is commonly used in the definitions of class member functions to refer to the current object on which the functions are operating on.
+It is a special pointer that saves the address of a class instance.
+The code below creates a plain pointer <code>ptr</code> to refer to a <code>Car</code> object.
+It&rsquo;s expected that <code>ptr</code> and <code>this</code> should have the same value, as can be seen in the output following the code.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="ln"> 2</span><span class="cp"></span><span class="k">class</span><span class="err"> </span><span class="nc">Car</span> <span class="p">{</span>
+<span class="ln"> 3</span><span class="k">public</span><span class="o">:</span>
+<span class="ln"> 4</span>  <span class="n">Car</span><span class="p">()</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span>
+<span class="ln"> 5</span>  <span class="kt">int</span> <span class="nf">getSize</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;this: &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="ln"> 7</span>    <span class="k">return</span> <span class="n">size</span><span class="p">;</span>
+<span class="ln"> 8</span>  <span class="p">}</span>
+<span class="ln"> 9</span>  <span class="kt">void</span> <span class="nf">setSize</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">10</span>    <span class="k">this</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+<span class="ln">11</span>  <span class="p">}</span>
+<span class="ln">12</span><span class="k">private</span><span class="o">:</span>
+<span class="ln">13</span>    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="ln">14</span><span class="p">};</span>
+<span class="ln">15</span>
+<span class="ln">16</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">17</span>  <span class="n">Car</span> <span class="n">car</span><span class="p">;</span>
+<span class="ln">18</span>  <span class="n">Car</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">car</span><span class="p">;</span>
+<span class="ln">19</span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;ptr: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ptr</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="ln">20</span>  <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span>
+<span class="ln">21</span>
+<span class="ln">22</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="ln">23</span><span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="c1">// code ouput
+</span><span class="ln">2</span><span class="c1"></span><span class="nl">ptr</span><span class="p">:</span> <span class="mh">0x7ffee0fc97f8</span>
+<span class="ln">3</span><span class="k">this</span><span class="o">:</span> <span class="mh">0x7ffee0fc97f8</span>
+</code></pre></div>
+<p>But <code>this</code> is no ordinary pointer &ndash; it&rsquo;s special in the sense that it&rsquo;s a <code>const</code> pointer which cannot be bound to another object.
+If we were able to define <code>this</code> by ourselves, it will look something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span> <span class="n">nissan</span><span class="p">,</span> <span class="n">toyota</span><span class="p">;</span>
+<span class="ln">2</span><span class="n">Car</span> <span class="o">*</span> <span class="k">const</span> <span class="k">this</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">nissan</span><span class="p">;</span> <span class="c1">// only for illustration, won&#39;t compile
+</span><span class="ln">3</span><span class="c1"></span><span class="k">this</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">toyota</span><span class="p">;</span> <span class="c1">// error, this has top-level const
 </span></code></pre></div>
-<p>One thing to keep in mind is that the top-level const is normally ignored during the type deduction:</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-<span class="ln">2</span><span class="k">auto</span> <span class="n">aa</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// aa is an int, not const int
-</span></code></pre></div>
-<p>However, the top-level const is not ignored when we define a reference:</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-<span class="ln">2</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">aa</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// aa is a const int
-</span></code></pre></div>
+<p>Note that the <code>const</code>ness of <code>this</code> is top-level, so the line 3 in the code above is illegal; on the other hand, <code>this</code> doesn&rsquo;t have low-level const, meaning the object it points to is free to change.</p>
+
+<h2 id="how-to-prevent-this-from-modifying-the-underlying-object">How to prevent <code>this</code> from modifying the underlying object?</h2>
+
+<p>One natural question is how to impose low-level const on <code>this</code>?
+Here we finally come to the point to explain the usage of <code>const</code> of a member function parameter list.
+Because <code>this</code> is implicitly define for us, we don&rsquo;t have opportunity to explicitly state that <code>this</code> refers to a const object, instead, we have to use a somewhat convoluted way to impose low-level const on <code>this</code>.
+The <code>getSize()</code> function has a trailing <code>const</code>, implying that the method is not allowed to modify the underlying object.</p>
+
+<p>If we were to add the <code>const</code> specifier after the <code>setSize()</code> function, as in the code below, there will be a compiling error since the usage of <code>const</code> prevent any changes to the object <code>this</code> points to and therefore the attempt to assign a value to <code>size</code> through <code>this</code> is illegal.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">void</span> <span class="nf">setSize</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+<span class="ln">2</span>  <span class="k">this</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span> <span class="c1">// compiling error
+</span><span class="ln">3</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div>
+<h2 id="what-is-really-this">What is really <code>this</code>?</h2>
+
+<p>My understanding of C++ memory model is still superficial at this moment, but the exploration of the <code>const</code> usage helps shed light on its internal working (what follows from this point is totally my personal view and in no way I can guarantee it&rsquo;s the correct interpretation, I&rsquo;ll probably come back and revise it in the future :-)).</p>
+
+<p>When we define an object, C++ allocates certain physical memories to it and provides us a convenient pointer <code>this</code> to refer to them.
+I believe it&rsquo;s inefficient to have a copy of all the member functions to each object &ndash; after all, it&rsquo;s the member attributes that are different from object to object, and C++ is likely to keep the member functions on the class level, like static variables.
+Then, what actually happens under the hood when we call a member function of an instantiated object? for example,</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">2</span>  <span class="n">Car</span> <span class="n">car</span><span class="p">;</span>
+<span class="ln">3</span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">car</span><span class="p">.</span><span class="n">getSize</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="ln">4</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="ln">5</span><span class="p">}</span>
+</code></pre></div>
+<p>I suspect the <code>.</code> pointer does all the magic in the process.
+The function all is likely to be translated into something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span><span class="o">::</span><span class="n">getSize</span><span class="p">(</span><span class="o">&amp;</span><span class="n">car</span><span class="p">);</span>
+</code></pre></div>
+<p>or using the implicit <code>this</code> keyword,</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span><span class="o">::</span><span class="n">getSize</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</code></pre></div>
+<p>I will come back to verify this after I get deeper understanding of C++ in the future.</p>
+
 
         
           <div class="blog-tags">
@@ -364,42 +437,42 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;text=C%2b%2b%20-%20auto&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f19%2fcpp-const-member-function%2f&amp;text=C%2b%2b%20-%20const%20member%20functions&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f19%2fcpp-const-member-function%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;title=C%2b%2b%20-%20auto" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f19%2fcpp-const-member-function%2f&amp;title=C%2b%2b%20-%20const%20member%20functions" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;title=C%2b%2b%20-%20auto" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f19%2fcpp-const-member-function%2f&amp;title=C%2b%2b%20-%20const%20member%20functions" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;title=C%2b%2b%20-%20auto" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f19%2fcpp-const-member-function%2f&amp;title=C%2b%2b%20-%20const%20member%20functions" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f18%2fcpp-auto%2f&amp;description=C%2b%2b%20-%20auto" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f01%2f19%2fcpp-const-member-function%2f&amp;description=C%2b%2b%20-%20const%20member%20functions" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -417,11 +490,11 @@ if (!doNotTrack) {
           <h4 class="see-also">See also</h4>
           <ul>
           
+            <li><a href="/2020/01/18/cpp-auto/">C&#43;&#43; - auto</a></li>
+          
             <li><a href="/2020/01/18/cpp-decltype/">C&#43;&#43; - decltype</a></li>
           
             <li><a href="/2020/01/14/cpp-string/">C&#43;&#43; - string</a></li>
-          
-            <li><a href="/2020/01/13/cpp-const/">C&#43;&#43; - const</a></li>
           
           </ul>
           
@@ -432,13 +505,9 @@ if (!doNotTrack) {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/01/18/cpp-decltype/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - decltype">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/01/18/cpp-auto/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - auto">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/01/19/cpp-const-member-function/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - const member functions">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -448,12 +517,12 @@ if (!doNotTrack) {
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/18/cpp-auto">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/01/19/cpp-const-member-function">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/18\/cpp-auto';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/01\/19\/cpp-const-member-function';
             };
 
           </script>

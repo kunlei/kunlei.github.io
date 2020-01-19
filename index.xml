@@ -14,6 +14,16 @@
     
     
     <item>
+      <title>C&#43;&#43; - const member functions</title>
+      <link>https://kunlei.github.io/2020/01/19/cpp-const-member-function/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/19/cpp-const-member-function/</guid>
+      <description>I used to find the usage of const after the parameter list of a member function within a class confusing &amp;ndash; the code snippet below shows an example in which getSize() is followed by a const specifier. It turns out that making sense of the const usage here requires a deep understanding of another keyword &amp;ndash; this.
+What is this? (pun intended) The specifier this is a reserved keyword in C++ that is commonly used in the definitions of class member functions to refer to the current object on which the functions are operating on.</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; - auto</title>
       <link>https://kunlei.github.io/2020/01/18/cpp-auto/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
