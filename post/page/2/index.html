@@ -192,6 +192,154 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/">
+                <h2 class="post-title">C&#43;&#43; - Exceptions</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 12, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Any program ought to have mechanism to deal with run time errors, for which C++ use exception handling technique to throw and process. The exception handling process consists of three components:
+ A throw expression that indicates an error occurs. A try block to encompass the statements that might throw exceptions. One or more catch clauses to address exceptions.
+1try { 2throw runtime_error(&#34;error&#34;); 3} catch (runtime_error err) { 4std::cout &lt;&lt; err.<a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/12/cpp-pointer/">
+                <h2 class="post-title">C&#43;&#43; - Pointer</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 12, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Pointer in C++ is similar to reference in the sense that they both refer to another objects other than themselves, although the ways they achieve it are different:
+ A reference bounds to another object and essentially exists as an alias. A pointer saves the address of the object it points to.  A key difference between them is that a pointer itself is an object while a reference is not.<a href="https://kunlei.github.io/2020/01/12/cpp-pointer/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/12/cpp-reference/">
+                <h2 class="post-title">C&#43;&#43; - Reference</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 12, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Reference is one of the compound types in C++ that modifies the base type of a variable. It is essentially another name of an existing variable, meaning that any operation on a reference is performed on the variable that the reference is bound to. It is important to note that a reference is not an object.
+A reference is defined using the &amp; operator, as in the code below,
+1int num = 3; 2int &amp;ref = num;  A reference must be bound to a variable upon creation, for example, the code below will trigger compilation error.<a href="https://kunlei.github.io/2020/01/12/cpp-reference/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/">
+                <h2 class="post-title">C&#43;&#43; - Variable Initialization</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 11, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Programming in C++ boils down to creating and manipulating variables of either built-in or class types. It&rsquo;s therefore imperative to understand how variables are initialized upon creation.
+Primitive Types There are a number of ways to give value to newly created variables,
+1int a(1); // option 1 2int a = 1; // option 2 3int a{3}; // option 3 4int a = {4}; // option 4  Options 3 and 4 are called list initialization.<a href="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/08/cpp-expressions/">
+                <h2 class="post-title">C&#43;&#43; - Expressions</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 8, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Expressions are the building blocks in C++ programs. They consist of one or more operands connected by one or more operators.
+Precedence and Associativity When multiple operators show up in the same expression, one need to heed the precedence rules defined by the language. Fortunately, we can always use parentheses to manually override these rules, which saves us the efforts of memorizing them. One caveat is that, within the same precedence, order of evaluation is undefined.<a href="https://kunlei.github.io/2020/01/08/cpp-expressions/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
               <a href="https://kunlei.github.io/2020/01/07/book-liberated-mind/">
                 <h2 class="post-title">Wandering Mind</h2>
 
@@ -310,161 +458,6 @@ Reading Reading is a noble thing, but too high a target spells the failure from 
                 
               </div>
 
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/10/26/cplex-java-continuous-callback/">
-                <h2 class="post-title">Using ContinuousCallback</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 26, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Introduction In this post, we will explore how to use callback, specifically continuous callback, to retrieve and output information during the search process of the simplex and barrier optimizer. The CPLEX optimizer typically outputs a series of log information to the console revealing some of its search process, and many times it is enough. Occasionally, we want to have more information, or different information, than those default message, and callback is to the rescue.<a href="https://kunlei.github.io/2019/10/26/cplex-java-continuous-callback/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/">
-                <h2 class="post-title">Build Optimization Models by Column using CPLEX Java API</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 20, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    In a previous post, we looked at how to build models by adding rows sequentially. It starts with creating decision variables, with which the objective function is defined. Constraints are then created sequentially and incorporated into the model. In optimization textbooks, mathematical models are usually represented in matrix format, and in CPLEX, it is indeed possible to build models column-wise. This post aims to demystify the process of building models by adding columns sequentially.<a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/">
-                <h2 class="post-title">Build Optimization Models by Column with IloLPMatrix using CPLEX Java API</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 20, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    This post explains how to use IloLPMatrix to build models by column. IloLPMatrix is commonly used in building large-scale optimization models.
-An illustrative example The same example used in a previous post is repeated here for clarity.
-$$ \begin{align} \text{min.} \quad &amp; 2 x_1 + x_2 + 3x_3 + 2x_4 + 5x_5 \newline \text{s.t.} \quad &amp; x_1 + x_3 \geq 2 \newline \quad &amp; x_2 + x_4 + x_5 \geq 3 \newline \quad &amp; x_1 + x_2 + x_4 \geq 1 \newline \quad &amp; 0 \leq x_i \leq 100,\ \forall i \in { 1, \cdots, 5 } \end{align} $$<a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/">
-                <h2 class="post-title">Build Optimization Models by Row with IloLPMatrix using CPLEX Java API</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 19, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    In a previous post, we examined how to build optimization models row-wise, in which decision variables and constraints are directly created and managed by an IloCplex object. It turns out that there is another, more powerful in certain cases, way to build and manage constraints in CPLEX and, in this post, we&rsquo;ll look at how to utilize IloLPMatrix to build models by row.
-An illustrative example As usual, let&rsquo;s use a small example to show the case.<a href="https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/">
-                <h2 class="post-title">Build Optimization Models by Row using CPLEX Java API</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 15, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    The CPLEX Java API separates model building from solving algorithms by defining various interfaces in the Concert package. There are two ways in constructing a mathematical model regarding how constraints are added to the model:
- by row by column  An illustrative example This post looks at how to build models by row. Assuming we have a small mathematical formulation as below:
-$$ \begin{align} \text{max.} \quad &amp; 20 x_1 + 15 x_2 \newline \text{s.<a href="https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
               
 
             </article>

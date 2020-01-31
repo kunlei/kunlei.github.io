@@ -14,6 +14,56 @@
     
     
     <item>
+      <title>2020 January Review</title>
+      <link>https://kunlei.github.io/2020/01/30/review-2020-01/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/30/review-2020-01/</guid>
+      <description>It feels like yesterday when I put down the new year resolution, and it&amp;rsquo;s already the end of January, that&amp;rsquo;s one twelfth of 2020 already part of the past! I&amp;rsquo;ll try to summarize what I have done in this month, which are divided into the following categories.
+Health I set a goal to have at least two workouts each week and that mediocre target is on track. I&amp;rsquo;ve long accepted the fact that too ambitious a goal often leads to early giving up, and any number above two seems daunting and takes mental tolls.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; - Standard Library Sequential Containers</title>
+      <link>https://kunlei.github.io/2020/01/28/cpp-standard-library/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/28/cpp-standard-library/</guid>
+      <description>C++ provides a set of containers to hold elements of the same type. These containers can be generally put into two categories:
+ Sequential containers Associative containers  This post examines the various sequential containers, which include
+ vector deque list forward_list array string  Container Iterators Traversing elements in a container can be done with the help of iterators, which exist in various forms:
+ iterator &amp;ndash; supports reading and writing elements, obtained using begin() and end().</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; - Array</title>
+      <link>https://kunlei.github.io/2020/01/21/cpp-array/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/21/cpp-array/</guid>
+      <description>Arrays are used less frequently than the vector library type, but may provide a option to define a list of objects when the size does not change. I always find the definition of arrays in C++ counterintuitive, partly due to the fact the a pair of brackets must be put after the name of the variable. I actually use dynamically allocated arrays more often in my daily programming experiences.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; - friend</title>
+      <link>https://kunlei.github.io/2020/01/20/cpp-friend/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/20/cpp-friend/</guid>
+      <description>Classes in C++ use access control specifiers like public, protected and private to decide which parts of their data attributes and/or member functions can be accessed by other objects. The public keyword is the most generous one among them, by making all of the data/methods under this specifier freely available to other objects; protected and private are more prudent &amp;ndash; only certain types of objects can access their corresponding data/methods.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; - vector</title>
+      <link>https://kunlei.github.io/2020/01/20/cpp-vector/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/01/20/cpp-vector/</guid>
+      <description>The C++ vector defines a library template to contain a list of objects of the same type. The appropriate header and namespace must be included to use it:
+1#include &amp;lt;vector&amp;gt;2using std::vector;  It&amp;rsquo;s worth noting that vector is not a class, instead it defines a template from which a variety of classes can be instantiated. To this purpose, an additional parameter, specifically, the type of objects in the vector, must be provided.</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; - const member functions</title>
       <link>https://kunlei.github.io/2020/01/19/cpp-const-member-function/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
