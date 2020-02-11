@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #c&#43;&#43; - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Standard Library Sequential Containers">
+  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Copy Control (1)">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -191,6 +191,64 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/02/09/cpp-copy-control-1/">
+                <h2 class="post-title">C&#43;&#43; - Copy Control (1)</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on February 9, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Copy control in C++ is too big a topic and I&rsquo;ll try to share my learnings in multiple posts. Part of the reasons why C++ is so powerful lies in the granular control it grants programmers to decide how objects of a class are created (constructor), copied (copy constructor), assigned (copy-assignment operator) and destroyed (destructor). The new standard introduces the move operators: move constructor and move-assignment operator. Therefore, there are five operators to remember when designing a C++ class:<a href="https://kunlei.github.io/2020/02/09/cpp-copy-control-1/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/02/02/cpp-statements/">
+                <h2 class="post-title">C&#43;&#43; - Statements</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on February 2, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Statements end with a semicolon and cause expressions to be evaluated.
+There are various types of statements:
+ Expression statement: an expression followed by a semicolon becomes an expression statement. Null statement: an empty expression with a semicolon forms a null statement. Compound statement: multiple statements create a compound statement using a pair of curly braces, also called a block. Conditional statement: both the if statement and switch statement are conditional statements.<a href="https://kunlei.github.io/2020/02/02/cpp-statements/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2020/01/28/cpp-standard-library/">
@@ -422,66 +480,6 @@ What is this? (pun intended) The specifier this is a reserved keyword in C++ tha
 1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
 Creation There exist a number of constructors for string.
 1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.<a href="https://kunlei.github.io/2020/01/14/cpp-string/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/01/13/cpp-const/">
-                <h2 class="post-title">C&#43;&#43; - const</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 13, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Normally operations performed on a variable can be put into two categories:
- operations that retrieve the value of the variable. operations that modify the value of the variable.  We can prohibit a variable being changed by type 2 operations using the qualifier const, as in the code below.
-1const int var = 1;  Here, the base type of variable var is still int, the const keyword just deprives the variable of certain operations that are allowed by its nonconst version.<a href="https://kunlei.github.io/2020/01/13/cpp-const/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/">
-                <h2 class="post-title">C&#43;&#43; - Exceptions</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 12, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Any program ought to have mechanism to deal with run time errors, for which C++ use exception handling technique to throw and process. The exception handling process consists of three components:
- A throw expression that indicates an error occurs. A try block to encompass the statements that might throw exceptions. One or more catch clauses to address exceptions.
-1try { 2throw runtime_error(&#34;error&#34;); 3} catch (runtime_error err) { 4std::cout &lt;&lt; err.<a href="https://kunlei.github.io/2020/01/12/cpp-exceptions/" class="post-read-more">[Read More]</a>
                   
                 
               </div>
