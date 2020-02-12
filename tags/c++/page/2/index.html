@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #c&#43;&#43; - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Copy Control (2)">
+  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Copy Control (3)">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -191,6 +191,44 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/18/cpp-decltype/">
+                <h2 class="post-title">C&#43;&#43; - decltype</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 18, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    <p>The keyword <code>decltype</code> is similar to <code>auto</code> in that it also helps us to deduce variable type, but there are some subtle differences.</p>
+
+<p>For one, <code>decltype</code> does not ignore top-level const.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">decltype</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="n">aa</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// aa is defined as const int, not int
+</span></code></pre></div>
+<p>For two, <code>decltype</code> sometimes returns a reference type.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">pa</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ra</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="n">pa</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
+</span><span class="ln">3</span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
+</span></code></pre></div>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2020/01/14/cpp-string/">

@@ -14,11 +14,20 @@
     
     
     <item>
-      <title>C&#43;&#43; - Copy Control (2)</title>
-      <link>https://kunlei.github.io/2020/02/11/cpp-copy-control-2/</link>
+      <title>C&#43;&#43; - Copy Control (3)</title>
+      <link>https://kunlei.github.io/2020/02/11/cpp-copy-control-3/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2020/02/11/cpp-copy-control-2/</guid>
+      <guid>https://kunlei.github.io/2020/02/11/cpp-copy-control-3/</guid>
+      <description>In an earlier post, we discussed ways to define copy control operators to make objects of the same class behave like values, in other words, copies of an object are independent from each other and don&amp;rsquo;t share resources. However, sometimes we do want multiple objects to share the same data and the objects themselves behave more like pointers. In this post, we will examine how to achieve this, using an illustrative class Car which has a price variable and weight variable to represent, not surprisingly, its price and weight, respectively.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; - Copy Control (2)</title>
+      <link>https://kunlei.github.io/2020/02/10/cpp-copy-control-2/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/02/10/cpp-copy-control-2/</guid>
       <description>In this post, we will put our copy control skill in use by designing an artificial Car class that manages its own resources. A Car object has two member attributes, price and weight, both are integer variables. The synthesized copy control operators would be enough if both of them are represented in primitive types. For the sake of illustration and in order to make this code more interesting, we use a pointer to a integer variable to save a car&amp;rsquo;s weight.</description>
     </item>
     

@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>C&#43;&#43; - Copy Control (1) - O.R. in Action</title>
-  <meta name="description" content="The gang of three">
+  <title>C&#43;&#43; - Copy Control (3) - O.R. in Action</title>
+  <meta name="description" content="Create objects that share states">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -44,8 +44,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/02\/09\/cpp-copy-control-1\/",
-          "name": "C\x2b\x2b copy control (1)"
+          "@id": "https:\/\/kunlei.github.io\/2020\/02\/11\/cpp-copy-control-3\/",
+          "name": "C\x2b\x2b copy control (3)"
         }
     }]
 }
@@ -56,15 +56,15 @@
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "C\x2b\x2b - Copy Control (1)",
-  "description" : "Copy control in C\x2b\x2b is too big a topic and I\x26rsquo;ll try to share my learnings in multiple posts. Part of the reasons why C\x2b\x2b is so powerful lies in the granular control it grants programmers to decide how objects of a class are created (constructor), copied (copy constructor), assigned (copy-assignment operator) and destroyed (destructor). The new standard introduces the move operators: move constructor and move-assignment operator. Therefore, there are five operators to remember when designing a C\x2b\x2b class:",
+  "headline": "C\x2b\x2b - Copy Control (3)",
+  "description" : "In an earlier post, we discussed ways to define copy control operators to make objects of the same class behave like values, in other words, copies of an object are independent from each other and don\x26rsquo;t share resources. However, sometimes we do want multiple objects to share the same data and the objects themselves behave more like pointers. In this post, we will examine how to achieve this, using an illustrative class Car which has a price variable and weight variable to represent, not surprisingly, its price and weight, respectively.",
   "inLanguage" : "en",
-  "wordCount":  689 ,
-  "datePublished" : "2020-02-09T00:00:00",
-  "dateModified" : "2020-02-09T00:00:00",
+  "wordCount":  546 ,
+  "datePublished" : "2020-02-11T00:00:00",
+  "dateModified" : "2020-02-11T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "c\x2b\x2b" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/02\/09\/cpp-copy-control-1\/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/02\/11\/cpp-copy-control-3\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -78,15 +78,15 @@
 }
 </script>
 
-<meta property="og:title" content="C&#43;&#43; - Copy Control (1)" />
-<meta property="og:description" content="The gang of three">
+<meta property="og:title" content="C&#43;&#43; - Copy Control (3)" />
+<meta property="og:description" content="Create objects that share states">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/02/09/cpp-copy-control-1/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="C&#43;&#43; - Copy Control (1)" />
-  <meta name="twitter:description" content="The gang of three">
+  <meta name="twitter:title" content="C&#43;&#43; - Copy Control (3)" />
+  <meta name="twitter:description" content="Create objects that share states">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -286,25 +286,25 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>C&#43;&#43; - Copy Control (1)</h1>
+                <h1>C&#43;&#43; - Copy Control (3)</h1>
               
               
               
                 
-                  <h2 class="post-subheading">The gang of three</h2>
+                  <h2 class="post-subheading">Create objects that share states</h2>
                 
               
               
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 9, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 11, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;689&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;546&nbsp;words
   
   
     
@@ -333,11 +333,9 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#copy-constructor">Copy Constructor</a>
-<ul>
-<li><a href="#direct-vs-copy-initialization">Direct vs. copy initialization</a></li>
-</ul></li>
-<li><a href="#copy-assignment-operator">Copy-assignment Operator</a></li>
+<li><a href="#counter">Counter</a></li>
+<li><a href="#constructor-and-copy-constructor">Constructor and Copy Constructor</a></li>
+<li><a href="#copy-assignment-operator">Copy-assignment operator</a></li>
 <li><a href="#destructor">Destructor</a></li>
 </ul></li>
 </ul>
@@ -345,89 +343,81 @@ if (!doNotTrack) {
 
         
 
-<p>Copy control in C++ is too big a topic and I&rsquo;ll try to share my learnings in multiple posts.
-Part of the reasons why C++ is so powerful lies in the granular control it grants programmers to decide how objects of a class are created (constructor), copied (copy constructor), assigned (copy-assignment operator) and destroyed (destructor).
-The new standard introduces the move operators: move constructor and move-assignment operator.
-Therefore, there are five operators to remember when designing a C++ class:</p>
-
-<ul>
-<li>copy constructor</li>
-<li>move constructor</li>
-<li>copy-assignment operator</li>
-<li>move-assignment operator</li>
-<li>destructor</li>
-</ul>
-
-<p>Note that the copy/move operators are used in an object initialization process, whereas the copy/move-assignment operators apply to the assignment process of one object to another.
-The difference is subtle, initialization assumes that the object being initialized doesn&rsquo;t exist yet and we use another object of the same class to construct the object.
-On the other hand, assignment happens when the object of the left hand already exists and the object of the right hand is copied to the object of the left hand.</p>
-
-<p>For illustration purpose, we&rsquo;ll try to define the copy control operators for an artificial <code>Car</code> class.</p>
+<p>In an earlier post, we discussed ways to define copy control operators to make objects of the same class behave like values, in other words, copies of an object are independent from each other and don&rsquo;t share resources.
+However, sometimes we do want multiple objects to share the same data and the objects themselves behave more like pointers.
+In this post, we will examine how to achieve this, using an illustrative class <code>Car</code> which has a price variable and weight variable to represent, not surprisingly, its price and weight, respectively.</p>
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln"> 1</span><span class="k">class</span><span class="err"> </span><span class="nc">Car</span> <span class="p">{</span>
 <span class="ln"> 2</span><span class="k">public</span><span class="o">:</span>
-<span class="ln"> 3</span>  <span class="n">Car</span><span class="p">();</span> <span class="c1">// constructor
-</span><span class="ln"> 4</span><span class="c1"></span>  <span class="n">Car</span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// constructor
-</span><span class="ln"> 5</span><span class="c1"></span>  <span class="n">Car</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span><span class="o">&amp;</span><span class="p">);</span> <span class="c1">// copy constructor
-</span><span class="ln"> 6</span><span class="c1"></span>  <span class="n">Car</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span><span class="o">&amp;</span><span class="p">);</span> <span class="c1">// copy-assignment operator
-</span><span class="ln"> 7</span><span class="c1"></span>  <span class="o">~</span><span class="n">Car</span><span class="p">();</span>
-<span class="ln"> 8</span>
-<span class="ln"> 9</span><span class="k">private</span><span class="o">:</span>
-<span class="ln">10</span>  <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-<span class="ln">11</span>  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
-<span class="ln">12</span><span class="p">};</span>
+<span class="ln"> 3</span>  <span class="c1">// constructor
+</span><span class="ln"> 4</span><span class="c1"></span>  <span class="n">Car</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">w</span><span class="p">);</span>
+<span class="ln"> 5</span>  <span class="c1">// copy constructor
+</span><span class="ln"> 6</span><span class="c1"></span>  <span class="n">Car</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+<span class="ln"> 7</span>  <span class="c1">// copy-assignment operator
+</span><span class="ln"> 8</span><span class="c1"></span>  <span class="n">Car</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+<span class="ln"> 9</span>  <span class="c1">// destructor
+</span><span class="ln">10</span><span class="c1"></span>  <span class="o">~</span><span class="n">Car</span><span class="p">();</span>
+<span class="ln">11</span>
+<span class="ln">12</span><span class="k">private</span><span class="o">:</span>
+<span class="ln">13</span>  <span class="kt">int</span> <span class="n">price</span><span class="p">;</span> <span class="c1">// price of the car
+</span><span class="ln">14</span><span class="c1"></span>  <span class="kt">int</span> <span class="o">*</span><span class="n">pWeight</span><span class="p">;</span> <span class="c1">// weight of the car
+</span><span class="ln">15</span><span class="c1"></span>  <span class="kt">int</span> <span class="o">*</span><span class="n">pCnt</span><span class="p">;</span> <span class="c1">// count
+</span><span class="ln">16</span><span class="c1"></span><span class="p">};</span>
 </code></pre></div>
-<h2 id="copy-constructor">Copy Constructor</h2>
+<h2 id="counter">Counter</h2>
 
-<p>The copy constructor, like other constructors we might define for a class, has no return type.
-The distinctive feature is the parameter type, it always takes a reference to a const object of the same type as the first parameter.
-It may optionally contain other parameters, but they must have default values.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span><span class="o">&amp;</span><span class="p">);</span>
-</code></pre></div>
-<p>Examining its signature, there are two things about a copy constructor that are worthing noting.
-The first one is the <code>const</code> specifier, which is understandable as we only intend to copy the object passed as the parameter.
-The other one is the <code>&amp;</code> specifier, which is necessary here because without the reference specifier, the argument object passed to the copy constructor will have to be copied to the parameter first, but we have yet defined the copy constructor, which creates a paradox &ndash; in order to define a copy constructor, we need a copy constructor first!
-That&rsquo;s why the reference specifier <code>&amp;</code> is necessary here to break the dilemma.</p>
+<p>The fact that multiple objects may share the same resource necessitates a way to check whether it&rsquo;s safe to free the resource or not.
+Clearly, an object cannot free the resource if another object is still use it.
+On the other hand, if an object sees that it&rsquo;s the last one with access to the object, it&rsquo;s obliged to free it during the object&rsquo;s destruction process.
+To this purpose, we need to keep track of the number of objects sharing the same resources, and the counter variable comes to our rescue.
+Note that the counter variable is a pointer too so that multiple objects can communicate about the number of other objects sharing the same data.</p>
 
-<h3 id="direct-vs-copy-initialization">Direct vs. copy initialization</h3>
+<h2 id="constructor-and-copy-constructor">Constructor and Copy Constructor</h2>
 
-<p>It&rsquo;s easy to confuse the direct versus the copy form of initialization:</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span> <span class="nf">car1</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s">&#34;car1&#34;</span><span class="p">);</span>
-<span class="ln">2</span><span class="n">Car</span> <span class="n">car2</span> <span class="o">=</span> <span class="n">car1</span><span class="p">;</span>
-</code></pre></div>
-<p>In the code above, line 1 is an example of direct initialization, which essentially uses function matching to identify the best constructor to create a new object.
-The second line represents the copy construction, in which the object on the right hand side is copied into the object on the left hand side.</p>
-
-<p>One use case of copy initialization is in function definitions:</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span> <span class="nf">makeCar</span><span class="p">(</span><span class="n">Car</span> <span class="n">car</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">2</span>  <span class="k">return</span> <span class="n">car</span><span class="p">;</span>
-<span class="ln">3</span><span class="p">}</span>
-</code></pre></div>
-<p>The seemingly simple function above involves two copy initializations: the first one happens when the <code>car</code> parameter is initialization upon function call; and the other one happens when the function finishes executing and the <code>car</code> object is returned to the caller!</p>
-
-<p>Another use case of copy initialization with with containers:</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Car</span><span class="o">&gt;</span> <span class="n">cars</span><span class="p">;</span>
-<span class="ln">2</span><span class="n">Car</span> <span class="nf">car</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s">&#34;car&#34;</span><span class="p">);</span>
-<span class="ln">3</span><span class="n">cars</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
-</code></pre></div>
-<p>In this case, the car object that&rsquo;s put into the <code>cars</code> container is independent from the <code>car</code> created on line 2, this is because the container stores a copy of the object during the <code>push_back</code> function.</p>
-
-<h2 id="copy-assignment-operator">Copy-assignment Operator</h2>
-
-<p>Examining the operator signature, it&rsquo;s easy to see that the copy-assignment operator overloads the <code>=</code> operator using the keyword <code>operator</code>.
-Similar to the copy constructor, it takes a reference to a <code>const</code> object as its parameter.
-One difference is that this function returns a reference.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span> <span class="o">&amp;</span><span class="n">other</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">2</span>  <span class="n">size</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">size</span><span class="p">;</span>
-<span class="ln">3</span>  <span class="n">name</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
-<span class="ln">4</span>  <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<p>The following code illustrates the definition of the constructor, which initializes the counter variable to 1 upon object creation.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="c1">// constructor
+</span><span class="ln">2</span><span class="c1"></span><span class="n">Car</span><span class="o">::</span><span class="n">Car</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">w</span><span class="p">)</span> <span class="o">:</span> <span class="n">price</span><span class="p">(</span><span class="n">p</span><span class="p">),</span>
+<span class="ln">3</span>  <span class="n">pWeight</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="n">w</span><span class="p">)),</span>
+<span class="ln">4</span>  <span class="n">pCnt</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
 <span class="ln">5</span><span class="p">}</span>
+</code></pre></div>
+<p>The copy constructor has slightly more works to do.
+In addition to copy values of price and weight, it has to manage the counter variable.
+The counter pointer is first copied into the object on the left-hand side, then its value is increased by 1 to indicate that now there is one more object sharing the resource.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="n">Car</span><span class="o">::</span><span class="n">Car</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">)</span> <span class="o">:</span> <span class="n">price</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">price</span><span class="p">),</span>
+<span class="ln">2</span>  <span class="n">pWeight</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">pWeight</span><span class="p">),</span>
+<span class="ln">3</span>  <span class="n">pCnt</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">pCnt</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">4</span>  <span class="o">++*</span><span class="n">pCnt</span><span class="p">;</span>
+<span class="ln">5</span><span class="p">}</span>
+</code></pre></div>
+<h2 id="copy-assignment-operator">Copy-assignment operator</h2>
+
+<p>The copy-assignment operator definition is more involved since the case of self-assignment must be taken care of.
+The problem is when should we free the resource used by the left-hand side object.
+The shared resource indicated by the left-hand object no longer exists should we free it first; then in the case of self-assignment, the right-hand object is still using the already-freed resource, which is precarious.
+To circumvent this, we should increment the counter through the right-hand object first before checking whether to free the resource in the left-hand object.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln"> 1</span><span class="n">Car</span><span class="o">&amp;</span> <span class="n">Car</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Car</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 2</span>  <span class="o">++*</span><span class="n">c</span><span class="p">.</span><span class="n">pCnt</span><span class="p">;</span>
+<span class="ln"> 3</span>  <span class="o">--*</span><span class="n">pCnt</span><span class="p">;</span>
+<span class="ln"> 4</span>  <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">pCnt</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 5</span>    <span class="k">delete</span> <span class="n">pWeight</span><span class="p">;</span>
+<span class="ln"> 6</span>    <span class="k">delete</span> <span class="n">pCnt</span><span class="p">;</span>
+<span class="ln"> 7</span>  <span class="p">}</span>
+<span class="ln"> 8</span>  <span class="n">price</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">price</span><span class="p">;</span>
+<span class="ln"> 9</span>  <span class="n">pWeight</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">pWeight</span><span class="p">;</span>
+<span class="ln">10</span>  <span class="n">pCnt</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">pCnt</span><span class="p">;</span>
+<span class="ln">11</span>  <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="ln">12</span><span class="p">}</span>
 </code></pre></div>
 <h2 id="destructor">Destructor</h2>
 
-<p>The destructor works reversely to the constructor.
-Note that a constructor actually involves two steps: (1) initialization and (2) function body, and the function body is executed after class members are initialized.
-The destructor, on the other hand, runs its function body first before destroying class members.</p>
-
+<p>The destructor is supposed to free the resource when no other object is still using it.
+This checking can be dong with the help of the counter variable.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="o">--*</span><span class="n">pCnt</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">pCnt</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">3</span>  <span class="k">delete</span> <span class="n">pWeight</span><span class="p">;</span>
+<span class="ln">4</span>  <span class="k">delete</span> <span class="n">pCnt</span><span class="p">;</span>
+<span class="ln">5</span><span class="p">}</span>
+</code></pre></div>
 
         
           <div class="blog-tags">
@@ -447,42 +437,42 @@ The destructor, on the other hand, runs its function body first before destroyin
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f09%2fcpp-copy-control-1%2f&amp;text=C%2b%2b%20-%20Copy%20Control%20%281%29&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f11%2fcpp-copy-control-3%2f&amp;text=C%2b%2b%20-%20Copy%20Control%20%283%29&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f09%2fcpp-copy-control-1%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f11%2fcpp-copy-control-3%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f09%2fcpp-copy-control-1%2f&amp;title=C%2b%2b%20-%20Copy%20Control%20%281%29" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f11%2fcpp-copy-control-3%2f&amp;title=C%2b%2b%20-%20Copy%20Control%20%283%29" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f09%2fcpp-copy-control-1%2f&amp;title=C%2b%2b%20-%20Copy%20Control%20%281%29" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f11%2fcpp-copy-control-3%2f&amp;title=C%2b%2b%20-%20Copy%20Control%20%283%29" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f09%2fcpp-copy-control-1%2f&amp;title=C%2b%2b%20-%20Copy%20Control%20%281%29" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f11%2fcpp-copy-control-3%2f&amp;title=C%2b%2b%20-%20Copy%20Control%20%283%29" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f09%2fcpp-copy-control-1%2f&amp;description=C%2b%2b%20-%20Copy%20Control%20%281%29" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f11%2fcpp-copy-control-3%2f&amp;description=C%2b%2b%20-%20Copy%20Control%20%283%29" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -500,11 +490,11 @@ The destructor, on the other hand, runs its function body first before destroyin
           <h4 class="see-also">See also</h4>
           <ul>
           
+            <li><a href="/2020/02/10/cpp-copy-control-2/">C&#43;&#43; - Copy Control (2)</a></li>
+          
+            <li><a href="/2020/02/09/cpp-copy-control-1/">C&#43;&#43; - Copy Control (1)</a></li>
+          
             <li><a href="/2020/02/02/cpp-statements/">C&#43;&#43; - Statements</a></li>
-          
-            <li><a href="/2020/01/28/cpp-standard-library/">C&#43;&#43; - Standard Library Sequential Containers</a></li>
-          
-            <li><a href="/2020/01/21/cpp-array/">C&#43;&#43; - Array</a></li>
           
           </ul>
           
@@ -515,13 +505,9 @@ The destructor, on the other hand, runs its function body first before destroyin
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/02/02/cpp-statements/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Statements">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/02/10/cpp-copy-control-2/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Copy Control (2)">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/02/10/cpp-copy-control-2/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Copy Control (2)">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -531,12 +517,12 @@ The destructor, on the other hand, runs its function body first before destroyin
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/02/09/cpp-copy-control-1">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/02/11/cpp-copy-control-3">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/02\/09\/cpp-copy-control-1';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/02\/11\/cpp-copy-control-3';
             };
 
           </script>

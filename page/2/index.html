@@ -273,6 +273,55 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/01/18/cpp-auto/">
+        <h2 class="post-title">C&#43;&#43; - auto</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 18, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;112&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        The C++ new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
+1int a = 1, b = 2; 2int c = a + b; // old way 3auto d = a + b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
+1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:
+        <a href="https://kunlei.github.io/2020/01/18/cpp-auto/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://kunlei.github.io/2020/01/18/cpp-decltype/">
         <h2 class="post-title">C&#43;&#43; - decltype</h2>
         
@@ -711,53 +760,6 @@ Precedence and Associativity When multiple operators show up in the same express
     <div class="blog-tags">
         
         <a href="https://kunlei.github.io/tags/book/">book</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2019/12/28/cpp-data-types/">
-        <h2 class="post-title">C&#43;&#43; - Data Types</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on December 28, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;533&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Data type is probably the most fundamental topic pertinent to a programming language. There is a plethora of online resources explaining all the available data types in C++, and the intend of this post is to serve as a quick reference for my future lookup because I used to check times and again some of the items in this post. It&rsquo;s time to avoid all that hassles and put them all in one place.
-        <a href="https://kunlei.github.io/2019/12/28/cpp-data-types/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
         
     </div>
     
