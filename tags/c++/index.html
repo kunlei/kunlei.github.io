@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #c&#43;&#43; - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Copy Control (1)">
+  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Copy Control (2)">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -191,6 +191,34 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-2/">
+                <h2 class="post-title">C&#43;&#43; - Copy Control (2)</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on February 11, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    In this post, we will put our copy control skill in use by designing an artificial Car class that manages its own resources. A Car object has two member attributes, price and weight, both are integer variables. The synthesized copy control operators would be enough if both of them are represented in primitive types. For the sake of illustration and in order to make this code more interesting, we use a pointer to a integer variable to save a car&rsquo;s weight.<a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-2/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2020/02/09/cpp-copy-control-1/">
@@ -449,37 +477,6 @@ What is this? (pun intended) The specifier this is a reserved keyword in C++ tha
 <span class="ln">2</span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="n">pa</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
 </span><span class="ln">3</span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
 </span></code></pre></div>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/01/14/cpp-string/">
-                <h2 class="post-title">C&#43;&#43; - string</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 14, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    The string is a library class defined by C++ to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
-1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
-Creation There exist a number of constructors for string.
-1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.<a href="https://kunlei.github.io/2020/01/14/cpp-string/" class="post-read-more">[Read More]</a>
                   
                 
               </div>
