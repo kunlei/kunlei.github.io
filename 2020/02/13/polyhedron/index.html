@@ -7,9 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>C&#43;&#43; - Swap - O.R. in Action</title>
-  <meta name="description" content="The C&#43;&#43; standard library defines a facility function that exchanges values of two variables. It&rsquo;s defined in header &lt;utility&gt; and namespace std. The code below shows an illustrative example.
-1#include &lt;utility&gt;2#include &lt;iostream&gt;3 4int main() { 5 int a = 10, b = 20; 6 // before swap 7 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 10 8 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 20 9 10 swap(a, b); 11 12 // after swap 13 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 20 14 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.">
+  <title>Polyhedron - O.R. in Action</title>
+  <meta name="description" content="In this post, we&rsquo;ll review some geometric properties of linear programming.
+Hyperplane Let $\mathbf{a} = (a_1, a_2, \cdots, a_n)$ be a column vector in $R^n$ and $a_i$ are not all 0, then the set defined by
+$$ S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{a}^T \mathbf{x} = b \} $$
+is called a hyperplane.
+Note that the hyperplane defines a $(n-1)$-dimensional space within $R^n$. In three dimensional space $\mathcal{R}^3$, a hyperplane is a plane.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,8 +48,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/02\/12\/cpp-swap\/",
-          "name": "C\x2b\x2b swap"
+          "@id": "https:\/\/kunlei.github.io\/2020\/02\/13\/polyhedron\/",
+          "name": "Polyhedron"
         }
     }]
 }
@@ -57,15 +60,15 @@
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "C\x2b\x2b - Swap",
-  "description" : "The C\x2b\x2b standard library defines a facility function that exchanges values of two variables. It\x26rsquo;s defined in header \x26lt;utility\x26gt; and namespace std. The code below shows an illustrative example.\n1#include \x26lt;utility\x26gt;2#include \x26lt;iostream\x26gt;3 4int main() { 5 int a = 10, b = 20; 6 \/\/ before swap 7 std::cout \x26lt;\x26lt; \x26#34;a = \x26#34; \x26lt;\x26lt; a \x26lt;\x26lt; std::endl; \/\/ a = 10 8 std::cout \x26lt;\x26lt; \x26#34;b = \x26#34; \x26lt;\x26lt; b \x26lt;\x26lt; std::endl; \/\/ b = 20 9 10 swap(a, b); 11 12 \/\/ after swap 13 std::cout \x26lt;\x26lt; \x26#34;a = \x26#34; \x26lt;\x26lt; a \x26lt;\x26lt; std::endl; \/\/ a = 20 14 std::cout \x26lt;\x26lt; \x26#34;b = \x26#34; \x26lt;\x26lt; b \x26lt;\x26lt; std::endl; \/\/ b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.",
+  "headline": "Polyhedron",
+  "description" : "In this post, we\x26rsquo;ll review some geometric properties of linear programming.\nHyperplane Let $\\mathbf{a} = (a_1, a_2, \\cdots, a_n)$ be a column vector in $R^n$ and $a_i$ are not all 0, then the set defined by\n$$ S = \\{ \\mathbf{x} \\in \\mathcal{R}^n \\ | \\ \\mathbf{a}^T \\mathbf{x} = b \\} $$\nis called a hyperplane.\nNote that the hyperplane defines a $(n-1)$-dimensional space within $R^n$. In three dimensional space $\\mathcal{R}^3$, a hyperplane is a plane.",
   "inLanguage" : "en",
-  "wordCount":  201 ,
-  "datePublished" : "2020-02-12T00:00:00",
-  "dateModified" : "2020-02-12T00:00:00",
+  "wordCount":  215 ,
+  "datePublished" : "2020-02-13T00:00:00",
+  "dateModified" : "2020-02-13T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
-  "keywords" : [ "c\x2b\x2b" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/02\/12\/cpp-swap\/",
+  "keywords" : [ "opt, lp" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/02\/13\/polyhedron\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -79,16 +82,20 @@
 }
 </script>
 
-<meta property="og:title" content="C&#43;&#43; - Swap" />
-<meta property="og:description" content="The C&#43;&#43; standard library defines a facility function that exchanges values of two variables. It&rsquo;s defined in header &lt;utility&gt; and namespace std. The code below shows an illustrative example.
-1#include &lt;utility&gt;2#include &lt;iostream&gt;3 4int main() { 5 int a = 10, b = 20; 6 // before swap 7 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 10 8 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 20 9 10 swap(a, b); 11 12 // after swap 13 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 20 14 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.">
+<meta property="og:title" content="Polyhedron" />
+<meta property="og:description" content="In this post, we&rsquo;ll review some geometric properties of linear programming.
+Hyperplane Let $\mathbf{a} = (a_1, a_2, \cdots, a_n)$ be a column vector in $R^n$ and $a_i$ are not all 0, then the set defined by
+$$ S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{a}^T \mathbf{x} = b \} $$
+is called a hyperplane.
+Note that the hyperplane defines a $(n-1)$-dimensional space within $R^n$. In three dimensional space $\mathcal{R}^3$, a hyperplane is a plane.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/02/12/cpp-swap/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/02/13/polyhedron/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="C&#43;&#43; - Swap" />
-  <meta name="twitter:description" content="The C&#43;&#43; standard library defines a facility function that exchanges values of two variables. It&rsquo;s defined in header &lt;utility&gt; and namespace std. The code below shows an illustrative …">
+  <meta name="twitter:title" content="Polyhedron" />
+  <meta name="twitter:description" content="In this post, we&rsquo;ll review some geometric properties of linear programming.
+Hyperplane Let $\mathbf{a} = (a_1, a_2, \cdots, a_n)$ be a column vector in $R^n$ and $a_i$ are not all 0, then the …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -288,7 +295,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>C&#43;&#43; - Swap</h1>
+                <h1>Polyhedron</h1>
               
               
               
@@ -296,13 +303,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 12, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 13, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;201&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;215&nbsp;words
   
   
     
@@ -331,63 +338,62 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#define-swap-for-class">Define Swap for Class</a></li>
+<li><a href="#hyperplane">Hyperplane</a></li>
+<li><a href="#halfspace">Halfspace</a></li>
+<li><a href="#polyhedron">Polyhedron</a></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>The C++ standard library defines a facility function that exchanges values of two variables.
-It&rsquo;s defined in header <code>&lt;utility&gt;</code> and namespace <code>std</code>.
-The code below shows an illustrative example.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;utility&gt;</span><span class="cp">
-</span><span class="ln"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span><span class="ln"> 3</span><span class="cp"></span>
-<span class="ln"> 4</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 5</span>  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-<span class="ln"> 6</span>  <span class="c1">// before swap
-</span><span class="ln"> 7</span><span class="c1"></span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// a = 10
-</span><span class="ln"> 8</span><span class="c1"></span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;b = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// b = 20
-</span><span class="ln"> 9</span><span class="c1"></span>  
-<span class="ln">10</span>  <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-<span class="ln">11</span>
-<span class="ln">12</span>  <span class="c1">// after swap
-</span><span class="ln">13</span><span class="c1"></span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// a = 20
-</span><span class="ln">14</span><span class="c1"></span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;b = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// b = 10
-</span><span class="ln">15</span><span class="c1"></span>
-<span class="ln">16</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="ln">17</span><span class="p">}</span>
-</code></pre></div>
-<h2 id="define-swap-for-class">Define Swap for Class</h2>
+<p>In this post, we&rsquo;ll review some geometric properties of linear programming.</p>
 
-<p>We might overload the swap function for our own classes, and the code below shows an example.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln"> 1</span><span class="k">class</span><span class="err"> </span><span class="nc">Car</span> <span class="p">{</span>
-<span class="ln"> 2</span>  <span class="k">friend</span> <span class="kt">void</span> <span class="n">swap</span><span class="p">(</span><span class="n">Car</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">Car</span><span class="o">&amp;</span><span class="p">);</span>
-<span class="ln"> 3</span>
-<span class="ln"> 4</span><span class="k">public</span><span class="o">:</span>
-<span class="ln"> 5</span>  <span class="n">Car</span><span class="p">()</span> <span class="o">:</span> <span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">pWgt</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="p">{}</span>
-<span class="ln"> 6</span>  <span class="o">~</span><span class="n">Car</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 7</span>    <span class="k">delete</span> <span class="n">pWgt</span><span class="p">;</span>
-<span class="ln"> 8</span>  <span class="p">}</span>
-<span class="ln"> 9</span>
-<span class="ln">10</span><span class="k">private</span><span class="o">:</span>
-<span class="ln">11</span>  <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-<span class="ln">12</span>  <span class="kt">int</span> <span class="o">*</span><span class="n">pWgt</span><span class="p">;</span>
-<span class="ln">13</span><span class="p">};</span>
-<span class="ln">14</span><span class="kr">inline</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">Car</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">Car</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">15</span>  <span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">;</span>
-<span class="ln">16</span>  <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
-<span class="ln">17</span>  <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">pWgt</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">pWgt</span><span class="p">);</span>
-<span class="ln">18</span><span class="p">}</span>
-</code></pre></div>
-<p>Note that the <code>swap</code> function used in the definition should <strong>not</strong> be <code>std::swap</code>.</p>
+<h2 id="hyperplane">Hyperplane</h2>
+
+<p>Let $\mathbf{a} = (a_1, a_2, \cdots, a_n)$ be a column vector in $R^n$ and $a_i$ are not all 0, then the set defined by</p>
+
+<p>$$
+S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{a}^T \mathbf{x} = b \}
+$$</p>
+
+<p>is called a <em>hyperplane</em>.</p>
+
+<p>Note that the hyperplane defines a $(n-1)$-dimensional space within $R^n$.
+In three dimensional space $\mathcal{R}^3$, a hyperplane is a plane.
+In two dimensional space $\mathcal{R}^2$, a hyperplane is a line.</p>
+
+<h2 id="halfspace">Halfspace</h2>
+
+<p>Using the same notations, the following set given by</p>
+
+<p>$$
+S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{a}^T \mathbf{x} \geq b \}
+$$</p>
+
+<p>defines a <em>halfspace</em>.</p>
+
+<p>It is easy to see that every constraint in a linear programming formulation effectively defines a halfspace, and the feasible space is decided by the intersection of all the halfspaces.</p>
+
+<h2 id="polyhedron">Polyhedron</h2>
+
+<p>We are now ready to introduce <em>polyhdron</em>, a set that can be described as</p>
+
+<p>$$
+S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{A}\mathbf{x} \geq \mathbf{b} \}
+$$</p>
+
+<p>where $\mathbf{A}$ and $\mathbf{b}$ are an $m \times n$ matrix and a $m$-dimensional vector, respectively.</p>
+
+<p>Note that the feasible region of any linear programming problem can be put into a general form of $\mathbf{A}\mathbf{x} \geq \mathbf{b}$, therefore is a polyhedron.</p>
 
 
         
           <div class="blog-tags">
             
-              <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+              <a href="https://kunlei.github.io/tags/opt/">opt</a>&nbsp;
+            
+              <a href="https://kunlei.github.io/tags/lp/">lp</a>&nbsp;
             
           </div>
         
@@ -402,42 +408,42 @@ The code below shows an illustrative example.</p>
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f12%2fcpp-swap%2f&amp;text=C%2b%2b%20-%20Swap&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f13%2fpolyhedron%2f&amp;text=Polyhedron&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f12%2fcpp-swap%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f13%2fpolyhedron%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f12%2fcpp-swap%2f&amp;title=C%2b%2b%20-%20Swap" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f13%2fpolyhedron%2f&amp;title=Polyhedron" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f12%2fcpp-swap%2f&amp;title=C%2b%2b%20-%20Swap" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f13%2fpolyhedron%2f&amp;title=Polyhedron" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f12%2fcpp-swap%2f&amp;title=C%2b%2b%20-%20Swap" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f13%2fpolyhedron%2f&amp;title=Polyhedron" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f12%2fcpp-swap%2f&amp;description=C%2b%2b%20-%20Swap" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f13%2fpolyhedron%2f&amp;description=Polyhedron" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -452,17 +458,6 @@ The code below shows an illustrative example.</p>
         
           
           
-          <h4 class="see-also">See also</h4>
-          <ul>
-          
-            <li><a href="/2020/02/11/cpp-copy-control-3/">C&#43;&#43; - Copy Control (3)</a></li>
-          
-            <li><a href="/2020/02/10/cpp-copy-control-2/">C&#43;&#43; - Copy Control (2)</a></li>
-          
-            <li><a href="/2020/02/09/cpp-copy-control-1/">C&#43;&#43; - Copy Control (1)</a></li>
-          
-          </ul>
-          
         
       </article>
 
@@ -470,13 +465,9 @@ The code below shows an illustrative example.</p>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Copy Control (3)">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/02/12/cpp-swap/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; - Swap">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/02/13/polyhedron/" data-toggle="tooltip" data-placement="top" title="Polyhedron">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -486,12 +477,12 @@ The code below shows an illustrative example.</p>
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/02/12/cpp-swap">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/02/13/polyhedron">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/02\/12\/cpp-swap';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/02\/13\/polyhedron';
             };
 
           </script>
