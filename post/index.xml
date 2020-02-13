@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Tue, 11 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C&#43;&#43; - Swap</title>
+      <link>https://kunlei.github.io/2020/02/12/cpp-swap/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/02/12/cpp-swap/</guid>
+      <description>The C++ standard library defines a facility function that exchanges values of two variables. It&amp;rsquo;s defined in header &amp;lt;utility&amp;gt; and namespace std. The code below shows an illustrative example.
+1#include &amp;lt;utility&amp;gt;2#include &amp;lt;iostream&amp;gt;3 4int main() { 5 int a = 10, b = 20; 6 // before swap 7 std::cout &amp;lt;&amp;lt; &amp;#34;a = &amp;#34; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; std::endl; // a = 10 8 std::cout &amp;lt;&amp;lt; &amp;#34;b = &amp;#34; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; std::endl; // b = 20 9 10 swap(a, b); 11 12 // after swap 13 std::cout &amp;lt;&amp;lt; &amp;#34;a = &amp;#34; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; std::endl; // a = 20 14 std::cout &amp;lt;&amp;lt; &amp;#34;b = &amp;#34; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; std::endl; // b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.</description>
+    </item>
     
     <item>
       <title>C&#43;&#43; - Copy Control (3)</title>

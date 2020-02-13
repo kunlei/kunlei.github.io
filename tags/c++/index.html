@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #c&#43;&#43; - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Copy Control (3)">
+  <meta name="description" content="Overview of all pages with the tag #c&#43;&#43;, such as: C&#43;&#43; - Swap">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -191,6 +191,35 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/02/12/cpp-swap/">
+                <h2 class="post-title">C&#43;&#43; - Swap</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on February 12, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    The C++ standard library defines a facility function that exchanges values of two variables. It&rsquo;s defined in header &lt;utility&gt; and namespace std. The code below shows an illustrative example.
+1#include &lt;utility&gt;2#include &lt;iostream&gt;3 4int main() { 5 int a = 10, b = 20; 6 // before swap 7 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 10 8 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 20 9 10 swap(a, b); 11 12 // after swap 13 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 20 14 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.<a href="https://kunlei.github.io/2020/02/12/cpp-swap/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/">
@@ -449,36 +478,6 @@ There are various types of statements:
                   
                     I used to find the usage of const after the parameter list of a member function within a class confusing &ndash; the code snippet below shows an example in which getSize() is followed by a const specifier. It turns out that making sense of the const usage here requires a deep understanding of another keyword &ndash; this.
 What is this? (pun intended) The specifier this is a reserved keyword in C++ that is commonly used in the definitions of class member functions to refer to the current object on which the functions are operating on.<a href="https://kunlei.github.io/2020/01/19/cpp-const-member-function/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/01/18/cpp-auto/">
-                <h2 class="post-title">C&#43;&#43; - auto</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 18, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    The C++ new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
-1int a = 1, b = 2; 2int c = a + b; // old way 3auto d = a + b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
-1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:<a href="https://kunlei.github.io/2020/01/18/cpp-auto/" class="post-read-more">[Read More]</a>
                   
                 
               </div>
