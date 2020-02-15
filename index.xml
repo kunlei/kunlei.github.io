@@ -15,10 +15,10 @@
     
     <item>
       <title>Convexity</title>
-      <link>https://kunlei.github.io/2020/02/14/convex-hull/</link>
-      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+      <link>https://kunlei.github.io/2020/02/15/convex-hull/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2020/02/14/convex-hull/</guid>
+      <guid>https://kunlei.github.io/2020/02/15/convex-hull/</guid>
       <description>This post describes the concept of convexity. You&amp;rsquo;ve probably heard of convex/concave functions or convex hull, and convexity is indeed an important topic in optimization.
 Convex Set Let&amp;rsquo;s say we have a set $S$ in $\mathcal{R}^n$ space, it is said to be convex if the following condition is met:
 $$ \lambda \mathbf{x} + (1-\lambda) \mathbf{y} \in S, \ \forall \mathbf{x}, \mathbf{y} \in S, \lambda \in [0, 1] $$
@@ -27,15 +27,26 @@ This condition basically requires that, for any two points in the set, all the p
     
     <item>
       <title>Polyhedron</title>
-      <link>https://kunlei.github.io/2020/02/13/polyhedron/</link>
-      <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
+      <link>https://kunlei.github.io/2020/02/14/polyhedron/</link>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2020/02/13/polyhedron/</guid>
+      <guid>https://kunlei.github.io/2020/02/14/polyhedron/</guid>
       <description>In this post, we&amp;rsquo;ll review some geometric properties of linear programming.
 Hyperplane Let $\mathbf{a} = (a_1, a_2, \cdots, a_n)$ be a column vector in $R^n$ and $a_i$ are not all 0, then the set defined by
 $$ S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{a}^T \mathbf{x} = b \} $$
 is called a hyperplane.
 Note that the hyperplane defines a $(n-1)$-dimensional space within $R^n$. In three dimensional space $\mathcal{R}^3$, a hyperplane is a plane.</description>
+    </item>
+    
+    <item>
+      <title>Linear Programming -- General and Standard Forms</title>
+      <link>https://kunlei.github.io/2020/02/13/lp-forms/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/02/13/lp-forms/</guid>
+      <description>A linear programming formulation can be put into either the general form or standard form.
+General Form $$ \begin{align} \text{min.} \quad &amp;amp; \mathbf{c}^T \mathbf{x} \newline \text{s.t.} \quad &amp;amp; \mathbf{A} x \geq b \newline \end{align} $$
+Standard Form $$ \begin{align} \text{min.} \quad &amp;amp; \mathbf{c}^T \mathbf{x} \newline \text{s.t.} \quad &amp;amp; \mathbf{A} x = b \newline &amp;amp; \mathbf{x} \geq 0 \end{align} $$</description>
     </item>
     
     <item>
@@ -611,7 +622,7 @@ First Round &amp;ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/about/</guid>
-      <description>Hello! My name is Kunlei Lian, and I&amp;rsquo;m a Sr. Data Scientist working at Walmart Labs.
+      <description>Hello! My name is Kunlei Lian, and I work as a Staff Data Scientist at Walmart Labs.
 Wait, Data Scientist? Yeah, I know. You probably couldn&amp;rsquo;t get any flavor of data science in my posts here, BECAUSE I AM NOT DOING ANY DATA SCIENCE WORK. Data scientist is a big umbrella in Walmart and I am actually an undercover Operations Research Scientist (don&amp;rsquo;t ask where I work:-)). I do all kinds of optimization works in supply chain area, routing is my favorite.</description>
     </item>
     

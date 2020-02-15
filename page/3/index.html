@@ -273,6 +273,55 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/01/12/cpp-reference/">
+        <h2 class="post-title">C&#43;&#43; - Reference</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 12, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;169&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        Reference is one of the compound types in C++ that modifies the base type of a variable. It is essentially another name of an existing variable, meaning that any operation on a reference is performed on the variable that the reference is bound to. It is important to note that a reference is not an object.
+A reference is defined using the &amp; operator, as in the code below,
+1int num = 3; 2int &amp;ref = num;  A reference must be bound to a variable upon creation, for example, the code below will trigger compilation error.
+        <a href="https://kunlei.github.io/2020/01/12/cpp-reference/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/">
         <h2 class="post-title">C&#43;&#43; - Variable Initialization</h2>
         
@@ -670,57 +719,6 @@ Reading Reading is a noble thing, but too high a target spells the failure from 
         
         In a previous post, we looked at how to build models by adding rows sequentially. It starts with creating decision variables, with which the objective function is defined. Constraints are then created sequentially and incorporated into the model. In optimization textbooks, mathematical models are usually represented in matrix format, and in CPLEX, it is indeed possible to build models column-wise. This post aims to demystify the process of building models by adding columns sequentially.
         <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
-        
-        <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/">
-        <h2 class="post-title">Build Optimization Models by Column with IloLPMatrix using CPLEX Java API</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on October 20, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;382&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        This post explains how to use IloLPMatrix to build models by column. IloLPMatrix is commonly used in building large-scale optimization models.
-An illustrative example The same example used in a previous post is repeated here for clarity.
-$$ \begin{align} \text{min.} \quad &amp; 2 x_1 + x_2 + 3x_3 + 2x_4 + 5x_5 \newline \text{s.t.} \quad &amp; x_1 + x_3 \geq 2 \newline \quad &amp; x_2 + x_4 + x_5 \geq 3 \newline \quad &amp; x_1 + x_2 + x_4 \geq 1 \newline \quad &amp; 0 \leq x_i \leq 100,\ \forall i \in { 1, \cdots, 5 } \end{align} $$
-        <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/" class="post-read-more">[Read More]</a>
         
     </div>
 
