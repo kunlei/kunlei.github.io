@@ -78,6 +78,24 @@ Standard Form $$ \begin{align} \text{min.} \quad &amp;amp; \mathbf{c}^T \mathbf{
     </item>
     
     <item>
+      <title>Integer Programming</title>
+      <link>https://kunlei.github.io/page/opt-integer-index/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/opt-integer-index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Programming</title>
+      <link>https://kunlei.github.io/page/opt-linear-index/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/opt-linear-index/</guid>
+      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity  Simplex Algorithm Column Generation </description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; - Copy Control (1)</title>
       <link>https://kunlei.github.io/2020/02/09/cpp-copy-control-1/</link>
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
