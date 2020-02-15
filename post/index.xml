@@ -8,10 +8,22 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Convexity</title>
+      <link>https://kunlei.github.io/2020/02/14/convex-hull/</link>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/02/14/convex-hull/</guid>
+      <description>This post describes the concept of convexity. You&amp;rsquo;ve probably heard of convex/concave functions or convex hull, and convexity is indeed an important topic in optimization.
+Convex Set Let&amp;rsquo;s say we have a set $S$ in $\mathcal{R}^n$ space, it is said to be convex if the following condition is met:
+$$ \lambda \mathbf{x} + (1-\lambda) \mathbf{y} \in S, \ \forall \mathbf{x}, \mathbf{y} \in S, \lambda \in [0, 1] $$
+This condition basically requires that, for any two points in the set, all the points on the line segment joining the two points must also belong to the set.</description>
+    </item>
     
     <item>
       <title>Polyhedron</title>
