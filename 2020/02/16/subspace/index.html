@@ -7,11 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Convexity - O.R. in Action</title>
-  <meta name="description" content="This post describes the concept of convexity. You&rsquo;ve probably heard of convex/concave functions or convex hull, and convexity is indeed an important topic in optimization.
-Convex Set Let&rsquo;s say we have a set $S$ in $\mathcal{R}^n$ space, it is said to be convex if the following condition is met:
-$$ \lambda \mathbf{x} &#43; (1-\lambda) \mathbf{y} \in S, \ \forall \mathbf{x}, \mathbf{y} \in S, \lambda \in [0, 1] $$
-This condition basically requires that, for any two points in the set, all the points on the line segment joining the two points must also belong to the set.">
+  <title>Subspace - O.R. in Action</title>
+  <meta name="description" content="Subspace is an important concept in linear algebra and understanding it helps us grasp the intricacies of linear programming. Let&rsquo;s say we have a $n$-dimensional space $\mathcal{R}^n$. A subset $S$ is called a subspace of $\mathcal{R}^n$, denoted by $S \subseteq \mathcal{R}^n$, if the following three conditions are met:
+ $S$ is not empty, that is, $S \neq \{0\}$ $S$ is closed under vector addition, that is, $\mathbf{x} &#43; \mathbf{y} \in S, \ \forall \mathbf{x, y} \in S$.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -47,8 +45,8 @@ This condition basically requires that, for any two points in the set, all the p
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/02\/15\/convex-hull\/",
-          "name": "Convexity"
+          "@id": "https:\/\/kunlei.github.io\/2020\/02\/16\/subspace\/",
+          "name": "Subspace"
         }
     }]
 }
@@ -59,15 +57,15 @@ This condition basically requires that, for any two points in the set, all the p
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Convexity",
-  "description" : "This post describes the concept of convexity. You\x26rsquo;ve probably heard of convex\/concave functions or convex hull, and convexity is indeed an important topic in optimization.\nConvex Set Let\x26rsquo;s say we have a set $S$ in $\\mathcal{R}^n$ space, it is said to be convex if the following condition is met:\n$$ \\lambda \\mathbf{x} \x2b (1-\\lambda) \\mathbf{y} \\in S, \\ \\forall \\mathbf{x}, \\mathbf{y} \\in S, \\lambda \\in [0, 1] $$\nThis condition basically requires that, for any two points in the set, all the points on the line segment joining the two points must also belong to the set.",
+  "headline": "Subspace",
+  "description" : "Subspace is an important concept in linear algebra and understanding it helps us grasp the intricacies of linear programming. Let\x26rsquo;s say we have a $n$-dimensional space $\\mathcal{R}^n$. A subset $S$ is called a subspace of $\\mathcal{R}^n$, denoted by $S \\subseteq \\mathcal{R}^n$, if the following three conditions are met:\n $S$ is not empty, that is, $S \\neq \\{0\\}$ $S$ is closed under vector addition, that is, $\\mathbf{x} \x2b \\mathbf{y} \\in S, \\ \\forall \\mathbf{x, y} \\in S$.",
   "inLanguage" : "en",
-  "wordCount":  415 ,
-  "datePublished" : "2020-02-15T00:00:00",
-  "dateModified" : "2020-02-15T00:00:00",
+  "wordCount":  95 ,
+  "datePublished" : "2020-02-16T00:00:00",
+  "dateModified" : "2020-02-16T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
-  "keywords" : [ "opt, lp" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/02\/15\/convex-hull\/",
+  "keywords" : [ "opt" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/02\/16\/subspace\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -81,19 +79,16 @@ This condition basically requires that, for any two points in the set, all the p
 }
 </script>
 
-<meta property="og:title" content="Convexity" />
-<meta property="og:description" content="This post describes the concept of convexity. You&rsquo;ve probably heard of convex/concave functions or convex hull, and convexity is indeed an important topic in optimization.
-Convex Set Let&rsquo;s say we have a set $S$ in $\mathcal{R}^n$ space, it is said to be convex if the following condition is met:
-$$ \lambda \mathbf{x} &#43; (1-\lambda) \mathbf{y} \in S, \ \forall \mathbf{x}, \mathbf{y} \in S, \lambda \in [0, 1] $$
-This condition basically requires that, for any two points in the set, all the points on the line segment joining the two points must also belong to the set.">
+<meta property="og:title" content="Subspace" />
+<meta property="og:description" content="Subspace is an important concept in linear algebra and understanding it helps us grasp the intricacies of linear programming. Let&rsquo;s say we have a $n$-dimensional space $\mathcal{R}^n$. A subset $S$ is called a subspace of $\mathcal{R}^n$, denoted by $S \subseteq \mathcal{R}^n$, if the following three conditions are met:
+ $S$ is not empty, that is, $S \neq \{0\}$ $S$ is closed under vector addition, that is, $\mathbf{x} &#43; \mathbf{y} \in S, \ \forall \mathbf{x, y} \in S$.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/02/15/convex-hull/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/02/16/subspace/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Convexity" />
-  <meta name="twitter:description" content="This post describes the concept of convexity. You&rsquo;ve probably heard of convex/concave functions or convex hull, and convexity is indeed an important topic in optimization.
-Convex Set Let&rsquo;s …">
+  <meta name="twitter:title" content="Subspace" />
+  <meta name="twitter:description" content="Subspace is an important concept in linear algebra and understanding it helps us grasp the intricacies of linear programming. Let&rsquo;s say we have a $n$-dimensional space $\mathcal{R}^n$. A subset …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -306,7 +301,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Convexity</h1>
+                <h1>Subspace</h1>
               
               
               
@@ -314,13 +309,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 15, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 16, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;415&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;95&nbsp;words
   
   
     
@@ -345,85 +340,23 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#convex-set">Convex Set</a>
-<ul>
-<li><a href="#a-halfspace-is-a-convex-set">A halfspace is a convex set</a></li>
-<li><a href="#a-polyhedron-is-a-convex-set">A polyhedron is a convex set</a></li>
-</ul></li>
-<li><a href="#convex-combination">Convex Combination</a></li>
-<li><a href="#convex-hull">Convex Hull</a></li>
-</ul></li>
-</ul>
-</nav>
-
         
 
-<p>This post describes the concept of convexity.
-You&rsquo;ve probably heard of convex/concave functions or convex hull, and convexity is indeed an important topic in optimization.</p>
+        <p>Subspace is an important concept in linear algebra and understanding it helps us grasp the intricacies of linear programming.
+Let&rsquo;s say we have a $n$-dimensional space $\mathcal{R}^n$.
+A subset $S$ is called a subspace of $\mathcal{R}^n$, denoted by $S \subseteq \mathcal{R}^n$, if the following three conditions are met:</p>
 
-<h2 id="convex-set">Convex Set</h2>
-
-<p>Let&rsquo;s say we have a set $S$ in $\mathcal{R}^n$ space, it is said to be <em>convex</em> if the following condition is met:</p>
-
-<p>$$
-\lambda \mathbf{x} + (1-\lambda) \mathbf{y} \in S, \ \forall \mathbf{x}, \mathbf{y} \in S, \lambda \in [0, 1]
-$$</p>
-
-<p>This condition basically requires that, for any two points in the set, all the points on the line segment joining the two points must also belong to the set.
-If we draw a circle, it is a convex set since any line segments joining two points within the circle also belong to the circle.
-It&rsquo;s easy to see that</p>
-
-<blockquote>
-<p>The intersection of convex sets is also convex.</p>
-</blockquote>
-
-<p>The reasoning is straightforward:</p>
-
-<blockquote>
-<p>Let $\cap_{i = 1}^k S_i$ indicates the intersection of a group of convex sets $S_i$, and for every points $\mathbf{x}, \mathbf{y} \in \cap_{i=1}^k S_i$, we know $\lambda \mathbf{x} + (1-\lambda) \mathbf{y} \in S_i, \forall i = 1, \cdots, k$, therefore, $\lambda \mathbf{x} + (1-\lambda) \mathbf{y}$ must also belong to the intersection of $S_i$.</p>
-</blockquote>
-
-<h3 id="a-halfspace-is-a-convex-set">A halfspace is a convex set</h3>
-
-<p>Let $S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{a}^T \mathbf{x} \geq b \}$ denote a halfspace, and $\mathbf{x, y} \in S$, and we have</p>
-
-<p>$$
-\begin{align}
-  \mathbf{a}^T (\lambda \mathbf{x} + (1 - \lambda) \mathbf{y}) &amp;= \lambda \mathbf{a}^T \mathbf{x} + (1 - \lambda) \mathbf{a}^T \mathbf
-  {y} \newline
-  &amp;\geq \lambda b + (1-\lambda) b \newline
-  &amp;\geq b
-\end{align}
-$$</p>
-
-<p>therefore, $S$ is a convex set.</p>
-
-<h3 id="a-polyhedron-is-a-convex-set">A polyhedron is a convex set</h3>
-
-<p>Since a polyhedron $S = \{ \mathbf{x} \in \mathcal{R}^n \ | \ \mathbf{A}\mathbf{x} \geq \mathbf{b} \}$ is essentially an intersection of multiple halfspaces, and it follows from previous proofs that $S$ is a convex set too.
-This is an important conclusion, as every linear programming solution space is a polyhedron and thus convex.</p>
-
-<h2 id="convex-combination">Convex Combination</h2>
-
-<p>A convex set requires the line segment joining any two points lies within the set, and the line segment actually represents all the <em>convex combinations</em> of the two points.
-The concept of convex combination can be generalized into multiple points:
-let $\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_m \in \mathcal{R}^n $ and $\lambda_1, \lambda_2, \cdots, \lambda_m$ are non-negative scalars, then $\sum_{i=1}^m \lambda_i x_i$ is called the **convex combination.</p>
-
-<h2 id="convex-hull">Convex Hull</h2>
-
-<p>Given a set of vectors $\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_m \in \mathcal{R}^n $, their <em>convex hull</em> is defined as all the convex combinations of th</p>
+<ul>
+<li>$S$ is not empty, that is, $S \neq \{0\}$</li>
+<li>$S$ is closed under vector addition, that is, $\mathbf{x} + \mathbf{y} \in S, \ \forall \mathbf{x, y} \in S$.</li>
+<li>$S$ is closed under scalar multiplication, that is, $a\mathbf{x} \in S, \ \forall a \in \mathcal{R}, \mathbf{x} \in S$.</li>
+</ul>
 
 
         
           <div class="blog-tags">
             
               <a href="https://kunlei.github.io/tags/opt/">opt</a>&nbsp;
-            
-              <a href="https://kunlei.github.io/tags/lp/">lp</a>&nbsp;
             
           </div>
         
@@ -438,42 +371,42 @@ let $\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_m \in \mathcal{R}^n $ and $\
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f15%2fconvex-hull%2f&amp;text=Convexity&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f16%2fsubspace%2f&amp;text=Subspace&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f15%2fconvex-hull%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f16%2fsubspace%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f15%2fconvex-hull%2f&amp;title=Convexity" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f16%2fsubspace%2f&amp;title=Subspace" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f15%2fconvex-hull%2f&amp;title=Convexity" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f16%2fsubspace%2f&amp;title=Subspace" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f15%2fconvex-hull%2f&amp;title=Convexity" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f16%2fsubspace%2f&amp;title=Subspace" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f15%2fconvex-hull%2f&amp;description=Convexity" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f02%2f16%2fsubspace%2f&amp;description=Subspace" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -491,6 +424,8 @@ let $\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_m \in \mathcal{R}^n $ and $\
           <h4 class="see-also">See also</h4>
           <ul>
           
+            <li><a href="/2020/02/15/convex-hull/">Convexity</a></li>
+          
             <li><a href="/2020/02/14/polyhedron/">Polyhedron</a></li>
           
             <li><a href="/2020/02/13/lp-forms/">Linear Programming -- General and Standard Forms</a></li>
@@ -504,13 +439,9 @@ let $\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_m \in \mathcal{R}^n $ and $\
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/02/14/polyhedron/" data-toggle="tooltip" data-placement="top" title="Polyhedron">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/02/15/convex-hull/" data-toggle="tooltip" data-placement="top" title="Convexity">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/02/16/subspace/" data-toggle="tooltip" data-placement="top" title="Subspace">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -520,12 +451,12 @@ let $\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_m \in \mathcal{R}^n $ and $\
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/02/15/convex-hull">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/02/16/subspace">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/02\/15\/convex-hull';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/02\/16\/subspace';
             };
 
           </script>

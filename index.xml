@@ -14,6 +14,16 @@
     
     
     <item>
+      <title>Subspace</title>
+      <link>https://kunlei.github.io/2020/02/16/subspace/</link>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/02/16/subspace/</guid>
+      <description>Subspace is an important concept in linear algebra and understanding it helps us grasp the intricacies of linear programming. Let&amp;rsquo;s say we have a $n$-dimensional space $\mathcal{R}^n$. A subset $S$ is called a subspace of $\mathcal{R}^n$, denoted by $S \subseteq \mathcal{R}^n$, if the following three conditions are met:
+ $S$ is not empty, that is, $S \neq \{0\}$ $S$ is closed under vector addition, that is, $\mathbf{x} + \mathbf{y} \in S, \ \forall \mathbf{x, y} \in S$.</description>
+    </item>
+    
+    <item>
       <title>Convexity</title>
       <link>https://kunlei.github.io/2020/02/15/convex-hull/</link>
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
@@ -405,8 +415,8 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/book-list/</guid>
-      <description> I am an avid reader and below compiles the books I read or am reading&amp;hellip;
-2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it! Quiet power: the secret strengths of introverts The simple path to wealth Bad blood: secrets and lies in a silicon valley startup Army of none: autonomous weapons and the future of war The subtle art of not giving a f*ck: a counterintuitive approach to living a good life Me before you The little prince Becoming Deep work The one thing The kite runner The shallows: what the internet is doing to our brains The road less traveled Irrational exuberance Educated Far from the tree The psychology of wealth Someday is not a day in the week Anonymous Limitless mind: learn, lead and live without barriers No Hard Feelings: The Secret Power of Embracing Emotions at Work by Liz Fosslien and West Duffy, Mollie All the Wrong Moves: A Memoir About Chess, Love, and Ruining Everything by Sasha Chapin Now is the way: an unconventional approach to modern mindfulness Some of my friends are &amp;hellip;: the daunting challenges and untapped benefits of cross-racial friendships Principles Digital minimalism Naked money  </description>
+      <description>I am an avid reader and below compiles the books I read or am reading&amp;hellip;
+2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking - reading  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
     </item>
     
     <item>
