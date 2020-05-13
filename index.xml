@@ -14,6 +14,25 @@
     
     
     <item>
+      <title>Linux screen management</title>
+      <link>https://kunlei.github.io/2020/05/13/command-screen/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/05/13/command-screen/</guid>
+      <description>Recently, I came across the task of testing the performance of an optimizer in a Linux environment and I wanted to test on multiple instances at the same time. Essentially, what I need are two things:
+ Able to run the optimizer for a long time without staying logged on. Able to run the optimizer with different inputs within the same login.  I was introduced the command screenand it solved my problem perfectly.</description>
+    </item>
+    
+    <item>
+      <title>whack</title>
+      <link>https://kunlei.github.io/2020/05/08/out-of-whack/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/05/08/out-of-whack/</guid>
+      <description>When I worked on an optimization project a few weeks back, the phrase &amp;lsquo;whack-a-mole&amp;rsquo; was used often to describe the behavior of the optimizer. The decision variables themselves were straightforward, most of them were binary variables and the problem took minimal times to solve. The difficulty came with the numerous constrains brought up by the business partners. Although the constraints all make sense from the operation perspective, including them into the model makes it infeasible most of the time.</description>
+    </item>
+    
+    <item>
       <title>2020 April Review</title>
       <link>https://kunlei.github.io/2020/04/29/review-2020-04/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
