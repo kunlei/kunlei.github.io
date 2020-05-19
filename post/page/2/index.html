@@ -205,6 +205,35 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/02/12/cpp-swap/">
+                <h2 class="post-title">C&#43;&#43; - Swap</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on February 12, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    The C++ standard library defines a facility function that exchanges values of two variables. It&rsquo;s defined in header &lt;utility&gt; and namespace std. The code below shows an illustrative example.
+1#include &lt;utility&gt;2#include &lt;iostream&gt;3 4int main() { 5 int a = 10, b = 20; 6 // before swap 7 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 10 8 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 20 9 10 swap(a, b); 11 12 // after swap 13 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 20 14 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.<a href="https://kunlei.github.io/2020/02/12/cpp-swap/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
               <a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/">
                 <h2 class="post-title">C&#43;&#43; - Copy Control (3)</h2>
 
@@ -461,35 +490,6 @@ Health I set a goal to have at least two workouts each week and that mediocre ta
                   
                     The C++ vector defines a library template to contain a list of objects of the same type. The appropriate header and namespace must be included to use it:
 1#include &lt;vector&gt;2using std::vector;  It&rsquo;s worth noting that vector is not a class, instead it defines a template from which a variety of classes can be instantiated. To this purpose, an additional parameter, specifically, the type of objects in the vector, must be provided.<a href="https://kunlei.github.io/2020/01/20/cpp-vector/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/01/19/cpp-const-member-function/">
-                <h2 class="post-title">C&#43;&#43; - const member functions</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 19, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    I used to find the usage of const after the parameter list of a member function within a class confusing &ndash; the code snippet below shows an example in which getSize() is followed by a const specifier. It turns out that making sense of the const usage here requires a deep understanding of another keyword &ndash; this.
-What is this? (pun intended) The specifier this is a reserved keyword in C++ that is commonly used in the definitions of class member functions to refer to the current object on which the functions are operating on.<a href="https://kunlei.github.io/2020/01/19/cpp-const-member-function/" class="post-read-more">[Read More]</a>
                   
                 
               </div>

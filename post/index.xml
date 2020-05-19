@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C&#43;&#43; - tuple</title>
+      <link>https://kunlei.github.io/2020/05/18/cpp-tuple/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/05/18/cpp-tuple/</guid>
+      <description>In my coding work today, I came across a need to store three values, of different types, within a single container so that I can save them in a set. Normally I would define a dedicated class or structure, but a brief search online led me to an existing solution provided by C++ &amp;ndash; tuple.
+What is tuple? In a nutshell, tuple provides an convenient way to let programmers define a type that contains data elements of various types.</description>
+    </item>
     
     <item>
       <title>Linux screen management</title>
