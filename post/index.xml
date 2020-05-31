@@ -8,10 +8,28 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Take smart notes</title>
+      <link>https://kunlei.github.io/2020/05/31/take-smart-notes/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/05/31/take-smart-notes/</guid>
+      <description>Take Smart Notes is probably the best book I&amp;rsquo;ll read this year, although it&amp;rsquo;s just half way into it. I used to be, and to some extent still am, the type of student who learn by reading and re-reading, and seldom take notes. As I reflect on this, part of the reason might be that books used to be precious resources for me when I was young. My books, textbooks for the most part, are always clean and void of any notes because I didn&amp;rsquo;t have the luxury to buy as many book as I wanted and I didn&amp;rsquo;t like to see books getting dirty by writing notes in them.</description>
+    </item>
+    
+    <item>
+      <title>May</title>
+      <link>https://kunlei.github.io/2020/05/30/review-2020-05/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/05/30/review-2020-05/</guid>
+      <description>It&amp;rsquo;s already the third month into working from home, which started from early March, and it&amp;rsquo;s possible that this working mode will continue for another month. Everything seems to be working, or not working, as usual, with the family staying at home and the coronavirus still ravaging throughout the world. There&amp;rsquo;s not a single day goes by that there aren&amp;rsquo;t tens of thousands of new confirmed cases; however, people seem to have gotten used to, or tired of, the virus.</description>
+    </item>
     
     <item>
       <title>C&#43;&#43; - tuple</title>
