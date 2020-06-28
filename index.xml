@@ -14,6 +14,16 @@
     
     
     <item>
+      <title>Fourier-Motzkin Elimination</title>
+      <link>https://kunlei.github.io/2020/06/25/projection/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/06/25/projection/</guid>
+      <description>The Fourier-Motzkin elimination (FME) is a topic I glanced over in my learning of linear programming. However, I recently read a in-depth treatment of FME and it is really an intriguing technique to learn optimization theories.
+How it works In short, FME is used to eliminate variables from a set of inequalities. Let&amp;rsquo;s say we have a column variable $\mathcal{x}$ that is defined in the $\mathcal{R^n}$ space, and is subject to $Ax \ge b$, FME can eliminate one or more variables from $x$, thereby projecting $x$ into the corresponding lower dimensional space.</description>
+    </item>
+    
+    <item>
       <title>Take smart notes</title>
       <link>https://kunlei.github.io/2020/05/31/take-smart-notes/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
@@ -177,7 +187,7 @@ Standard Form $$ \begin{align} \text{min.} \quad &amp;amp; \mathbf{c}^T \mathbf{
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/opt-linear-index/</guid>
-      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity  Simplex Algorithm Column Generation </description>
+      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition </description>
     </item>
     
     <item>
@@ -500,7 +510,7 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/book-list/</guid>
       <description>I am an avid reader and below compiles the books I read or am reading&amp;hellip;
-2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice - reading The 5 A.M. club The great influenza The tipping point How to take smart notes  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
+2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice - reading The 5 A.M. club The great influenza The tipping point How to take smart notes Naked economics (reading) Poor economics (reading) The room where it happened (reading)  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
     </item>
     
     <item>

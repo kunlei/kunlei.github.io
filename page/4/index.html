@@ -53,7 +53,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="/css/tweaks.css"/>
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -284,6 +284,55 @@ if (!doNotTrack) {
 
         <div class="posts-list">
           
+          
+            <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/01/12/cpp-reference/">
+        <h2 class="post-title">C&#43;&#43; - Reference</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 12, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;169&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        Reference is one of the compound types in C++ that modifies the base type of a variable. It is essentially another name of an existing variable, meaning that any operation on a reference is performed on the variable that the reference is bound to. It is important to note that a reference is not an object.
+A reference is defined using the &amp; operator, as in the code below,
+1int num = 3; 2int &amp;ref = num;  A reference must be bound to a variable upon creation, for example, the code below will trigger compilation error.
+        <a href="https://kunlei.github.io/2020/01/12/cpp-reference/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+        
+    </div>
+    
+
+</article>
           
             <article class="post-preview">
     <a href="https://kunlei.github.io/2020/01/11/cpp-variable-initialization/">
@@ -685,55 +734,6 @@ Reading Reading is a noble thing, but too high a target spells the failure from 
         
         Introduction In this post, we will explore how to use callback, specifically continuous callback, to retrieve and output information during the search process of the simplex and barrier optimizer. The CPLEX optimizer typically outputs a series of log information to the console revealing some of its search process, and many times it is enough. Occasionally, we want to have more information, or different information, than those default message, and callback is to the rescue.
         <a href="https://kunlei.github.io/2019/10/26/cplex-java-continuous-callback/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
-        
-        <a href="https://kunlei.github.io/tags/java/">Java</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/">
-        <h2 class="post-title">Build Optimization Models by Column using CPLEX Java API</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on October 20, 2019
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;786&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        In a previous post, we looked at how to build models by adding rows sequentially. It starts with creating decision variables, with which the objective function is defined. Constraints are then created sequentially and incorporated into the model. In optimization textbooks, mathematical models are usually represented in matrix format, and in CPLEX, it is indeed possible to build models column-wise. This post aims to demystify the process of building models by adding columns sequentially.
-        <a href="https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/" class="post-read-more">[Read More]</a>
         
     </div>
 

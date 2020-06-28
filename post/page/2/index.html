@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="/css/tweaks.css"/>
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -203,6 +203,39 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/02/15/convex-hull/">
+                <h2 class="post-title">Convexity</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on February 15, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    This post describes the concept of convexity. You&rsquo;ve probably heard of convex/concave functions or convex hull, and convexity is indeed an important topic in optimization.
+Convex Set Let&rsquo;s say we have a set $S$ in $\mathcal{R}^n$ space, it is said to be convex if the following condition is met:
+$$ \lambda \mathbf{x} + (1-\lambda) \mathbf{y} \in S, \ \forall \mathbf{x}, \mathbf{y} \in S, \lambda \in [0, 1] $$
+This condition basically requires that, for any two points in the set, all the points on the line segment joining the two points must also belong to the set.<a href="https://kunlei.github.io/2020/02/15/convex-hull/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/opt">opt</a>&nbsp;
+                  
+                    #<a href="/tags/lp">lp</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2020/02/14/polyhedron/">
@@ -491,34 +524,6 @@ Health I set a goal to have at least two workouts each week and that mediocre ta
  Sequential containers Associative containers  This post examines the various sequential containers, which include
  vector deque list forward_list array string  Container Iterators Traversing elements in a container can be done with the help of iterators, which exist in various forms:
  iterator &ndash; supports reading and writing elements, obtained using begin() and end().<a href="https://kunlei.github.io/2020/01/28/cpp-standard-library/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/01/21/cpp-array/">
-                <h2 class="post-title">C&#43;&#43; - Array</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 21, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Arrays are used less frequently than the vector library type, but may provide a option to define a list of objects when the size does not change. I always find the definition of arrays in C++ counterintuitive, partly due to the fact the a pair of brackets must be put after the name of the variable. I actually use dynamically allocated arrays more often in my daily programming experiences.<a href="https://kunlei.github.io/2020/01/21/cpp-array/" class="post-read-more">[Read More]</a>
                   
                 
               </div>

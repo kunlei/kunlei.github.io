@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linear programming</title>
+      <link>https://kunlei.github.io/tags/linear-programming/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/tags/linear-programming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Books</title>
