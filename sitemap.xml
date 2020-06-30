@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kunlei.github.io/page/algorithm-index/</loc>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/page/</loc>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kunlei.github.io/2020/06/25/projection/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
   </url>
@@ -144,11 +154,6 @@
   
   <url>
     <loc>https://kunlei.github.io/page/opt-linear-index/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/page/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
   </url>
   
