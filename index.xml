@@ -14,6 +14,16 @@
     
     
     <item>
+      <title>Solving Linear Programs using Projection</title>
+      <link>https://kunlei.github.io/2020/07/05/projection-solve-linear-program/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/05/projection-solve-linear-program/</guid>
+      <description>Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.
+Projection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:</description>
+    </item>
+    
+    <item>
       <title>Data Structure and Algorithm</title>
       <link>https://kunlei.github.io/page/algorithm-index/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
@@ -23,11 +33,24 @@
     </item>
     
     <item>
+      <title>Linear, Affine, Conic and Convex Combinations</title>
+      <link>https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/</guid>
+      <description>The linear combination of a set of points $x_1, x_2, \cdots, x_k$ in $\mathcal{R}^n$ is defined as
+$$ \lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_k x_k $$
+The affine combination of a set of points $x_1, x_2, \cdots, x_k$ in $\mathcal{R}^n$ is defined as
+$$ \lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_k x_k, \sum_{i = 1}^k \lambda_k = 1 $$
+and the affine hull of these points, denoted as $aff({_1, x_2, \cdots, x_k})$, is all the affine combinations of them.</description>
+    </item>
+    
+    <item>
       <title>Fourier-Motzkin Elimination</title>
-      <link>https://kunlei.github.io/2020/06/25/projection/</link>
+      <link>https://kunlei.github.io/2020/06/25/fourier-motzkin-elimination/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2020/06/25/projection/</guid>
+      <guid>https://kunlei.github.io/2020/06/25/fourier-motzkin-elimination/</guid>
       <description>The Fourier-Motzkin elimination (FME) is a topic I glanced over in my learning of linear programming. However, I recently read a in-depth treatment of FME and it is really an intriguing technique to learn optimization theories.
 How it works In short, FME is used to eliminate variables from a set of inequalities. Let&amp;rsquo;s say we have a column variable $\mathcal{x}$ that is defined in the $\mathcal{R^n}$ space, and is subject to $Ax \ge b$, FME can eliminate one or more variables from $x$, thereby projecting $x$ into the corresponding lower dimensional space.</description>
     </item>
@@ -196,7 +219,7 @@ Standard Form $$ \begin{align} \text{min.} \quad &amp;amp; \mathbf{c}^T \mathbf{
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/opt-linear-index/</guid>
-      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition </description>
+      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition </description>
     </item>
     
     <item>

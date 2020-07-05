@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kunlei.github.io/post/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/projection/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2020/07/05/projection-solve-linear-program/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kunlei.github.io/page/algorithm-index/</loc>
     <lastmod>2020-06-30T00:00:00+00:00</lastmod>
   </url>
@@ -13,22 +33,22 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2020/06/25/projection/</loc>
+    <loc>https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/polyhedron/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2020/06/25/fourier-motzkin-elimination/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/tags/linear-programming/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/post/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
   </url>
   

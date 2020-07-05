@@ -7,8 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Take smart notes - O.R. in Action</title>
-  <meta name="description" content="Take Smart Notes is probably the best book I&rsquo;ll read this year, although it&rsquo;s just half way into it. I used to be, and to some extent still am, the type of student who learn by reading and re-reading, and seldom take notes. As I reflect on this, part of the reason might be that books used to be precious resources for me when I was young. My books, textbooks for the most part, are always clean and void of any notes because I didn&rsquo;t have the luxury to buy as many book as I wanted and I didn&rsquo;t like to see books getting dirty by writing notes in them.">
+  <title>Solving Linear Programs using Projection - O.R. in Action</title>
+  <meta name="description" content="Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.
+Projection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -44,8 +45,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/05\/31\/take-smart-notes\/",
-          "name": "Take smart notes"
+          "@id": "https:\/\/kunlei.github.io\/2020\/07\/05\/projection-solve-linear-program\/",
+          "name": "Solving linear programs using projection"
         }
     }]
 }
@@ -56,15 +57,15 @@
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Take smart notes",
-  "description" : "Take Smart Notes is probably the best book I\x26rsquo;ll read this year, although it\x26rsquo;s just half way into it. I used to be, and to some extent still am, the type of student who learn by reading and re-reading, and seldom take notes. As I reflect on this, part of the reason might be that books used to be precious resources for me when I was young. My books, textbooks for the most part, are always clean and void of any notes because I didn\x26rsquo;t have the luxury to buy as many book as I wanted and I didn\x26rsquo;t like to see books getting dirty by writing notes in them.",
+  "headline": "Solving Linear Programs using Projection",
+  "description" : "Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.\nProjection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:",
   "inLanguage" : "en",
-  "wordCount":  392 ,
-  "datePublished" : "2020-05-31T00:00:00",
-  "dateModified" : "2020-05-31T00:00:00",
+  "wordCount":  401 ,
+  "datePublished" : "2020-07-05T00:00:00",
+  "dateModified" : "2020-07-05T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
-  "keywords" : [ "reading, books" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/05\/31\/take-smart-notes\/",
+  "keywords" : [ "projection" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/05\/projection-solve-linear-program\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -78,15 +79,16 @@
 }
 </script>
 
-<meta property="og:title" content="Take smart notes" />
-<meta property="og:description" content="Take Smart Notes is probably the best book I&rsquo;ll read this year, although it&rsquo;s just half way into it. I used to be, and to some extent still am, the type of student who learn by reading and re-reading, and seldom take notes. As I reflect on this, part of the reason might be that books used to be precious resources for me when I was young. My books, textbooks for the most part, are always clean and void of any notes because I didn&rsquo;t have the luxury to buy as many book as I wanted and I didn&rsquo;t like to see books getting dirty by writing notes in them.">
+<meta property="og:title" content="Solving Linear Programs using Projection" />
+<meta property="og:description" content="Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.
+Projection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/05/31/take-smart-notes/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/07/05/projection-solve-linear-program/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Take smart notes" />
-  <meta name="twitter:description" content="Take Smart Notes is probably the best book I&rsquo;ll read this year, although it&rsquo;s just half way into it. I used to be, and to some extent still am, the type of student who learn by reading and …">
+  <meta name="twitter:title" content="Solving Linear Programs using Projection" />
+  <meta name="twitter:description" content="Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -301,7 +303,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Take smart notes</h1>
+                <h1>Solving Linear Programs using Projection</h1>
               
               
               
@@ -309,13 +311,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 31, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 5, 2020
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;392&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;401&nbsp;words
   
   
     
@@ -340,37 +342,84 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#projection-with-fourier-motzkin-elimination">Projection with Fourier-Motzkin Elimination</a></li>
+<li><a href="#application-to-linear-programming">Application to linear programming</a></li>
+</ul></li>
+</ul>
+</nav>
+
         
 
-        <p><strong>Take Smart Notes</strong> is probably the best book I&rsquo;ll read this year, although it&rsquo;s just half way into it.
-I used to be, and to some extent still am, the type of student who learn by reading and re-reading, and seldom take notes.
-As I reflect on this, part of the reason might be that books used to be precious resources for me when I was young.
-My books, textbooks for the most part, are always clean and void of any notes because I didn&rsquo;t have the luxury to buy as many book as I wanted and I didn&rsquo;t like to see books getting dirty by writing notes in them.
-Perhaps this scarcity has done more bad than good in my learning journal, although it&rsquo;s supposed to be a tool to help me learn.</p>
+<p>Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm.
+It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection.
+I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.</p>
 
-<p>So what should we do while reading? take notes.
-It happens often that the books didn&rsquo;t register with me the moment I finish it and I can hardly recall anything from them.
-The reading process turns out to be a mere one-way understanding journal and no elaboration is involved.
-The author promotes a better way of reading - with a pen and paper on hand, and write down your interpretation whenever something resonates with you.
-More importantly, one is advised to put the notes into a so-called <em>slip-box</em> that serves as the central place for saving and connecting notes.
-By connecting notes, interesting topics will cluster and emerge over time, which serves as natural candidate to write something about, either as an article or a book.</p>
+<h2 id="projection-with-fourier-motzkin-elimination">Projection with Fourier-Motzkin Elimination</h2>
 
-<p>Note taking makes particular sense for learning something new.
-When we approach a new subject for the first time, we typically find a book to read and sometimes mere reading could give us a false impression that we&rsquo;ve understood the subject.
-Unfortunately, when we try to use the knowledge in a new context, we can&rsquo;t recall it as as thought we would.
-In these cases, it&rsquo;s better to write notes during the process of learning.
-The notes could take the form of explaining the things we just learned in layman&rsquo;s term.
-Only if we can elaborate a point can we safely say that we&rsquo;ve grasped a concept.
-Note taking is as simple as is, and is no way a revolutionary idea, many people are probably always use it.
-Let&rsquo;s start taking notes.</p>
+<p>I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:</p>
+
+<p>$$\mathbf{Ax} \geq \mathbf{b}$$</p>
+
+<p>where $\mathbf{A}$ is a $m \times n$ matrix, $\mathbf{x}$ is a column vector of size $n$, and $\mathbf{b}$ is a column vector of size $m$.
+Using projection, specifically the Fourier-Motzkin elimination method, to eliminate all $\mathbf{x}$ variables results in a system of inequalities with all zeros on the left hand side, and constants on the right hand side.</p>
+
+<p>$$
+0 \geq d_k, \ k \in \{1, &hellip;, K\}
+$$</p>
+
+<p>Note that any positive $d_k$ indicates infeasibility of the system of inequalities.
+The idea of projection makes it extremely easy to interpret the theorem of alternatives, one that puzzled me for a long time, not about how it works and more about its significance.</p>
+
+<h2 id="application-to-linear-programming">Application to linear programming</h2>
+
+<p>It&rsquo;s not surprising to see that $\mathbf{Ax} \geq \mathbf{b}$ defines the feasible space for a linear programming problem in general form:</p>
+
+<p>$$
+\begin{align}
+\text{min.} \quad&amp; \mathbf{c&rsquo;x} \newline
+\text{s.t.} \quad &amp; \mathbf{Ax} \geq \mathbf{b}
+\end{align}
+$$</p>
+
+<p>Now we introduce a new variable, $y$, to represent the objective value and let $y \geq \mathbf{c&rsquo;x}$.
+The above linear program can be rewritten as</p>
+
+<p>$$
+\begin{align}
+\text{min.} \quad&amp; y \newline
+\text{s.t.} \quad &amp; y - \mathbf{c&rsquo;x} \geq 0 \newline
+&amp; \mathbf{Ax} \geq \mathbf{b}
+\end{align}
+$$</p>
+
+<p>Using Fourier-Motzkin elimination to project out all $x$ variables results in</p>
+
+<p>$$
+\begin{align}
+\text{min.} \quad&amp; y \newline
+\text{s.t.} \quad &amp; y  \geq d_k, k \in \{1, &hellip;, K\} \newline
+&amp; 0 \geq d_k, k \in \{K + 1, &hellip;, L \}
+\end{align}
+$$</p>
+
+<p>It&rsquo;s then clear that the optimal objective value is</p>
+
+<p>$$
+\text{max}\{d_k | k = 1, &hellip;, K \}
+$$</p>
+
+<p>Unfortunately, the number of constraints $L$ could be very large, preventing it to solve linear programming problems of practical sizes.
+Still, the idea of projection can help understand concept like duality and the theorem of alternatives, which I will elaborate in future posts.</p>
 
 
         
           <div class="blog-tags">
             
-              <a href="https://kunlei.github.io/tags/reading/">reading</a>&nbsp;
-            
-              <a href="https://kunlei.github.io/tags/books/">books</a>&nbsp;
+              <a href="https://kunlei.github.io/tags/projection/">projection</a>&nbsp;
             
           </div>
         
@@ -385,42 +434,42 @@ Let&rsquo;s start taking notes.</p>
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f05%2f31%2ftake-smart-notes%2f&amp;text=Take%20smart%20notes&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;text=Solving%20Linear%20Programs%20using%20Projection&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f05%2f31%2ftake-smart-notes%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f05%2f31%2ftake-smart-notes%2f&amp;title=Take%20smart%20notes" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;title=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f05%2f31%2ftake-smart-notes%2f&amp;title=Take%20smart%20notes" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;title=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f05%2f31%2ftake-smart-notes%2f&amp;title=Take%20smart%20notes" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;title=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f05%2f31%2ftake-smart-notes%2f&amp;description=Take%20smart%20notes" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;description=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -435,17 +484,6 @@ Let&rsquo;s start taking notes.</p>
         
           
           
-          <h4 class="see-also">See also</h4>
-          <ul>
-          
-            <li><a href="/2019/09/25/someday-not-a-day-in-the-week/">The Mysterious Someday That Could</a></li>
-          
-            <li><a href="/2019/09/15/psychology-of-wealth/">Random Pick Turned Out to be a Disappointment</a></li>
-          
-            <li><a href="/2019/09/06/far-from-the-tree/">Apple and the Tree</a></li>
-          
-          </ul>
-          
         
       </article>
 
@@ -453,13 +491,9 @@ Let&rsquo;s start taking notes.</p>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/05/30/review-2020-05/" data-toggle="tooltip" data-placement="top" title="May">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/" data-toggle="tooltip" data-placement="top" title="Linear, Affine, Conic and Convex Combinations">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/06/25/fourier-motzkin-elimination/" data-toggle="tooltip" data-placement="top" title="Fourier-Motzkin Elimination">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -469,12 +503,12 @@ Let&rsquo;s start taking notes.</p>
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/05/31/take-smart-notes">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/05/projection-solve-linear-program">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/05\/31\/take-smart-notes';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/05\/projection-solve-linear-program';
             };
 
           </script>
