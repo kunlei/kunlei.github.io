@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deriving Theorems of the Alternatives using Projection</title>
+      <link>https://kunlei.github.io/2020/07/06/theorem-of-alternatives/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/06/theorem-of-alternatives/</guid>
+      <description>The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas&amp;rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.</description>
+    </item>
     
     <item>
       <title>Solving Linear Programs using Projection</title>

@@ -7,9 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Solving Linear Programs using Projection - O.R. in Action</title>
-  <meta name="description" content="Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.
-Projection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:">
+  <title>Deriving Theorems of the Alternatives using Projection - O.R. in Action</title>
+  <meta name="description" content="The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas&rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,8 +44,8 @@ Projection with Fourier-Motzkin Elimination I explained in an earlier post the i
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/07\/05\/projection-solve-linear-program\/",
-          "name": "Solving linear programs using projection"
+          "@id": "https:\/\/kunlei.github.io\/2020\/07\/06\/theorem-of-alternatives\/",
+          "name": "Deriving theorems of the alternatives using projection"
         }
     }]
 }
@@ -57,15 +56,15 @@ Projection with Fourier-Motzkin Elimination I explained in an earlier post the i
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Solving Linear Programs using Projection",
-  "description" : "Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.\nProjection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:",
+  "headline": "Deriving Theorems of the Alternatives using Projection",
+  "description" : "The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas\x26rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.",
   "inLanguage" : "en",
-  "wordCount":  401 ,
-  "datePublished" : "2020-07-05T00:00:00",
-  "dateModified" : "2020-07-05T00:00:00",
+  "wordCount":  409 ,
+  "datePublished" : "2020-07-06T00:00:00",
+  "dateModified" : "2020-07-06T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
-  "keywords" : [ "projection" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/05\/projection-solve-linear-program\/",
+  "keywords" : [ "optimization" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/06\/theorem-of-alternatives\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -79,16 +78,15 @@ Projection with Fourier-Motzkin Elimination I explained in an earlier post the i
 }
 </script>
 
-<meta property="og:title" content="Solving Linear Programs using Projection" />
-<meta property="og:description" content="Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.
-Projection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:">
+<meta property="og:title" content="Deriving Theorems of the Alternatives using Projection" />
+<meta property="og:description" content="The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas&rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/07/05/projection-solve-linear-program/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/07/06/theorem-of-alternatives/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Solving Linear Programs using Projection" />
-  <meta name="twitter:description" content="Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. …">
+  <meta name="twitter:title" content="Deriving Theorems of the Alternatives using Projection" />
+  <meta name="twitter:description" content="The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -303,7 +301,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Solving Linear Programs using Projection</h1>
+                <h1>Deriving Theorems of the Alternatives using Projection</h1>
               
               
               
@@ -311,13 +309,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 5, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 6, 2020
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;401&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;409&nbsp;words
   
   
     
@@ -346,80 +344,75 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#projection-with-fourier-motzkin-elimination">Projection with Fourier-Motzkin Elimination</a></li>
-<li><a href="#application-to-linear-programming">Application to linear programming</a></li>
+<li><a href="#get-to-our-first-theorem-of-alternatives-using-projection">Get to our first theorem of alternatives using projection</a></li>
+<li><a href="#derive-variations">Derive variations</a></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm.
-It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection.
-I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.</p>
+<p>The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place.
+The textbook used in my linear programing class simply states the two alternatives, the Farkas&rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation.
+It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.</p>
 
-<h2 id="projection-with-fourier-motzkin-elimination">Projection with Fourier-Motzkin Elimination</h2>
+<h2 id="get-to-our-first-theorem-of-alternatives-using-projection">Get to our first theorem of alternatives using projection</h2>
 
-<p>I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:</p>
-
-<p>$$\mathbf{Ax} \geq \mathbf{b}$$</p>
-
-<p>where $\mathbf{A}$ is a $m \times n$ matrix, $\mathbf{x}$ is a column vector of size $n$, and $\mathbf{b}$ is a column vector of size $m$.
-Using projection, specifically the Fourier-Motzkin elimination method, to eliminate all $\mathbf{x}$ variables results in a system of inequalities with all zeros on the left hand side, and constants on the right hand side.</p>
-
-<p>$$
-0 \geq d_k, \ k \in \{1, &hellip;, K\}
-$$</p>
-
-<p>Note that any positive $d_k$ indicates infeasibility of the system of inequalities.
-The idea of projection makes it extremely easy to interpret the theorem of alternatives, one that puzzled me for a long time, not about how it works and more about its significance.</p>
-
-<h2 id="application-to-linear-programming">Application to linear programming</h2>
-
-<p>It&rsquo;s not surprising to see that $\mathbf{Ax} \geq \mathbf{b}$ defines the feasible space for a linear programming problem in general form:</p>
+<p>To explain this, suppose we have a system of inequalities of the following form</p>
 
 <p>$$
 \begin{align}
-\text{min.} \quad&amp; \mathbf{c&rsquo;x} \newline
-\text{s.t.} \quad &amp; \mathbf{Ax} \geq \mathbf{b}
+\mathbf{Ax} &amp;\geq \mathbf{b}
 \end{align}
 $$</p>
 
-<p>Now we introduce a new variable, $y$, to represent the objective value and let $y \geq \mathbf{c&rsquo;x}$.
-The above linear program can be rewritten as</p>
+<p>where $\mathbf{A}$ is a $m \times n$ matrix, $\mathbf{x}$ is column vector in $\mathbf{R}^n$ and $\mathbf{b}$ is a constant vector in $\mathbf{R}^m$.
+Eliminating the variables $\mathbf{x}$ from the left hand side is equivalent to find a multiplier vector $\mathbf{p}$, a column vector of size $m$, such that $\mathbf{p&rsquo;A} = \mathbf{0}$ and $\mathbf{p&rsquo;b} \leq 0$, which is essentially the process of projection that drives the original system of inequalities into the form below</p>
 
 <p>$$
 \begin{align}
-\text{min.} \quad&amp; y \newline
-\text{s.t.} \quad &amp; y - \mathbf{c&rsquo;x} \geq 0 \newline
-&amp; \mathbf{Ax} \geq \mathbf{b}
+0 \geq \mathbf{p&rsquo;b}
 \end{align}
 $$</p>
 
-<p>Using Fourier-Motzkin elimination to project out all $x$ variables results in</p>
+<p>Note that if we can find a vector $\mathbf{p}$ such that $\mathbf{p&rsquo;A = 0}$ and $\mathbf{p&rsquo;b} &gt; 0$, then the original system of inequalities must have no solution.
+Now we have our first theorem of the alternatives:</p>
+
+<p><strong>Theorem 1.</strong> Either the system $\mathbf{Ax} \geq \mathbf{b}$, or the system $\mathbf{p} \geq 0, \mathbf{p&rsquo;A = 0}, \mathbf{p&rsquo;b} &gt; 0 $ has a solution, but not both.</p>
+
+<h2 id="derive-variations">Derive variations</h2>
+
+<p>The theorem of the alternatives has multiple variations, but all of them can be derived through similar reasoning logic.
+Now let&rsquo;s look at the constraint set of a linear program in standard form $\mathbf{Ax = b}$ and $\mathbf{x} \geq \mathbf{0}$.
+First we rewrite it into the following format</p>
 
 <p>$$
 \begin{align}
-\text{min.} \quad&amp; y \newline
-\text{s.t.} \quad &amp; y  \geq d_k, k \in \{1, &hellip;, K\} \newline
-&amp; 0 \geq d_k, k \in \{K + 1, &hellip;, L \}
+\mathbf{Ax} &amp;\geq \mathbf{b} \newline
+\mathbf{-Ax} &amp;\geq \mathbf{-b} \newline
+\mathbf{x} &amp;\geq \mathbf{0}
 \end{align}
 $$</p>
 
-<p>It&rsquo;s then clear that the optimal objective value is</p>
+<p>Associate the multiplier $\mathbf{u, v, w} \geq 0$ and apply the projection procedure, we have</p>
 
 <p>$$
-\text{max}\{d_k | k = 1, &hellip;, K \}
+\begin{align}
+\mathbf{u&rsquo;A} - \mathbf{v&rsquo;A} + \mathbf{w&rsquo;I} &amp;= 0 \newline
+\mathbf{u&rsquo;b} - \mathbf{v&rsquo;b} &amp;&gt; 0
+\end{align}
 $$</p>
 
-<p>Unfortunately, the number of constraints $L$ could be very large, preventing it to solve linear programming problems of practical sizes.
-Still, the idea of projection can help understand concept like duality and the theorem of alternatives, which I will elaborate in future posts.</p>
+<p>Let $\mathbf{p = u - v}$, then we have $\mathbf{p&rsquo;A} + \mathbf{w&rsquo;I} = 0$ and $\mathbf{p&rsquo;b} \geq 0$.
+Now we have the second theorem of the alternatives:</p>
+
+<p><strong>Theorem 2.</strong> Either the system $\mathbf{Ax = b}, \mathbf{x} \geq \mathbf{0}$ has a solution, or the system $\mathbf{p&rsquo;A} \leq \mathbf{0}, \mathbf{p&rsquo;b} \geq 0$ has a solution, but not both.</p>
 
 
         
           <div class="blog-tags">
             
-              <a href="https://kunlei.github.io/tags/projection/">projection</a>&nbsp;
+              <a href="https://kunlei.github.io/tags/optimization/">optimization</a>&nbsp;
             
           </div>
         
@@ -434,42 +427,42 @@ Still, the idea of projection can help understand concept like duality and the t
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;text=Solving%20Linear%20Programs%20using%20Projection&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;text=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;title=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;title=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;title=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;title=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;title=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;title=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f05%2fprojection-solve-linear-program%2f&amp;description=Solving%20Linear%20Programs%20using%20Projection" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;description=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -491,13 +484,9 @@ Still, the idea of projection can help understand concept like duality and the t
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/" data-toggle="tooltip" data-placement="top" title="Linear, Affine, Conic and Convex Combinations">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/07/05/projection-solve-linear-program/" data-toggle="tooltip" data-placement="top" title="Solving Linear Programs using Projection">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/07/06/theorem-of-alternatives/" data-toggle="tooltip" data-placement="top" title="Deriving Theorems of the Alternatives using Projection">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -507,12 +496,12 @@ Still, the idea of projection can help understand concept like duality and the t
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/05/projection-solve-linear-program">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/06/theorem-of-alternatives">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/05\/projection-solve-linear-program';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/06\/theorem-of-alternatives';
             };
 
           </script>
