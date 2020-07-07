@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Motivating Duality from Projection</title>
+      <link>https://kunlei.github.io/2020/07/07/duality-and-projection/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/07/duality-and-projection/</guid>
+      <description>Dual theory is an important topic in linear programming and one that can be motivated from multiple ways. For example, the dual problem of a primal linear program can be derived using Lagrange multiplier, as elaborated in the book Introduction to Linear Optimization. In this post, I&amp;rsquo;ll show how to come up with the dual formulation with the help of projection.
+Deriving the dual for a primal program in general form Let&amp;rsquo;s start with a primal problem in general form:</description>
+    </item>
     
     <item>
       <title>Deriving Theorems of the Alternatives using Projection</title>

@@ -7,8 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Deriving Theorems of the Alternatives using Projection - O.R. in Action</title>
-  <meta name="description" content="The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas&rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.">
+  <title>Motivating Duality from Projection - O.R. in Action</title>
+  <meta name="description" content="Dual theory is an important topic in linear programming and one that can be motivated from multiple ways. For example, the dual problem of a primal linear program can be derived using Lagrange multiplier, as elaborated in the book Introduction to Linear Optimization. In this post, I&rsquo;ll show how to come up with the dual formulation with the help of projection.
+Deriving the dual for a primal program in general form Let&rsquo;s start with a primal problem in general form:">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -44,8 +45,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/07\/06\/theorem-of-alternatives\/",
-          "name": "Deriving theorems of the alternatives using projection"
+          "@id": "https:\/\/kunlei.github.io\/2020\/07\/07\/duality-and-projection\/",
+          "name": "Motivating duality from projection"
         }
     }]
 }
@@ -56,15 +57,15 @@
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Deriving Theorems of the Alternatives using Projection",
-  "description" : "The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas\x26rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.",
+  "headline": "Motivating Duality from Projection",
+  "description" : "Dual theory is an important topic in linear programming and one that can be motivated from multiple ways. For example, the dual problem of a primal linear program can be derived using Lagrange multiplier, as elaborated in the book Introduction to Linear Optimization. In this post, I\x26rsquo;ll show how to come up with the dual formulation with the help of projection.\nDeriving the dual for a primal program in general form Let\x26rsquo;s start with a primal problem in general form:",
   "inLanguage" : "en",
-  "wordCount":  409 ,
-  "datePublished" : "2020-07-06T00:00:00",
-  "dateModified" : "2020-07-06T00:00:00",
+  "wordCount":  516 ,
+  "datePublished" : "2020-07-07T00:00:00",
+  "dateModified" : "2020-07-07T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "optimization" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/06\/theorem-of-alternatives\/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/07\/duality-and-projection\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -78,15 +79,16 @@
 }
 </script>
 
-<meta property="og:title" content="Deriving Theorems of the Alternatives using Projection" />
-<meta property="og:description" content="The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas&rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.">
+<meta property="og:title" content="Motivating Duality from Projection" />
+<meta property="og:description" content="Dual theory is an important topic in linear programming and one that can be motivated from multiple ways. For example, the dual problem of a primal linear program can be derived using Lagrange multiplier, as elaborated in the book Introduction to Linear Optimization. In this post, I&rsquo;ll show how to come up with the dual formulation with the help of projection.
+Deriving the dual for a primal program in general form Let&rsquo;s start with a primal problem in general form:">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/07/06/theorem-of-alternatives/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/07/07/duality-and-projection/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Deriving Theorems of the Alternatives using Projection" />
-  <meta name="twitter:description" content="The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first …">
+  <meta name="twitter:title" content="Motivating Duality from Projection" />
+  <meta name="twitter:description" content="Dual theory is an important topic in linear programming and one that can be motivated from multiple ways. For example, the dual problem of a primal linear program can be derived using Lagrange …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -301,7 +303,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Deriving Theorems of the Alternatives using Projection</h1>
+                <h1>Motivating Duality from Projection</h1>
               
               
               
@@ -309,13 +311,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 6, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 7, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;409&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;516&nbsp;words
   
   
     
@@ -344,69 +346,124 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#get-to-our-first-theorem-of-alternatives-using-projection">Get to our first theorem of alternatives using projection</a></li>
-<li><a href="#derive-variations">Derive variations</a></li>
+<li><a href="#deriving-the-dual-for-a-primal-program-in-general-form">Deriving the dual for a primal program in general form</a></li>
+<li><a href="#deriving-the-dual-for-a-primal-program-in-standard-form">Deriving the dual for a primal program in standard form</a></li>
+<li><a href="#notes">Notes</a></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place.
-The textbook used in my linear programing class simply states the two alternatives, the Farkas&rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation.
-It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.</p>
+<p>Dual theory is an important topic in linear programming and one that can be motivated from multiple ways.
+For example, the dual problem of a primal linear program can be derived using Lagrange multiplier, as elaborated in the book <em>Introduction to Linear Optimization</em>.
+In this post, I&rsquo;ll show how to come up with the dual formulation with the help of projection.</p>
 
-<h2 id="get-to-our-first-theorem-of-alternatives-using-projection">Get to our first theorem of alternatives using projection</h2>
+<h2 id="deriving-the-dual-for-a-primal-program-in-general-form">Deriving the dual for a primal program in general form</h2>
 
-<p>To explain this, suppose we have a system of inequalities of the following form</p>
-
-<p>$$
-\begin{align}
-\mathbf{Ax} &amp;\geq \mathbf{b}
-\end{align}
-$$</p>
-
-<p>where $\mathbf{A}$ is a $m \times n$ matrix, $\mathbf{x}$ is column vector in $\mathbf{R}^n$ and $\mathbf{b}$ is a constant vector in $\mathbf{R}^m$.
-Eliminating the variables $\mathbf{x}$ from the left hand side is equivalent to find a multiplier vector $\mathbf{p}$, a column vector of size $m$, such that $\mathbf{p&rsquo;A} = \mathbf{0}$ and $\mathbf{p&rsquo;b} \leq 0$, which is essentially the process of projection that drives the original system of inequalities into the form below</p>
+<p>Let&rsquo;s start with a primal problem in general form:</p>
 
 <p>$$
 \begin{align}
-0 \geq \mathbf{p&rsquo;b}
+\text{min. } \quad &amp; \mathbf{c&rsquo;x} \newline
+\text{s.t.} \quad &amp; \mathbf{Ax} \geq \mathbf{b}
 \end{align}
 $$</p>
 
-<p>Note that if we can find a vector $\mathbf{p}$ such that $\mathbf{p&rsquo;A = 0}$ and $\mathbf{p&rsquo;b} &gt; 0$, then the original system of inequalities must have no solution.
-Now we have our first theorem of the alternatives:</p>
-
-<p><strong>Theorem 1.</strong> Either the system $\mathbf{Ax} \geq \mathbf{b}$, or the system $\mathbf{p} \geq 0, \mathbf{p&rsquo;A = 0}, \mathbf{p&rsquo;b} &gt; 0 $ has a solution, but not both.</p>
-
-<h2 id="derive-variations">Derive variations</h2>
-
-<p>The theorem of the alternatives has multiple variations, but all of them can be derived through similar reasoning logic.
-Now let&rsquo;s look at the constraint set of a linear program in standard form $\mathbf{Ax = b}$ and $\mathbf{x} \geq \mathbf{0}$.
-First we rewrite it into the following format</p>
+<p>Using Fourier-Motzkin elimination to project out all $x$ variables requires a simple reformulation by introducing a new variable $z$ that represents the objective function.</p>
 
 <p>$$
 \begin{align}
-\mathbf{Ax} &amp;\geq \mathbf{b} \newline
-\mathbf{-Ax} &amp;\geq \mathbf{-b} \newline
-\mathbf{x} &amp;\geq \mathbf{0}
+\text{min.} \quad &amp; z \newline
+\text{s.t.} \quad &amp; z - \mathbf{c&rsquo;x} \geq 0 \newline
+ &amp; \mathbf{Ax} \geq \mathbf{b}
 \end{align}
 $$</p>
 
-<p>Associate the multiplier $\mathbf{u, v, w} \geq 0$ and apply the projection procedure, we have</p>
+<p>Associate a multiplier $u$ and $\mathbf{p}$ with the two constraints respectively and apply projection:</p>
 
 <p>$$
 \begin{align}
-\mathbf{u&rsquo;A} - \mathbf{v&rsquo;A} + \mathbf{w&rsquo;I} &amp;= 0 \newline
-\mathbf{u&rsquo;b} - \mathbf{v&rsquo;b} &amp;&gt; 0
+\text{min.} \quad &amp; z \newline
+\text{s.t.} \quad &amp; z \geq \mathbf{p&rsquo;b}, i = 1, &hellip;, n_1 \newline
+ &amp; 0 \geq \mathbf{p&rsquo;b}, i = 1, &hellip;, n_2
 \end{align}
 $$</p>
 
-<p>Let $\mathbf{p = u - v}$, then we have $\mathbf{p&rsquo;A} + \mathbf{w&rsquo;I} = 0$ and $\mathbf{p&rsquo;b} \geq 0$.
-Now we have the second theorem of the alternatives:</p>
+<p>Note that in order for $\mathbf{p}$ to be able to project out the $x$ variables in the primal problem, it must satisfies the following condition:</p>
 
-<p><strong>Theorem 2.</strong> Either the system $\mathbf{Ax = b}, \mathbf{x} \geq \mathbf{0}$ has a solution, or the system $\mathbf{p&rsquo;A} \leq \mathbf{0}, \mathbf{p&rsquo;b} \geq 0$ has a solution, but not both.</p>
+<p>$$
+\begin{align}
+\mathbf{p&rsquo;A} = \mathbf{c} \newline
+\mathbf{p} \geq \mathbf{0}
+\end{align}
+$$</p>
+
+<p>which essentially defines the feasible space for all candidate $\mathbf{p}$.
+We also realize that each $\mathbf{p&rsquo;b}$ provides a lower bound on the primal objective value $z$, for which the optimal value is $\text{max}\{\mathbf{p&rsquo;b}\}$.
+In other words, we&rsquo;ve successfully constructed the dual problem:</p>
+
+<p>$$
+\begin{align}
+\text{max.} \quad &amp; \mathbf{p&rsquo;b} \newline
+\text{s.t.} \quad &amp; \mathbf{p&rsquo;A} = \mathbf{c} \newline
+&amp;\mathbf{p} \geq \mathbf{0}
+\end{align}
+$$</p>
+
+<h2 id="deriving-the-dual-for-a-primal-program-in-standard-form">Deriving the dual for a primal program in standard form</h2>
+
+<p>In a similar vein, we can derive the dual for a standard form linear program:</p>
+
+<p>$$
+\begin{align}
+\text{min. } \quad &amp; \mathbf{c&rsquo;x} \newline
+\text{s.t.} \quad &amp; \mathbf{Ax} = \mathbf{b} \newline
+&amp; \mathbf{x} \geq \mathbf{0}
+\end{align}
+$$</p>
+
+<p>$$
+\begin{align}
+\text{min.} \quad &amp; z \newline
+\text{s.t.} \quad &amp; z - \mathbf{c&rsquo;x} \geq 0 \newline
+ &amp; \mathbf{Ax} = \mathbf{b} \newline
+ &amp; \mathbf{x} \geq \mathbf{0}
+\end{align}
+$$</p>
+
+<p>Projecting out the $x$ variables requires our assigning multiplier $\mathbf{p}$ and $\mathbf{v}$ to the last two constraints that must meet the requirements:</p>
+
+<p>$$
+\begin{align}
+\mathbf{p&rsquo;A} + \mathbf{vI} = \mathbf{c} \newline
+\mathbf{v} \geq \mathbf{0}
+\end{align}
+$$</p>
+
+<p>which is equivalent to</p>
+
+<p>$$
+\begin{align}
+\mathbf{p&rsquo;A} \leq \mathbf{c} \newline
+\end{align}
+$$</p>
+
+<p>and then we have the dual problem</p>
+
+<p>$$
+\begin{align}
+\text{max.} \quad &amp; \mathbf{p&rsquo;b} \newline
+\text{s.t.} \quad &amp; \mathbf{p&rsquo;A} \leq \mathbf{c} \newline
+&amp;\mathbf{p} \ \text{unrestricted}
+\end{align}
+$$</p>
+
+<h2 id="notes">Notes</h2>
+
+<p>I always find it hard to memorize the correct sign of the dual variable, and this projection provides an intuitive way to assimilate the derivation without much efforts to remember the rules.
+For example, if we have a $\mathbf{Ax} \geq \mathbf{b}$ in the primal problem, the dual variable must be nonnegative in order to keep the $\geq$ sign after projection.
+As for the $\mathbf{Ax = b}$, the dual variable is not restricted as neither positive nor negative multiplier can alter the $=$ sign of the equation.</p>
 
 
         
@@ -427,42 +484,42 @@ Now we have the second theorem of the alternatives:</p>
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;text=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f07%2fduality-and-projection%2f&amp;text=Motivating%20Duality%20from%20Projection&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f07%2fduality-and-projection%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;title=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f07%2fduality-and-projection%2f&amp;title=Motivating%20Duality%20from%20Projection" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;title=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f07%2fduality-and-projection%2f&amp;title=Motivating%20Duality%20from%20Projection" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;title=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f07%2fduality-and-projection%2f&amp;title=Motivating%20Duality%20from%20Projection" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f06%2ftheorem-of-alternatives%2f&amp;description=Deriving%20Theorems%20of%20the%20Alternatives%20using%20Projection" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f07%2fduality-and-projection%2f&amp;description=Motivating%20Duality%20from%20Projection" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -477,6 +534,13 @@ Now we have the second theorem of the alternatives:</p>
         
           
           
+          <h4 class="see-also">See also</h4>
+          <ul>
+          
+            <li><a href="/2020/07/06/theorem-of-alternatives/">Deriving Theorems of the Alternatives using Projection</a></li>
+          
+          </ul>
+          
         
       </article>
 
@@ -484,13 +548,9 @@ Now we have the second theorem of the alternatives:</p>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/07/05/projection-solve-linear-program/" data-toggle="tooltip" data-placement="top" title="Solving Linear Programs using Projection">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/07/06/theorem-of-alternatives/" data-toggle="tooltip" data-placement="top" title="Deriving Theorems of the Alternatives using Projection">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/07/07/duality-and-projection/" data-toggle="tooltip" data-placement="top" title="Motivating Duality from Projection">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -500,12 +560,12 @@ Now we have the second theorem of the alternatives:</p>
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/06/theorem-of-alternatives">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/07/duality-and-projection">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/06\/theorem-of-alternatives';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/07\/duality-and-projection';
             };
 
           </script>
