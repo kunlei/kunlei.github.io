@@ -3,22 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kunlei.github.io/tags/cplex/</loc>
+    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel/</loc>
+    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/java/</loc>
+    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/post/</loc>
+    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/</loc>
+    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kunlei.github.io/2020/07/07/duality-and-projection/</loc>
     <lastmod>2020-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/tags/optimization/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/post/</loc>
-    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/tags/</loc>
     <lastmod>2020-07-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -313,47 +328,37 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/tags/cplex/</loc>
+    <loc>https://kunlei.github.io/2019/10/26/continuous-callback/</loc>
     <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/tags/java/</loc>
-    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/2019/10/26/cplex-java-continuous-callback/</loc>
-    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/</loc>
+    <loc>https://kunlei.github.io/2019/10/20/build-model-by-column/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/</loc>
+    <loc>https://kunlei.github.io/2019/10/20/build-model-by-column-lpmatrix/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/</loc>
+    <loc>https://kunlei.github.io/2019/10/19/build-model-by-row-lpmatrix/</loc>
     <lastmod>2019-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/</loc>
+    <loc>https://kunlei.github.io/2019/10/15/build-model-by-row/</loc>
     <lastmod>2019-10-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</loc>
+    <loc>https://kunlei.github.io/2019/10/11/api-deep-dive-1/</loc>
     <lastmod>2019-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/10/11/cplex-java-setup/</loc>
+    <loc>https://kunlei.github.io/2019/10/11/setup/</loc>
     <lastmod>2019-10-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -503,7 +508,7 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2019/03/04/cplex-java-variables/</loc>
+    <loc>https://kunlei.github.io/2019/03/04/variables/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -513,7 +518,7 @@
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/1/01/01/cplex-java-conversion/</loc>
+    <loc>https://kunlei.github.io/1/01/01/conversion/</loc>
     <priority>0</priority>
   </url>
   

@@ -15,10 +15,10 @@
     
     <item>
       <title>Cplex Java Concert Technology - Variables</title>
-      <link>https://kunlei.github.io/2019/03/04/cplex-java-variables/</link>
+      <link>https://kunlei.github.io/2019/03/04/variables/</link>
       <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/03/04/cplex-java-variables/</guid>
+      <guid>https://kunlei.github.io/2019/03/04/variables/</guid>
       <description>Cplex provides three types of decision variables, which are defined by class IloNumVarType. There are two key information about a variable: bound and type, the former can be changed after a variable is created, but the latter remains the same throughout the lifetime of the object. Also, a variable bound consists of lower bound and upper bound, defined by class IloNumVarBoundType.
 Although variables are key components of a mathematical model, Cplex does not provide function to explicitly add variables to a model, instead, variables are added implicitly.</description>
     </item>

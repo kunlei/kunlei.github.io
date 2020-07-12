@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IloAddable and IloModel</title>
+      <link>https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel/</link>
+      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel/</guid>
+      <description>As a frequent user of CPLEX through its Java API, I have been wondering for a long time how the various interfaces/classes are designed in a way that supports flexible model building and problem solving. This post, and future ones, aims to help myself comprehend the inner designing logic.
+A mathematical model consists of three components: decision variables, one or more optimization objectives and constraints. The first step towards solving a model is to build a model that encompasses the three components.</description>
+    </item>
     
     <item>
       <title>Motivating Duality from Projection</title>
@@ -450,28 +460,28 @@ Reading Reading is a noble thing, but too high a target spells the failure from 
     
     <item>
       <title>Using ContinuousCallback</title>
-      <link>https://kunlei.github.io/2019/10/26/cplex-java-continuous-callback/</link>
+      <link>https://kunlei.github.io/2019/10/26/continuous-callback/</link>
       <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/26/cplex-java-continuous-callback/</guid>
+      <guid>https://kunlei.github.io/2019/10/26/continuous-callback/</guid>
       <description>Introduction In this post, we will explore how to use callback, specifically continuous callback, to retrieve and output information during the search process of the simplex and barrier optimizer. The CPLEX optimizer typically outputs a series of log information to the console revealing some of its search process, and many times it is enough. Occasionally, we want to have more information, or different information, than those default message, and callback is to the rescue.</description>
     </item>
     
     <item>
       <title>Build Optimization Models by Column using CPLEX Java API</title>
-      <link>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/</link>
+      <link>https://kunlei.github.io/2019/10/20/build-model-by-column/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column/</guid>
+      <guid>https://kunlei.github.io/2019/10/20/build-model-by-column/</guid>
       <description>In a previous post, we looked at how to build models by adding rows sequentially. It starts with creating decision variables, with which the objective function is defined. Constraints are then created sequentially and incorporated into the model. In optimization textbooks, mathematical models are usually represented in matrix format, and in CPLEX, it is indeed possible to build models column-wise. This post aims to demystify the process of building models by adding columns sequentially.</description>
     </item>
     
     <item>
       <title>Build Optimization Models by Column with IloLPMatrix using CPLEX Java API</title>
-      <link>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/</link>
+      <link>https://kunlei.github.io/2019/10/20/build-model-by-column-lpmatrix/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/20/cplex-java-build-model-by-column-lpmatrix/</guid>
+      <guid>https://kunlei.github.io/2019/10/20/build-model-by-column-lpmatrix/</guid>
       <description>This post explains how to use IloLPMatrix to build models by column. IloLPMatrix is commonly used in building large-scale optimization models.
 An illustrative example The same example used in a previous post is repeated here for clarity.
 $$ \begin{align} \text{min.} \quad &amp;amp; 2 x_1 + x_2 + 3x_3 + 2x_4 + 5x_5 \newline \text{s.t.} \quad &amp;amp; x_1 + x_3 \geq 2 \newline \quad &amp;amp; x_2 + x_4 + x_5 \geq 3 \newline \quad &amp;amp; x_1 + x_2 + x_4 \geq 1 \newline \quad &amp;amp; 0 \leq x_i \leq 100,\ \forall i \in { 1, \cdots, 5 } \end{align} $$</description>
@@ -479,20 +489,20 @@ $$ \begin{align} \text{min.} \quad &amp;amp; 2 x_1 + x_2 + 3x_3 + 2x_4 + 5x_5 \n
     
     <item>
       <title>Build Optimization Models by Row with IloLPMatrix using CPLEX Java API</title>
-      <link>https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/</link>
+      <link>https://kunlei.github.io/2019/10/19/build-model-by-row-lpmatrix/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/19/cplex-java-build-model-by-row-lpmatrix/</guid>
+      <guid>https://kunlei.github.io/2019/10/19/build-model-by-row-lpmatrix/</guid>
       <description>In a previous post, we examined how to build optimization models row-wise, in which decision variables and constraints are directly created and managed by an IloCplex object. It turns out that there is another, more powerful in certain cases, way to build and manage constraints in CPLEX and, in this post, we&amp;rsquo;ll look at how to utilize IloLPMatrix to build models by row.
 An illustrative example As usual, let&amp;rsquo;s use a small example to show the case.</description>
     </item>
     
     <item>
       <title>Build Optimization Models by Row using CPLEX Java API</title>
-      <link>https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/</link>
+      <link>https://kunlei.github.io/2019/10/15/build-model-by-row/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/15/cplex-java-build-model-by-row/</guid>
+      <guid>https://kunlei.github.io/2019/10/15/build-model-by-row/</guid>
       <description>The CPLEX Java API separates model building from solving algorithms by defining various interfaces in the Concert package. There are two ways in constructing a mathematical model regarding how constraints are added to the model:
  by row by column  An illustrative example This post looks at how to build models by row. Assuming we have a small mathematical formulation as below:
 $$ \begin{align} \text{max.} \quad &amp;amp; 20 x_1 + 15 x_2 \newline \text{s.</description>
@@ -500,20 +510,20 @@ $$ \begin{align} \text{max.} \quad &amp;amp; 20 x_1 + 15 x_2 \newline \text{s.</
     
     <item>
       <title>Deep Dive into CPLEX Java API (1)</title>
-      <link>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</link>
+      <link>https://kunlei.github.io/2019/10/11/api-deep-dive-1/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/11/cplex-java-api-deep-dive-1/</guid>
+      <guid>https://kunlei.github.io/2019/10/11/api-deep-dive-1/</guid>
       <description>I have been using CPLEX for a while but haven&amp;rsquo;t paid much attention to how its various components are woven together to enable users building and solving optimization models. It is time to dive deeper into CPLEX&amp;rsquo;s design principle and see how it works internally. This is an attempt to improve my knowledge about CPLEX, and the random notes below are just my thinking aloud.
 IloAddable IloAddable is the base interface implemented by most classes in the package.</description>
     </item>
     
     <item>
       <title>Setup and Run CPLEX using Java</title>
-      <link>https://kunlei.github.io/2019/10/11/cplex-java-setup/</link>
+      <link>https://kunlei.github.io/2019/10/11/setup/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/11/cplex-java-setup/</guid>
+      <guid>https://kunlei.github.io/2019/10/11/setup/</guid>
       <description>I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.</description>
     </item>
     
@@ -686,10 +696,10 @@ Others It&amp;rsquo;s hard to describe what I got most from this book, other tha
     
     <item>
       <title>Cplex Java Concert Technology - Variables</title>
-      <link>https://kunlei.github.io/2019/03/04/cplex-java-variables/</link>
+      <link>https://kunlei.github.io/2019/03/04/variables/</link>
       <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/03/04/cplex-java-variables/</guid>
+      <guid>https://kunlei.github.io/2019/03/04/variables/</guid>
       <description>Cplex provides three types of decision variables, which are defined by class IloNumVarType. There are two key information about a variable: bound and type, the former can be changed after a variable is created, but the latter remains the same throughout the lifetime of the object. Also, a variable bound consists of lower bound and upper bound, defined by class IloNumVarBoundType.
 Although variables are key components of a mathematical model, Cplex does not provide function to explicitly add variables to a model, instead, variables are added implicitly.</description>
     </item>
@@ -706,10 +716,10 @@ First Round &amp;ndash; 2020/01/01 Introduction Chapter 1: Getting Started  Part
     
     <item>
       <title></title>
-      <link>https://kunlei.github.io/1/01/01/cplex-java-conversion/</link>
+      <link>https://kunlei.github.io/1/01/01/conversion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/1/01/01/cplex-java-conversion/</guid>
+      <guid>https://kunlei.github.io/1/01/01/conversion/</guid>
       <description></description>
     </item>
     
