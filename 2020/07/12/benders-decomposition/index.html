@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Benders Decomposition - O.R. in Action</title>
+  <title>Benders Decomposition Explained - O.R. in Action</title>
   <meta name="description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following format:
 $$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
 where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
@@ -47,7 +47,7 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
         "position": 3,
         "item": {
           "@id": "https:\/\/kunlei.github.io\/2020\/07\/12\/benders-decomposition\/",
-          "name": "Benders decomposition"
+          "name": "Benders decomposition explained"
         }
     }]
 }
@@ -58,10 +58,10 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Benders Decomposition",
+  "headline": "Benders Decomposition Explained",
   "description" : "Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it\x26rsquo;s applicable when a model possesses the following format:\n$$ \\begin{align} \\mbox{min.} \\quad \x26amp; \\mathbf{c\x26rsquo;x} \x2b \\mathbf{f\x26rsquo;y} \\newline \\mbox{s.t.} \\quad \x26amp; \\mathbf{Ax} \x2b \\mathbf{By} \\geq \\mathbf{b} \\newline \x26amp; \\mathbf{x} \\geq 0 \\newline \x26amp; \\mathbf{y} \\in \\mathbf{Y} \\end{align} $$\nwhere $\\mathbf{x}$ and $\\mathbf{y}$ are decision variables in $\\mathbf{R}^{n_1}$ and $\\mathbf{R}^{n_2}$, respectively. $\\mathbf{c}$ and $\\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\\mathbf{A}$ and $\\mathbf{B}$ are of size $m \\times n_1$ and $m\\times n_2$, respectively.",
   "inLanguage" : "en",
-  "wordCount":  959 ,
+  "wordCount":  1161 ,
   "datePublished" : "2020-07-12T00:00:00",
   "dateModified" : "2020-07-12T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
@@ -80,7 +80,7 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
 }
 </script>
 
-<meta property="og:title" content="Benders Decomposition" />
+<meta property="og:title" content="Benders Decomposition Explained" />
 <meta property="og:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following format:
 $$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
 where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
@@ -89,7 +89,7 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Benders Decomposition" />
+  <meta name="twitter:title" content="Benders Decomposition Explained" />
   <meta name="twitter:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
@@ -305,7 +305,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Benders Decomposition</h1>
+                <h1>Benders Decomposition Explained</h1>
               
               
               
@@ -316,10 +316,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on July 12, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;959&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1161&nbsp;words
   
   
     
@@ -505,6 +505,28 @@ $$</p>
 
 <h2 id="benders-decomposition-workflow">Benders decomposition workflow</h2>
 
+<p>Now we are ready to outline the workflow of Benders&rsquo; Decomposition:</p>
+
+<ol>
+<li>Identify an initial value for $\mathbf{y \in Y}$, let $UB$ and $LB$ denote the upper bound and lower bound of the optimal solution, set their corresponding values to $\infty$ and $-\infty$, respectively.</li>
+<li>Solve the Benders subproblem $\mbox{max}\{\mathbf{v&rsquo;(b-By)} | \mathbf{v&rsquo;A \leq c}, \mathbf{v \geq 0}\}$ with the current $\mathbf{y}$, and
+
+<ol>
+<li>if the subproblem is infeasible, terminate the algorithm</li>
+<li>if the subproblem has an optimal solution, find the solution $\mathbf{v}$, update the upper bound as $UB = \mbox{min}\{UB, \mathbf{f&rsquo;y + v&rsquo;(b - By)}\}$, terminate the algorithm if $UB - LB  &lt; \epsilon$</li>
+<li>if the subproblem is unbounded, find the extreme ray $\mathbf{v}$</li>
+</ol></li>
+<li>Add a new constraint to the relaxed main problem based on whether $\mathbf{v}$ is an extreme point or extreme ray
+
+<ol>
+<li>if $\mathbf{v}$ is an extreme point, add constraint $z \geq \mathbf{f&rsquo;y + v&rsquo;(b - By)}$</li>
+<li>if $\mathbf{v}$ is an extreme ray, add constraint $\mathbf{v&rsquo;(b - By) \leq 0}$</li>
+</ol></li>
+<li>Solve the resulting main problem and get its optimal value $z$, update lower bound $LB = z$. Terminate the algorithm if $UB - LB  &lt; \epsilon$ or the relaxed main problem is infeasible.</li>
+</ol>
+
+<p>We&rsquo;ll examine some applications of Benders&rsquo; decomposition in future posts.</p>
+
 
         
           <div class="blog-tags">
@@ -526,7 +548,7 @@ $$</p>
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;text=Benders%20Decomposition&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;text=Benders%20Decomposition%20Explained&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -540,28 +562,28 @@ $$</p>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition%20Explained" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition%20Explained" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition%20Explained" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;description=Benders%20Decomposition" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;description=Benders%20Decomposition%20Explained" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
