@@ -61,7 +61,7 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
   "headline": "Benders Decomposition",
   "description" : "Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it\x26rsquo;s applicable when a model possesses the following format:\n$$ \\begin{align} \\mbox{min.} \\quad \x26amp; \\mathbf{c\x26rsquo;x} \x2b \\mathbf{f\x26rsquo;y} \\newline \\mbox{s.t.} \\quad \x26amp; \\mathbf{Ax} \x2b \\mathbf{By} \\geq \\mathbf{b} \\newline \x26amp; \\mathbf{x} \\geq 0 \\newline \x26amp; \\mathbf{y} \\in \\mathbf{Y} \\end{align} $$\nwhere $\\mathbf{x}$ and $\\mathbf{y}$ are decision variables in $\\mathbf{R}^{n_1}$ and $\\mathbf{R}^{n_2}$, respectively. $\\mathbf{c}$ and $\\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\\mathbf{A}$ and $\\mathbf{B}$ are of size $m \\times n_1$ and $m\\times n_2$, respectively.",
   "inLanguage" : "en",
-  "wordCount":  750 ,
+  "wordCount":  959 ,
   "datePublished" : "2020-07-12T00:00:00",
   "dateModified" : "2020-07-12T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
@@ -316,10 +316,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on July 12, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;750&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;959&nbsp;words
   
   
     
@@ -355,7 +355,9 @@ if (!doNotTrack) {
 <li><a href="#delayed-constraint-generation">Delayed constraint generation</a>
 <ul>
 <li><a href="#subproblem">Subproblem</a></li>
+<li><a href="#lower-bound-and-upper-bound">Lower bound and upper bound</a></li>
 </ul></li>
+<li><a href="#benders-decomposition-workflow">Benders decomposition workflow</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -474,6 +476,34 @@ Then by identifying the constraints that the resulting main problem solution vio
 &amp; \mathbf{v} \geq 0
 \end{align}
 $$</p>
+
+<p>With a given $\mathbf{y_0}$, the main problem can be solved first to get its optimal value $z_0$.
+By solving the subproblem, we obtain the optimal solution $\mathbf{v_0}$ and the corresponding optimal value $\mathbf{f&rsquo;y_0} + \mathbf{v&rsquo;_{0}(b - By_0)}$.
+There exist three scenarios:</p>
+
+<ul>
+<li>the subproblem has an optimal value and $z &lt; \mathbf{f&rsquo;y_0} + \mathbf{v&rsquo;_{0}(b - By_0)}$, in this case, we add the constraint $z \geq \mathbf{f&rsquo;y} + \mathbf{v&rsquo;_{0}(b - By)}$ to the main problem</li>
+<li>the subproblem is unbounded, in this case, we add the constraint $\mathbf{v&rsquo;_0(b - By)} \leq 0$ to the main problem.</li>
+<li>the subproblem is infeasible, terminate the main problem.</li>
+</ul>
+
+<h3 id="lower-bound-and-upper-bound">Lower bound and upper bound</h3>
+
+<p>Note that each optimal solution to the relaxed main problem provides a lower bound to the original formulation.
+On the other hand, the optimal value of the subproblem gives a valid upper bound.
+To see this, notice that the subproblem is equivalent to</p>
+
+<p>$$
+\begin{align}
+\mbox{min.} \quad &amp; \mathbf{f&rsquo;y} + \mathbf{c&rsquo;x} \newline
+\mbox{s.t.} \quad &amp; \mathbf{Ax}  \geq \mathbf{b} - \mathbf{By}\newline
+&amp; \mathbf{x} \geq 0 \newline
+\end{align}
+$$</p>
+
+<p>Therefore, the optimal dual solution of the subproblem, together with the $\mathbf{y}$ value, provides a feasible solution to the original problem, which is also a valid upper bound on the relaxed main problem.</p>
+
+<h2 id="benders-decomposition-workflow">Benders decomposition workflow</h2>
 
 
         
