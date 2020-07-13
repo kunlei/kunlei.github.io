@@ -7,9 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>IloAddable and IloModel - O.R. in Action</title>
-  <meta name="description" content="As a frequent user of CPLEX through its Java API, I have been wondering for a long time how the various interfaces/classes are designed in a way that supports flexible model building and problem solving. This post, and future ones, aims to help myself comprehend the inner designing logic.
-A mathematical model consists of three components: decision variables, one or more optimization objectives and constraints. The first step towards solving a model is to build a model that encompasses the three components.">
+  <title>Benders Decomposition - O.R. in Action</title>
+  <meta name="description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following structure:
+$$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
+where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,8 +46,8 @@ A mathematical model consists of three components: decision variables, one or mo
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/07\/12\/iloaddable-and-ilomodel\/",
-          "name": "Ilo addable and ilo model"
+          "@id": "https:\/\/kunlei.github.io\/2020\/07\/12\/benders-decomposition\/",
+          "name": "Benders decomposition"
         }
     }]
 }
@@ -57,15 +58,15 @@ A mathematical model consists of three components: decision variables, one or mo
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "IloAddable and IloModel",
-  "description" : "As a frequent user of CPLEX through its Java API, I have been wondering for a long time how the various interfaces\/classes are designed in a way that supports flexible model building and problem solving. This post, and future ones, aims to help myself comprehend the inner designing logic.\nA mathematical model consists of three components: decision variables, one or more optimization objectives and constraints. The first step towards solving a model is to build a model that encompasses the three components.",
+  "headline": "Benders Decomposition",
+  "description" : "Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it\x26rsquo;s applicable when a model possesses the following structure:\n$$ \\begin{align} \\mbox{min.} \\quad \x26amp; \\mathbf{c\x26rsquo;x} \x2b \\mathbf{f\x26rsquo;y} \\newline \\mbox{s.t.} \\quad \x26amp; \\mathbf{Ax} \x2b \\mathbf{By} \\geq \\mathbf{b} \\newline \x26amp; \\mathbf{x} \\geq 0 \\newline \x26amp; \\mathbf{y} \\in \\mathbf{Y} \\end{align} $$\nwhere $\\mathbf{x}$ and $\\mathbf{y}$ are decision variables in $\\mathbf{R}^{n_1}$ and $\\mathbf{R}^{n_2}$, respectively. $\\mathbf{c}$ and $\\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\\mathbf{A}$ and $\\mathbf{B}$ are of size $m \\times n_1$ and $m\\times n_2$, respectively.",
   "inLanguage" : "en",
-  "wordCount":  332 ,
+  "wordCount":  404 ,
   "datePublished" : "2020-07-12T00:00:00",
   "dateModified" : "2020-07-12T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
-  "keywords" : [ "cplex, java" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/12\/iloaddable-and-ilomodel\/",
+  "keywords" : [ "optimization, decomposition" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/12\/benders-decomposition\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -79,16 +80,17 @@ A mathematical model consists of three components: decision variables, one or mo
 }
 </script>
 
-<meta property="og:title" content="IloAddable and IloModel" />
-<meta property="og:description" content="As a frequent user of CPLEX through its Java API, I have been wondering for a long time how the various interfaces/classes are designed in a way that supports flexible model building and problem solving. This post, and future ones, aims to help myself comprehend the inner designing logic.
-A mathematical model consists of three components: decision variables, one or more optimization objectives and constraints. The first step towards solving a model is to build a model that encompasses the three components.">
+<meta property="og:title" content="Benders Decomposition" />
+<meta property="og:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following structure:
+$$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
+where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/07/12/benders-decomposition/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="IloAddable and IloModel" />
-  <meta name="twitter:description" content="As a frequent user of CPLEX through its Java API, I have been wondering for a long time how the various interfaces/classes are designed in a way that supports flexible model building and problem …">
+  <meta name="twitter:title" content="Benders Decomposition" />
+  <meta name="twitter:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -303,7 +305,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>IloAddable and IloModel</h1>
+                <h1>Benders Decomposition</h1>
               
               
               
@@ -317,7 +319,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;332&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;404&nbsp;words
   
   
     
@@ -346,50 +348,87 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#essential-functions-of-a-modeling-component">Essential functions of a modeling component</a></li>
-<li><a href="#essential-functions-of-a-model">Essential functions of a model</a></li>
+<li><a href="#motivating-benders-decomposition-through-projection">Motivating Benders decomposition through projection</a></li>
+<li><a href="#delayed-constraint-generation">Delayed constraint generation</a></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>As a frequent user of CPLEX through its Java API, I have been wondering for a long time how the various interfaces/classes are designed in a way that supports flexible model building and problem solving.
-This post, and future ones, aims to help myself comprehend the inner designing logic.</p>
+<p>Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures.
+Specifically, it&rsquo;s applicable when a model possesses the following structure:</p>
 
-<p>A mathematical model consists of three components: decision variables, one or more optimization objectives and constraints.
-The first step towards solving a model is to build a model that encompasses the three components.
-If we have a Java class that represents a model, then one of its key functions would be add modeling components.
-The Java <em>IloAddable</em> defines an interface that specifies the most fundamental function that a modeling component should have;
-whereas <em>IloModel</em> defines an interface that defines the behaviors that a model is supposed to have.</p>
+<p>$$
+\begin{align}
+\mbox{min.} \quad &amp; \mathbf{c&rsquo;x} + \mathbf{f&rsquo;y} \newline
+\mbox{s.t.} \quad &amp; \mathbf{Ax} + \mathbf{By} \geq \mathbf{b} \newline
+&amp; \mathbf{x} \geq 0 \newline
+&amp; \mathbf{y} \in \mathbf{Y}
+\end{align}
+$$</p>
 
-<h2 id="essential-functions-of-a-modeling-component">Essential functions of a modeling component</h2>
+<p>where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively.
+$\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.
+$\mathbf{b}$ is a column vector of size $m$.
+Note that $\mathbf{x}$ are nonnegative continuous variables, whereas $\mathbf{y}$ might be discrete variables.</p>
 
-<p>When we build a mathematical model, we would expect a way to uniquely identify each of its components, for which purpose we can assign a name to each modeling component added to the model.
-In other words, a modeling component should at least support the name setting and retrieval functions:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">String</span> <span class="nf">name</span><span class="p">);</span>
-<span class="ln">2</span><span class="n">String</span> <span class="nf">getName</span><span class="p">();</span></code></pre></div>
-<p>Put it in another way, objects of classes implementing this interface have their corresponding names and can be included in a CPLEX model.</p>
+<h2 id="motivating-benders-decomposition-through-projection">Motivating Benders decomposition through projection</h2>
 
-<h2 id="essential-functions-of-a-model">Essential functions of a model</h2>
+<p>The specialty of problems in this structure is that, with $\mathbf{y}$ fixed, the remaining problem with only the $\mathbf{x}$ variables is relatively easy to solve.
+Introduce a new variable $z$ to denote the objective and rearrange the constraints, we have</p>
 
-<p>An empty model is useless we have ways to add or remove components to/from it.
-Sometimes we might even want to add/remove multiple components at the same time.
-It is therefore natural for a model interface to have the following behaviors:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="n">IloAddable</span> <span class="nf">add</span><span class="p">(</span><span class="n">IloAddable</span> <span class="nf">obj</span><span class="p">);</span>
-<span class="ln">2</span><span class="n">IloAddable</span><span class="p">[]</span> <span class="nf">add</span><span class="p">(</span><span class="n">IloAddable</span><span class="p">[]</span> <span class="nf">objs</span><span class="p">);</span>
-<span class="ln">3</span><span class="n">IloAddable</span> <span class="nf">remove</span><span class="p">(</span><span class="n">IloAddable</span> <span class="nf">obj</span><span class="p">);</span>
-<span class="ln">4</span><span class="n">IloAddable</span><span class="p">[]</span> <span class="nf">remove</span><span class="p">(</span><span class="n">IloAddable</span><span class="p">[]</span> <span class="nf">objs</span><span class="p">);</span></code></pre></div>
-<p>It&rsquo;s interesting to note that the <em>IloModel</em> itself implements the <em>IloAddable</em> interface, thereby enabling us to assign a name to a model.
-I am not sure at this moment whether adding a model to an existing model makes sense or does anything useful, but theoretically, the definitions of the two interfaces allow this.</p>
+<p>$$
+\begin{align}
+\mbox{min.} \quad &amp; z \newline
+\mbox{s.t.} \quad &amp; z - \mathbf{c&rsquo;x} \geq \mathbf{f&rsquo;y} \newline
+&amp; \mathbf{Ax} \geq \mathbf{b} - \mathbf{By} \newline
+&amp; \mathbf{x} \geq 0 \newline
+&amp; \mathbf{y} \in \mathbf{Y}
+\end{align}
+$$</p>
+
+<p>Associating a nonnegative multiplier $u$ to constraints $z - \mathbf{c&rsquo;x} \geq \mathbf{f&rsquo;y}$, vector $\mathbf{v}$ to constraints $\mathbf{Ax} \geq \mathbf{b} - \mathbf{By}$, and vecotr $\mathbf{w}$ to $\mathbf{x} \geq 0$, we can project out the $\mathbf{x}$ variables using Fourier-Motzkin elimination that results in</p>
+
+<p>$$
+\begin{align}
+\mbox{min.} \quad &amp; z \newline
+\mbox{s.t.} \quad &amp; u^iz \geq u^i\mathbf{f&rsquo;y} + \mathbf{v^i(b - By)}, i = 1,\cdots, K  \newline
+&amp; \mathbf{y} \in \mathbf{Y}
+\end{align}
+$$</p>
+
+<p>where $K$ is the number of possible multipliers that meet the following criteria:</p>
+
+<p>$$
+\begin{align}
+\mathbf{v&rsquo;A} + \mathbf{w&rsquo;} = u\mathbf{c&rsquo;}
+\end{align}
+$$</p>
+
+<p>Given that $u \geq 0$, the first constraints can be subsumed into two categories based on whether $u = 0$ or $u \gt 0$:</p>
+
+<p>$$
+\begin{align}
+\mbox{min.} \quad &amp; z \newline
+\mbox{s.t.} \quad &amp; z \geq \mathbf{f&rsquo;y} + \mathbf{v^i(b - By)}, i = 1,\cdots, K_1  \newline
+&amp; 0 \geq \mathbf{v^i(b - By)}, i = K_1 + 1,\cdots, K  \newline
+&amp; \mathbf{y} \in \mathbf{Y}
+\end{align}
+$$</p>
+
+<p>Note that the above model, hereafter we refer it as the main problem, is essentially the original model projected into the space $\mathbf{y} \in \mathbf{R}^{n_2}$, and $\mathbf{K}$ is the total number of constraints that define the feasible region of the projected model.
+Unfortunately, $K$ is usually prohibitively large for practical size problems.</p>
+
+<h2 id="delayed-constraint-generation">Delayed constraint generation</h2>
 
 
         
           <div class="blog-tags">
             
-              <a href="https://kunlei.github.io/tags/cplex/">cplex</a>&nbsp;
+              <a href="https://kunlei.github.io/tags/optimization/">optimization</a>&nbsp;
             
-              <a href="https://kunlei.github.io/tags/java/">java</a>&nbsp;
+              <a href="https://kunlei.github.io/tags/decomposition/">decomposition</a>&nbsp;
             
           </div>
         
@@ -404,42 +443,42 @@ I am not sure at this moment whether adding a model to an existing model makes s
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2filoaddable-and-ilomodel%2f&amp;text=IloAddable%20and%20IloModel&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;text=Benders%20Decomposition&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2filoaddable-and-ilomodel%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2filoaddable-and-ilomodel%2f&amp;title=IloAddable%20and%20IloModel" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2filoaddable-and-ilomodel%2f&amp;title=IloAddable%20and%20IloModel" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2filoaddable-and-ilomodel%2f&amp;title=IloAddable%20and%20IloModel" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2filoaddable-and-ilomodel%2f&amp;description=IloAddable%20and%20IloModel" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;description=Benders%20Decomposition" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -457,11 +496,9 @@ I am not sure at this moment whether adding a model to an existing model makes s
           <h4 class="see-also">See also</h4>
           <ul>
           
-            <li><a href="/2019/10/11/setup/">Setup and Run CPLEX using Java</a></li>
+            <li><a href="/2020/07/07/duality-and-projection/">Motivating Duality from Projection</a></li>
           
-            <li><a href="/page/cplex-index/">CPLEX</a></li>
-          
-            <li><a href="/2019/10/26/continuous-callback/">Using ContinuousCallback</a></li>
+            <li><a href="/2020/07/06/theorem-of-alternatives/">Deriving Theorems of the Alternatives using Projection</a></li>
           
           </ul>
           
@@ -472,13 +509,9 @@ I am not sure at this moment whether adding a model to an existing model makes s
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/07/07/duality-and-projection/" data-toggle="tooltip" data-placement="top" title="Motivating Duality from Projection">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel/" data-toggle="tooltip" data-placement="top" title="IloAddable and IloModel">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/07/12/benders-decomposition/" data-toggle="tooltip" data-placement="top" title="Benders Decomposition">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -488,12 +521,12 @@ I am not sure at this moment whether adding a model to an existing model makes s
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/12/benders-decomposition">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/12\/iloaddable-and-ilomodel';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/12\/benders-decomposition';
             };
 
           </script>

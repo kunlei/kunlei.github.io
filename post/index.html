@@ -207,6 +207,38 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/07/12/benders-decomposition/">
+                <h2 class="post-title">Benders Decomposition</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on July 12, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following structure:
+$$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} + \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} + \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
+where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.<a href="https://kunlei.github.io/2020/07/12/benders-decomposition/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/optimization">optimization</a>&nbsp;
+                  
+                    #<a href="/tags/decomposition">decomposition</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
               <a href="https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel/">
                 <h2 class="post-title">IloAddable and IloModel</h2>
 
@@ -467,29 +499,6 @@ What is tuple? In a nutshell, tuple provides an convenient way to let programmer
                     #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
                   
                 </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/05/13/command-screen/">
-                <h2 class="post-title">Linux screen management</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on May 13, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Recently, I came across the task of testing the performance of an optimizer in a Linux environment and I wanted to test on multiple instances at the same time. Essentially, what I need are two things:
- Able to run the optimizer for a long time without staying logged on. Able to run the optimizer with different inputs within the same login.  I was introduced the command screenand it solved my problem perfectly.<a href="https://kunlei.github.io/2020/05/13/command-screen/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
               
 
             </article>
