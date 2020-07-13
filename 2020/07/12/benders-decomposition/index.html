@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Benders Decomposition - O.R. in Action</title>
-  <meta name="description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following structure:
+  <meta name="description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following format:
 $$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
 where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
@@ -59,9 +59,9 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
     "name" : "Kunlei Lian"
   },
   "headline": "Benders Decomposition",
-  "description" : "Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it\x26rsquo;s applicable when a model possesses the following structure:\n$$ \\begin{align} \\mbox{min.} \\quad \x26amp; \\mathbf{c\x26rsquo;x} \x2b \\mathbf{f\x26rsquo;y} \\newline \\mbox{s.t.} \\quad \x26amp; \\mathbf{Ax} \x2b \\mathbf{By} \\geq \\mathbf{b} \\newline \x26amp; \\mathbf{x} \\geq 0 \\newline \x26amp; \\mathbf{y} \\in \\mathbf{Y} \\end{align} $$\nwhere $\\mathbf{x}$ and $\\mathbf{y}$ are decision variables in $\\mathbf{R}^{n_1}$ and $\\mathbf{R}^{n_2}$, respectively. $\\mathbf{c}$ and $\\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\\mathbf{A}$ and $\\mathbf{B}$ are of size $m \\times n_1$ and $m\\times n_2$, respectively.",
+  "description" : "Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it\x26rsquo;s applicable when a model possesses the following format:\n$$ \\begin{align} \\mbox{min.} \\quad \x26amp; \\mathbf{c\x26rsquo;x} \x2b \\mathbf{f\x26rsquo;y} \\newline \\mbox{s.t.} \\quad \x26amp; \\mathbf{Ax} \x2b \\mathbf{By} \\geq \\mathbf{b} \\newline \x26amp; \\mathbf{x} \\geq 0 \\newline \x26amp; \\mathbf{y} \\in \\mathbf{Y} \\end{align} $$\nwhere $\\mathbf{x}$ and $\\mathbf{y}$ are decision variables in $\\mathbf{R}^{n_1}$ and $\\mathbf{R}^{n_2}$, respectively. $\\mathbf{c}$ and $\\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\\mathbf{A}$ and $\\mathbf{B}$ are of size $m \\times n_1$ and $m\\times n_2$, respectively.",
   "inLanguage" : "en",
-  "wordCount":  404 ,
+  "wordCount":  750 ,
   "datePublished" : "2020-07-12T00:00:00",
   "dateModified" : "2020-07-12T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
@@ -81,7 +81,7 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
 </script>
 
 <meta property="og:title" content="Benders Decomposition" />
-<meta property="og:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following structure:
+<meta property="og:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following format:
 $$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
 where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
@@ -316,10 +316,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on July 12, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;404&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;750&nbsp;words
   
   
     
@@ -348,8 +348,14 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#motivating-benders-decomposition-through-projection">Motivating Benders decomposition through projection</a></li>
-<li><a href="#delayed-constraint-generation">Delayed constraint generation</a></li>
+<li><a href="#motivating-benders-decomposition-through-projection">Motivating Benders decomposition through projection</a>
+<ul>
+<li><a href="#projection-cone">Projection cone</a></li>
+</ul></li>
+<li><a href="#delayed-constraint-generation">Delayed constraint generation</a>
+<ul>
+<li><a href="#subproblem">Subproblem</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -357,7 +363,7 @@ if (!doNotTrack) {
         
 
 <p>Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures.
-Specifically, it&rsquo;s applicable when a model possesses the following structure:</p>
+Specifically, it&rsquo;s applicable when a model possesses the following format:</p>
 
 <p>$$
 \begin{align}
@@ -398,15 +404,9 @@ $$</p>
 \end{align}
 $$</p>
 
-<p>where $K$ is the number of possible multipliers that meet the following criteria:</p>
+<p>where $K$ is the number of possible multipliers that enable this projection.</p>
 
-<p>$$
-\begin{align}
-\mathbf{v&rsquo;A} + \mathbf{w&rsquo;} = u\mathbf{c&rsquo;}
-\end{align}
-$$</p>
-
-<p>Given that $u \geq 0$, the first constraints can be subsumed into two categories based on whether $u = 0$ or $u \gt 0$:</p>
+<p>Given that $u \geq 0$, the first constraints can be subsumed into two categories based on whether $u = 0$ or $u \gt 0$ (which can be further rescaled into $u = 1$)</p>
 
 <p>$$
 \begin{align}
@@ -420,7 +420,60 @@ $$</p>
 <p>Note that the above model, hereafter we refer it as the main problem, is essentially the original model projected into the space $\mathbf{y} \in \mathbf{R}^{n_2}$, and $\mathbf{K}$ is the total number of constraints that define the feasible region of the projected model.
 Unfortunately, $K$ is usually prohibitively large for practical size problems.</p>
 
+<h3 id="projection-cone">Projection cone</h3>
+
+<p>Now that we have a model with humongous number of constraints, which is not necessarily exciting to include all at once.
+Fortunately, the $K$ sets of multipliers possess some special attributes, namely, they are all solutions to the following system:</p>
+
+<p>$$
+\begin{align}
+\mathbf{v&rsquo;A} + \mathbf{w&rsquo;I} = u\mathbf{c&rsquo;} \newline
+u \geq 0 \newline
+\mathbf{v} \geq 0 \newline
+\mathbf{w} \geq 0 \newline
+\end{align}
+$$</p>
+
+<p>They are also called <strong>projection cone</strong></p>
+
+<p>$$
+\begin{align}
+C_x(P) = \{(u, \mathbf{v}, \mathbf{w}) | \mathbf{v&rsquo;A} + \mathbf{w&rsquo;I} - u\mathbf{c&rsquo;} = 0, (u, \mathbf{v}, \mathbf{w}) \geq 0\}
+\end{align}
+$$</p>
+
+<p>It turns out that not all solutions to the above system need to be generated - only the extreme rays are needed.
+Again, depending on whether $u = 0$ or $u &gt; 0$ ($u = 1$ after proper scaling), the extreme rays can be generated in two scenarios:</p>
+
+<ul>
+<li>if $u = 1$, $\mathbf{v}$ are the extreme points of the polyhedron $\{\mathbf{v} | \mathbf{v&rsquo;A} \leq \mathbf{c}, \mathbf{v} \geq 0\}$</li>
+<li>if $u = 0$, $\mathbf{v}$ are the extreme rays of the recession cone $\{\mathbf{v} | \mathbf{v&rsquo;A} \leq 0, \mathbf{v} \geq 0\}$</li>
+</ul>
+
 <h2 id="delayed-constraint-generation">Delayed constraint generation</h2>
+
+<p>Now let&rsquo;s step back and check what we&rsquo;ve achieved so far:</p>
+
+<ul>
+<li>We&rsquo;ve transformed the original formulation with both the $\mathbf{x}$ and $\mathbf{y}$ variables into one with only the $\mathbf{y}$ variable.</li>
+<li>The new formulation has many more constraints that are determined by the extreme rays of a cone involving only the $\mathbf{x}$ variables.</li>
+</ul>
+
+<p>In other words, we&rsquo;ve effectively decomposed the original problem into two subproblems, one we refer to as the main problem, and the other as the subproblem.
+Since it&rsquo;s not practical or even necessary to include all the constraints, we can employ a small portion of the constraints and solve a relaxed main problem first.
+Then by identifying the constraints that the resulting main problem solution violates, we can iteratively add more constraints on the fly, this is a technique called as delayed constraint generation.</p>
+
+<h3 id="subproblem">Subproblem</h3>
+
+<p>Let&rsquo;s formally define the subproblem:</p>
+
+<p>$$
+\begin{align}
+\mbox{max.} \quad &amp; \mathbf{f&rsquo;y} + \mathbf{v&rsquo;(b - By)} \newline
+\mbox{s.t.} \quad &amp; \mathbf{v&rsquo;A} \leq \mathbf{c} \newline
+&amp; \mathbf{v} \geq 0
+\end{align}
+$$</p>
 
 
         

@@ -19,7 +19,7 @@
       <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/2020/07/12/benders-decomposition/</guid>
-      <description>Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&amp;rsquo;s applicable when a model possesses the following structure:
+      <description>Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&amp;rsquo;s applicable when a model possesses the following format:
 $$ \begin{align} \mbox{min.} \quad &amp;amp; \mathbf{c&amp;rsquo;x} + \mathbf{f&amp;rsquo;y} \newline \mbox{s.t.} \quad &amp;amp; \mathbf{Ax} + \mathbf{By} \geq \mathbf{b} \newline &amp;amp; \mathbf{x} \geq 0 \newline &amp;amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
 where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.</description>
     </item>
