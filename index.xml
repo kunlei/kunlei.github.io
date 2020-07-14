@@ -14,6 +14,16 @@
     
     
     <item>
+      <title>Simple Facility Location Problem - Modeling</title>
+      <link>https://kunlei.github.io/2020/07/14/benders-facility-location-model/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/14/benders-facility-location-model/</guid>
+      <description> This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&amp;rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description Mathematical model Testing instance </description>
+    </item>
+    
+    <item>
       <title>Benders Decomposition Explained</title>
       <link>https://kunlei.github.io/2020/07/12/benders-decomposition/</link>
       <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
@@ -259,7 +269,7 @@ Standard Form $$ \begin{align} \text{min.} \quad &amp;amp; \mathbf{c}^T \mathbf{
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/opt-linear-index/</guid>
-      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection Deriving Theorems of the Alternatives using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition  Benders Decomposition Explained  </description>
+      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection Deriving Theorems of the Alternatives using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition  Benders Decomposition Explained Simple Facility Location - Model Simple Facility Location - Auto Benders Simple Facility Location - Manual Benders  </description>
     </item>
     
     <item>

@@ -7,8 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Linear Programming - O.R. in Action</title>
-  <meta name="description" content=" This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection Deriving Theorems of the Alternatives using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition  Benders Decomposition Explained Simple Facility Location - Model Simple Facility Location - Auto Benders Simple Facility Location - Manual Benders  ">
+  <title>Simple Facility Location Problem - Modeling - O.R. in Action</title>
+  <meta name="description" content=" This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description Mathematical model Testing instance ">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -44,8 +45,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/page\/opt-linear-index\/",
-          "name": "Linear programming"
+          "@id": "https:\/\/kunlei.github.io\/2020\/07\/14\/benders-facility-location-model\/",
+          "name": "Simple facility location problem modeling"
         }
     }]
 }
@@ -56,15 +57,15 @@
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Linear Programming",
-  "description" : " This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection Deriving Theorems of the Alternatives using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition  Benders Decomposition Explained Simple Facility Location - Model Simple Facility Location - Auto Benders Simple Facility Location - Manual Benders  ",
+  "headline": "Simple Facility Location Problem - Modeling",
+  "description" : " This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We\x26rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.\nProblem description Mathematical model Testing instance ",
   "inLanguage" : "en",
-  "wordCount":  73 ,
-  "datePublished" : "2020-02-10T00:00:00",
-  "dateModified" : "2020-02-10T00:00:00",
+  "wordCount":  52 ,
+  "datePublished" : "2020-07-14T00:00:00",
+  "dateModified" : "2020-07-14T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
-  "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/page\/opt-linear-index\/",
+  "keywords" : [ "optimization, Benders decomposition" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/14\/benders-facility-location-model\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -78,15 +79,16 @@
 }
 </script>
 
-<meta property="og:title" content="Linear Programming" />
-<meta property="og:description" content=" This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection Deriving Theorems of the Alternatives using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition  Benders Decomposition Explained Simple Facility Location - Model Simple Facility Location - Auto Benders Simple Facility Location - Manual Benders  ">
+<meta property="og:title" content="Simple Facility Location Problem - Modeling" />
+<meta property="og:description" content=" This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description Mathematical model Testing instance ">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/page/opt-linear-index/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/07/14/benders-facility-location-model/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Linear Programming" />
-  <meta name="twitter:description" content=" This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin …">
+  <meta name="twitter:title" content="Simple Facility Location Problem - Modeling" />
+  <meta name="twitter:description" content=" This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -299,14 +301,33 @@ if (!doNotTrack) {
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
+            <div class="post-heading">
               
-                <h1>Linear Programming</h1>
-              
-              
-                <hr class="small">
+                <h1>Simple Facility Location Problem - Modeling</h1>
               
               
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 14, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;52&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
               
             </div>
           </div>
@@ -325,62 +346,37 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#basics">Basics</a></li>
-<li><a href="#projection">Projection</a></li>
-<li><a href="#simplex-algorithm">Simplex Algorithm</a></li>
-<li><a href="#column-generation">Column Generation</a></li>
-<li><a href="#cutting-planes">Cutting Planes</a></li>
-<li><a href="#dantzig-wolfe-decomposition">Dantzig-Wolfe Decomposition</a></li>
-<li><a href="#benders-decomposition">Benders Decomposition</a></li>
+<li>
+<ul>
+<li><a href="#problem-description">Problem description</a></li>
+<li><a href="#mathematical-model">Mathematical model</a></li>
+<li><a href="#testing-instance">Testing instance</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>This page compiles all the posts about linear programming.
-<!-- []() --></p>
+<p>This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem.
+We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model.
+The testing instances used in this and future posts will be introduced in the end.</p>
 
-<h2 id="basics">Basics</h2>
+<h3 id="problem-description">Problem description</h3>
 
-<ul>
-<li><a href="https://kunlei.github.io/2020/02/13/lp-forms/">General vs. standard forms</a></li>
-<li><a href="https://kunlei.github.io/2020/02/14/polyhedron/">Polyhedron</a></li>
-<li><a href="https://kunlei.github.io/2020/02/15/convex-hull/">Convexity</a></li>
-<li><a href="https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/">Linear, Affine, Conic and Convex Combinations</a></li>
-</ul>
+<h3 id="mathematical-model">Mathematical model</h3>
 
-<h2 id="projection">Projection</h2>
-
-<ul>
-<li><a href="https://kunlei.github.io/2020/06/25/fourier-motzkin-elimination/">Fourier-Motzkin Elimination</a></li>
-<li><a href="https://kunlei.github.io/2020/07/05/projection-solve-linear-program/">Solving Linear Programs using Projection</a></li>
-<li><a href="https://kunlei.github.io/2020/07/06/theorem-of-alternatives/">Deriving Theorems of the Alternatives using Projection</a></li>
-</ul>
-
-<h2 id="simplex-algorithm">Simplex Algorithm</h2>
-
-<h2 id="column-generation">Column Generation</h2>
-
-<ul>
-<li>Cutting stock problem</li>
-<li>Vehicle routing problem</li>
-</ul>
-
-<h2 id="cutting-planes">Cutting Planes</h2>
-
-<h2 id="dantzig-wolfe-decomposition">Dantzig-Wolfe Decomposition</h2>
-
-<h2 id="benders-decomposition">Benders Decomposition</h2>
-
-<ul>
-<li><a href="https://kunlei.github.io/2020/07/12/benders-decomposition/">Benders Decomposition Explained</a></li>
-<li><a href="https://kunlei.github.io/2020/07/14/benders-facility-location-model/">Simple Facility Location - Model</a></li>
-<li><a href="">Simple Facility Location - Auto Benders</a></li>
-<li><a href="">Simple Facility Location - Manual Benders</a></li>
-</ul>
+<h3 id="testing-instance">Testing instance</h3>
 
 
+        
+          <div class="blog-tags">
+            
+              <a href="https://kunlei.github.io/tags/optimization/">optimization</a>&nbsp;
+            
+              <a href="https://kunlei.github.io/tags/benders-decomposition/">Benders decomposition</a>&nbsp;
+            
+          </div>
         
 
         
@@ -393,42 +389,42 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2fpage%2fopt-linear-index%2f&amp;text=Linear%20Programming&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f14%2fbenders-facility-location-model%2f&amp;text=Simple%20Facility%20Location%20Problem%20-%20Modeling&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2fpage%2fopt-linear-index%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f14%2fbenders-facility-location-model%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2fpage%2fopt-linear-index%2f&amp;title=Linear%20Programming" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f14%2fbenders-facility-location-model%2f&amp;title=Simple%20Facility%20Location%20Problem%20-%20Modeling" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2fpage%2fopt-linear-index%2f&amp;title=Linear%20Programming" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f14%2fbenders-facility-location-model%2f&amp;title=Simple%20Facility%20Location%20Problem%20-%20Modeling" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2fpage%2fopt-linear-index%2f&amp;title=Linear%20Programming" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f14%2fbenders-facility-location-model%2f&amp;title=Simple%20Facility%20Location%20Problem%20-%20Modeling" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2fpage%2fopt-linear-index%2f&amp;description=Linear%20Programming" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f14%2fbenders-facility-location-model%2f&amp;description=Simple%20Facility%20Location%20Problem%20-%20Modeling" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -443,9 +439,29 @@ if (!doNotTrack) {
         
           
           
+          <h4 class="see-also">See also</h4>
+          <ul>
+          
+            <li><a href="/2020/07/12/benders-decomposition/">Benders Decomposition Explained</a></li>
+          
+            <li><a href="/2020/07/07/duality-and-projection/">Motivating Duality from Projection</a></li>
+          
+            <li><a href="/2020/07/06/theorem-of-alternatives/">Deriving Theorems of the Alternatives using Projection</a></li>
+          
+          </ul>
+          
         
       </article>
 
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kunlei.github.io/2020/07/12/benders-decomposition/" data-toggle="tooltip" data-placement="top" title="Benders Decomposition Explained">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
       
 
 
@@ -453,12 +469,12 @@ if (!doNotTrack) {
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/page/opt-linear-index">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/14/benders-facility-location-model">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/page\/opt-linear-index';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/14\/benders-facility-location-model';
             };
 
           </script>
@@ -473,14 +489,6 @@ if (!doNotTrack) {
 </div>
 
       
-    <div class="page-meta">
-  
-  
-  
-</div>
-
-
-  
 <footer>
   <div class="container">
     <div class="row">

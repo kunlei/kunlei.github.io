@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simple Facility Location Problem - Modeling</title>
+      <link>https://kunlei.github.io/2020/07/14/benders-facility-location-model/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/14/benders-facility-location-model/</guid>
+      <description> This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&amp;rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description Mathematical model Testing instance </description>
+    </item>
     
     <item>
       <title>Benders Decomposition Explained</title>
