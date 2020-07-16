@@ -19,8 +19,8 @@
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/2020/07/14/benders-facility-location-model/</guid>
-      <description> This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&amp;rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
-Problem description Mathematical model Testing instance </description>
+      <description>This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&amp;rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description In the simple facility location problem, there are $m$ candidate facilities to serve the demands from $n$ customers. A facility $i$ has unlimited capacity and incurs an operational cost of $f_i$ if it&amp;rsquo;s opened.</description>
     </item>
     
     <item>

@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Simple Facility Location Problem - Modeling - O.R. in Action</title>
-  <meta name="description" content=" This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
-Problem description Mathematical model Testing instance ">
+  <meta name="description" content="This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description In the simple facility location problem, there are $m$ candidate facilities to serve the demands from $n$ customers. A facility $i$ has unlimited capacity and incurs an operational cost of $f_i$ if it&rsquo;s opened.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -58,9 +58,9 @@ Problem description Mathematical model Testing instance ">
     "name" : "Kunlei Lian"
   },
   "headline": "Simple Facility Location Problem - Modeling",
-  "description" : " This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We\x26rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.\nProblem description Mathematical model Testing instance ",
+  "description" : "This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We\x26rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.\nProblem description In the simple facility location problem, there are $m$ candidate facilities to serve the demands from $n$ customers. A facility $i$ has unlimited capacity and incurs an operational cost of $f_i$ if it\x26rsquo;s opened.",
   "inLanguage" : "en",
-  "wordCount":  52 ,
+  "wordCount":  322 ,
   "datePublished" : "2020-07-14T00:00:00",
   "dateModified" : "2020-07-14T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
@@ -80,15 +80,15 @@ Problem description Mathematical model Testing instance ">
 </script>
 
 <meta property="og:title" content="Simple Facility Location Problem - Modeling" />
-<meta property="og:description" content=" This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
-Problem description Mathematical model Testing instance ">
+<meta property="og:description" content="This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description In the simple facility location problem, there are $m$ candidate facilities to serve the demands from $n$ customers. A facility $i$ has unlimited capacity and incurs an operational cost of $f_i$ if it&rsquo;s opened.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
 <meta property="og:url" content="https://kunlei.github.io/2020/07/14/benders-facility-location-model/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
   <meta name="twitter:title" content="Simple Facility Location Problem - Modeling" />
-  <meta name="twitter:description" content=" This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the …">
+  <meta name="twitter:description" content="This post will examine a typical application of Benders decomposition, the simple (uncapacitated) facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -314,10 +314,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i>&nbsp;Posted on July 14, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;52&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;322&nbsp;words
   
   
     
@@ -364,9 +364,42 @@ The testing instances used in this and future posts will be introduced in the en
 
 <h3 id="problem-description">Problem description</h3>
 
+<p>In the simple facility location problem, there are $m$ candidate facilities to serve the demands from $n$ customers.
+A facility $i$ has unlimited capacity and incurs an operational cost of $f_i$ if it&rsquo;s opened.
+The cost of serving customer $j$ from facility $i$ is denoted as $c_{ij}$.
+The problem is to decide which facilities to open and the amount of demands satisfied from facility $i$ for customer $j$, with the objective of minimizing the total cost.</p>
+
 <h3 id="mathematical-model">Mathematical model</h3>
 
+<p>Define the following two decision variables:</p>
+
+<ul>
+<li>$x_{ij}$: continuous variable that represents the amount of demands from customer $j$ that is satisfied by facility $i$.</li>
+<li>$y_i$: binary variable equals 1 if facility $i$ is opened, 0 otherwise.</li>
+</ul>
+
+<p>The model can be formulated as</p>
+
+<p>$$
+\begin{align}
+\mbox{min.} \quad &amp; \sum_{i = 1}^{m} \sum_{j = 1}^n c_{ij} x_{ij} + \sum_{i = 1}^m f_i y_i \newline
+\mbox{s.t.} \quad &amp; \sum_{i = 1}^{m} x_{ij} \geq 1, \ \forall j = 1,\cdots, n \newline
+&amp; x_{ij} \leq y_i, \ \forall i = 1, \cdots, m, j = 1, \cdots, n \newline
+&amp; x_{ij} \geq 0, \ \forall i = 1, \cdots, m, j = 1, \cdots, n  \newline
+&amp; y \in \{0, 1\}, \ \forall i = 1, \cdots, m
+\end{align}
+$$</p>
+
+<p>In the formulation, the objective is to minimize the total operational costs of all open facilities and all the service costs.
+The first constraints make sure that all customer demands are satisfied.
+The second constraints guarantees that only open facilities can serve customers.
+The last two constraints specify the variable types.</p>
+
 <h3 id="testing-instance">Testing instance</h3>
+
+<p>There exist lots of benchmarking instances in the literature, some of them can be found here:</p>
+
+<p><a href="http://resources.mpi-inf.mpg.de/departments/d1/projects/benchmarks/UflLib/packages.html">http://resources.mpi-inf.mpg.de/departments/d1/projects/benchmarks/UflLib/packages.html</a></p>
 
 
         
