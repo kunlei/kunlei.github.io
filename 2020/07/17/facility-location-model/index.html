@@ -7,10 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Benders Decomposition Explained - O.R. in Action</title>
-  <meta name="description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following format:
-$$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
-where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
+  <title>Capacitated Facility Location Problem - MIP Model - O.R. in Action</title>
+  <meta name="description" content="This post will examine a typical application of Benders decomposition, the capacitated facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description In the capacitated facility location problem, there are $m$ candidate facilities to serve the demands $d_j$ from $n$ customers. A facility $i$ has limited capacity $q_i$ and incurs an operational cost of $f_i$ if it&rsquo;s opened.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -46,8 +45,8 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/07\/12\/benders-decomposition\/",
-          "name": "Benders decomposition explained"
+          "@id": "https:\/\/kunlei.github.io\/2020\/07\/17\/facility-location-model\/",
+          "name": "Capacitated facility location problem m i p model"
         }
     }]
 }
@@ -58,15 +57,15 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Benders Decomposition Explained",
-  "description" : "Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it\x26rsquo;s applicable when a model possesses the following format:\n$$ \\begin{align} \\mbox{min.} \\quad \x26amp; \\mathbf{c\x26rsquo;x} \x2b \\mathbf{f\x26rsquo;y} \\newline \\mbox{s.t.} \\quad \x26amp; \\mathbf{Ax} \x2b \\mathbf{By} \\geq \\mathbf{b} \\newline \x26amp; \\mathbf{x} \\geq 0 \\newline \x26amp; \\mathbf{y} \\in \\mathbf{Y} \\end{align} $$\nwhere $\\mathbf{x}$ and $\\mathbf{y}$ are decision variables in $\\mathbf{R}^{n_1}$ and $\\mathbf{R}^{n_2}$, respectively. $\\mathbf{c}$ and $\\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\\mathbf{A}$ and $\\mathbf{B}$ are of size $m \\times n_1$ and $m\\times n_2$, respectively.",
+  "headline": "Capacitated Facility Location Problem - MIP Model",
+  "description" : "This post will examine a typical application of Benders decomposition, the capacitated facility location problem. We\x26rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.\nProblem description In the capacitated facility location problem, there are $m$ candidate facilities to serve the demands $d_j$ from $n$ customers. A facility $i$ has limited capacity $q_i$ and incurs an operational cost of $f_i$ if it\x26rsquo;s opened.",
   "inLanguage" : "en",
-  "wordCount":  1161 ,
-  "datePublished" : "2020-07-12T00:00:00",
-  "dateModified" : "2020-07-12T00:00:00",
+  "wordCount":  385 ,
+  "datePublished" : "2020-07-17T00:00:00",
+  "dateModified" : "2020-07-17T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
-  "keywords" : [ "optimization, decomposition" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/12\/benders-decomposition\/",
+  "keywords" : [ "optimization, Benders decomposition" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/17\/facility-location-model\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -80,17 +79,16 @@ where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$
 }
 </script>
 
-<meta property="og:title" content="Benders Decomposition Explained" />
-<meta property="og:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following format:
-$$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} &#43; \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} &#43; \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
-where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.">
+<meta property="og:title" content="Capacitated Facility Location Problem - MIP Model" />
+<meta property="og:description" content="This post will examine a typical application of Benders decomposition, the capacitated facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
+Problem description In the capacitated facility location problem, there are $m$ candidate facilities to serve the demands $d_j$ from $n$ customers. A facility $i$ has limited capacity $q_i$ and incurs an operational cost of $f_i$ if it&rsquo;s opened.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/07/12/benders-decomposition/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/07/17/facility-location-model/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Benders Decomposition Explained" />
-  <meta name="twitter:description" content="Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following …">
+  <meta name="twitter:title" content="Capacitated Facility Location Problem - MIP Model" />
+  <meta name="twitter:description" content="This post will examine a typical application of Benders decomposition, the capacitated facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -305,7 +303,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Benders Decomposition Explained</h1>
+                <h1>Capacitated Facility Location Problem - MIP Model</h1>
               
               
               
@@ -313,13 +311,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 12, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 17, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1161&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;385&nbsp;words
   
   
     
@@ -348,184 +346,64 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#motivating-benders-decomposition-through-projection">Motivating Benders decomposition through projection</a>
+<li>
 <ul>
-<li><a href="#projection-cone">Projection cone</a></li>
+<li><a href="#problem-description">Problem description</a></li>
+<li><a href="#mathematical-model">Mathematical model</a></li>
+<li><a href="#testing">Testing</a></li>
 </ul></li>
-<li><a href="#delayed-constraint-generation">Delayed constraint generation</a>
-<ul>
-<li><a href="#subproblem">Subproblem</a></li>
-<li><a href="#lower-bound-and-upper-bound">Lower bound and upper bound</a></li>
-</ul></li>
-<li><a href="#benders-decomposition-workflow">Benders decomposition workflow</a></li>
 </ul></li>
 </ul>
 </nav>
 
         
 
-<p>Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures.
-Specifically, it&rsquo;s applicable when a model possesses the following format:</p>
+<p>This post will examine a typical application of Benders decomposition, the capacitated facility location problem.
+We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model.
+The testing instances used in this and future posts will be introduced in the end.</p>
 
-<p>$$
-\begin{align}
-\mbox{min.} \quad &amp; \mathbf{c&rsquo;x} + \mathbf{f&rsquo;y} \newline
-\mbox{s.t.} \quad &amp; \mathbf{Ax} + \mathbf{By} \geq \mathbf{b} \newline
-&amp; \mathbf{x} \geq 0 \newline
-&amp; \mathbf{y} \in \mathbf{Y}
-\end{align}
-$$</p>
+<h3 id="problem-description">Problem description</h3>
 
-<p>where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively.
-$\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.
-$\mathbf{b}$ is a column vector of size $m$.
-Note that $\mathbf{x}$ are nonnegative continuous variables, whereas $\mathbf{y}$ might be discrete variables.</p>
+<p>In the capacitated facility location problem, there are $m$ candidate facilities to serve the demands $d_j$ from $n$ customers.
+A facility $i$ has limited capacity $q_i$ and incurs an operational cost of $f_i$ if it&rsquo;s opened.
+The cost of serving customer $j$ from facility $i$ is denoted as $c_{ij}$.
+The problem is to decide which facilities to open and the amount of demands satisfied from facility $i$ for customer $j$, with the objective of minimizing the total cost.</p>
 
-<h2 id="motivating-benders-decomposition-through-projection">Motivating Benders decomposition through projection</h2>
+<h3 id="mathematical-model">Mathematical model</h3>
 
-<p>The specialty of problems in this structure is that, with $\mathbf{y}$ fixed, the remaining problem with only the $\mathbf{x}$ variables is relatively easy to solve.
-Introduce a new variable $z$ to denote the objective and rearrange the constraints, we have</p>
-
-<p>$$
-\begin{align}
-\mbox{min.} \quad &amp; z \newline
-\mbox{s.t.} \quad &amp; z - \mathbf{c&rsquo;x} \geq \mathbf{f&rsquo;y} \newline
-&amp; \mathbf{Ax} \geq \mathbf{b} - \mathbf{By} \newline
-&amp; \mathbf{x} \geq 0 \newline
-&amp; \mathbf{y} \in \mathbf{Y}
-\end{align}
-$$</p>
-
-<p>Associating a nonnegative multiplier $u$ to constraints $z - \mathbf{c&rsquo;x} \geq \mathbf{f&rsquo;y}$, vector $\mathbf{v}$ to constraints $\mathbf{Ax} \geq \mathbf{b} - \mathbf{By}$, and vecotr $\mathbf{w}$ to $\mathbf{x} \geq 0$, we can project out the $\mathbf{x}$ variables using Fourier-Motzkin elimination that results in</p>
-
-<p>$$
-\begin{align}
-\mbox{min.} \quad &amp; z \newline
-\mbox{s.t.} \quad &amp; u^iz \geq u^i\mathbf{f&rsquo;y} + \mathbf{v^i(b - By)}, i = 1,\cdots, K  \newline
-&amp; \mathbf{y} \in \mathbf{Y}
-\end{align}
-$$</p>
-
-<p>where $K$ is the number of possible multipliers that enable this projection.</p>
-
-<p>Given that $u \geq 0$, the first constraints can be subsumed into two categories based on whether $u = 0$ or $u \gt 0$ (which can be further rescaled into $u = 1$)</p>
-
-<p>$$
-\begin{align}
-\mbox{min.} \quad &amp; z \newline
-\mbox{s.t.} \quad &amp; z \geq \mathbf{f&rsquo;y} + \mathbf{v^i(b - By)}, i = 1,\cdots, K_1  \newline
-&amp; 0 \geq \mathbf{v^i(b - By)}, i = K_1 + 1,\cdots, K  \newline
-&amp; \mathbf{y} \in \mathbf{Y}
-\end{align}
-$$</p>
-
-<p>Note that the above model, hereafter we refer it as the main problem, is essentially the original model projected into the space $\mathbf{y} \in \mathbf{R}^{n_2}$, and $\mathbf{K}$ is the total number of constraints that define the feasible region of the projected model.
-Unfortunately, $K$ is usually prohibitively large for practical size problems.</p>
-
-<h3 id="projection-cone">Projection cone</h3>
-
-<p>Now that we have a model with humongous number of constraints, which is not necessarily exciting to include all at once.
-Fortunately, the $K$ sets of multipliers possess some special attributes, namely, they are all solutions to the following system:</p>
-
-<p>$$
-\begin{align}
-\mathbf{v&rsquo;A} + \mathbf{w&rsquo;I} = u\mathbf{c&rsquo;} \newline
-u \geq 0 \newline
-\mathbf{v} \geq 0 \newline
-\mathbf{w} \geq 0 \newline
-\end{align}
-$$</p>
-
-<p>They are also called <strong>projection cone</strong></p>
-
-<p>$$
-\begin{align}
-C_x(P) = \{(u, \mathbf{v}, \mathbf{w}) | \mathbf{v&rsquo;A} + \mathbf{w&rsquo;I} - u\mathbf{c&rsquo;} = 0, (u, \mathbf{v}, \mathbf{w}) \geq 0\}
-\end{align}
-$$</p>
-
-<p>It turns out that not all solutions to the above system need to be generated - only the extreme rays are needed.
-Again, depending on whether $u = 0$ or $u &gt; 0$ ($u = 1$ after proper scaling), the extreme rays can be generated in two scenarios:</p>
+<p>Define the following two decision variables:</p>
 
 <ul>
-<li>if $u = 1$, $\mathbf{v}$ are the extreme points of the polyhedron $\{\mathbf{v} | \mathbf{v&rsquo;A} \leq \mathbf{c}, \mathbf{v} \geq 0\}$</li>
-<li>if $u = 0$, $\mathbf{v}$ are the extreme rays of the recession cone $\{\mathbf{v} | \mathbf{v&rsquo;A} \leq 0, \mathbf{v} \geq 0\}$</li>
+<li>$x_{ij}$: continuous variable that represents the amount of demands from customer $j$ that is satisfied by facility $i$.</li>
+<li>$y_i$: binary variable equals 1 if facility $i$ is opened, 0 otherwise.</li>
 </ul>
 
-<h2 id="delayed-constraint-generation">Delayed constraint generation</h2>
-
-<p>Now let&rsquo;s step back and check what we&rsquo;ve achieved so far:</p>
-
-<ul>
-<li>We&rsquo;ve transformed the original formulation with both the $\mathbf{x}$ and $\mathbf{y}$ variables into one with only the $\mathbf{y}$ variable.</li>
-<li>The new formulation has many more constraints that are determined by the extreme rays of a cone involving only the $\mathbf{x}$ variables.</li>
-</ul>
-
-<p>In other words, we&rsquo;ve effectively decomposed the original problem into two subproblems, one we refer to as the main problem, and the other as the subproblem.
-Since it&rsquo;s not practical or even necessary to include all the constraints, we can employ a small portion of the constraints and solve a relaxed main problem first.
-Then by identifying the constraints that the resulting main problem solution violates, we can iteratively add more constraints on the fly, this is a technique called as delayed constraint generation.</p>
-
-<h3 id="subproblem">Subproblem</h3>
-
-<p>Let&rsquo;s formally define the subproblem:</p>
+<p>The model can be formulated as</p>
 
 <p>$$
 \begin{align}
-\mbox{max.} \quad &amp; \mathbf{f&rsquo;y} + \mathbf{v&rsquo;(b - By)} \newline
-\mbox{s.t.} \quad &amp; \mathbf{v&rsquo;A} \leq \mathbf{c} \newline
-&amp; \mathbf{v} \geq 0
+\mbox{min.} \quad &amp; \sum_{i = 1}^{m} \sum_{j = 1}^n c_{ij} x_{ij} + \sum_{i = 1}^m f_i y_i \newline
+\mbox{s.t.} \quad &amp; \sum_{i = 1}^{m} x_{ij} \geq d_j, \ \forall j = 1,\cdots, n \newline
+&amp; \sum_{j = 1}^n x_{ij} \leq q_i y_i, \ \forall i = 1, \cdots, m \newline
+&amp; x_{ij} \geq 0, \ \forall i = 1, \cdots, m, j = 1, \cdots, n  \newline
+&amp; y \in \{0, 1\}, \ \forall i = 1, \cdots, m
 \end{align}
 $$</p>
 
-<p>With a given $\mathbf{y_0}$, the main problem can be solved first to get its optimal value $z_0$.
-By solving the subproblem, we obtain the optimal solution $\mathbf{v_0}$ and the corresponding optimal value $\mathbf{f&rsquo;y_0} + \mathbf{v&rsquo;_{0}(b - By_0)}$.
-There exist three scenarios:</p>
+<p>In the formulation, the objective is to minimize the total operational costs of all open facilities and all the service costs.
+The first constraints make sure that all customer demands are satisfied.
+The second constraints guarantees that only open facilities can serve customers.
+The last two constraints specify the variable types.</p>
 
-<ul>
-<li>the subproblem has an optimal value and $z &lt; \mathbf{f&rsquo;y_0} + \mathbf{v&rsquo;_{0}(b - By_0)}$, in this case, we add the constraint $z \geq \mathbf{f&rsquo;y} + \mathbf{v&rsquo;_{0}(b - By)}$ to the main problem</li>
-<li>the subproblem is unbounded, in this case, we add the constraint $\mathbf{v&rsquo;_0(b - By)} \leq 0$ to the main problem.</li>
-<li>the subproblem is infeasible, terminate the main problem.</li>
-</ul>
+<h3 id="testing">Testing</h3>
 
-<h3 id="lower-bound-and-upper-bound">Lower bound and upper bound</h3>
+<p>There exist lots of benchmarking instances in the literature, some of them can be found here:
+<a href="http://people.brunel.ac.uk/~mastjjb/jeb/orlib/capinfo.html">http://people.brunel.ac.uk/~mastjjb/jeb/orlib/capinfo.html</a></p>
 
-<p>Note that each optimal solution to the relaxed main problem provides a lower bound to the original formulation.
-On the other hand, the optimal value of the subproblem gives a valid upper bound.
-To see this, notice that the subproblem is equivalent to</p>
-
-<p>$$
-\begin{align}
-\mbox{min.} \quad &amp; \mathbf{f&rsquo;y} + \mathbf{c&rsquo;x} \newline
-\mbox{s.t.} \quad &amp; \mathbf{Ax}  \geq \mathbf{b} - \mathbf{By}\newline
-&amp; \mathbf{x} \geq 0 \newline
-\end{align}
-$$</p>
-
-<p>Therefore, the optimal dual solution of the subproblem, together with the $\mathbf{y}$ value, provides a feasible solution to the original problem, which is also a valid upper bound on the relaxed main problem.</p>
-
-<h2 id="benders-decomposition-workflow">Benders decomposition workflow</h2>
-
-<p>Now we are ready to outline the workflow of Benders&rsquo; Decomposition:</p>
-
-<ol>
-<li>Identify an initial value for $\mathbf{y \in Y}$, let $UB$ and $LB$ denote the upper bound and lower bound of the optimal solution, set their corresponding values to $\infty$ and $-\infty$, respectively.</li>
-<li>Solve the Benders subproblem $\mbox{max}\{\mathbf{v&rsquo;(b-By)} | \mathbf{v&rsquo;A \leq c}, \mathbf{v \geq 0}\}$ with the current $\mathbf{y}$, and
-
-<ol>
-<li>if the subproblem is infeasible, terminate the algorithm</li>
-<li>if the subproblem has an optimal solution, find the solution $\mathbf{v}$, update the upper bound as $UB = \mbox{min}\{UB, \mathbf{f&rsquo;y + v&rsquo;(b - By)}\}$, terminate the algorithm if $UB - LB  &lt; \epsilon$</li>
-<li>if the subproblem is unbounded, find the extreme ray $\mathbf{v}$</li>
-</ol></li>
-<li>Add a new constraint to the relaxed main problem based on whether $\mathbf{v}$ is an extreme point or extreme ray
-
-<ol>
-<li>if $\mathbf{v}$ is an extreme point, add constraint $z \geq \mathbf{f&rsquo;y + v&rsquo;(b - By)}$</li>
-<li>if $\mathbf{v}$ is an extreme ray, add constraint $\mathbf{v&rsquo;(b - By) \leq 0}$</li>
-</ol></li>
-<li>Solve the resulting main problem and get its optimal value $z$, update lower bound $LB = z$. Terminate the algorithm if $UB - LB  &lt; \epsilon$ or the relaxed main problem is infeasible.</li>
-</ol>
-
-<p>We&rsquo;ll examine some applications of Benders&rsquo; decomposition in future posts.</p>
+<p>In future posts, I&rsquo;ll illustrate how to solve the model directly using CPLEX Java API.
+I&rsquo;ll also show how to decompose the problem so that Benders&rsquo; approach can be applied.
+Moreover, the Benders&rsquo; decomposition will be demonstrated in two ways: a manual approach that solve a main problem and a subproblem iteratively;
+and an automatic Benders&rsquo; approach enabled by CPLEX starting from version 12.8.0.</p>
 
 
         
@@ -533,7 +411,7 @@ $$</p>
             
               <a href="https://kunlei.github.io/tags/optimization/">optimization</a>&nbsp;
             
-              <a href="https://kunlei.github.io/tags/decomposition/">decomposition</a>&nbsp;
+              <a href="https://kunlei.github.io/tags/benders-decomposition/">Benders decomposition</a>&nbsp;
             
           </div>
         
@@ -548,42 +426,42 @@ $$</p>
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;text=Benders%20Decomposition%20Explained&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f17%2ffacility-location-model%2f&amp;text=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f17%2ffacility-location-model%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition%20Explained" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f17%2ffacility-location-model%2f&amp;title=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition%20Explained" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f17%2ffacility-location-model%2f&amp;title=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;title=Benders%20Decomposition%20Explained" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f17%2ffacility-location-model%2f&amp;title=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f12%2fbenders-decomposition%2f&amp;description=Benders%20Decomposition%20Explained" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f17%2ffacility-location-model%2f&amp;description=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -601,6 +479,8 @@ $$</p>
           <h4 class="see-also">See also</h4>
           <ul>
           
+            <li><a href="/2020/07/12/benders-decomposition/">Benders Decomposition Explained</a></li>
+          
             <li><a href="/2020/07/07/duality-and-projection/">Motivating Duality from Projection</a></li>
           
             <li><a href="/2020/07/06/theorem-of-alternatives/">Deriving Theorems of the Alternatives using Projection</a></li>
@@ -614,12 +494,12 @@ $$</p>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/07/12/iloaddable-and-ilomodel/" data-toggle="tooltip" data-placement="top" title="IloAddable and IloModel">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/07/12/benders-decomposition/" data-toggle="tooltip" data-placement="top" title="Benders Decomposition Explained">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://kunlei.github.io/2020/07/17/facility-location-model/" data-toggle="tooltip" data-placement="top" title="Capacitated Facility Location Problem - MIP Model">Next Post &rarr;</a>
+              <a href="https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/" data-toggle="tooltip" data-placement="top" title="Capacitated Facility Location Problem - MIP Model Solving using CPLEX">Next Post &rarr;</a>
             </li>
           
         </ul>
@@ -630,12 +510,12 @@ $$</p>
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/12/benders-decomposition">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/17/facility-location-model">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/12\/benders-decomposition';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/17\/facility-location-model';
             };
 
           </script>

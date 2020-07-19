@@ -37,7 +37,7 @@
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/opt-linear-index/</guid>
-      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection Deriving Theorems of the Alternatives using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition  Benders Decomposition Explained Simple Facility Location - Model Simple Facility Location - Auto Benders Simple Facility Location - Manual Benders  </description>
+      <description> This page compiles all the posts about linear programming. Basics  General vs. standard forms Polyhedron Convexity Linear, Affine, Conic and Convex Combinations  Projection  Fourier-Motzkin Elimination Solving Linear Programs using Projection Deriving Theorems of the Alternatives using Projection  Simplex Algorithm Column Generation  Cutting stock problem Vehicle routing problem  Cutting Planes Dantzig-Wolfe Decomposition Benders Decomposition  Benders Decomposition Explained Capacitated Facility Location - Model Capacitated Facility Location - Auto Benders Capacitated Facility Location - Manual Benders  </description>
     </item>
     
     <item>

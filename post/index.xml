@@ -8,17 +8,27 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Fri, 17 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Capacitated Facility Location Problem - Modeling</title>
-      <link>https://kunlei.github.io/2020/07/17/benders-facility-location-model/</link>
+      <title>Capacitated Facility Location Problem - MIP Model Solving using CPLEX</title>
+      <link>https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/</guid>
+      <description>I&amp;rsquo;ll demonstrate in this post how to use the CPLEX Java API to solve an capacitated facility location problem instance. A testing instance cap41 is taken from ORLib and the data input function will be illustrated first. With the class holding the instance data ready, the MIP modeling class will be implemented and computational results will be shown in the end.
+Testing instance The instance can be obtained directly from the following url:</description>
+    </item>
+    
+    <item>
+      <title>Capacitated Facility Location Problem - MIP Model</title>
+      <link>https://kunlei.github.io/2020/07/17/facility-location-model/</link>
       <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2020/07/17/benders-facility-location-model/</guid>
+      <guid>https://kunlei.github.io/2020/07/17/facility-location-model/</guid>
       <description>This post will examine a typical application of Benders decomposition, the capacitated facility location problem. We&amp;rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
 Problem description In the capacitated facility location problem, there are $m$ candidate facilities to serve the demands $d_j$ from $n$ customers. A facility $i$ has limited capacity $q_i$ and incurs an operational cost of $f_i$ if it&amp;rsquo;s opened.</description>
     </item>

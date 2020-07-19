@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Overview of all pages with the tag #optimization - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #optimization, such as: Capacitated Facility Location Problem - MIP Model">
+  <title>Overview of all pages with the tag #facility location - O.R. in Action</title>
+  <meta name="description" content="Overview of all pages with the tag #facility location, such as: Capacitated Facility Location Problem - MIP Model Solving using CPLEX">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -30,13 +30,13 @@
 }
 </script>
 
-<meta property="og:title" content="optimization" />
+<meta property="og:title" content="facility location" />
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/tags/optimization/" />
+<meta property="og:url" content="https://kunlei.github.io/tags/facility-location/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="optimization" />
+  <meta name="twitter:title" content="facility location" />
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -191,7 +191,7 @@ if (!doNotTrack) {
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="page-heading">
-              <h1>#optimization</h1>
+              <h1>#facility location</h1>
               <hr class="small">
             </div>
           </div>
@@ -208,20 +208,20 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/07/17/facility-location-model/">
-                <h2 class="post-title">Capacitated Facility Location Problem - MIP Model</h2>
+              <a href="https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/">
+                <h2 class="post-title">Capacitated Facility Location Problem - MIP Model Solving using CPLEX</h2>
 
                 
               </a>
 
               <p class="post-meta">
-                Posted on July 17, 2020
+                Posted on July 19, 2020
               </p>
               <div class="post-entry">
                 
                   
-                    This post will examine a typical application of Benders decomposition, the capacitated facility location problem. We&rsquo;ll first give a brief description of the problem, followed by the formal mathematical model. The testing instances used in this and future posts will be introduced in the end.
-Problem description In the capacitated facility location problem, there are $m$ candidate facilities to serve the demands $d_j$ from $n$ customers. A facility $i$ has limited capacity $q_i$ and incurs an operational cost of $f_i$ if it&rsquo;s opened.<a href="https://kunlei.github.io/2020/07/17/facility-location-model/" class="post-read-more">[Read More]</a>
+                    I&rsquo;ll demonstrate in this post how to use the CPLEX Java API to solve an capacitated facility location problem instance. A testing instance cap41 is taken from ORLib and the data input function will be illustrated first. With the class holding the instance data ready, the MIP modeling class will be implemented and computational results will be shown in the end.
+Testing instance The instance can be obtained directly from the following url:<a href="https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/" class="post-read-more">[Read More]</a>
                   
                 
               </div>
@@ -229,98 +229,9 @@ Problem description In the capacitated facility location problem, there are $m$ 
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/optimization">optimization</a>&nbsp;
+                    #<a href="/tags/facility-location">facility location</a>&nbsp;
                   
-                    #<a href="/tags/benders-decomposition">Benders decomposition</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/07/12/benders-decomposition/">
-                <h2 class="post-title">Benders Decomposition Explained</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on July 12, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Benders decomposition is a potent, albeit advanced, technique to attack optimization problems with certain special structures. Specifically, it&rsquo;s applicable when a model possesses the following format:
-$$ \begin{align} \mbox{min.} \quad &amp; \mathbf{c&rsquo;x} + \mathbf{f&rsquo;y} \newline \mbox{s.t.} \quad &amp; \mathbf{Ax} + \mathbf{By} \geq \mathbf{b} \newline &amp; \mathbf{x} \geq 0 \newline &amp; \mathbf{y} \in \mathbf{Y} \end{align} $$
-where $\mathbf{x}$ and $\mathbf{y}$ are decision variables in $\mathbf{R}^{n_1}$ and $\mathbf{R}^{n_2}$, respectively. $\mathbf{c}$ and $\mathbf{f}$ are column vectors of size $n_1$ and $n_2$, and matrices $\mathbf{A}$ and $\mathbf{B}$ are of size $m \times n_1$ and $m\times n_2$, respectively.<a href="https://kunlei.github.io/2020/07/12/benders-decomposition/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/optimization">optimization</a>&nbsp;
-                  
-                    #<a href="/tags/decomposition">decomposition</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/07/07/duality-and-projection/">
-                <h2 class="post-title">Motivating Duality from Projection</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on July 7, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Dual theory is an important topic in linear programming and one that can be motivated from multiple ways. For example, the dual problem of a primal linear program can be derived using Lagrange multiplier, as elaborated in the book Introduction to Linear Optimization. In this post, I&rsquo;ll show how to come up with the dual formulation with the help of projection.
-Deriving the dual for a primal program in general form Let&rsquo;s start with a primal problem in general form:<a href="https://kunlei.github.io/2020/07/07/duality-and-projection/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/optimization">optimization</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/07/06/theorem-of-alternatives/">
-                <h2 class="post-title">Deriving Theorems of the Alternatives using Projection</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on July 6, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    The theorem of the alternatives is an important topic in linear programming, but I found it utterly confusing, not about how it works, and more about how the alternatives are derived in the first place. The textbook used in my linear programing class simply states the two alternatives, the Farkas&rsquo; Lemma, and proves its correctness, which left me bewildered about its derivation. It is not until I learned about the theory of projection that I started to understand the various theorems of alternatives.<a href="https://kunlei.github.io/2020/07/06/theorem-of-alternatives/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/optimization">optimization</a>&nbsp;
+                    #<a href="/tags/benders-decomposition">benders decomposition</a>&nbsp;
                   
                 </span>
               
@@ -366,7 +277,7 @@ Deriving the dual for a primal program in general form Let&rsquo;s start with a 
               </li>
           
           <li>
-            <a href="/tags/optimization/index.xml" title="RSS">
+            <a href="/tags/facility-location/index.xml" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

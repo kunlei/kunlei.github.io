@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Capacitated Facility Location Problem - MIP Model Solving using CPLEX - O.R. in Action</title>
+  <meta name="description" content="I&rsquo;ll demonstrate in this post how to use the CPLEX Java API to solve an capacitated facility location problem instance. A testing instance cap41 is taken from ORLib and the data input function will be illustrated first. With the class holding the instance data ready, the MIP modeling class will be implemented and computational results will be shown in the end.
+Testing instance The instance can be obtained directly from the following url:">
+  <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "O.R. in Action",
+    
+    "url": "https:\/\/kunlei.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kunlei.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kunlei.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kunlei.github.io\/2020\/07\/19\/facility-location-standard-cplex\/",
+          "name": "Capacitated facility location problem m i p model solving using c p l e x"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Kunlei Lian"
+  },
+  "headline": "Capacitated Facility Location Problem - MIP Model Solving using CPLEX",
+  "description" : "I\x26rsquo;ll demonstrate in this post how to use the CPLEX Java API to solve an capacitated facility location problem instance. A testing instance cap41 is taken from ORLib and the data input function will be illustrated first. With the class holding the instance data ready, the MIP modeling class will be implemented and computational results will be shown in the end.\nTesting instance The instance can be obtained directly from the following url:",
+  "inLanguage" : "en",
+  "wordCount":  1943 ,
+  "datePublished" : "2020-07-19T00:00:00",
+  "dateModified" : "2020-07-19T00:00:00",
+  "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
+  "keywords" : [ "facility location, benders decomposition" ],
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/19\/facility-location-standard-cplex\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kunlei.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kunlei.github.io\/img\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Capacitated Facility Location Problem - MIP Model Solving using CPLEX" />
+<meta property="og:description" content="I&rsquo;ll demonstrate in this post how to use the CPLEX Java API to solve an capacitated facility location problem instance. A testing instance cap41 is taken from ORLib and the data input function will be illustrated first. With the class holding the instance data ready, the MIP modeling class will be implemented and computational results will be shown in the end.
+Testing instance The instance can be obtained directly from the following url:">
+<meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
+<meta property="og:url" content="https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="O.R. in Action" />
+
+  <meta name="twitter:title" content="Capacitated Facility Location Problem - MIP Model Solving using CPLEX" />
+  <meta name="twitter:description" content="I&rsquo;ll demonstrate in this post how to use the CPLEX Java API to solve an capacitated facility location problem instance. A testing instance cap41 is taken from ORLib and the data input function …">
+  <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.57.1" />
+  <link rel="alternate" href="https://kunlei.github.io/index.xml" type="application/rss+xml" title="O.R. in Action"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kunlei.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://kunlei.github.io/css/syntax.css" /><link rel="stylesheet" href="https://kunlei.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><link rel="stylesheet" href="/css/tweaks.css"/>
+
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+    extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-124241468-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kunlei.github.io">O.R. in Action</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/book-list">Reading</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">O.R.</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/opt-linear-index">Linear</a>
+                
+                  <a href="/page/opt-integer-index">Integer</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Coding</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/java-index">Java</a>
+                
+                  <a href="/page/cpp-index">C&#43;&#43;</a>
+                
+                  <a href="/page/cplex-index">CPLEX</a>
+                
+                  <a href="/page/algorithm-index">ALGORITHM</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">About</a>
+              <div class="navlinks-children">
+                
+                  <a href="/pagedown-resume">Resume</a>
+                
+                  <a href="/page/about">About</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="中文" href="/blog-cn">中文</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="O.R. in Action" href="https://kunlei.github.io">
+            <img class="avatar-img" src="https://kunlei.github.io/img/logo.png" alt="O.R. in Action" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Capacitated Facility Location Problem - MIP Model Solving using CPLEX</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 19, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;10&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1943&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#testing-instance">Testing instance</a></li>
+<li><a href="#model-building-and-solving">Model building and solving</a></li>
+</ul></li>
+</ul>
+</nav>
+
+        
+
+<p>I&rsquo;ll demonstrate in this post how to use the CPLEX Java API to solve an capacitated facility location problem instance.
+A testing instance <em>cap41</em> is taken from ORLib and the data input function will be illustrated first.
+With the class holding the instance data ready, the MIP modeling class will be implemented and computational results will be shown in the end.</p>
+
+<h2 id="testing-instance">Testing instance</h2>
+
+<p>The instance can be obtained directly from the following url:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text"><span class="ln">1</span>http://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/cap41.txt</code></pre></div>
+<p>I&rsquo;ll use the <em>Instance</em> class to hold all the data, which encompasses some key information of this problem:</p>
+
+<ul>
+<li>facility-related data
+
+<ul>
+<li><em>numFacilities</em>: number of facilities available</li>
+<li><em>fixedCosts</em>: fixed cost of each facility</li>
+<li><em>capacities</em>: capacity of each facility</li>
+</ul></li>
+<li>customer-related data
+
+<ul>
+<li><em>numCustomers</em>: number of customers</li>
+<li><em>demands</em>: demand of each customer</li>
+</ul></li>
+<li>assignment-related data
+
+<ul>
+<li><em>flowCosts</em>: cost of serving a customer from a specific facility</li>
+</ul></li>
+</ul>
+
+<p>The code below gives the <em>Instance</em> class definition, the key part of which is the <em>readData</em> function that takes an filename as input and scans all the data within the file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">  1</span><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">learn</span><span class="p">.</span><span class="na">opt</span><span class="p">.</span><span class="na">benders</span><span class="p">;</span>
+<span class="ln">  2</span>
+<span class="ln">  3</span><span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">File</span><span class="p">;</span>
+<span class="ln">  4</span><span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Scanner</span><span class="p">;</span>
+<span class="ln">  5</span><span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">FileNotFoundException</span><span class="p">;</span>
+<span class="ln">  6</span>
+<span class="ln">  7</span><span class="cm">/**
+</span><span class="ln">  8</span><span class="cm"> * define a class that represents a facility location problem instance.
+</span><span class="ln">  9</span><span class="cm"> */</span>
+<span class="ln"> 10</span><span class="kd">public</span> <span class="nf">final</span> <span class="kd">class</span> <span class="nf">Instance</span> <span class="p">{</span>
+<span class="ln"> 11</span>  <span class="cm">/**
+</span><span class="ln"> 12</span><span class="cm">   * total number of facilities
+</span><span class="ln"> 13</span><span class="cm">   */</span>
+<span class="ln"> 14</span>  <span class="kd">private</span> <span class="nf">int</span> <span class="n">numFacilities</span><span class="p">;</span>
+<span class="ln"> 15</span>
+<span class="ln"> 16</span>  <span class="cm">/**
+</span><span class="ln"> 17</span><span class="cm">   * total number of customers
+</span><span class="ln"> 18</span><span class="cm">   */</span>
+<span class="ln"> 19</span>  <span class="kd">private</span> <span class="nf">int</span> <span class="n">numCustomers</span><span class="p">;</span>
+<span class="ln"> 20</span>
+<span class="ln"> 21</span>  <span class="cm">/**
+</span><span class="ln"> 22</span><span class="cm">   * facility capacities
+</span><span class="ln"> 23</span><span class="cm">   * size: 1 * numFacilities
+</span><span class="ln"> 24</span><span class="cm">   */</span>
+<span class="ln"> 25</span>  <span class="kd">private</span> <span class="nf">int</span><span class="p">[]</span> <span class="n">capacities</span><span class="p">;</span>
+<span class="ln"> 26</span>
+<span class="ln"> 27</span>  <span class="cm">/**
+</span><span class="ln"> 28</span><span class="cm">   * facility fixed costs
+</span><span class="ln"> 29</span><span class="cm">   * size: 1 * numFacilities
+</span><span class="ln"> 30</span><span class="cm">   */</span>
+<span class="ln"> 31</span>  <span class="kd">private</span> <span class="nf">double</span><span class="p">[]</span> <span class="n">fixedCosts</span><span class="p">;</span>
+<span class="ln"> 32</span>
+<span class="ln"> 33</span>  <span class="cm">/**
+</span><span class="ln"> 34</span><span class="cm">   * customer demands
+</span><span class="ln"> 35</span><span class="cm">   * size: 1 * numCustomers
+</span><span class="ln"> 36</span><span class="cm">   */</span>
+<span class="ln"> 37</span>  <span class="kd">private</span> <span class="nf">int</span><span class="p">[]</span> <span class="n">demands</span><span class="p">;</span>
+<span class="ln"> 38</span>
+<span class="ln"> 39</span>  <span class="cm">/**
+</span><span class="ln"> 40</span><span class="cm">   * allocation cost from facilities to customers
+</span><span class="ln"> 41</span><span class="cm">   * size: numCustomers * numFacilities
+</span><span class="ln"> 42</span><span class="cm">   */</span>
+<span class="ln"> 43</span>  <span class="kd">private</span> <span class="nf">double</span><span class="p">[][]</span> <span class="n">flowCosts</span><span class="p">;</span>
+<span class="ln"> 44</span>
+<span class="ln"> 45</span>  <span class="kd">public</span> <span class="nf">Instance</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 46</span>    <span class="n">numCustomers</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln"> 47</span>    <span class="n">numFacilities</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span>
+<span class="ln"> 48</span>    <span class="n">capacities</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln"> 49</span>    <span class="n">fixedCosts</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln"> 50</span>    <span class="n">demands</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln"> 51</span>    <span class="n">flowCosts</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="ln"> 52</span>  <span class="p">}</span>
+<span class="ln"> 53</span>
+<span class="ln"> 54</span>  <span class="cm">/**
+</span><span class="ln"> 55</span><span class="cm">   * read data from file
+</span><span class="ln"> 56</span><span class="cm">   * @param filename name of the input file
+</span><span class="ln"> 57</span><span class="cm">   */</span>
+<span class="ln"> 58</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">readData</span><span class="p">(</span><span class="n">String</span> <span class="nf">filename</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 59</span>    <span class="k">try</span> <span class="p">{</span>
+<span class="ln"> 60</span>      <span class="n">File</span> <span class="nf">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<span class="ln"> 61</span>      <span class="n">Scanner</span> <span class="nf">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+<span class="ln"> 62</span>
+<span class="ln"> 63</span>      <span class="n">numFacilities</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="ln"> 64</span>      <span class="n">numCustomers</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="ln"> 65</span>
+<span class="ln"> 66</span>      <span class="c1">// create data objects
+</span><span class="ln"> 67</span><span class="c1"></span>      <span class="n">capacities</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">numFacilities</span><span class="p">];</span>
+<span class="ln"> 68</span>      <span class="n">fixedCosts</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[</span><span class="n">numFacilities</span><span class="p">];</span>
+<span class="ln"> 69</span>      <span class="n">demands</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">numCustomers</span><span class="p">];</span>
+<span class="ln"> 70</span>      <span class="n">flowCosts</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[</span><span class="n">numCustomers</span><span class="p">][</span><span class="n">numFacilities</span><span class="p">];</span>
+<span class="ln"> 71</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">i</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 72</span>        <span class="n">flowCosts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[</span><span class="n">numFacilities</span><span class="p">];</span>
+<span class="ln"> 73</span>      <span class="p">}</span>
+<span class="ln"> 74</span>
+<span class="ln"> 75</span>      <span class="c1">// read in facility capacities and fixed cost
+</span><span class="ln"> 76</span><span class="c1"></span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 77</span>        <span class="n">capacities</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="ln"> 78</span>        <span class="n">fixedCosts</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<span class="ln"> 79</span>      <span class="p">}</span>
+<span class="ln"> 80</span>
+<span class="ln"> 81</span>      <span class="c1">// read in customer demand and flow cost
+</span><span class="ln"> 82</span><span class="c1"></span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 83</span>        <span class="n">demands</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="ln"> 84</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 85</span>          <span class="n">flowCosts</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">()</span> <span class="o">/</span> <span class="n">demands</span><span class="p">[</span><span class="n">c</span><span class="p">];</span>
+<span class="ln"> 86</span>        <span class="p">}</span>
+<span class="ln"> 87</span>      <span class="p">}</span>
+<span class="ln"> 88</span>
+<span class="ln"> 89</span>      <span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="ln"> 90</span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">FileNotFoundException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 91</span>      <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="ln"> 92</span>    <span class="p">}</span>
+<span class="ln"> 93</span>  <span class="p">}</span>
+<span class="ln"> 94</span>
+<span class="ln"> 95</span>  <span class="kd">public</span> <span class="nf">int</span> <span class="n">getNumFacilities</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 96</span>    <span class="k">return</span> <span class="n">numFacilities</span><span class="p">;</span>
+<span class="ln"> 97</span>  <span class="p">}</span>
+<span class="ln"> 98</span>
+<span class="ln"> 99</span>  <span class="kd">public</span> <span class="nf">int</span> <span class="n">getNumCustomers</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">100</span>    <span class="k">return</span> <span class="n">numCustomers</span><span class="p">;</span>
+<span class="ln">101</span>  <span class="p">}</span>
+<span class="ln">102</span>
+<span class="ln">103</span>  <span class="kd">public</span> <span class="nf">int</span> <span class="n">getCapacity</span><span class="p">(</span><span class="kt">int</span> <span class="nf">fIdx</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">104</span>    <span class="k">return</span> <span class="n">capacities</span><span class="p">[</span><span class="n">fIdx</span><span class="p">];</span>
+<span class="ln">105</span>  <span class="p">}</span>
+<span class="ln">106</span>
+<span class="ln">107</span>  <span class="kd">public</span> <span class="nf">double</span> <span class="n">getFixedCost</span><span class="p">(</span><span class="kt">int</span> <span class="nf">fIdx</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">108</span>    <span class="k">return</span> <span class="n">fixedCosts</span><span class="p">[</span><span class="n">fIdx</span><span class="p">];</span>
+<span class="ln">109</span>  <span class="p">}</span>
+<span class="ln">110</span>
+<span class="ln">111</span>  <span class="kd">public</span> <span class="nf">int</span> <span class="n">getDemand</span><span class="p">(</span><span class="kt">int</span> <span class="nf">cIdx</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">112</span>    <span class="k">return</span> <span class="n">demands</span><span class="p">[</span><span class="n">cIdx</span><span class="p">];</span>
+<span class="ln">113</span>  <span class="p">}</span>
+<span class="ln">114</span>
+<span class="ln">115</span>  <span class="kd">public</span> <span class="nf">double</span> <span class="n">getFlowCost</span><span class="p">(</span><span class="kt">int</span> <span class="nf">fIdx</span><span class="p">,</span> <span class="kt">int</span> <span class="nf">cIdx</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">116</span>    <span class="k">return</span> <span class="n">flowCosts</span><span class="p">[</span><span class="n">cIdx</span><span class="p">][</span><span class="n">fIdx</span><span class="p">];</span>
+<span class="ln">117</span>  <span class="p">}</span>
+<span class="ln">118</span>
+<span class="ln">119</span>  <span class="nd">@Override</span>
+<span class="ln">120</span>  <span class="kd">public</span> <span class="nf">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">121</span>    <span class="n">StringBuilder</span> <span class="nf">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">(</span><span class="s">&#34;Instance{&#34;</span><span class="p">);</span>
+<span class="ln">122</span>    <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;numFacilities: &#34;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">numFacilities</span><span class="p">)</span>
+<span class="ln">123</span>        <span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;\nnumCustomers: &#34;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">numCustomers</span><span class="p">);</span>
+<span class="ln">124</span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">125</span>      <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;\nfacility &#34;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">f</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;: capacity: &#34;</span><span class="p">)</span>
+<span class="ln">126</span>          <span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">capacities</span><span class="p">[</span><span class="n">f</span><span class="p">])</span>
+<span class="ln">127</span>          <span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;\tfixedCost: &#34;</span><span class="p">)</span>
+<span class="ln">128</span>          <span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">fixedCosts</span><span class="p">[</span><span class="n">f</span><span class="p">]);</span>
+<span class="ln">129</span>    <span class="p">}</span>
+<span class="ln">130</span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">131</span>      <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;\ncustomer &#34;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">c</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;: demand: &#34;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">demands</span><span class="p">[</span><span class="n">c</span><span class="p">]);</span>
+<span class="ln">132</span>    <span class="p">}</span>
+<span class="ln">133</span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">134</span>      <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;\n&#34;</span><span class="p">);</span>
+<span class="ln">135</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">136</span>        <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">flowCosts</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="n">f</span><span class="p">]).</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;\t&#34;</span><span class="p">);</span>
+<span class="ln">137</span>      <span class="p">}</span>
+<span class="ln">138</span>    <span class="p">}</span>
+<span class="ln">139</span>    <span class="k">return</span> <span class="n">builder</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="ln">140</span>  <span class="p">}</span>
+<span class="ln">141</span><span class="p">}</span></code></pre></div>
+<h2 id="model-building-and-solving">Model building and solving</h2>
+
+<p>The modeling code is pretty self-explanatory.
+The <em>cplex</em> object is first created within the constructor to help us build key modeling components:</p>
+
+<ul>
+<li>decision variables
+
+<ul>
+<li><em>open</em>: a binary variable equals 1 if a facility is open, 0 otherwise</li>
+<li><em>flow</em>: a continuous variable that represents the demand of a customer that&rsquo;s satisfied by a facility</li>
+</ul></li>
+<li>objective
+
+<ul>
+<li><em>obj</em>: this defines the objective function that consists of the fixed cost and assignment cost</li>
+</ul></li>
+<li>constraints
+
+<ul>
+<li><em>consDemand</em>: the constraint requires that all customer demands must be fulfilled</li>
+<li><em>constCapacity</em>: this constraint makes sure that facility capacity is not violated</li>
+</ul></li>
+</ul>
+
+<p>The <em>solve()</em> function calls CPLEX to find and output the optimal solution.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">  1</span><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">learn</span><span class="p">.</span><span class="na">opt</span><span class="p">.</span><span class="na">benders</span><span class="p">;</span>
+<span class="ln">  2</span>
+<span class="ln">  3</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloException</span><span class="p">;</span>
+<span class="ln">  4</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloLinearNumExpr</span><span class="p">;</span>
+<span class="ln">  5</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloNumVar</span><span class="p">;</span>
+<span class="ln">  6</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloObjective</span><span class="p">;</span>
+<span class="ln">  7</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">concert</span><span class="p">.</span><span class="na">IloRange</span><span class="p">;</span>
+<span class="ln">  8</span><span class="kn">import</span> <span class="nf">ilog</span><span class="p">.</span><span class="na">cplex</span><span class="p">.</span><span class="na">IloCplex</span><span class="p">;</span>
+<span class="ln">  9</span>
+<span class="ln"> 10</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">MIPModel</span> <span class="p">{</span>
+<span class="ln"> 11</span>  <span class="kd">private</span> <span class="nf">final</span> <span class="n">Instance</span> <span class="nf">instance</span><span class="p">;</span>
+<span class="ln"> 12</span>
+<span class="ln"> 13</span>  <span class="kd">private</span> <span class="nf">IloCplex</span> <span class="n">cplex</span><span class="p">;</span>
+<span class="ln"> 14</span>
+<span class="ln"> 15</span>  <span class="kd">private</span> <span class="nf">IloNumVar</span><span class="p">[]</span> <span class="n">open</span><span class="p">;</span>
+<span class="ln"> 16</span>  <span class="kd">private</span> <span class="nf">IloNumVar</span><span class="p">[][]</span> <span class="n">flow</span><span class="p">;</span>
+<span class="ln"> 17</span>
+<span class="ln"> 18</span>  <span class="kd">private</span> <span class="nf">IloObjective</span> <span class="n">obj</span><span class="p">;</span>
+<span class="ln"> 19</span>  <span class="kd">private</span> <span class="nf">IloRange</span><span class="p">[]</span> <span class="n">consDemand</span><span class="p">;</span>
+<span class="ln"> 20</span>  <span class="kd">private</span> <span class="nf">IloRange</span><span class="p">[]</span> <span class="n">consCapacity</span><span class="p">;</span>
+<span class="ln"> 21</span>
+<span class="ln"> 22</span>  <span class="kd">public</span> <span class="nf">MIPModel</span><span class="p">(</span><span class="n">Instance</span> <span class="nf">instance</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 23</span>    <span class="k">this</span><span class="p">.</span><span class="na">instance</span> <span class="o">=</span> <span class="n">instance</span><span class="p">;</span>
+<span class="ln"> 24</span>
+<span class="ln"> 25</span>    <span class="kt">int</span> <span class="nf">numFacilities</span> <span class="o">=</span> <span class="n">instance</span><span class="p">.</span><span class="na">getNumFacilities</span><span class="p">();</span>
+<span class="ln"> 26</span>    <span class="kt">int</span> <span class="nf">numCustomers</span> <span class="o">=</span> <span class="n">instance</span><span class="p">.</span><span class="na">getNumCustomers</span><span class="p">();</span>
+<span class="ln"> 27</span>
+<span class="ln"> 28</span>    <span class="k">try</span> <span class="p">{</span>
+<span class="ln"> 29</span>      <span class="n">cplex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IloCplex</span><span class="p">();</span>
+<span class="ln"> 30</span>
+<span class="ln"> 31</span>      <span class="c1">// create decision variables that indicate whether a facility is open or not
+</span><span class="ln"> 32</span><span class="c1"></span>      <span class="n">open</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IloNumVar</span><span class="p">[</span><span class="n">numFacilities</span><span class="p">];</span>
+<span class="ln"> 33</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 34</span>        <span class="n">open</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">boolVar</span><span class="p">(</span><span class="s">&#34;open_&#34;</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+<span class="ln"> 35</span>      <span class="p">}</span>
+<span class="ln"> 36</span>
+<span class="ln"> 37</span>      <span class="c1">// create decision variables that represent the demand of customer c that are
+</span><span class="ln"> 38</span><span class="c1"></span>      <span class="c1">// satisfied by facility f
+</span><span class="ln"> 39</span><span class="c1"></span>      <span class="n">flow</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IloNumVar</span><span class="p">[</span><span class="n">numFacilities</span><span class="p">][</span><span class="n">numCustomers</span><span class="p">];</span>
+<span class="ln"> 40</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 41</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 42</span>          <span class="n">flow</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">numVar</span><span class="p">(</span><span class="n">0</span><span class="p">,</span> <span class="n">Double</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">,</span> <span class="s">&#34;flow_&#34;</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="s">&#34;,&#34;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+<span class="ln"> 43</span>        <span class="p">}</span>
+<span class="ln"> 44</span>      <span class="p">}</span>
+<span class="ln"> 45</span>
+<span class="ln"> 46</span>      <span class="c1">// create objective function
+</span><span class="ln"> 47</span><span class="c1"></span>      <span class="n">IloLinearNumExpr</span> <span class="nf">expr</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">linearNumExpr</span><span class="p">();</span>
+<span class="ln"> 48</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 49</span>        <span class="n">expr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">instance</span><span class="p">.</span><span class="na">getFixedCost</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">open</span><span class="p">[</span><span class="n">f</span><span class="p">]);</span>
+<span class="ln"> 50</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 51</span>          <span class="n">expr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">instance</span><span class="p">.</span><span class="na">getFlowCost</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">flow</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">c</span><span class="p">]);</span>
+<span class="ln"> 52</span>        <span class="p">}</span>
+<span class="ln"> 53</span>      <span class="p">}</span>
+<span class="ln"> 54</span>      <span class="n">obj</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">addMinimize</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="s">&#34;obj&#34;</span><span class="p">);</span>
+<span class="ln"> 55</span>
+<span class="ln"> 56</span>      <span class="c1">// create constraints
+</span><span class="ln"> 57</span><span class="c1"></span>      <span class="n">consDemand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IloRange</span><span class="p">[</span><span class="n">numCustomers</span><span class="p">];</span>
+<span class="ln"> 58</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 59</span>        <span class="n">expr</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+<span class="ln"> 60</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 61</span>          <span class="n">expr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">flow</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">c</span><span class="p">]);</span>
+<span class="ln"> 62</span>        <span class="p">}</span>
+<span class="ln"> 63</span>        <span class="n">consDemand</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">addGe</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">instance</span><span class="p">.</span><span class="na">getDemand</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="s">&#34;demand_&#34;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+<span class="ln"> 64</span>      <span class="p">}</span>
+<span class="ln"> 65</span>
+<span class="ln"> 66</span>      <span class="n">consCapacity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IloRange</span><span class="p">[</span><span class="n">numFacilities</span><span class="p">];</span>
+<span class="ln"> 67</span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 68</span>        <span class="n">expr</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+<span class="ln"> 69</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 70</span>          <span class="n">expr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="n">1</span><span class="p">.</span><span class="na">0</span><span class="p">,</span> <span class="n">flow</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">c</span><span class="p">]);</span>
+<span class="ln"> 71</span>        <span class="p">}</span>
+<span class="ln"> 72</span>        <span class="n">expr</span><span class="p">.</span><span class="na">addTerm</span><span class="p">(</span><span class="o">-</span><span class="n">instance</span><span class="p">.</span><span class="na">getCapacity</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">open</span><span class="p">[</span><span class="n">f</span><span class="p">]);</span>
+<span class="ln"> 73</span>        <span class="n">consCapacity</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">addLe</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">0</span><span class="p">,</span> <span class="s">&#34;capacity_&#34;</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+<span class="ln"> 74</span>      <span class="p">}</span>
+<span class="ln"> 75</span>
+<span class="ln"> 76</span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IloException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 77</span>      <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="ln"> 78</span>    <span class="p">}</span>
+<span class="ln"> 79</span>  <span class="p">}</span>
+<span class="ln"> 80</span>
+<span class="ln"> 81</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">solve</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 82</span>    <span class="k">try</span> <span class="p">{</span>
+<span class="ln"> 83</span>      <span class="k">if</span> <span class="p">(</span><span class="n">cplex</span><span class="p">.</span><span class="na">solve</span><span class="p">())</span> <span class="p">{</span>
+<span class="ln"> 84</span>        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;obj = &#34;</span> <span class="o">+</span> <span class="n">cplex</span><span class="p">.</span><span class="na">getObjValue</span><span class="p">());</span>
+<span class="ln"> 85</span>
+<span class="ln"> 86</span>        <span class="kt">int</span> <span class="nf">numFacilities</span> <span class="o">=</span> <span class="n">instance</span><span class="p">.</span><span class="na">getNumFacilities</span><span class="p">();</span>
+<span class="ln"> 87</span>        <span class="kt">int</span> <span class="nf">numCustomers</span> <span class="o">=</span> <span class="n">instance</span><span class="p">.</span><span class="na">getNumCustomers</span><span class="p">();</span>
+<span class="ln"> 88</span>        <span class="kt">double</span><span class="p">[]</span> <span class="nf">optOpen</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">getValues</span><span class="p">(</span><span class="n">open</span><span class="p">);</span>
+<span class="ln"> 89</span>        <span class="kt">double</span><span class="p">[][]</span> <span class="nf">optFlow</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[</span><span class="n">numFacilities</span><span class="p">][];</span>
+<span class="ln"> 90</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 91</span>          <span class="n">optFlow</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">cplex</span><span class="p">.</span><span class="na">getValues</span><span class="p">(</span><span class="n">flow</span><span class="p">[</span><span class="n">f</span><span class="p">]);</span>
+<span class="ln"> 92</span>        <span class="p">}</span>
+<span class="ln"> 93</span>
+<span class="ln"> 94</span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">f</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">numFacilities</span><span class="p">;</span> <span class="o">++</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 95</span>          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;facility &#34;</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="s">&#34;: &#34;</span><span class="p">);</span>
+<span class="ln"> 96</span>          <span class="k">if</span> <span class="p">(</span><span class="n">optOpen</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">0</span><span class="p">.</span><span class="na">99</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 97</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;open, &#34;</span><span class="p">);</span>
+<span class="ln"> 98</span>            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nf">c</span> <span class="o">=</span> <span class="n">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">numCustomers</span><span class="p">;</span> <span class="o">++</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 99</span>              <span class="k">if</span> <span class="p">(</span><span class="n">optFlow</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">0</span><span class="p">.</span><span class="na">01</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">100</span>                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\tto customer &#34;</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="s">&#34; volume: &#34;</span> <span class="o">+</span> <span class="n">optFlow</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">c</span><span class="p">]);</span>
+<span class="ln">101</span>              <span class="p">}</span>
+<span class="ln">102</span>            <span class="p">}</span>
+<span class="ln">103</span>          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">104</span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;close, &#34;</span><span class="p">);</span>
+<span class="ln">105</span>          <span class="p">}</span>
+<span class="ln">106</span>        <span class="p">}</span>
+<span class="ln">107</span>      <span class="p">}</span>
+<span class="ln">108</span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IloException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">109</span>      <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="ln">110</span>    <span class="p">}</span>
+<span class="ln">111</span>  <span class="p">}</span>
+<span class="ln">112</span>
+<span class="ln">113</span><span class="p">}</span></code></pre></div>
+<p>A <em>Console</em> class is defined below to facilitate our experiment:</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">learn</span><span class="p">.</span><span class="na">opt</span><span class="p">.</span><span class="na">benders</span><span class="p">;</span>
+<span class="ln"> 2</span>
+<span class="ln"> 3</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Console</span> <span class="p">{</span>
+<span class="ln"> 4</span>  <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 5</span>    <span class="c1">// create a problem instance
+</span><span class="ln"> 6</span><span class="c1"></span>    <span class="n">Instance</span> <span class="nf">inst</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Instance</span><span class="p">();</span>
+<span class="ln"> 7</span>    <span class="n">inst</span><span class="p">.</span><span class="na">readData</span><span class="p">(</span><span class="s">&#34;/Users/klian/dev/facility-location-benders/instance/cap41.txt&#34;</span><span class="p">);</span>
+<span class="ln"> 8</span>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">inst</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="ln"> 9</span>
+<span class="ln">10</span>    <span class="n">MIPModel</span> <span class="nf">mipModel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MIPModel</span><span class="p">(</span><span class="n">inst</span><span class="p">);</span>
+<span class="ln">11</span>    <span class="n">mipModel</span><span class="p">.</span><span class="na">solve</span><span class="p">();</span>
+<span class="ln">12</span>  <span class="p">}</span>
+<span class="ln">13</span><span class="p">}</span></code></pre></div>
+<p>The terminal output is as follows:</p>
+
+<pre><code>Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 1 columns.
+Reduced MIP has 66 rows, 815 columns, and 1615 nonzeros.
+Reduced MIP has 15 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.64 ticks)
+Probing time = 0.00 sec. (0.06 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 66 rows, 815 columns, and 1615 nonzeros.
+Reduced MIP has 15 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.75 ticks)
+Probing time = 0.00 sec. (0.06 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (0.36 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0  1018151.6250     7                1018151.6250       81         
+*     0+    0                      1050749.6250  1018151.6250             3.10%
+      0     0  1038238.6359     3  1050749.6250      Cuts: 37       97    1.19%
+*     0+    0                      1043000.4500  1038238.6359             0.46%
+      0     0  1040169.2296     1  1043000.4500      Cuts: 26      107    0.27%
+*     0     0      integral     0  1040444.3750       Cuts: 8      111    0.00%
+      0     0        cutoff        1040444.3750                    111    0.00%
+Elapsed time = 0.04 sec. (8.69 ticks, tree = 0.01 MB, solutions = 3)
+
+Implied bound cuts applied:  37
+Flow cuts applied:  3
+Mixed integer rounding cuts applied:  11
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  5
+
+Root node processing (before b&amp;c):
+  Real time             =    0.04 sec. (8.74 ticks)
+Parallel b&amp;c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&amp;cut) =    0.04 sec. (8.74 ticks)
+obj = 1040444.375
+facility 0: open, 
+	to customer 2 volume: 672.0
+	to customer 3 volume: 1337.0
+	to customer 5 volume: 559.0
+	to customer 13 volume: 143.0
+	to customer 23 volume: 304.0
+	to customer 25 volume: 337.0
+	to customer 29 volume: 495.0
+	to customer 39 volume: 328.0
+	to customer 48 volume: 728.0
+facility 1: open, 
+	to customer 6 volume: 2370.0
+	to customer 33 volume: 2630.0
+facility 2: open, 
+	to customer 33 volume: 5000.000000000001
+facility 3: open, 
+	to customer 10 volume: 5000.000000000001
+facility 4: open, 
+	to customer 11 volume: 904.0
+	to customer 33 volume: 3360.0
+	to customer 48 volume: 736.0
+facility 5: open, 
+	to customer 12 volume: 1466.0
+	to customer 36 volume: 3534.0
+facility 6: open, 
+	to customer 14 volume: 615.0
+	to customer 19 volume: 195.0
+	to customer 21 volume: 807.0
+	to customer 43 volume: 500.0
+	to customer 47 volume: 49.00000000000001
+facility 7: open, 
+	to customer 0 volume: 146.0
+	to customer 4 volume: 31.0
+	to customer 8 volume: 33.0
+	to customer 9 volume: 32.0
+	to customer 15 volume: 564.0
+	to customer 38 volume: 705.0
+	to customer 42 volume: 275.0
+	to customer 44 volume: 1609.0
+	to customer 45 volume: 733.0
+	to customer 46 volume: 222.0
+facility 8: open, 
+	to customer 7 volume: 1089.000000000001
+	to customer 17 volume: 3016.0
+	to customer 33 volume: 894.9999999999991
+facility 9: close, 
+facility 10: open, 
+	to customer 10 volume: 494.9999999999991
+	to customer 22 volume: 551.0
+	to customer 27 volume: 577.0
+	to customer 33 volume: 1027.0
+	to customer 36 volume: 137.0
+	to customer 37 volume: 2213.0
+facility 11: open, 
+	to customer 1 volume: 87.0
+	to customer 16 volume: 226.0
+	to customer 18 volume: 253.0
+	to customer 20 volume: 38.0
+	to customer 24 volume: 814.0
+	to customer 34 volume: 325.0
+	to customer 35 volume: 366.0
+	to customer 40 volume: 1552.0
+	to customer 41 volume: 1117.0
+	to customer 49 volume: 222.0
+facility 12: open, 
+	to customer 26 volume: 4368.0
+	to customer 44 volume: 632.0
+facility 13: open, 
+	to customer 28 volume: 482.0
+	to customer 30 volume: 231.0
+	to customer 31 volume: 322.0
+	to customer 32 volume: 685.0000000000001
+	to customer 40 volume: 129.0
+facility 14: close, 
+facility 15: close, 
+
+Process finished with exit code 0
+</code></pre>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kunlei.github.io/tags/facility-location/">facility location</a>&nbsp;
+            
+              <a href="https://kunlei.github.io/tags/benders-decomposition/">benders decomposition</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f19%2ffacility-location-standard-cplex%2f&amp;text=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model%20Solving%20using%20CPLEX&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f19%2ffacility-location-standard-cplex%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f19%2ffacility-location-standard-cplex%2f&amp;title=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model%20Solving%20using%20CPLEX" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f19%2ffacility-location-standard-cplex%2f&amp;title=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model%20Solving%20using%20CPLEX" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f19%2ffacility-location-standard-cplex%2f&amp;title=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model%20Solving%20using%20CPLEX" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f19%2ffacility-location-standard-cplex%2f&amp;description=Capacitated%20Facility%20Location%20Problem%20-%20MIP%20Model%20Solving%20using%20CPLEX" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kunlei.github.io/2020/07/17/facility-location-model/" data-toggle="tooltip" data-placement="top" title="Capacitated Facility Location Problem - MIP Model">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">                  
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/19/facility-location-standard-cplex">comments</span></button>
+            <div id="disqus_thread"></div>
+
+            <script type="text/javascript">
+              var disqus_config = function () {
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/19\/facility-location-standard-cplex';
+            };
+
+          </script>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:kunlei1987@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/kunlei" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/kunlei-lian-ba55a73b" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://kunlei.github.io">Kunlei Lian</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kunlei.github.io">O.R. in Action</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.57.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kunlei.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kunlei.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+  $('#show-comments').on('click', function(){
+    var disqus_shortname = 'orinaction';
+      
+    (function() {
+      var disqus = document.createElement('script'); 
+      disqus.type = 'text/javascript'; 
+      disqus.async = true;
+      disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+    })();
+      
+    $(this).hide(); 
+    });
+  });
+      
+</script>
+<script id="dsq-count-scr" src="//orinaction.disqus.com/count.js" async></script>
+
+
+<script>
+(function() {
+  var toc = document.getElementById('TableOfContents');
+  if (!toc) return;
+  do {
+    var li, ul = toc.querySelector('ul');
+    if (ul.childElementCount !== 1) break;
+    li = ul.firstElementChild;
+    if (li.tagName !== 'LI') break;
+    
+    ul.outerHTML = li.innerHTML;
+  } while (toc.childElementCount >= 1);
+})();
+</script>
+
+    
+  </body>
+</html>
+
