@@ -540,11 +540,11 @@ $$ \begin{align} \text{max.} \quad &amp;amp; 20 x_1 + 15 x_2 \newline \text{s.</
     </item>
     
     <item>
-      <title>Deep Dive into CPLEX Java API (1)</title>
-      <link>https://kunlei.github.io/2019/10/11/api-deep-dive-1/</link>
+      <title>IloModel, IloModeler and IloMPModeler</title>
+      <link>https://kunlei.github.io/2019/10/11/ilomodel-ilomodeler-ilompmodeler/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
-      <guid>https://kunlei.github.io/2019/10/11/api-deep-dive-1/</guid>
+      <guid>https://kunlei.github.io/2019/10/11/ilomodel-ilomodeler-ilompmodeler/</guid>
       <description>I have been using CPLEX for a while but haven&amp;rsquo;t paid much attention to how its various components are woven together to enable users building and solving optimization models. It is time to dive deeper into CPLEX&amp;rsquo;s design principle and see how it works internally. This is an attempt to improve my knowledge about CPLEX, and the random notes below are just my thinking aloud.
 IloAddable IloAddable is the base interface implemented by most classes in the package.</description>
     </item>
