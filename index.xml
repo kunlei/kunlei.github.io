@@ -14,6 +14,26 @@
     
     
     <item>
+      <title>R</title>
+      <link>https://kunlei.github.io/page/r-index/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/r-index/</guid>
+      <description>This page compiles all the R-related posts.
+Recipes Plotting multiple histograms in one graph</description>
+    </item>
+    
+    <item>
+      <title>Recipe - Plotting Multiple Histograms in one Graph</title>
+      <link>https://kunlei.github.io/2020/07/23/histogram-multiple-data-frame/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/23/histogram-multiple-data-frame/</guid>
+      <description>I recently had a small data analysis work that required showing two histograms in the same graph. It has been quite a while since my I last used R in my work, and I had to resort to google to find the solution (see the code below).
+1# create two sample data frames 2x &amp;lt;- data.frame(x = sample(0 : 10, 100, TRUE), group = &amp;#39;Group A&amp;#39;) 3y &amp;lt;- data.frame(x = sample(5 : 20, 50, TRUE), group = &amp;#39;Group B&amp;#39;) 4 5# bind them together 6data &amp;lt;- rbind(x, y) 7 8# make the histogram using ggplot 9ggplot(data, aes(x, fill = group, colour = group)) + 10 geom_histogram(aes(y = .</description>
+    </item>
+    
+    <item>
       <title>Capacitated Facility Location Problem - MIP Model Solving using CPLEX</title>
       <link>https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
@@ -602,7 +622,7 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/book-list/</guid>
       <description>I am an avid reader and below compiles the books I read or am reading&amp;hellip;
-2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice - reading The 5 A.M. club The great influenza The tipping point How to take smart notes Naked economics Poor economics The room where it happened (reading) China&amp;rsquo;s gilded age (reading) The end of white christian america (reading) Addiction, procrastination and laziness (reading)  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
+2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice - reading The 5 A.M. club The great influenza The tipping point How to take smart notes Naked economics Poor economics The room where it happened (reading) China&amp;rsquo;s gilded age China&amp;rsquo;s economy The end of white christian America (reading) Addiction, procrastination and laziness (reading) Too much and never enough (reading)  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
     </item>
     
     <item>

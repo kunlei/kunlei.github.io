@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recipe - Plotting Multiple Histograms in one Graph</title>
+      <link>https://kunlei.github.io/2020/07/23/histogram-multiple-data-frame/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/23/histogram-multiple-data-frame/</guid>
+      <description>I recently had a small data analysis work that required showing two histograms in the same graph. It has been quite a while since my I last used R in my work, and I had to resort to google to find the solution (see the code below).
+1# create two sample data frames 2x &amp;lt;- data.frame(x = sample(0 : 10, 100, TRUE), group = &amp;#39;Group A&amp;#39;) 3y &amp;lt;- data.frame(x = sample(5 : 20, 50, TRUE), group = &amp;#39;Group B&amp;#39;) 4 5# bind them together 6data &amp;lt;- rbind(x, y) 7 8# make the histogram using ggplot 9ggplot(data, aes(x, fill = group, colour = group)) + 10 geom_histogram(aes(y = .</description>
+    </item>
     
     <item>
       <title>Capacitated Facility Location Problem - MIP Model Solving using CPLEX</title>

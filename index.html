@@ -137,6 +137,8 @@ if (!doNotTrack) {
                 
                   <a href="/page/algorithm-index">ALGORITHM</a>
                 
+                  <a href="/page/r-index">R</a>
+                
               </div>
             </li>
           
@@ -286,6 +288,54 @@ if (!doNotTrack) {
 
         <div class="posts-list">
           
+          
+            <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/07/23/histogram-multiple-data-frame/">
+        <h2 class="post-title">Recipe - Plotting Multiple Histograms in one Graph</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 23, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;120&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        I recently had a small data analysis work that required showing two histograms in the same graph. It has been quite a while since my I last used R in my work, and I had to resort to google to find the solution (see the code below).
+1# create two sample data frames 2x &lt;- data.frame(x = sample(0 : 10, 100, TRUE), group = &#39;Group A&#39;) 3y &lt;- data.frame(x = sample(5 : 20, 50, TRUE), group = &#39;Group B&#39;) 4 5# bind them together 6data &lt;- rbind(x, y) 7 8# make the histogram using ggplot 9ggplot(data, aes(x, fill = group, colour = group)) + 10 geom_histogram(aes(y = .
+        <a href="https://kunlei.github.io/2020/07/23/histogram-multiple-data-frame/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/r/">R</a>&nbsp;
+        
+    </div>
+    
+
+</article>
           
             <article class="post-preview">
     <a href="https://kunlei.github.io/2020/07/19/facility-location-standard-cplex/">
@@ -724,55 +774,6 @@ How it works In short, FME is used to eliminate variables from a set of inequali
     <div class="blog-tags">
         
         <a href="https://kunlei.github.io/tags/linear-programming/">linear programming</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2020/05/31/take-smart-notes/">
-        <h2 class="post-title">Take smart notes</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 31, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;392&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Take Smart Notes is probably the best book I&rsquo;ll read this year, although it&rsquo;s just half way into it. I used to be, and to some extent still am, the type of student who learn by reading and re-reading, and seldom take notes. As I reflect on this, part of the reason might be that books used to be precious resources for me when I was young. My books, textbooks for the most part, are always clean and void of any notes because I didn&rsquo;t have the luxury to buy as many book as I wanted and I didn&rsquo;t like to see books getting dirty by writing notes in them.
-        <a href="https://kunlei.github.io/2020/05/31/take-smart-notes/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/reading/">reading</a>&nbsp;
-        
-        <a href="https://kunlei.github.io/tags/books/">books</a>&nbsp;
         
     </div>
     

@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Tue, 30 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R</title>
+      <link>https://kunlei.github.io/page/r-index/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/r-index/</guid>
+      <description>This page compiles all the R-related posts.
+Recipes Plotting multiple histograms in one graph</description>
+    </item>
     
     <item>
       <title>Data Structure and Algorithm</title>
@@ -47,7 +57,7 @@
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/book-list/</guid>
       <description>I am an avid reader and below compiles the books I read or am reading&amp;hellip;
-2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice - reading The 5 A.M. club The great influenza The tipping point How to take smart notes Naked economics Poor economics The room where it happened (reading) China&amp;rsquo;s gilded age (reading) The end of white christian america (reading) Addiction, procrastination and laziness (reading)  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
+2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice - reading The 5 A.M. club The great influenza The tipping point How to take smart notes Naked economics Poor economics The room where it happened (reading) China&amp;rsquo;s gilded age China&amp;rsquo;s economy The end of white christian America (reading) Addiction, procrastination and laziness (reading) Too much and never enough (reading)  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
     </item>
     
     <item>
