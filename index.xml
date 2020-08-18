@@ -14,6 +14,25 @@
     
     
     <item>
+      <title>Spring Framework</title>
+      <link>https://kunlei.github.io/page/spring-index/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/page/spring-index/</guid>
+      <description>This is an index page for all the posts related to Java Spring framework.
+Basics Dependency Injection</description>
+    </item>
+    
+    <item>
+      <title>Spring - Dependency Injection</title>
+      <link>https://kunlei.github.io/2020/07/30/dependency-injection/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/30/dependency-injection/</guid>
+      <description>Dependency injection is the underpinning concept of the Spring framework that is widely used to build enterprise applications using Java. To understand the concept, it&amp;rsquo;s important to grasp what dependency is. Semantically speaking, dependency involves two things and describes the relationship between them. In the context of Java programming, it refers to the relationship between two classes - a class is the dependency of another class if it provides indispensable functions for it.</description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>https://kunlei.github.io/page/r-index/</link>
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>

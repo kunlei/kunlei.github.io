@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring - Dependency Injection</title>
+      <link>https://kunlei.github.io/2020/07/30/dependency-injection/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/07/30/dependency-injection/</guid>
+      <description>Dependency injection is the underpinning concept of the Spring framework that is widely used to build enterprise applications using Java. To understand the concept, it&amp;rsquo;s important to grasp what dependency is. Semantically speaking, dependency involves two things and describes the relationship between them. In the context of Java programming, it refers to the relationship between two classes - a class is the dependency of another class if it provides indispensable functions for it.</description>
+    </item>
     
     <item>
       <title>Recipe - Plotting Multiple Histograms in one Graph</title>
