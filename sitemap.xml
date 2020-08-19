@@ -14,26 +14,36 @@
   
   <url>
     <loc>https://kunlei.github.io/tags/java/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/post/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/tags/spring/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/2020/07/30/dependency-injection/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
+    <loc>https://kunlei.github.io/2020/08/05/candidate-dependencies/</loc>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/tags/</loc>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2020/08/02/inversion-of-control/</loc>
+    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/2020/07/30/dependency-injection/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   

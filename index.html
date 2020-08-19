@@ -292,6 +292,106 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/08/05/candidate-dependencies/">
+        <h2 class="post-title">Spring - Resolving Multiple Candidate Dependencies</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on August 5, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;429&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        In this post, we&rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies. To illustrate the problem, let&rsquo;s say we have a Room class that has a dependency on an object implementing the CleanStrategy interface:
+1@Component 2public class Room { 3 private final CleanStrategy cleanStrategy; 4 5 @Autowired 6 public Room(CleanStrategy cleanStrategy) { 7 this.cleanStrategy = cleanStrategy; 8 } 9 10 public void clean() { 11 this.
+        <a href="https://kunlei.github.io/2020/08/05/candidate-dependencies/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/java/">java</a>&nbsp;
+        
+        <a href="https://kunlei.github.io/tags/spring/">spring</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/08/02/inversion-of-control/">
+        <h2 class="post-title">Spring - Inversion of Control</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on August 2, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;479&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        In an earlier post, we examined the concept of dependency injection as well as the process of making two classes loosely coupled. For the sake of completeness, the main function code is repeated here:
+1public class Demo { 2 public static void main(String[] args) { 3 CleanStrategy cleanStrategy = new ManualClean(); 4 Room room = new Room(cleanStrategy); 5 room.clean(); 6 } 7} Although we&rsquo;ve made the Room and ManualClean classes loosely coupled, this code change still requires us manually supplying a ManualClean object upon the Room object construction.
+        <a href="https://kunlei.github.io/2020/08/02/inversion-of-control/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/java/">java</a>&nbsp;
+        
+        <a href="https://kunlei.github.io/tags/spring/">spring</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://kunlei.github.io/2020/07/30/dependency-injection/">
         <h2 class="post-title">Spring - Dependency Injection</h2>
         
@@ -678,105 +778,6 @@ Deriving the dual for a primal program in general form Let&rsquo;s start with a 
     <div class="blog-tags">
         
         <a href="https://kunlei.github.io/tags/optimization/">optimization</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2020/07/05/projection-solve-linear-program/">
-        <h2 class="post-title">Solving Linear Programs using Projection</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 5, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;401&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Having used column generation, both in my graduate study and working experience, to solve large scale linear programming problems with many variables, I am quite familiar with the simplex algorithm. It turns out that there is another way, although not necessarily fast theoretically or practically, to solve linear programs using projection. I feel the reasoning is intriguing as well as intuitive to understand, which is detailed below.
-Projection with Fourier-Motzkin Elimination I explained in an earlier post the inner workings of using projection to eliminate variables from a system of linear inequalities of the form:
-        <a href="https://kunlei.github.io/2020/07/05/projection-solve-linear-program/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/projection/">projection</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/">
-        <h2 class="post-title">Linear, Affine, Conic and Convex Combinations</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on June 29, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;204&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        The linear combination of a set of points $x_1, x_2, \cdots, x_k$ in $\mathcal{R}^n$ is defined as
-$$ \lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_k x_k $$
-The affine combination of a set of points $x_1, x_2, \cdots, x_k$ in $\mathcal{R}^n$ is defined as
-$$ \lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_k x_k, \sum_{i = 1}^k \lambda_k = 1 $$
-and the affine hull of these points, denoted as $aff({_1, x_2, \cdots, x_k})$, is all the affine combinations of them.
-        <a href="https://kunlei.github.io/2020/06/29/linear-affine-conic-convex-combination/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/polyhedron/">polyhedron</a>&nbsp;
         
     </div>
     

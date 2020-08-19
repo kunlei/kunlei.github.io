@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Overview of all pages with the tag #java - O.R. in Action</title>
-  <meta name="description" content="Overview of all pages with the tag #java, such as: Spring - Dependency Injection">
+  <meta name="description" content="Overview of all pages with the tag #java, such as: Spring - Resolving Multiple Candidate Dependencies">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -210,6 +210,68 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/08/05/candidate-dependencies/">
+                <h2 class="post-title">Spring - Resolving Multiple Candidate Dependencies</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on August 5, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    In this post, we&rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies. To illustrate the problem, let&rsquo;s say we have a Room class that has a dependency on an object implementing the CleanStrategy interface:
+1@Component 2public class Room { 3 private final CleanStrategy cleanStrategy; 4 5 @Autowired 6 public Room(CleanStrategy cleanStrategy) { 7 this.cleanStrategy = cleanStrategy; 8 } 9 10 public void clean() { 11 this.<a href="https://kunlei.github.io/2020/08/05/candidate-dependencies/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/java">java</a>&nbsp;
+                  
+                    #<a href="/tags/spring">spring</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/08/02/inversion-of-control/">
+                <h2 class="post-title">Spring - Inversion of Control</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on August 2, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    In an earlier post, we examined the concept of dependency injection as well as the process of making two classes loosely coupled. For the sake of completeness, the main function code is repeated here:
+1public class Demo { 2 public static void main(String[] args) { 3 CleanStrategy cleanStrategy = new ManualClean(); 4 Room room = new Room(cleanStrategy); 5 room.clean(); 6 } 7} Although we&rsquo;ve made the Room and ManualClean classes loosely coupled, this code change still requires us manually supplying a ManualClean object upon the Room object construction.<a href="https://kunlei.github.io/2020/08/02/inversion-of-control/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/java">java</a>&nbsp;
+                  
+                    #<a href="/tags/spring">spring</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
           
             <article class="post-preview">
               <a href="https://kunlei.github.io/2020/07/30/dependency-injection/">
@@ -452,65 +514,6 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
                     #<a href="/tags/cplex">cplex</a>&nbsp;
                   
                     #<a href="/tags/java">Java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/10/11/setup/">
-                <h2 class="post-title">Setup and Run CPLEX using Java</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 11, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    I have been using IBM ILOG CPLEX for quite some years, both in my research back in graduate study towards my M.S. and Ph.D. degrees and in my industrial projects in the past some years. Although I have grown more and more familiar with various Cplex functionalities, I still remember the struggles I went through to get it work to solve a simple optimization problem in my first encounter with Cplex.<a href="https://kunlei.github.io/2019/10/11/setup/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/cplex">cplex</a>&nbsp;
-                  
-                    #<a href="/tags/java">java</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/10/01/multikeymap/">
-                <h2 class="post-title">MultiKeyMap in Java</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 1, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    I am working on a project that requires value lookup using multiple keys. I believe this operation is common in other applications and want to leave a note here. It turns out that there is already a good open source solution for this purpose and all we need to do is adding the following package as one of the project dependencies through maven:
-1&lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 --&gt; 2&lt;dependency&gt; 3 &lt;groupId&gt;org.apache.commons&lt;/groupId&gt; 4 &lt;artifactId&gt;commons-collections4&lt;/artifactId&gt; 5 &lt;version&gt;4.<a href="https://kunlei.github.io/2019/10/01/multikeymap/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/java">java</a>&nbsp;
                   
                 </span>
               

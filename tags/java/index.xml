@@ -8,10 +8,30 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring - Resolving Multiple Candidate Dependencies</title>
+      <link>https://kunlei.github.io/2020/08/05/candidate-dependencies/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/08/05/candidate-dependencies/</guid>
+      <description>In this post, we&amp;rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies. To illustrate the problem, let&amp;rsquo;s say we have a Room class that has a dependency on an object implementing the CleanStrategy interface:
+1@Component 2public class Room { 3 private final CleanStrategy cleanStrategy; 4 5 @Autowired 6 public Room(CleanStrategy cleanStrategy) { 7 this.cleanStrategy = cleanStrategy; 8 } 9 10 public void clean() { 11 this.</description>
+    </item>
+    
+    <item>
+      <title>Spring - Inversion of Control</title>
+      <link>https://kunlei.github.io/2020/08/02/inversion-of-control/</link>
+      <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/08/02/inversion-of-control/</guid>
+      <description>In an earlier post, we examined the concept of dependency injection as well as the process of making two classes loosely coupled. For the sake of completeness, the main function code is repeated here:
+1public class Demo { 2 public static void main(String[] args) { 3 CleanStrategy cleanStrategy = new ManualClean(); 4 Room room = new Room(cleanStrategy); 5 room.clean(); 6 } 7} Although we&amp;rsquo;ve made the Room and ManualClean classes loosely coupled, this code change still requires us manually supplying a ManualClean object upon the Room object construction.</description>
+    </item>
     
     <item>
       <title>Spring - Dependency Injection</title>

@@ -7,8 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Spring - Dependency Injection - O.R. in Action</title>
-  <meta name="description" content="Dependency injection is the underpinning concept of the Spring framework that is widely used to build enterprise applications using Java. To understand the concept, it&rsquo;s important to grasp what dependency is. Semantically speaking, dependency involves two things and describes the relationship between them. In the context of Java programming, it refers to the relationship between two classes - a class is the dependency of another class if it provides indispensable functions for it.">
+  <title>Spring - Resolving Multiple Candidate Dependencies - O.R. in Action</title>
+  <meta name="description" content="In this post, we&rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies. To illustrate the problem, let&rsquo;s say we have a Room class that has a dependency on an object implementing the CleanStrategy interface:
+1@Component 2public class Room { 3 private final CleanStrategy cleanStrategy; 4 5 @Autowired 6 public Room(CleanStrategy cleanStrategy) { 7 this.cleanStrategy = cleanStrategy; 8 } 9 10 public void clean() { 11 this.">
   <meta name="author" content="Kunlei Lian"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -44,8 +45,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/kunlei.github.io\/2020\/07\/30\/dependency-injection\/",
-          "name": "Spring dependency injection"
+          "@id": "https:\/\/kunlei.github.io\/2020\/08\/05\/candidate-dependencies\/",
+          "name": "Spring resolving multiple candidate dependencies"
         }
     }]
 }
@@ -56,15 +57,15 @@
   "author": {
     "name" : "Kunlei Lian"
   },
-  "headline": "Spring - Dependency Injection",
-  "description" : "Dependency injection is the underpinning concept of the Spring framework that is widely used to build enterprise applications using Java. To understand the concept, it\x26rsquo;s important to grasp what dependency is. Semantically speaking, dependency involves two things and describes the relationship between them. In the context of Java programming, it refers to the relationship between two classes - a class is the dependency of another class if it provides indispensable functions for it.",
+  "headline": "Spring - Resolving Multiple Candidate Dependencies",
+  "description" : "In this post, we\x26rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies. To illustrate the problem, let\x26rsquo;s say we have a Room class that has a dependency on an object implementing the CleanStrategy interface:\n1@Component 2public class Room { 3 private final CleanStrategy cleanStrategy; 4 5 @Autowired 6 public Room(CleanStrategy cleanStrategy) { 7 this.cleanStrategy = cleanStrategy; 8 } 9 10 public void clean() { 11 this.",
   "inLanguage" : "en",
-  "wordCount":  434 ,
-  "datePublished" : "2020-07-30T00:00:00",
-  "dateModified" : "2020-07-30T00:00:00",
+  "wordCount":  429 ,
+  "datePublished" : "2020-08-05T00:00:00",
+  "dateModified" : "2020-08-05T00:00:00",
   "image" : "https:\/\/kunlei.github.io\/img\/logo.png",
   "keywords" : [ "java, spring" ],
-  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/07\/30\/dependency-injection\/",
+  "mainEntityOfPage" : "https:\/\/kunlei.github.io\/2020\/08\/05\/candidate-dependencies\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/kunlei.github.io",
@@ -78,15 +79,16 @@
 }
 </script>
 
-<meta property="og:title" content="Spring - Dependency Injection" />
-<meta property="og:description" content="Dependency injection is the underpinning concept of the Spring framework that is widely used to build enterprise applications using Java. To understand the concept, it&rsquo;s important to grasp what dependency is. Semantically speaking, dependency involves two things and describes the relationship between them. In the context of Java programming, it refers to the relationship between two classes - a class is the dependency of another class if it provides indispensable functions for it.">
+<meta property="og:title" content="Spring - Resolving Multiple Candidate Dependencies" />
+<meta property="og:description" content="In this post, we&rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies. To illustrate the problem, let&rsquo;s say we have a Room class that has a dependency on an object implementing the CleanStrategy interface:
+1@Component 2public class Room { 3 private final CleanStrategy cleanStrategy; 4 5 @Autowired 6 public Room(CleanStrategy cleanStrategy) { 7 this.cleanStrategy = cleanStrategy; 8 } 9 10 public void clean() { 11 this.">
 <meta property="og:image" content="https://kunlei.github.io/img/logo.png" />
-<meta property="og:url" content="https://kunlei.github.io/2020/07/30/dependency-injection/" />
+<meta property="og:url" content="https://kunlei.github.io/2020/08/05/candidate-dependencies/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="O.R. in Action" />
 
-  <meta name="twitter:title" content="Spring - Dependency Injection" />
-  <meta name="twitter:description" content="Dependency injection is the underpinning concept of the Spring framework that is widely used to build enterprise applications using Java. To understand the concept, it&rsquo;s important to grasp what …">
+  <meta name="twitter:title" content="Spring - Resolving Multiple Candidate Dependencies" />
+  <meta name="twitter:description" content="In this post, we&rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies. To illustrate the problem, let&rsquo;s say we have a Room class that has a dependency on an …">
   <meta name="twitter:image" content="https://kunlei.github.io/img/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://kunlei.github.io/img/logo.png' rel='icon' type='image/x-icon'/>
@@ -305,7 +307,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Spring - Dependency Injection</h1>
+                <h1>Spring - Resolving Multiple Candidate Dependencies</h1>
               
               
               
@@ -313,13 +315,13 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 30, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on August 5, 2020
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;434&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;429&nbsp;words
   
   
     
@@ -344,66 +346,117 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#primary">@Primary</a></li>
+<li><a href="#by-naming-convention">By naming convention</a></li>
+<li><a href="#qualifier">@Qualifier</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
         
 
-        <p>Dependency injection is the underpinning concept of the Spring framework that is widely used to build enterprise applications using Java.
-To understand the concept, it&rsquo;s important to grasp what dependency is.
-Semantically speaking, dependency involves two things and describes the relationship between them.
-In the context of Java programming, it refers to the relationship between two classes - a class is the dependency of another class if it provides indispensable functions for it.</p>
-
-<p>Let&rsquo;s examine the concept from an example.
-Imagine we have a <code>Room</code> class that is able to perform cleaning, either manually or automatically.
-The cleaning activity is performed using any class implementing the <code>CleanStrategy</code> interface which provides a function, not surprisingly, called <code>clean()</code>.
-In this case, whenever a room object needs cleaning, it will invoke the cleaning agent to do the actual work, and we call the class <code>Room</code> depends on a class implementing the interface <code>CleanStrategy</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Room</span> <span class="p">{</span>
-<span class="ln"> 2</span>
+<p>In this post, we&rsquo;ll look at possible ways of resolving the issue with multiple candidate dependencies.
+To illustrate the problem, let&rsquo;s say we have a <code>Room</code> class that has a dependency on an object implementing the <code>CleanStrategy</code> interface:</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="nd">@Component</span>
+<span class="ln"> 2</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Room</span> <span class="p">{</span>
 <span class="ln"> 3</span>  <span class="kd">private</span> <span class="nf">final</span> <span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span><span class="p">;</span>
 <span class="ln"> 4</span>
-<span class="ln"> 5</span>  <span class="kd">public</span> <span class="nf">Room</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 6</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ManualClean</span><span class="p">();</span>
-<span class="ln"> 7</span>  <span class="p">}</span>
-<span class="ln"> 8</span>
-<span class="ln"> 9</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span><span class="p">.</span><span class="na">clean</span><span class="p">();</span>
-<span class="ln">11</span>  <span class="p">}</span>
-<span class="ln">12</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ManualClean</span> <span class="nf">implements</span> <span class="n">CleanStrategy</span> <span class="p">{</span>
-<span class="ln">2</span>
+<span class="ln"> 5</span>  <span class="nd">@Autowired</span>
+<span class="ln"> 6</span>  <span class="kd">public</span> <span class="nf">Room</span><span class="p">(</span><span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 7</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span> <span class="o">=</span> <span class="n">cleanStrategy</span><span class="p">;</span>
+<span class="ln"> 8</span>  <span class="p">}</span>
+<span class="ln"> 9</span>
+<span class="ln">10</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">11</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span><span class="p">.</span><span class="na">clean</span><span class="p">();</span>
+<span class="ln">12</span>  <span class="p">}</span>
+<span class="ln">13</span><span class="p">}</span></code></pre></div>
+<p>Now we have two ways to clean the room, manually and automatically, and the corresponding class implementations are as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="nd">@Component</span>
+<span class="ln">2</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ManualClean</span> <span class="nf">implements</span> <span class="n">CleanStrategy</span> <span class="p">{</span>
 <span class="ln">3</span>  <span class="nd">@Override</span>
 <span class="ln">4</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
 <span class="ln">5</span>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;clean manually!&#34;</span><span class="p">);</span>
 <span class="ln">6</span>  <span class="p">}</span>
-<span class="ln">7</span><span class="p">}</span></code></pre></div>
-<p>Now we are ready to unravel the concept of <strong>dependency injection</strong>.
-In the above example, the <code>Room</code> class instantiates a <code>ManualClean</code> object within its constructor directly.
-In case we want a different clean strategy, like automatic cleaning, in the future, we&rsquo;ll have to get into the constructor and make the change manually.
-We can the classes <code>Room</code> and <code>ManualClean</code> are tightly coupled, which is not a desired design.</p>
-
-<p>Instead, we can make the two classes loosely coupled by modifying the constructor like in the code below:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Room</span> <span class="p">{</span>
-<span class="ln"> 2</span>
-<span class="ln"> 3</span>  <span class="kd">private</span> <span class="nf">final</span> <span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span><span class="p">;</span>
-<span class="ln"> 4</span>
-<span class="ln"> 5</span>  <span class="kd">public</span> <span class="nf">Room</span><span class="p">(</span><span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 6</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span> <span class="o">=</span> <span class="n">cleanStrategy</span><span class="p">;</span>
-<span class="ln"> 7</span>  <span class="p">}</span>
-<span class="ln"> 8</span>
-<span class="ln"> 9</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln">10</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span><span class="p">.</span><span class="na">clean</span><span class="p">();</span>
-<span class="ln">11</span>  <span class="p">}</span>
-<span class="ln">12</span><span class="p">}</span></code></pre></div>
-<p>Now we can change cleaning agents without modifying the class <code>Room</code> itself.
-This way of decoupling two classes is also called the <strong>strategy pattern</strong> using the terminology of design patterns.</p>
-
-<p>After we make the change, the dependency injection comes into play when we try to create a <code>Room</code> object by supplying a <code>ManualClean</code> object - we inject the <code>ManualClean</code> object into the <code>Room</code> object.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Demo</span> <span class="p">{</span>
-<span class="ln">2</span>  <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">3</span>    <span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ManualClean</span><span class="p">();</span>
-<span class="ln">4</span>    <span class="n">Room</span> <span class="nf">room</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Room</span><span class="p">(</span><span class="n">cleanStrategy</span><span class="p">);</span>
-<span class="ln">5</span>    <span class="n">room</span><span class="p">.</span><span class="na">clean</span><span class="p">();</span>
+<span class="ln">7</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="nd">@Component</span>
+<span class="ln">2</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">AutomaticClean</span> <span class="nf">implements</span> <span class="n">CleanStrategy</span> <span class="p">{</span>
+<span class="ln">3</span>  <span class="nd">@Override</span>
+<span class="ln">4</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">5</span>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;clean automatically!&#34;</span><span class="p">);</span>
 <span class="ln">6</span>  <span class="p">}</span>
 <span class="ln">7</span><span class="p">}</span></code></pre></div>
-<p>This code change may seem trivial at first glance, but we&rsquo;ll learn its significance in future posts about the Spring framework.</p>
+<p>Because both classes have the <code>@Component</code> annotation, Spring will have trouble determining which one it should use to inject into the <code>Room</code> class.
+To address this, we have three possible ways.</p>
 
+<h3 id="primary">@Primary</h3>
+
+<p>It we want to use the <code>ManualClean</code> as the underlying cleaning strategy for the <code>Room</code> class, we can use the annotation <code>Primary</code> to let Spring know our intent.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="nd">@Component</span>
+<span class="ln">2</span><span class="nd">@Primary</span>
+<span class="ln">3</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ManualClean</span> <span class="nf">implements</span> <span class="n">CleanStrategy</span> <span class="p">{</span>
+<span class="ln">4</span>  <span class="nd">@Override</span>
+<span class="ln">5</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">6</span>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;clean manually!&#34;</span><span class="p">);</span>
+<span class="ln">7</span>  <span class="p">}</span>
+<span class="ln">8</span><span class="p">}</span></code></pre></div>
+<h3 id="by-naming-convention">By naming convention</h3>
+
+<p>Instead of using the <code>@Primary</code> annotation, we can change the parameter name of the constructor.
+Here, we specify that the input parameter is named as <code>automaticClean</code>, and Spring will recognize the name and choose the associated class.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="nd">@Component</span>
+<span class="ln"> 2</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Room</span> <span class="p">{</span>
+<span class="ln"> 3</span>  <span class="kd">private</span> <span class="nf">final</span> <span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span><span class="p">;</span>
+<span class="ln"> 4</span>
+<span class="ln"> 5</span>  <span class="nd">@Autowired</span>
+<span class="ln"> 6</span>  <span class="kd">public</span> <span class="nf">Room</span><span class="p">(</span><span class="n">CleanStrategy</span> <span class="nf">automaticClean</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 7</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span> <span class="o">=</span> <span class="n">automaticClean</span><span class="p">;</span>
+<span class="ln"> 8</span>  <span class="p">}</span>
+<span class="ln"> 9</span>
+<span class="ln">10</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">11</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span><span class="p">.</span><span class="na">clean</span><span class="p">();</span>
+<span class="ln">12</span>  <span class="p">}</span>
+<span class="ln">13</span><span class="p">}</span></code></pre></div>
+<p>Note that in case of autowiring on class attributes, their names should be changes instead of constructor parameters.</p>
+
+<h3 id="qualifier">@Qualifier</h3>
+
+<p>The last option we have is to use the <code>@Qualifier</code> annotation.
+To do this, we give a nickname for each candidate dependency class, like below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="nd">@Component</span>
+<span class="ln">2</span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;manual&#34;</span><span class="p">)</span>
+<span class="ln">3</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">ManualClean</span> <span class="nf">implements</span> <span class="n">CleanStrategy</span> <span class="p">{</span>
+<span class="ln">4</span>  <span class="nd">@Override</span>
+<span class="ln">5</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">6</span>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;clean manually!&#34;</span><span class="p">);</span>
+<span class="ln">7</span>  <span class="p">}</span>
+<span class="ln">8</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln">1</span><span class="nd">@Component</span>
+<span class="ln">2</span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;automatic&#34;</span><span class="p">)</span>
+<span class="ln">3</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">AutomaticClean</span> <span class="nf">implements</span> <span class="n">CleanStrategy</span> <span class="p">{</span>
+<span class="ln">4</span>  <span class="nd">@Override</span>
+<span class="ln">5</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">6</span>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;clean automatically!&#34;</span><span class="p">);</span>
+<span class="ln">7</span>  <span class="p">}</span>
+<span class="ln">8</span><span class="p">}</span></code></pre></div>
+<p>Then, in the <code>Room</code> class constructor we just need to specify the cleaning strategy we want through its associated qualifier.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="nd">@Component</span>
+<span class="ln"> 2</span><span class="kd">public</span> <span class="nf">class</span> <span class="n">Room</span> <span class="p">{</span>
+<span class="ln"> 3</span>  <span class="kd">private</span> <span class="nf">final</span> <span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span><span class="p">;</span>
+<span class="ln"> 4</span>
+<span class="ln"> 5</span>  <span class="nd">@Autowired</span>
+<span class="ln"> 6</span>  <span class="kd">public</span> <span class="nf">Room</span><span class="p">(</span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;manual&#34;</span><span class="p">)</span> <span class="n">CleanStrategy</span> <span class="nf">cleanStrategy</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 7</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span> <span class="o">=</span> <span class="n">cleanStrategy</span><span class="p">;</span>
+<span class="ln"> 8</span>  <span class="p">}</span>
+<span class="ln"> 9</span>
+<span class="ln">10</span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">clean</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">11</span>    <span class="k">this</span><span class="p">.</span><span class="na">cleanStrategy</span><span class="p">.</span><span class="na">clean</span><span class="p">();</span>
+<span class="ln">12</span>  <span class="p">}</span>
+<span class="ln">13</span><span class="p">}</span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -425,42 +478,42 @@ This way of decoupling two classes is also called the <strong>strategy pattern</
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f30%2fdependency-injection%2f&amp;text=Spring%20-%20Dependency%20Injection&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fkunlei.github.io%2f2020%2f08%2f05%2fcandidate-dependencies%2f&amp;text=Spring%20-%20Resolving%20Multiple%20Candidate%20Dependencies&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f30%2fdependency-injection%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkunlei.github.io%2f2020%2f08%2f05%2fcandidate-dependencies%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f30%2fdependency-injection%2f&amp;title=Spring%20-%20Dependency%20Injection" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f08%2f05%2fcandidate-dependencies%2f&amp;title=Spring%20-%20Resolving%20Multiple%20Candidate%20Dependencies" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f30%2fdependency-injection%2f&amp;title=Spring%20-%20Dependency%20Injection" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkunlei.github.io%2f2020%2f08%2f05%2fcandidate-dependencies%2f&amp;title=Spring%20-%20Resolving%20Multiple%20Candidate%20Dependencies" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f30%2fdependency-injection%2f&amp;title=Spring%20-%20Dependency%20Injection" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fkunlei.github.io%2f2020%2f08%2f05%2fcandidate-dependencies%2f&amp;title=Spring%20-%20Resolving%20Multiple%20Candidate%20Dependencies" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f07%2f30%2fdependency-injection%2f&amp;description=Spring%20-%20Dependency%20Injection" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkunlei.github.io%2f2020%2f08%2f05%2fcandidate-dependencies%2f&amp;description=Spring%20-%20Resolving%20Multiple%20Candidate%20Dependencies" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -478,11 +531,11 @@ This way of decoupling two classes is also called the <strong>strategy pattern</
           <h4 class="see-also">See also</h4>
           <ul>
           
+            <li><a href="/2020/08/02/inversion-of-control/">Spring - Inversion of Control</a></li>
+          
+            <li><a href="/2020/07/30/dependency-injection/">Spring - Dependency Injection</a></li>
+          
             <li><a href="/2020/07/12/iloaddable-and-ilomodel/">IloAddable and IloModel</a></li>
-          
-            <li><a href="/2019/10/11/setup/">Setup and Run CPLEX using Java</a></li>
-          
-            <li><a href="/2019/10/01/multikeymap/">MultiKeyMap in Java</a></li>
           
           </ul>
           
@@ -493,13 +546,9 @@ This way of decoupling two classes is also called the <strong>strategy pattern</
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://kunlei.github.io/2020/07/23/histogram-multiple-data-frame/" data-toggle="tooltip" data-placement="top" title="Recipe - Plotting Multiple Histograms in one Graph">&larr; Previous Post</a>
+              <a href="https://kunlei.github.io/2020/08/02/inversion-of-control/" data-toggle="tooltip" data-placement="top" title="Spring - Inversion of Control">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://kunlei.github.io/2020/08/02/inversion-of-control/" data-toggle="tooltip" data-placement="top" title="Spring - Inversion of Control">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
@@ -509,12 +558,12 @@ This way of decoupling two classes is also called the <strong>strategy pattern</
         
           
           <div class="disqus-comments">                  
-            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/07/30/dependency-injection">comments</span></button>
+            <button id="show-comments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="https://kunlei.github.io/2020/08/05/candidate-dependencies">comments</span></button>
             <div id="disqus_thread"></div>
 
             <script type="text/javascript">
               var disqus_config = function () {
-              this.page.url = 'https:\/\/kunlei.github.io\/2020\/07\/30\/dependency-injection';
+              this.page.url = 'https:\/\/kunlei.github.io\/2020\/08\/05\/candidate-dependencies';
             };
 
           </script>
