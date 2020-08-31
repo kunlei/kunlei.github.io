@@ -24,6 +24,15 @@ Basics  Dependency Injection Inversion of Control Multiple Candidate Dependencie
     </item>
     
     <item>
+      <title>Spring - Bean Scope</title>
+      <link>https://kunlei.github.io/2020/08/10/bean-scope/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/08/10/bean-scope/</guid>
+      <description>In Spring, beans refer to the objects constructed, assembled and managed by the framework.</description>
+    </item>
+    
+    <item>
       <title>Spring - Resolving Multiple Candidate Dependencies</title>
       <link>https://kunlei.github.io/2020/08/05/candidate-dependencies/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
@@ -661,7 +670,7 @@ IloAddable IloAddable is the base interface implemented by most classes in the p
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/page/book-list/</guid>
       <description>I am an avid reader and below compiles the books I read or am reading&amp;hellip;
-2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice - reading The 5 A.M. club The great influenza The tipping point How to take smart notes Naked economics Poor economics The room where it happened (reading) China&amp;rsquo;s gilded age China&amp;rsquo;s economy The end of white christian America (reading) Addiction, procrastination and laziness (reading) Too much and never enough Bookdown: Authoring Books and Technical Documents with R Markdown Can Asians think Why we work Get out of your own way (reading)  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
+2020  A liberated mind Thinking, fast and slow Nudge: Improving Decisions About Health, Wealth, and Happiness Winning the Loser&amp;rsquo;s Game Your money or your life Better than before Black box thinking Paradox of choice The 5 A.M. club The great influenza The tipping point How to take smart notes Naked economics Poor economics The room where it happened (reading) China&amp;rsquo;s gilded age China&amp;rsquo;s economy The end of white christian America (reading) Addiction, procrastination and laziness (reading) Too much and never enough Bookdown: Authoring Books and Technical Documents with R Markdown Can Asians think Why we work Get out of your own way (reading) Tiny Habits by BJ Fogg Atomic Habits by James Clear The deficit myth by Stephanie Kelton (reading)  2019  The gardener and the carpenter Everything I never told you So you want to talk about race Peak Crush it!</description>
     </item>
     
     <item>
