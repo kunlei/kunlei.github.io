@@ -24,6 +24,16 @@ Basics  Dependency Injection Inversion of Control Multiple Candidate Dependencie
     </item>
     
     <item>
+      <title>Functional Interface - Predicate</title>
+      <link>https://kunlei.github.io/2020/08/10/predicate/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/08/10/predicate/</guid>
+      <description>Functional interface in Java is a special type of interface that has only one abstract method. A typical example is Predicate&amp;lt;T&amp;gt; which provides a test(T t) method to return a boolean variable:
+1@FunctionalInterface 2public interface Predicate&amp;lt;T&amp;gt; { 3 boolean test(T t); 4} Note that @FunctionalInterface is not required here but can help the JDK recognize our intention. Classes implementing this interface provide an evaluation function to decide whether a statement about a T object is true or not.</description>
+    </item>
+    
+    <item>
       <title>Spring - Resolving Multiple Candidate Dependencies</title>
       <link>https://kunlei.github.io/2020/08/05/candidate-dependencies/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>

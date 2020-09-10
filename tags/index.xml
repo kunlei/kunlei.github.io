@@ -8,7 +8,7 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +16,7 @@
     <item>
       <title>java</title>
       <link>https://kunlei.github.io/tags/java/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
       <guid>https://kunlei.github.io/tags/java/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     </item>
     
     <item>
-      <title>benders decomposition</title>
+      <title>Benders decomposition</title>
       <link>https://kunlei.github.io/tags/benders-decomposition/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
@@ -113,7 +113,7 @@
     </item>
     
     <item>
-      <title>Books</title>
+      <title>books</title>
       <link>https://kunlei.github.io/tags/books/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       <author>kunlei1987@gmail.com (Kunlei Lian)</author>
