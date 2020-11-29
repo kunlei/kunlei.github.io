@@ -292,6 +292,57 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/02/09/cpp-copy-control-1/">
+        <h2 class="post-title">C&#43;&#43; - Copy Control (1)</h2>
+        
+        <h3 class="post-subtitle">
+            The gang of three
+        </h3>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 9, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;689&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        Copy control in C++ is too big a topic and I&rsquo;ll try to share my learnings in multiple posts. Part of the reasons why C++ is so powerful lies in the granular control it grants programmers to decide how objects of a class are created (constructor), copied (copy constructor), assigned (copy-assignment operator) and destroyed (destructor). The new standard introduces the move operators: move constructor and move-assignment operator. Therefore, there are five operators to remember when designing a C++ class:
+        <a href="https://kunlei.github.io/2020/02/09/cpp-copy-control-1/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://kunlei.github.io/2020/02/02/cpp-statements/">
         <h2 class="post-title">C&#43;&#43; - Statements</h2>
         
@@ -720,56 +771,6 @@ What is this? (pun intended) The specifier this is a reserved keyword in C++ tha
 <span class="ln">2</span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="n">pa</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
 </span><span class="ln">3</span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
 </span></code></pre></div>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2020/01/14/cpp-string/">
-        <h2 class="post-title">C&#43;&#43; - string</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 14, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;232&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        The string is a library class defined by C++ to represent and manipulate characters. It&rsquo;s defined in header string and included in namespace std:
-1#include &lt;string&gt;2using std::string;  We&rsquo;ll look at some of the most useful operations for string.
-Creation There exist a number of constructors for string.
-1string(); // default constructor 2string(const string &amp;str); // copy constructor 3string(const char * c); // c-string constructor 4string(size_t n, char c); // fill constructor 1string a; // define empty string using default constructor 2string b(a); // copy construction 3string c(&#34;hello world&#34;); // c-string constructor 4string d(10, d); // fill construction  Access The library defines a number of iterators to iterate through a string object.
-        <a href="https://kunlei.github.io/2020/01/14/cpp-string/" class="post-read-more">[Read More]</a>
         
     </div>
 

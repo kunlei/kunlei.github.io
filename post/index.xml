@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>kunlei1987@gmail.com (Kunlei Lian)</managingEditor>
     <webMaster>kunlei1987@gmail.com (Kunlei Lian)</webMaster>
-    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kunlei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What I Am Grateful For</title>
+      <link>https://kunlei.github.io/2020/11/28/thanksgiving/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/11/28/thanksgiving/</guid>
+      <description>I have been &amp;ldquo;lazy&amp;rdquo; in the past few months about updating this blog. There seemed to be endless tasks I needed to prioritize over writing posts. But reflecting back, I couldn&amp;rsquo;t come up with any significant achievements that worth mentioning here - being busy is more like an illusion or an excuse to avoid sitting down and producing something memorable. The thing is, the more I postponed writing something, the harder I found it to &amp;hellip; write something.</description>
+    </item>
     
     <item>
       <title>Functional Interface - Predicate</title>
