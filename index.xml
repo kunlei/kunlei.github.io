@@ -14,6 +14,26 @@
     
     
     <item>
+      <title>Projection</title>
+      <link>https://kunlei.github.io/2020/12/04/projection/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/12/04/projection/</guid>
+      <description>Projection is the process of, not surprisingly, projecting a polyhedron into a lower dimensional space. First, let&amp;rsquo;s first define a polyhedron:
+$$ \begin{align} P = \{(x, y) \in \mathcal{R}^{n_1} \times \mathcal{R}^{n_2} \, | \, Ax + By \geq b \} \end{align} $$
+A polyhedron can also be defined as the intersection of a finite number of half-spaces, and in the definition above, each $a_i x + b_i y \geq b_i$ essentially defines a half-space.</description>
+    </item>
+    
+    <item>
+      <title>Seven Habits of Effective Teens</title>
+      <link>https://kunlei.github.io/2020/11/30/seven-habits-effective-teens/</link>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+      <author>kunlei1987@gmail.com (Kunlei Lian)</author>
+      <guid>https://kunlei.github.io/2020/11/30/seven-habits-effective-teens/</guid>
+      <description> Be proactive Start with the end in mind First things first Think win-win </description>
+    </item>
+    
+    <item>
       <title>What I Am Grateful For</title>
       <link>https://kunlei.github.io/2020/11/28/thanksgiving/</link>
       <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>

@@ -211,6 +211,59 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/05/13/command-screen/">
+                <h2 class="post-title">Linux screen management</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on May 13, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    Recently, I came across the task of testing the performance of an optimizer in a Linux environment and I wanted to test on multiple instances at the same time. Essentially, what I need are two things:
+ Able to run the optimizer for a long time without staying logged on. Able to run the optimizer with different inputs within the same login.  I was introduced the command screenand it solved my problem perfectly.<a href="https://kunlei.github.io/2020/05/13/command-screen/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/05/08/out-of-whack/">
+                <h2 class="post-title">whack</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on May 8, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    When I worked on an optimization project a few weeks back, the phrase &lsquo;whack-a-mole&rsquo; was used often to describe the behavior of the optimizer. The decision variables themselves were straightforward, most of them were binary variables and the problem took minimal times to solve. The difficulty came with the numerous constrains brought up by the business partners. Although the constraints all make sense from the operation perspective, including them into the model makes it infeasible most of the time.<a href="https://kunlei.github.io/2020/05/08/out-of-whack/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/english">english</a>&nbsp;
+                  
+                    #<a href="/tags/words">words</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
               <a href="https://kunlei.github.io/2020/04/29/review-2020-04/">
                 <h2 class="post-title">2020 April Review</h2>
 
@@ -458,70 +511,6 @@ $$</p>
                   
                     The C++ standard library defines a facility function that exchanges values of two variables. It&rsquo;s defined in header &lt;utility&gt; and namespace std. The code below shows an illustrative example.
 1#include &lt;utility&gt;2#include &lt;iostream&gt;3 4int main() { 5 int a = 10, b = 20; 6 // before swap 7 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 10 8 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 20 9 10 swap(a, b); 11 12 // after swap 13 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 20 14 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.<a href="https://kunlei.github.io/2020/02/12/cpp-swap/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/">
-                <h2 class="post-title">C&#43;&#43; - Copy Control (3)</h2>
-
-                
-                  <h3 class="post-subtitle">
-                    Create objects that share states
-                  </h3>
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on February 11, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    In an earlier post, we discussed ways to define copy control operators to make objects of the same class behave like values, in other words, copies of an object are independent from each other and don&rsquo;t share resources. However, sometimes we do want multiple objects to share the same data and the objects themselves behave more like pointers. In this post, we will examine how to achieve this, using an illustrative class Car which has a price variable and weight variable to represent, not surprisingly, its price and weight, respectively.<a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/02/10/cpp-copy-control-2/">
-                <h2 class="post-title">C&#43;&#43; - Copy Control (2)</h2>
-
-                
-                  <h3 class="post-subtitle">
-                    Create objects that act independently
-                  </h3>
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on February 10, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    In this post, we will put our copy control skill in use by designing an artificial Car class that manages its own resources. A Car object has two member attributes, price and weight, both are integer variables. The synthesized copy control operators would be enough if both of them are represented in primitive types. For the sake of illustration and in order to make this code more interesting, we use a pointer to a integer variable to save a car&rsquo;s weight.<a href="https://kunlei.github.io/2020/02/10/cpp-copy-control-2/" class="post-read-more">[Read More]</a>
                   
                 
               </div>

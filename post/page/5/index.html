@@ -211,6 +211,74 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/18/cpp-auto/">
+                <h2 class="post-title">C&#43;&#43; - auto</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 18, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    The C++ new standard introduces the keyword auto to help us deduce the type of a variable that&rsquo;s assigned to the value of an expression.
+1int a = 1, b = 2; 2int c = a + b; // old way 3auto d = a + b; // new way  One thing to keep in mind is that the top-level const is normally ignored during the type deduction:
+1const int a = 3; 2auto aa = a; // aa is an int, not const int  However, the top-level const is not ignored when we define a reference:<a href="https://kunlei.github.io/2020/01/18/cpp-auto/" class="post-read-more">[Read More]</a>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kunlei.github.io/2020/01/18/cpp-decltype/">
+                <h2 class="post-title">C&#43;&#43; - decltype</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on January 18, 2020
+              </p>
+              <div class="post-entry">
+                
+                  
+                    <p>The keyword <code>decltype</code> is similar to <code>auto</code> in that it also helps us to deduce variable type, but there are some subtle differences.</p>
+
+<p>For one, <code>decltype</code> does not ignore top-level const.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">decltype</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="n">aa</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// aa is defined as const int, not int
+</span></code></pre></div>
+<p>For two, <code>decltype</code> sometimes returns a reference type.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="ln">1</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">pa</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ra</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+<span class="ln">2</span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="n">pa</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
+</span><span class="ln">3</span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int&amp;
+</span></code></pre></div>
+                  
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
               <a href="https://kunlei.github.io/2020/01/14/cpp-string/">
                 <h2 class="post-title">C&#43;&#43; - string</h2>
 
@@ -441,67 +509,6 @@ Precedence and Associativity When multiple operators show up in the same express
                 <span class="post-meta">
                   
                     #<a href="/tags/book">book</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2020/01/01/morning-club-2020/">
-                <h2 class="post-title">The Morning Club - 2020</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on January 1, 2020
-              </p>
-              <div class="post-entry">
-                
-                  
-                    <p>03/10/2020 &ndash; 06:00am
-03/11/2020 &ndash; 06:15am
-03/12/2020 &ndash; 08:00am
-03/13/2020 &ndash; 08:00am
-03/14/2020 &ndash; 08:00am
-03/16/2020 &ndash; 07:00am
-03/17/2020 &ndash; 07:40am
-03/18/2020 &ndash; 07:40am
-03/19/2020 &ndash; 07:40am
-03/21/2020 &ndash; 08:30am
-03/23/2020 &ndash; 06:50am</p>
-
-                  
-                
-              </div>
-
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://kunlei.github.io/2019/12/28/cpp-data-types/">
-                <h2 class="post-title">C&#43;&#43; - Data Types</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on December 28, 2019
-              </p>
-              <div class="post-entry">
-                
-                  
-                    Data type is probably the most fundamental topic pertinent to a programming language. There is a plethora of online resources explaining all the available data types in C++, and the intend of this post is to serve as a quick reference for my future lookup because I used to check times and again some of the items in this post. It&rsquo;s time to avoid all that hassles and put them all in one place.<a href="https://kunlei.github.io/2019/12/28/cpp-data-types/" class="post-read-more">[Read More]</a>
-                  
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="/tags/c&#43;&#43;">c&#43;&#43;</a>&nbsp;
                   
                 </span>
               
