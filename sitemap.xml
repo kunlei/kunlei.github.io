@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kunlei.github.io/post/</loc>
-    <lastmod>2020-12-26T00:00:00+00:00</lastmod>
+    <loc>https://kunlei.github.io/2020/12/27/resolution-2021/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kunlei.github.io/tags/review/</loc>
-    <lastmod>2020-12-26T00:00:00+00:00</lastmod>
+    <loc>https://kunlei.github.io/post/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/resolution/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kunlei.github.io/tags/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kunlei.github.io/tags/review/</loc>
     <lastmod>2020-12-26T00:00:00+00:00</lastmod>
   </url>
   
