@@ -292,96 +292,6 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
-    <a href="https://kunlei.github.io/2020/05/18/cpp-tuple/">
-        <h2 class="post-title">C&#43;&#43; - tuple</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 18, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;180&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        In my coding work today, I came across a need to store three values, of different types, within a single container so that I can save them in a set. Normally I would define a dedicated class or structure, but a brief search online led me to an existing solution provided by C++ &ndash; tuple.
-What is tuple? In a nutshell, tuple provides an convenient way to let programmers define a type that contains data elements of various types.
-        <a href="https://kunlei.github.io/2020/05/18/cpp-tuple/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://kunlei.github.io/2020/05/13/command-screen/">
-        <h2 class="post-title">Linux screen management</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 13, 2020
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;252&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Recently, I came across the task of testing the performance of an optimizer in a Linux environment and I wanted to test on multiple instances at the same time. Essentially, what I need are two things:
- Able to run the optimizer for a long time without staying logged on. Able to run the optimizer with different inputs within the same login.  I was introduced the command screenand it solved my problem perfectly.
-        <a href="https://kunlei.github.io/2020/05/13/command-screen/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
     <a href="https://kunlei.github.io/2020/05/08/out-of-whack/">
         <h2 class="post-title">whack</h2>
         
@@ -789,6 +699,105 @@ $$</p>
         <a href="https://kunlei.github.io/tags/lp/">lp</a>&nbsp;
         
         <a href="https://kunlei.github.io/tags/opt/">opt</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/02/12/cpp-swap/">
+        <h2 class="post-title">C&#43;&#43; - Swap</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 12, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;201&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        The C++ standard library defines a facility function that exchanges values of two variables. It&rsquo;s defined in header &lt;utility&gt; and namespace std. The code below shows an illustrative example.
+1#include &lt;utility&gt;2#include &lt;iostream&gt;3 4int main() { 5 int a = 10, b = 20; 6 // before swap 7 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 10 8 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 20 9 10 swap(a, b); 11 12 // after swap 13 std::cout &lt;&lt; &#34;a = &#34; &lt;&lt; a &lt;&lt; std::endl; // a = 20 14 std::cout &lt;&lt; &#34;b = &#34; &lt;&lt; b &lt;&lt; std::endl; // b = 10 15 16 return 0; 17}  Define Swap for Class We might overload the swap function for our own classes, and the code below shows an example.
+        <a href="https://kunlei.github.io/2020/02/12/cpp-swap/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/">
+        <h2 class="post-title">C&#43;&#43; - Copy Control (3)</h2>
+        
+        <h3 class="post-subtitle">
+            Create objects that share states
+        </h3>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 11, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;546&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Kunlei Lian
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        In an earlier post, we discussed ways to define copy control operators to make objects of the same class behave like values, in other words, copies of an object are independent from each other and don&rsquo;t share resources. However, sometimes we do want multiple objects to share the same data and the objects themselves behave more like pointers. In this post, we will examine how to achieve this, using an illustrative class Car which has a price variable and weight variable to represent, not surprisingly, its price and weight, respectively.
+        <a href="https://kunlei.github.io/2020/02/11/cpp-copy-control-3/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://kunlei.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>&nbsp;
         
     </div>
     
