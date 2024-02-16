@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kunlei.github.io/about.html</loc>
+    <lastmod>2024-02-16T02:54:19.196Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kunlei.github.io/docs/blog/index.html</loc>
+    <lastmod>2024-02-16T04:37:22.755Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kunlei.github.io/docs/blog/posts/2024-02-15.html</loc>
+    <lastmod>2024-02-16T04:47:57.579Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kunlei.github.io/docs/blog/posts/2024-02-15-placeholder/index.html</loc>
+    <lastmod>2024-02-16T04:48:53.177Z</lastmod>
+  </url>
 </urlset>
