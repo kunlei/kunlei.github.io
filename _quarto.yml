@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "OptVoyager"
+  google-analytics: "G-DJ30KLH89M"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - text: "Blog"
+        href: docs/blog/index.qmd
+      - text: "Books"
+        menu:
+          - text: "OR-Tools"
+            icon: "book"
+            href: "https://kunlei.github.io/python-ortools-notes/"
+          - text: "Large-Scale Optimization"
+            icon: "book"
+            href: "https://kunlei.github.io/large-scale-opt-python/"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
