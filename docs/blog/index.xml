@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>Kunlei Lian</title>
-<link>https://https://kunlei.github.io/docs/blog/</link>
-<atom:link href="https://https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://kunlei.github.io/docs/blog/</link>
+<atom:link href="https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.526</generator>
-<lastBuildDate>Sat, 17 Feb 2024 03:35:11 GMT</lastBuildDate>
+<lastBuildDate>Sat, 17 Feb 2024 03:36:01 GMT</lastBuildDate>
 <item>
   <title>Site Revamp using Quarto</title>
-  <link>https://https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</link>
+  <link>https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</link>
   <description><![CDATA[ 
 
 
@@ -24,8 +24,8 @@
 
 
  ]]></description>
-  <guid>https://https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</guid>
-  <pubDate>Sat, 17 Feb 2024 03:35:11 GMT</pubDate>
+  <guid>https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</guid>
+  <pubDate>Sat, 17 Feb 2024 03:36:01 GMT</pubDate>
 </item>
 </channel>
 </rss>
