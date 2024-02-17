@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "OptVoyager"
+  title: "Kunlei Lian"
   google-analytics: "G-DJ30KLH89M"
   navbar:
     left:
@@ -23,9 +23,15 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: journal
     css: styles.css
     toc: true
+    toc-depth: 4
+    toc-title: "Contents"
+    html-math-method: katex
+    include-in-header:
+      - includes.html
+    highlight-style: tango
 
 
 
