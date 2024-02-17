@@ -6,26 +6,26 @@
       version="2.0">
 <channel>
 <title>Kunlei Lian</title>
-<link>https://kunlei.github.io/docs/blog/</link>
-<atom:link href="https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://https://kunlei.github.io/docs/blog/</link>
+<atom:link href="https://https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.526</generator>
-<lastBuildDate>Sat, 17 Feb 2024 02:46:09 GMT</lastBuildDate>
+<lastBuildDate>Sat, 17 Feb 2024 03:35:11 GMT</lastBuildDate>
 <item>
-  <title>test</title>
-  <link>https://kunlei.github.io/docs/blog/posts/2024-02-15-placeholder/</link>
+  <title>Site Revamp using Quarto</title>
+  <link>https://https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</link>
   <description><![CDATA[ 
 
 
 
 
-<p>test</p>
+<p>I have probably spent more time revamping my personal website than actually writing contents for it. Every once in a while, I would feel the site that I put up some time ago becomes too ugly to motivate me to update it. Since I have gradually used more Quarto to write my books and it also has the functionality to build website, I feel it’s time to yet again revamp my blog using Quarto. Hopefully, this is the last time.</p>
 
 
 
  ]]></description>
-  <guid>https://kunlei.github.io/docs/blog/posts/2024-02-15-placeholder/</guid>
-  <pubDate>Sat, 17 Feb 2024 02:46:09 GMT</pubDate>
+  <guid>https://https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</guid>
+  <pubDate>Sat, 17 Feb 2024 03:35:11 GMT</pubDate>
 </item>
 </channel>
 </rss>
