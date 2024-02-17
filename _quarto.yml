@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Kunlei Lian"
+  site-url: https://https://kunlei.github.io/
   google-analytics: "G-DJ30KLH89M"
   navbar:
     left:

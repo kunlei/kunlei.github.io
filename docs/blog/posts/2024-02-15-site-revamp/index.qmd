@@ -1,14 +1,18 @@
 ---
-title: test
+title: Site Revamp using Quarto
 # subtitle: Use callouts to draw attention to important complementary content without interupting the document flow
 # description: |
 #   Callouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.
 # categories:
 #   - Features
 #   - Authoring
-# author: Charles Teague
-# date: 2/13/2022
+author: Kunlei Lian
+date: 2/15/2022
 # image: callouts.png
 # image-alt: "Three calout boxes: A note (has a blue banner with info icon preceding the header), a tip (has a green banner with lightbulb icon preceding the header), and an important (has a red banner with info exclamation-point icon preceding the header)."
 ---
-test
+
+I have probably spent more time revamping my personal website than actually writing contents for it.
+Every once in a while, I would feel the site that I put up some time ago becomes too ugly to motivate me to update it.
+Since I have gradually used more Quarto to write my books and it also has the functionality to build website, I feel it's time to yet again revamp my blog using Quarto.
+Hopefully, this is the last time.
