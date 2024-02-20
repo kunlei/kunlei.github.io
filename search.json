@@ -14,6 +14,13 @@
     "text": "I have probably spent more time revamping my personal website than actually writing contents for it. Every once in a while, I would feel the site that I put up some time ago becomes too ugly to motivate me to update it. Since I have gradually used more Quarto to write my books and it also has the functionality to build website, I feel it’s time to yet again revamp my blog using Quarto. Hopefully, this is the last time."
   },
   {
+    "objectID": "docs/blog/posts/2024-02-20-python-jupyter-setup/index.html",
+    "href": "docs/blog/posts/2024-02-20-python-jupyter-setup/index.html",
+    "title": "Python Virtual Environemnt Setup",
+    "section": "",
+    "text": "Just save the list of commands I use frequently to create virtual environments and make them available to jupyter notebooks.\n# create a new virtual environemnt named 'env_name'\nconda create -n 'env_name'\n\n# activate the newly created virtual environment\nconda activate 'env_name'\n\n# list all available environments\nconda env list\n\n# remove an virtual environment\nconda env remove -n 'env_name'\n\n# install ipykernel\npip install --user ipykernel\n\n# add the virtual environment to jupyter\npython -m ipykernel install --user --name='env_name'\n\n# list available jupyter kernels\njupyter kernelspec list\n\n# remove kernel from jupyter\njupyter kernelspec uninstall 'env_name'"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Kunlei Lian",

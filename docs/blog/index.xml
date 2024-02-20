@@ -10,9 +10,51 @@
 <atom:link href="https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.526</generator>
-<lastBuildDate>Mon, 19 Feb 2024 02:20:09 GMT</lastBuildDate>
+<lastBuildDate>Tue, 20 Feb 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Python Virtual Environemnt Setup</title>
+  <dc:creator>Kunlei Lian</dc:creator>
+  <link>https://kunlei.github.io/docs/blog/posts/2024-02-20-python-jupyter-setup/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Just save the list of commands I use frequently to create virtual environments and make them available to jupyter notebooks.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"># create a new virtual environemnt named 'env_name'</span>
+<span id="cb1-2">conda create -n 'env_name'</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"># activate the newly created virtual environment</span>
+<span id="cb1-5">conda activate 'env_name'</span>
+<span id="cb1-6"></span>
+<span id="cb1-7"># list all available environments</span>
+<span id="cb1-8">conda env list</span>
+<span id="cb1-9"></span>
+<span id="cb1-10"># remove an virtual environment</span>
+<span id="cb1-11">conda env remove -n 'env_name'</span>
+<span id="cb1-12"></span>
+<span id="cb1-13"># install ipykernel</span>
+<span id="cb1-14">pip install --user ipykernel</span>
+<span id="cb1-15"></span>
+<span id="cb1-16"># add the virtual environment to jupyter</span>
+<span id="cb1-17">python -m ipykernel install --user --name='env_name'</span>
+<span id="cb1-18"></span>
+<span id="cb1-19"># list available jupyter kernels</span>
+<span id="cb1-20">jupyter kernelspec list</span>
+<span id="cb1-21"></span>
+<span id="cb1-22"># remove kernel from jupyter</span>
+<span id="cb1-23">jupyter kernelspec uninstall 'env_name'</span></code></pre></div>
+
+
+
+ ]]></description>
+  <category>Python</category>
+  <guid>https://kunlei.github.io/docs/blog/posts/2024-02-20-python-jupyter-setup/</guid>
+  <pubDate>Tue, 20 Feb 2024 05:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Site Revamp using Quarto</title>
+  <dc:creator>Kunlei Lian</dc:creator>
   <link>https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</link>
   <description><![CDATA[ 
 
@@ -24,8 +66,9 @@
 
 
  ]]></description>
+  <category>Misc</category>
   <guid>https://kunlei.github.io/docs/blog/posts/2024-02-15-site-revamp/</guid>
-  <pubDate>Mon, 19 Feb 2024 02:20:09 GMT</pubDate>
+  <pubDate>Tue, 15 Feb 2022 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

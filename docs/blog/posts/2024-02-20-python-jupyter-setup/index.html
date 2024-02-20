@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kunlei Lian">
+<meta name="dcterms.date" content="2024-02-20">
 
-<title>Kunlei Lian - Resume</title>
+<title>Kunlei Lian - Python Virtual Environemnt Setup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +114,7 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -88,7 +124,7 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Kunlei Lian</span>
     </a>
   </div>
@@ -99,15 +135,15 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../../../about.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/blog/index.html"> 
+    <a class="nav-link" href="../../../../docs/blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -144,28 +180,36 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resume</h1>
-</div>
+<h1 class="title">Python Virtual Environemnt Setup</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kunlei Lian </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 20, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -175,112 +219,32 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 </header>
 
 
-<section id="education" class="level3">
-<h3 class="anchored" data-anchor-id="education">Education</h3>
-<div class="d-flex justify-content-between">
-<div>
-<p><strong>University of Arkasnas</strong><br>
-Ph.D.&nbsp;in Industrial Engineering</p>
-</div>
-<div class="text-end">
-<p>Fayetteville, Arkansas<br>
-2012 - 2017</p>
-</div>
-</div>
-<ul>
-<li>Dissertation: <a href="https://scholarworks.uark.edu/etd/1912/"><em>Service Consistency in Vehicle Routing</em></a> <!-- - Developed an enhanced multi-directional local search algorithm for approximating Pareto frontiers in multi-objective optimization, effectively solving the consistent vehicle routing problems (ConVRP).
-- Developed a large neighborhood search and a branch-and-price algorithm to solve the ConVRP to minimize traveling costs. --></li>
-</ul>
-<div class="d-flex justify-content-between">
-<div>
-<p><strong>Huazhong University of Science and Technology</strong><br>
-M.S. in Industrial Engineering</p>
-</div>
-<div class="text-end">
-<p>Wuhan, China 2009 - 2012</p>
-</div>
-</div>
-<div class="d-flex justify-content-between">
-<div>
-<p><strong>Huazhong University of Science and Technology</strong><br>
-B.S. in Industrial Engineering</p>
-</div>
-<div class="text-end">
-<p>Wuhan, China 2005 - 2009</p>
-</div>
-</div>
-</section>
-<section id="experience" class="level3">
-<h3 class="anchored" data-anchor-id="experience">Experience</h3>
-<div class="d-flex justify-content-between">
-<div>
-<p><strong>Marriott Vacations Worldwide</strong></p>
-</div>
-<div class="text-end">
-<p>October 2023 - present</p>
-</div>
-</div>
-<p><em>Principal Data Scientist / Associate Director - Data Science</em></p>
-<ul>
-<li>Marketing campaign optimization</li>
-<li>Owner propensity to buy</li>
-<li>Inventory optimization</li>
-</ul>
-<div class="d-flex justify-content-between">
-<div>
-<p><strong>Walmart</strong></p>
-</div>
-<div class="text-end">
-<p>Map 2016 - August 2023</p>
-</div>
-</div>
-<p><em>Principal Data Scientist</em></p>
-<ul>
-<li>Oversaw all order optimization initiatives for Walmart grocery and regional distribution center (GDC&amp;RDC) network as principal data scientist, focusing on improving efficiencies in GDC&amp;RDC inbound and outbound replenishment operations.</li>
-<li>Led the development of truckload optimization (TLO) engine as the core of the next-gen inbound replenishment system that optimizes order quantities from vendors to DCs, enabled its rollout to 10,000+ lanes to replace legacy TLO.</li>
-<li>Designed and implemented a truck planning optimization (TPO) engine to smooth ship point volumes and reduce unplanned truck needs, anticipating a $9 million reduction in transportation costs for Q4 2023.</li>
-<li>Built an outbound order optimization (O3) engine using mixed-integer programming (MIP) and linear regression for GDCs and RDCs to smooth store inbound volumes, improve truck arrival time consistency and facilitate store labor planning.</li>
-<li>Devised a network planning model employing integer programming (IP) and K-means clustering to optimize shipment consolidation efficiency for Walmart’s largest inbound transportation network.</li>
-<li>Tech stack: Python, Java, Google OR-Tools, CPLEX | IP, MIP, Heuristics, Linear regression, Clustering</li>
-</ul>
-<p><em>Staff Data Scientist</em></p>
-<ul>
-<li>Designed and implemented a cloud-based distributed shipment consolidation engine for Walmart’s high-volume inbound transportation network, optimizing 100,000+ shipments during peak periods. It consists of a heuristic-driven partition engine to segment the network, a column generation-based consolidation engine that iteratively identifies cost-effective candidate loads, and a MIP-based picking engine for final load selection. Realized $1 million monthly transportation cost reductions in 2023, with progress toward replacing the current industry-leading commercial solver.</li>
-<li>Developed a rapid heuristic algorithm for solving the fixed sequence 3D bin packing problem in GDC pallet building process, addressing the 6-month learning curve and high turnover rates for new hires. Attained an average of 20s for full pallet building with 100+ heterogeneous cases, yielding 85+% packing efficiency and 80+% pallet stability. Conducted successful pilots in 2 GDCs, revealing a 70% decrease in the learning curve and an anticipated $10 million yearly savings if used across all GDCs.</li>
-<li>Assisted the global logistics team in selecting optimal ocean carriers and reducing total transportation costs, resulting in a cost reduction of $90 million during the challenging disruptions of the COVID-19 impacted global supply chain in fiscal year 2021.</li>
-<li>Tech stack: Java, CPLEX, SpringBoot Microservices | Column Generation, MIP, Vehicle Routing/Bin Packing Heuristics</li>
-</ul>
-<p><em>Senior Data Scientist</em></p>
-<ul>
-<li>Conceptualized and developed a profiling application prototype, enabling GDCs to attain optimal item-to-slot assignments. Participated in end-to-end system development encompassing both frontend and backend components.</li>
-<li>Overhauled legacy MIP-based optimization engine for optimal carrier and load quantity determination in Walmart’s ocean procurement during fiscal year 2020. Strengthened modeling capabilities and constraint adaptability to encompass operational and strategic factors. Offered on-site optimization support across numerous bidding cycles, resulting in $30 million operational cost savings, noteworthy labor hour reduction, and heightened stability within the Walmart supply chain.</li>
-<li>Tech Stack: Java, JavaScript | MIP, Heuristics</li>
-</ul>
-<p><em>Data Scientist</em></p>
-<ul>
-<li>Constructed a column-generation-driven optimization engine in a rolling horizon framework, focusing on assigning drivers to tractors to optimize tractor utilization and reduce driver split-seat instances. Generated $4 million labor cost savings and $8 million operational cost savings annually through this approach.</li>
-<li>Implemented a column-generation-based optimization engine to estimate store-level customer purchase probability based on historical transaction data. Built a MIP engine to decide optimal offer set for each category at store level.</li>
-<li>Migrated legacy truckload optimization COBOL code to Java, reducing data processing time from 10 minutes to 10 seconds. Developed heuristic algorithms to solve instances with large number of orders, resulting in a daily reduction of 14 trucks.</li>
-<li>Tech stack: Java, COBOL | Column Generation, MIP, Heuristics</li>
-</ul>
-<p><em>Global Business Process Intern</em></p>
-<ul>
-<li>Contributed to the implementation and validation of next generation inventory optimization model for Walmart U.S., yielding an 8% improvement over the existing system in pilot store trials. Spearheaded the data platform migration from Teradata to Hadoop, implementing data ETL processes and Hive queries.</li>
-</ul>
-<!-- ### Publications
-
-#### Facebook
-::: {.d-flex .justify-content-between}
-::: {}
-test
-:::
-::: {.text-end}
-2011-2022
-:::
-::: -->
+<p>Just save the list of commands I use frequently to create virtual environments and make them available to jupyter notebooks.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a># create a new virtual environemnt named 'env_name'</span>
+<span id="cb1-2"><a href="#cb1-2"></a>conda create -n 'env_name'</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a># activate the newly created virtual environment</span>
+<span id="cb1-5"><a href="#cb1-5"></a>conda activate 'env_name'</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a># list all available environments</span>
+<span id="cb1-8"><a href="#cb1-8"></a>conda env list</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a># remove an virtual environment</span>
+<span id="cb1-11"><a href="#cb1-11"></a>conda env remove -n 'env_name'</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a># install ipykernel</span>
+<span id="cb1-14"><a href="#cb1-14"></a>pip install --user ipykernel</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a># add the virtual environment to jupyter</span>
+<span id="cb1-17"><a href="#cb1-17"></a>python -m ipykernel install --user --name='env_name'</span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a># list available jupyter kernels</span>
+<span id="cb1-20"><a href="#cb1-20"></a>jupyter kernelspec list</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a># remove kernel from jupyter</span>
+<span id="cb1-23"><a href="#cb1-23"></a>jupyter kernelspec uninstall 'env_name'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
