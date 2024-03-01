@@ -3,14 +3,16 @@ title: Blog
 # subtitle: News, tips, and commentary about all things Quarto
 listing:
     sort: "date desc"
-    contents: "posts/*/index.qmd"
+    contents: 
+        - "posts/*/index.qmd"
+        - "posts/*/index.ipynb"
     sort-ui: false
     filter-ui: false
     categories: true
     feed: true
 page-layout: full
 # margin-header: signup.html
-title-block-banner: "#EDF3F9"
+# title-block-banner: "#EDF3F9"
 title-block-banner-color: body
 search: false
 # image: quarto-blog-v2.png

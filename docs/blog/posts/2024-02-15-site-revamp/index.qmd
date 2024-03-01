@@ -1,11 +1,10 @@
 ---
 title: Site Revamp using Quarto
-# subtitle: Use callouts to draw attention to important complementary content without interupting the document flow
+# subtitle: 
 # description: |
 #   Callouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.
-# categories:
-#   - Features
-#   - Authoring
+categories:
+    - Misc
 author: Kunlei Lian
 date: 2/15/2022
 # image: callouts.png

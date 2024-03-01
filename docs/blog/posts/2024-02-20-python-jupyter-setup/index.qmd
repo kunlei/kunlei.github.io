@@ -1,0 +1,43 @@
+---
+title: Python Virtual Environment Setup
+author: Kunlei Lian
+date: 02/20/2024
+categories:
+  - Python
+jupyter: 'pytorch-guide'
+format:
+  html:
+    code-line-numbers: true
+    code-overflow: wrap
+    code-block-bg: true
+    code-block-border-left: true
+    highlight-style: Arrow
+---
+
+Just save the list of commands I use frequently to create virtual environments and make them available to jupyter notebooks.
+
+```{bash}
+# create a new virtual environemnt named 'env_name'
+conda create -n 'env_name'
+
+# activate the newly created virtual environment
+conda activate 'env_name'
+
+# list all available environments
+conda env list
+
+# remove an virtual environment
+conda env remove -n 'env_name'
+
+# install ipykernel
+pip install --user ipykernel
+
+# add the virtual environment to jupyter
+python -m ipykernel install --user --name='env_name'
+
+# list available jupyter kernels
+jupyter kernelspec list
+
+# remove kernel from jupyter
+jupyter kernelspec uninstall 'env_name'
+```

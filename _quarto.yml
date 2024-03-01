@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Kunlei Lian"
-  site-url: https://https://kunlei.github.io/
+  site-url: https://kunlei.github.io/
   google-analytics: "G-DJ30KLH89M"
   navbar:
     left:
@@ -21,6 +21,9 @@ website:
           - text: "Large-Scale Optimization"
             icon: "book"
             href: "https://kunlei.github.io/large-scale-opt-python/"
+          - text: "Approaching VRPs"
+            icon: "book"
+            href: "https://kunlei.github.io/approaching-vrp-java/"
 
 format:
   html:
