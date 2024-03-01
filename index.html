@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.526">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -144,11 +144,11 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -162,7 +162,7 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -175,7 +175,7 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 
 
 <div class="column-page-inset page-columns page-full">
-<div class="column-page-inset-left">
+<div class="">
 <p>I am an Operations Research Scientist and Machine Learning practitioner.</p>
 <p>I am currently working at Marriott Vacations Worldwide responsible for marketing campaign optimization, inventory control and revenue management. Previously, I contributed to various supply chain optimization projects at Walmart Global Technology.</p>
 <p>My academic journey includes earning a Ph.D.&nbsp;in Industrial Engineering from the University of Arkansas, where my research centered on solving vehicle routing problems. Prior to that, I obtained both my B.S. and M.S. degrees in Industrial Engineering from Huazhong University of Science and Technology in China.</p>
@@ -213,7 +213,7 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 </ul></li>
 </ul>
 </div>
-<div class="column-margin column-container">
+<div class="column-container">
 <p><img src="./headshot.jpg" class="rounded img-fluid"></p>
 </div>
 </div>
@@ -376,27 +376,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -411,10 +390,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -423,8 +406,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.526">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -125,6 +125,33 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../../styles.css">
 <link rel="alternate" type="application/rss+xml" title="Kunlei Lian" href="index.xml" data-external="1"></head>
 
@@ -192,7 +219,7 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Misc">Misc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Matplotlib">Matplotlib <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Misc">Misc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -221,7 +248,106 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Python" data-listing-date-sort="1708405200000" data-listing-file-modified-sort="1708467682192" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1709260823693">
+<div class="thumbnail">
+<p><a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external">
+</a><p><a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1709260827210">
+<div class="thumbnail">
+<p><a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external">
+</a><p><a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1709260827479">
+<div class="thumbnail">
+<p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external">
+</a><p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Python,Matplotlib" data-listing-date-sort="1709182800000" data-listing-file-modified-sort="1709260809888" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="54">
+<div class="thumbnail">
+<p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2024-02-29-plot-synchronized-colors/index_files/figure-html/cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external">Synchronized Colors in Python Plots</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Matplotlib'); return false;">
+Matplotlib
+</div>
+</div>
+<div class="listing-description">
+<a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external">Today I came across a case for which I need put two figures side by side and I would like to use the same color to indicate the same element across the figures. After some…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../../docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html" class="no-external">
+<div class="listing-date">
+Feb 29, 2024
+</div>
+<div class="listing-author">
+Kunlei Lian
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="Python" data-listing-date-sort="1708405200000" data-listing-file-modified-sort="1709258118338" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
 <div class="thumbnail">
 <p><a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -229,7 +355,7 @@ gtag('config', 'G-DJ30KLH89M', { 'anonymize_ip': true});
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external">Python Virtual Environemnt Setup</a>
+<a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external">Python Virtual Environment Setup</a>
 </h3>
 <div class="listing-subtitle">
 <a href="../../docs/blog/posts/2024-02-20-python-jupyter-setup/index.html" class="no-external"></a>
@@ -254,7 +380,7 @@ Kunlei Lian
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Misc" data-listing-date-sort="1644901200000" data-listing-file-modified-sort="1708467646810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
+<div class="quarto-post image-right" data-index="5" data-categories="Misc" data-listing-date-sort="1644901200000" data-listing-file-modified-sort="1708467646810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
 <div class="thumbnail">
 <p><a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external"></a></p><a href="../../docs/blog/posts/2024-02-15-site-revamp/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -420,27 +546,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -455,10 +560,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -467,8 +576,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

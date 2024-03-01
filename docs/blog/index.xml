@@ -9,10 +9,335 @@
 <link>https://kunlei.github.io/docs/blog/</link>
 <atom:link href="https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.526</generator>
-<lastBuildDate>Tue, 20 Feb 2024 05:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.550</generator>
+<lastBuildDate>Thu, 29 Feb 2024 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>Python Virtual Environemnt Setup</title>
+  <title>Synchronized Colors in Python Plots</title>
+  <dc:creator>Kunlei Lian</dc:creator>
+  <link>https://kunlei.github.io/docs/blog/posts/2024-02-29-plot-synchronized-colors/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Today I came across a case for which I need put two figures side by side and I would like to use the same color to indicate the same element across the figures. After some searching on the internet, here is the solution I settled on.</p>
+<div id="cell-2" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> seaborn <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> sns</span>
+<span id="cb1-4">sns.set_theme()</span>
+<span id="cb1-5"></span>
+<span id="cb1-6">data_a <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.Series(data<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>], index<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Dog'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Cat'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Rabbit'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Horse'</span>])</span>
+<span id="cb1-7">data_b <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.Series(data<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>], index<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Cat'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Horse'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Fish'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Cow'</span>])</span>
+<span id="cb1-8"></span>
+<span id="cb1-9">index_set <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">set</span>()</span>
+<span id="cb1-10">index_set.update(data_a.index)</span>
+<span id="cb1-11">index_set.update(data_b.index)</span>
+<span id="cb1-12"></span>
+<span id="cb1-13">cm <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.get_cmap(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'rainbow'</span>)</span>
+<span id="cb1-14">colors <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [cm(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.0</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(index_set)) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(index_set))]</span>
+<span id="cb1-15">color_dict <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {label: color <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> label, color <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">zip</span>(index_set, colors)}</span>
+<span id="cb1-16"></span>
+<span id="cb1-17">fig, axes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb1-18"></span>
+<span id="cb1-19">patches, texts, autotexts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> axes[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>].pie(data_a,</span>
+<span id="cb1-20">            labels<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data_a.index,</span>
+<span id="cb1-21">            colors<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[color_dict[label] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> label <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> data_a.index],</span>
+<span id="cb1-22">            explode<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>],</span>
+<span id="cb1-23">            autopct<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%.1f%%</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>,</span>
+<span id="cb1-24">            textprops<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fontsize'</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">13</span>}</span>
+<span id="cb1-25">            )</span>
+<span id="cb1-26"></span>
+<span id="cb1-27">patches[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>].set_alpha(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.3</span>)</span>
+<span id="cb1-28"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># patches[2].set_visible(False)</span></span>
+<span id="cb1-29"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> text <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> texts:</span>
+<span id="cb1-30">    text.set_verticalalignment(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'bottom'</span>)</span>
+<span id="cb1-31"></span>
+<span id="cb1-32"></span>
+<span id="cb1-33">patches, texts, autotexts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> axes[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>].pie(data_b,</span>
+<span id="cb1-34">            labels<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data_b.index,</span>
+<span id="cb1-35">            colors<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[color_dict[label] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> label <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> data_b.index],</span>
+<span id="cb1-36">            explode<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>],</span>
+<span id="cb1-37">            autopct<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%.1f%%</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>,</span>
+<span id="cb1-38">            textprops<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fontsize'</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">13</span>}</span>
+<span id="cb1-39">            )</span>
+<span id="cb1-40">    </span>
+<span id="cb1-41"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># hole = plt.Circle((0, 0), 0.65, facecolor='white')</span></span>
+<span id="cb1-42"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.gcf().gca().add_artist(hole)</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://kunlei.github.io/docs/blog/posts/2024-02-29-plot-synchronized-colors/index_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I also stumbled on how to make a donut chart:</p>
+<div id="cell-4" class="cell" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1">fig, ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>))</span>
+<span id="cb2-2"> </span>
+<span id="cb2-3">ax.pie(</span>
+<span id="cb2-4">    x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data_a, </span>
+<span id="cb2-5">    labels<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data_a.index,</span>
+<span id="cb2-6">    colors<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>sns.color_palette(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Set1'</span>),</span>
+<span id="cb2-7">    explode<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.03</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>],</span>
+<span id="cb2-8">    startangle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">90</span></span>
+<span id="cb2-9">)</span>
+<span id="cb2-10">hole <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.Circle((<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>), <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, facecolor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'white'</span>)</span>
+<span id="cb2-11">plt.gcf().gca().add_artist(hole)</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://kunlei.github.io/docs/blog/posts/2024-02-29-plot-synchronized-colors/index_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>Python</category>
+  <category>Matplotlib</category>
+  <guid>https://kunlei.github.io/docs/blog/posts/2024-02-29-plot-synchronized-colors/</guid>
+  <pubDate>Thu, 29 Feb 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Python Virtual Environment Setup</title>
   <dc:creator>Kunlei Lian</dc:creator>
   <link>https://kunlei.github.io/docs/blog/posts/2024-02-20-python-jupyter-setup/</link>
   <description><![CDATA[ 
