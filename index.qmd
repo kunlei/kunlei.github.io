@@ -13,7 +13,9 @@ I am an Operations Research Scientist and Machine Learning practitioner.
 I am currently working at Marriott Vacations Worldwide responsible for marketing campaign optimization, inventory control and revenue management.
 Previously, I contributed to various supply chain optimization projects at Walmart Global Technology. 
 
+
 My academic journey includes earning a Ph.D. in Industrial Engineering from the University of Arkansas, where my research centered on solving vehicle routing problems. Prior to that, I obtained both my B.S. and M.S. degrees in Industrial Engineering from Huazhong University of Science and Technology in China.
+
 
 My competitive strengths:
 
@@ -21,28 +23,32 @@ My competitive strengths:
 - Extensive experience in solving large-scale optimization problems in supply chain.
 - Deep hands-on skills in building efficient and scalable optimization products.
 
+
 My domain expertise acquired through industrial experience:
 
-- Transportation
-  - Route and delivery optimization.
-  - Job/drive scheduling optimization.
-- Fulfillment
-  - Warehouse inbound: item/slot profiling.
-  - Warehouse outbound: trip building, pallet building.
-- Replenishment
-  - Truckload optimization.
-  - Inventory optimization.
-  - Order optimization.
-- Marketing
-  - Marketing campaign optimization.
-- Revenue manegement
-  - Inventory control.
+- **Suppy (Chain) Management**
+  - Transportation
+    - Route and delivery optimization.
+    - Job/driver scheduling optimization.
+  - Fulfillment
+    - Warehouse inbound: item/slot profiling.
+    - Warehouse outbound: trip building, pallet building.
+  - Replenishment
+    - Truckload optimization.
+    - Inventory optimization.
+    - Order optimization.
+- **Demand Management**
+  - Marketing
+    - Marketing campaign optimization.
+  - Revenue/Yield manegement
+    - Inventory control.
 
 :::
 
 <div class="column-margin column-container">
 ![](./headshot.jpg){.rounded}
 </div>
+
 :::
 
 {{< pagebreak >}}
