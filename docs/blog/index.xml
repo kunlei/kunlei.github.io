@@ -10,7 +10,124 @@
 <atom:link href="https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.550</generator>
-<lastBuildDate>Thu, 29 Feb 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 18 Mar 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>SQL EXTRACT() and Python ORD()/CHR()</title>
+  <dc:creator>Kunlei Lian</dc:creator>
+  <link>https://kunlei.github.io/docs/blog/posts/2024-03-18-sql-extract-python-ord-chr/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="a-useful-function-in-sql" class="level2">
+<h2 class="anchored" data-anchor-id="a-useful-function-in-sql">A useful function in SQL</h2>
+<p>Today I was trying to retrieve the ‘year’ information from a date object in SQL and learned about this <code>EXTRACT()</code> function. Below is an example usage in which the ‘year’ is identified from a date string.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">SELECT</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">EXTRACT</span>(<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">YEAR</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">FROM</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'2024-03-18'</span>); <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-- output: 2024</span></span></code></pre></div>
+<p>It turns out the function is very powerful in retrieving various time components from a date or datetime object. Below is the list of possible time components:</p>
+<ul>
+<li>MICROSECOND</li>
+<li>SECOND</li>
+<li>MINUTE</li>
+<li>HOUR</li>
+<li>DAY</li>
+<li>WEEK</li>
+<li>MONTH</li>
+<li>QUARTER</li>
+<li>YEAR</li>
+<li>SECOND_MICROSECOND</li>
+<li>MINUTE_MICROSECOND</li>
+<li>MINUTE_SECOND</li>
+<li>HOUR_MICROSECOND</li>
+<li>HOUR_SECOND</li>
+<li>HOUR_MINUTE</li>
+<li>DAY_MICROSECOND</li>
+<li>DAY_SECOND</li>
+<li>DAY_MINUTE</li>
+<li>DAY_HOUR</li>
+<li>YEAR_MONTH</li>
+</ul>
+<p>Here are another two sample usages:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">SELECT</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">EXTRACT</span>(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">MINUTE</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">FROM</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">"2023-03-18 22:34:21"</span>); <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-- output: 34</span></span></code></pre></div>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">SELECT</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">EXTRACT</span>(DAY_HOUR <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">FROM</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">"2023-03-18 22:34:21"</span>); <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-- output: 1822</span></span></code></pre></div>
+</section>
+<section id="two-functions-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="two-functions-in-python">Two functions in Python</h2>
+<p>There is always a handy function in Python when you need it and here is the pair of functions, <code>ord()</code> and <code>chr()</code>, that converts a character into a number and converts the number back. Their official documentation can be found <a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord">here</a> and <a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#chr">here</a>.</p>
+<div id="cell-10" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1">char <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'a'</span></span>
+<span id="cb4-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">ord</span>(char))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>97</code></pre>
+</div>
+</div>
+<div id="cell-11" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1">num <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">ord</span>(char)</span>
+<span id="cb6-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">chr</span>(num))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>a</code></pre>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>Matplotlib</category>
+  <guid>https://kunlei.github.io/docs/blog/posts/2024-03-18-sql-extract-python-ord-chr/</guid>
+  <pubDate>Mon, 18 Mar 2024 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Synchronized Colors in Python Plots</title>
   <dc:creator>Kunlei Lian</dc:creator>
