@@ -3,19 +3,42 @@ title: "Kunlei Lian"
 description: "OR/ML Scientist"
 page-layout: full
 # resources:
+comments: false
+image: headshot.jpg
+about:
+  template: solana
+  # links:
+  #   - icon: github
+  #     text: Github
+  #     href: https://github.com/kunlei
+  #   - icon: envelope
+  #     text: Email
+  #     href: mailto:kunlei.lian@gmail.com
+    # - icon: file-pdf
+    #   text: Resume
+    #   href: https://kunlei.github.io/resume/index.pdf  
+    # - icon: linkedin
+    #   text: LinkedIn
+    #   href: https://www.linkedin.com/in/kunlei-lian/ 
+    # - text: "{{< ai google-scholar >}}"
+      # href: https://scholar.google.com/citations?user=beuQ5RsAAAAJ&hl=en)
 ---
 
-::: {.column-page-inset}
-::: {.column-page-inset-left}
+<!-- ::: {.column-page-inset}
+::: {.column-page-inset-left} -->
+
+:::{#hero-heading}
+
+## Background
 
 I am an Operations Research Scientist and Machine Learning practitioner.
 
 I am currently working at Marriott Vacations Worldwide responsible for marketing campaign optimization, inventory control and revenue management.
 Previously, I contributed to various supply chain optimization projects at Walmart Global Technology. 
 
-
 My academic journey includes earning a Ph.D. in Industrial Engineering from the University of Arkansas, where my research centered on solving vehicle routing problems. Prior to that, I obtained both my B.S. and M.S. degrees in Industrial Engineering from Huazhong University of Science and Technology in China.
 
+## Strengths and Experience
 
 My competitive strengths:
 
@@ -24,42 +47,94 @@ My competitive strengths:
 - Deep hands-on skills in building efficient and scalable optimization products.
 
 
-My domain expertise acquired through industrial experience:
+My professional experience can be put into the following categories:
 
-- **Suppy (Chain) Management**
-  - Transportation
-    - Route and delivery optimization.
-    - Job/driver scheduling optimization.
-  - Fulfillment
-    - Warehouse inbound: item/slot profiling.
-    - Warehouse outbound: trip building, pallet building.
-  - Replenishment
-    - Truckload optimization.
-    - Inventory optimization.
-    - Order optimization.
-- **Demand Management**
-  - Marketing
-    - Marketing campaign optimization.
-  - Revenue/Yield manegement
-    - Inventory control.
+```{mermaid}
+%%{init: {'theme':'forest'}}%%
+flowchart LR
+    A[Experience] --> B[Supply Chain Management]
+    A --> C[Revenue/Yield Management]
+    B --> E[Transportation]
+    B --> F[Fulfillment]
+    B --> G[Replenishment]
+      E --> J[Route/delivery optimization]
+      E --> K[Shipment consolidation]
+      E --> L[Job/driver scheduling]
+      F --> M[Warehouse inbound - item slotting/profiling]
+      F --> N[Warehouse outbound - trip/pallet building]
+      G --> O[Truckload optimization]
+      G --> P[Order optimization]
+      G --> Q[Inventory optimization]
+    C --> H[Marketing campaign optimization]
+    C --> I[Inventory control]
+```
+
+## Contact
+
+```{=html}
+<a class="btn btn-outline-dark", href="https://www.linkedin.com/in/kunlei-lian/" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-linkedin" role='img' aria-label='LinkedIn'></i>
+</a>
+
+<a class="btn btn-outline-dark", href="https://github.com/kunlei" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-github" role='img' aria-label='Github'></i>
+</a>
+
+<a class="btn btn-outline-dark", href="https://scholar.google.com/citations?user=beuQ5RsAAAAJ&hl=en)" target="_blank" rel="noopener noreferrer">
+    <i class="ai ai-google-scholar" role='img' aria-label='Google Scholar'></i>
+</a>
+
+<a class="btn btn-outline-dark", href="mailto:kunlei.lian@gmail.com" target="_blank" rel="noopener noreferrer">
+    <i class="ai bi-envelope" role='img' aria-label='email'></i>
+</a>
+```
+
+<!-- #### Suppy (Chain) Management
+
+Transportation
+
+  - Route and delivery optimization.
+  - Job/driver scheduling optimization.
+
+Fulfillment
+
+  - Warehouse inbound: item/slot profiling.
+  - Warehouse outbound: trip building, pallet building.
+
+Replenishment
+
+  - Truckload optimization.
+  - Inventory optimization.
+  - Order optimization.
+
+#### Demand Management
+
+- Marketing
+  - Marketing campaign optimization.
+- Revenue/Yield manegement
+  - Inventory control. -->
 
 :::
+
+<!-- :::
+
 
 <div class="column-margin column-container">
 ![](./headshot.jpg){.rounded}
 </div>
 
-:::
+::: -->
 
 {{< pagebreak >}}
 
-::: {.column-page-inset .text-center}
-```{=html}
+<!-- ::: {.column-page-inset .text-center} -->
+
+<!-- ```{=html} -->
 <!-- <a class="btn btn-outline-dark", href="https://twitter.com/kunlei" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-twitter" role='img' aria-label='Twitter'></i>
 </a> -->
 
-<a class="btn btn-outline-dark", href="https://github.com/kunlei" target="_blank" rel="noopener noreferrer">
+<!-- <a class="btn btn-outline-dark", href="https://github.com/kunlei" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-github" role='img' aria-label='Github'></i>
 </a>
 
@@ -69,7 +144,7 @@ My domain expertise acquired through industrial experience:
 
 <a class="btn btn-outline-dark", href="https://scholar.google.com/citations?user=beuQ5RsAAAAJ&hl=en)" target="_blank" rel="noopener noreferrer">
     <i class="ai ai-google-scholar" role='img' aria-label='Google Scholar'></i>
-</a>
+</a> -->
 
 <!-- <a class="btn btn-outline-dark", href="https://arxiv.org/a/dimmery_d_1.html" target="_blank" rel="noopener noreferrer">
     <i class="ai ai-arxiv" role='img' aria-label='arXiv'></i>
@@ -78,7 +153,8 @@ My domain expertise acquired through industrial experience:
 
 <!-- <a class="btn btn-outline-dark", href="mailto:kunlei.lian@gmail.com" target="_blank" rel="noopener noreferrer">
     <i class="ai bi-envelope" role='img' aria-label='email'></i>
-</a> -->
-```
-:::
+</a>
+<!-- ```
+::: -->
+
 

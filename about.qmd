@@ -103,6 +103,21 @@ May 2016 - August 2023
 
 ::: {.d-flex .justify-content-between}
 ::: {}
+**Methods and Apparatus for Automatic Item Placement**  
+*Kunlei Lian*, Cai Gao, Cong Guo, Mingang Fu
+:::
+::: {.text-end}
+2024
+:::
+:::
+
+This patent presents a highly efficient optimization algorithm to solve the three-dimensional bin packing problem in the context of pallet building and container loading.
+The algorithm is able to stack highly heterogeneous items in a near-optimal way to maximize space utilization and more importantly stability.
+
+
+
+::: {.d-flex .justify-content-between}
+::: {}
 **Load Builder Optimizer using a Column Generation Engine**  
 *Kunlei Lian*, Ming Ni, Mingang Fu
 :::
@@ -142,22 +157,22 @@ This patent features a Monte Carlo simulation-based stochastic optimization engi
 ### Publications
 
 
-- Chang Lv, Chaoyong Zhang, Kunlei Lian, Yaping Ren and Leilei Meng. A two-echelon fuzzy clustering based heuristic for large-scale bike sharing repositioning problem. Transportation Research Part B: Methodological 160 (2022): 54-75.
-- Jianzhao Wu, Kunlei Lian, Yelin Deng, Ping Jiang and Chaoyong Zhang. Multi-Objective Parameter Optimization of Fiber Laser Welding Considering Energy Consumption and Bead Geometry. IEEE Transactions on Automation Science and Engineering vol. 19 issue 4 (2021): 3561-3574
-- Chunjiang Zhang, Jiawei Tan, Kunkun Peng, Liang Gao, Weiming Shen, Kunlei Lian. A discrete whale swarm algorithm for a hybrid flow-shop scheduling problem with limited buffers. Robotics and Computer-Integrated Manufacturing (2020).
-- Chang Lv, Chaoyong Zhang, Kunlei Lian, Yaping Ren, and Leilei Meng. A hybrid algorithm for the static bike-sharing re-positioning problem based on an effective clustering strategy. Transportation Research Part B: Methodological 140 (2020): 1-21.
-- Yang Xie, Kunlei Lian, Qiong Liu, Chaoyong Zhang, and Hongqi Liu. Digital twin for cutting tool: Modeling, application and service strategy. Journal of Manufacturing Systems (2020).
-- Chunjiang Zhang, Yin Zhou, Kunkun Peng, Xinyu Li, Kunlei Lian, and Suyan Zhang. Dynamic flexible job shop scheduling method based on improved gene expression programming. Measurement and Control (2020).
-- Kunlei Lian, Ashlea Bennett Milburn, and Ronald L. Rardin. An improved multi-directional local search algorithm for the multi-objective consistent vehicle routing problem. IIE Transactions 48, no. 10 (2016): 975-992.
-- Chuanjun Zhu, Jing Cao, Chaoyong Zhang, Kunlei Lian. Applying modified colonial competitive algorithm to solve minimal hitting set problems. China Mechanical Engineering 26, no. 7 (2015): 917-923
-- Kunlei Lian, Chaoyong Zhang, Liang Gao, and Xinyu Shao. A modified colonial competitive algorithm for the mixed-model U-line balancing and sequencing problem. International Journal of Production Research 50, no. 18 (2012): 5117-5131.
-- Kunlei Lian, Chaoyong Zhang, Liang Gao, and Xinyu Li. Integrated process planning and scheduling using an imperialist competitive algorithm. International Journal of Production Research 50, no. 15 (2012): 4326-4343.
-- Kunlei Lian, Chaoyong Zhang, Xinyu Shao, and Liang Gao. Optimization of process planning with various flexibilities using an imperialist competitive algorithm. The International Journal of Advanced Manufacturing Technology 59, no. 5-8 (2012): 815-828.
-- KunLei Lian, ChaoYong Zhang, XinYu Shao, and YaoHui Zeng. A multi-dimensional tabu search algorithm for the optimization of process planning. Science China Technological Sciences 54, no. 12 (2011): 3211-3219.
-- Kun Zhang, Hui Liu, and Kunlei Lian. Application of bee colony optimization algorithm in warehouse facility location of rail transit network. Modern Urban Transit 1, (2011): 63-66
-- Fuping Deng, Chaoyong Zhang, kunlei Lian and Shaotan Xu. An adaptive ant colony optimization for solving assembly line balancing problem. China Mechanical Engineering 22, no. 16 (2011):1949-1953, 1959.
-- Kunlei Lian, Chaoyong Zhang, Liang Gao, Shaotan Xu, and Yi Sun. A cooperative simulated annealing algorithm for the optimization of process planning. In Advanced Materials Research, vol. 181, pp. 489-494. Trans Tech Publications Ltd, 2011.
-- Kunlei Lian, Chaoyong Zhang, Liang Gao and Chaoyang Zhang. An improved genetic algorithm for multi-objective dynamic scheduling optimization. Machine Design and Manufacturing Engineering 39, no. 3 (2010):13-17, 21
+- Chang Lv, Chaoyong Zhang, **Kunlei Lian**, Yaping Ren and Leilei Meng. A two-echelon fuzzy clustering based heuristic for large-scale bike sharing repositioning problem. Transportation Research Part B: Methodological 160 (2022): 54-75.
+- Jianzhao Wu, **Kunlei Lian**, Yelin Deng, Ping Jiang and Chaoyong Zhang. Multi-Objective Parameter Optimization of Fiber Laser Welding Considering Energy Consumption and Bead Geometry. IEEE Transactions on Automation Science and Engineering vol. 19 issue 4 (2021): 3561-3574
+- Chunjiang Zhang, Jiawei Tan, Kunkun Peng, Liang Gao, Weiming Shen, **Kunlei Lian**. A discrete whale swarm algorithm for a hybrid flow-shop scheduling problem with limited buffers. Robotics and Computer-Integrated Manufacturing (2020).
+- Chang Lv, Chaoyong Zhang, **Kunlei Lian**, Yaping Ren, and Leilei Meng. A hybrid algorithm for the static bike-sharing re-positioning problem based on an effective clustering strategy. Transportation Research Part B: Methodological 140 (2020): 1-21.
+- Yang Xie, **Kunlei Lian**, Qiong Liu, Chaoyong Zhang, and Hongqi Liu. Digital twin for cutting tool: Modeling, application and service strategy. Journal of Manufacturing Systems (2020).
+- Chunjiang Zhang, Yin Zhou, Kunkun Peng, Xinyu Li, **Kunlei Lian**, and Suyan Zhang. Dynamic flexible job shop scheduling method based on improved gene expression programming. Measurement and Control (2020).
+- **Kunlei Lian**, Ashlea Bennett Milburn, and Ronald L. Rardin. An improved multi-directional local search algorithm for the multi-objective consistent vehicle routing problem. IIE Transactions 48, no. 10 (2016): 975-992.
+- Chuanjun Zhu, Jing Cao, Chaoyong Zhang, **Kunlei Lian**. Applying modified colonial competitive algorithm to solve minimal hitting set problems. China Mechanical Engineering 26, no. 7 (2015): 917-923
+- **Kunlei Lian**, Chaoyong Zhang, Liang Gao, and Xinyu Shao. A modified colonial competitive algorithm for the mixed-model U-line balancing and sequencing problem. International Journal of Production Research 50, no. 18 (2012): 5117-5131.
+- **Kunlei Lian**, Chaoyong Zhang, Liang Gao, and Xinyu Li. Integrated process planning and scheduling using an imperialist competitive algorithm. International Journal of Production Research 50, no. 15 (2012): 4326-4343.
+- **Kunlei Lian**, Chaoyong Zhang, Xinyu Shao, and Liang Gao. Optimization of process planning with various flexibilities using an imperialist competitive algorithm. The International Journal of Advanced Manufacturing Technology 59, no. 5-8 (2012): 815-828.
+- **KunLei Lian**, ChaoYong Zhang, XinYu Shao, and YaoHui Zeng. A multi-dimensional tabu search algorithm for the optimization of process planning. Science China Technological Sciences 54, no. 12 (2011): 3211-3219.
+- Kun Zhang, Hui Liu, and **Kunlei Lian**. Application of bee colony optimization algorithm in warehouse facility location of rail transit network. Modern Urban Transit 1, (2011): 63-66
+- Fuping Deng, Chaoyong Zhang, **Kunlei Lian** and Shaotan Xu. An adaptive ant colony optimization for solving assembly line balancing problem. China Mechanical Engineering 22, no. 16 (2011):1949-1953, 1959.
+- **Kunlei Lian**, Chaoyong Zhang, Liang Gao, Shaotan Xu, and Yi Sun. A cooperative simulated annealing algorithm for the optimization of process planning. In Advanced Materials Research, vol. 181, pp. 489-494. Trans Tech Publications Ltd, 2011.
+- **Kunlei Lian**, Chaoyong Zhang, Liang Gao and Chaoyang Zhang. An improved genetic algorithm for multi-objective dynamic scheduling optimization. Machine Design and Manufacturing Engineering 39, no. 3 (2010):13-17, 21
 
 
 

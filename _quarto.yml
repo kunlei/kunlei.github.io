@@ -24,6 +24,9 @@ website:
           - text: "Approaching VRPs"
             icon: "book"
             href: "https://kunlei.github.io/approaching-vrp-java/"
+          - text: "Metaheuristics in Action"
+            icon: "book"
+            href: "https://kunlei.github.io/metaheuristics-java/"
 
 format:
   html:
