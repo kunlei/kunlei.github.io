@@ -2,6 +2,7 @@
   {
     "listing": "/docs/blog/index.html",
     "items": [
+      "/docs/blog/posts/2024-04-02-pareto-front/index.html",
       "/docs/blog/posts/2024-03-18-sql-extract-python-ord-chr/index.html",
       "/docs/blog/posts/2024-02-29-plot-synchronized-colors/index.html",
       "/docs/blog/posts/2024-02-20-python-jupyter-setup/index.html",

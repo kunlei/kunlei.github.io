@@ -10,7 +10,589 @@
 <atom:link href="https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.550</generator>
-<lastBuildDate>Mon, 18 Mar 2024 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 02 Apr 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Multi-objective Optimization and Pareto Front</title>
+  <dc:creator>Kunlei Lian</dc:creator>
+  <link>https://kunlei.github.io/docs/blog/posts/2024-04-02-pareto-front/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I recently came across a multi-objective optimization problem at work and I need to identify the Pareto front - the set of non-dominating solutions among all the candidate solutions. I used to study multi-objective optimization problems and algorithms in my Ph.D.&nbsp;years, it is nice to actually use it in my work. In this post, I will explain some key concepts and some useful techniques:</p>
+<ul>
+<li>Multi-objective optimization</li>
+<li>Pareto dominance and Pareto front</li>
+<li>Identify Pareto front in Python</li>
+</ul>
+<section id="multi-objective-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="multi-objective-optimization">Multi-Objective Optimization</h2>
+<p>Multi-objective optimization is an area of mathematical optimization that deals with problems involving more than one objective function to be optimized simultaneously. Each objective function may represent a different criterion, and these criteria often conflict with each other. The goal in multi-objective optimization is not to find a single solution that optimizes a single criterion, but rather to find solutions that achieve a satisfactory balance among all the criteria.</p>
+<p>Multi-objective optimization is used in many fields where trade-offs between two or more outcomes must be negotiated, such as:</p>
+<ul>
+<li>Engineering Design: Optimizing design parameters for competing objectives like cost, performance, and safety.</li>
+<li>Economics and Finance: Balancing return and risk in portfolio management.</li>
+<li>Energy Management: Managing the trade-offs between cost, environmental impact, and efficiency.</li>
+<li>Logistics and Transportation: Optimizing routes and schedules to minimize costs and time while maximizing customer satisfaction.</li>
+</ul>
+<p>The main challenges in multi-objective optimization include handling the complexity and computational cost of finding multiple optimal solutions, choosing appropriate methods and algorithms that fit the specific characteristics of the problem, and effectively assisting decision-makers in selecting from among the set of optimal solutions based on their preferences and the trade-offs they are willing to make.</p>
+</section>
+<section id="pareto-dominance-and-pareto-front" class="level2">
+<h2 class="anchored" data-anchor-id="pareto-dominance-and-pareto-front">Pareto Dominance and Pareto Front</h2>
+<p>A solution <img src="https://latex.codecogs.com/png.latex?x"> is said to Pareto dominate another solution <img src="https://latex.codecogs.com/png.latex?y"> if and only if:</p>
+<ol type="1">
+<li><img src="https://latex.codecogs.com/png.latex?x"> is no worse than <img src="https://latex.codecogs.com/png.latex?y"> in all objectives, and</li>
+<li><img src="https://latex.codecogs.com/png.latex?x"> is strictly better than <img src="https://latex.codecogs.com/png.latex?y"> in at least one objective.</li>
+</ol>
+<p>In mathematical terms, considering a minimization problem with objectives <img src="https://latex.codecogs.com/png.latex?f_1,%20f_2,%20%5Ccdots,%20f_k">:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?x"> Pareto dominates <img src="https://latex.codecogs.com/png.latex?y"> if for all <img src="https://latex.codecogs.com/png.latex?i%20%5Cin%20%5C%7B1,%202,%20%5Ccdots,%20k%5C%7D,%20f_i(x)%20%5Cleq%20f_i(y)"> and there exists at least one <img src="https://latex.codecogs.com/png.latex?j"> such that <img src="https://latex.codecogs.com/png.latex?f_i(x)%20%3C%20f_i(y)">.</li>
+</ul>
+<p>This concept allows decision-makers to sift through multiple feasible solutions to identify those that are not dominated by any other, helping them focus on the most promising solutions.</p>
+<p>The <strong>Pareto front</strong> consists of all solutions that are not Pareto dominated by any other solution. These solutions are also known as Pareto optimal solutions. The Pareto front is particularly useful because it contains all possible trade-offs that a decision-maker can consider, providing a clear visualization of how one can improve one objective only at the expense of another.</p>
+</section>
+<section id="identify-pareto-front-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="identify-pareto-front-in-python">Identify Pareto Front in Python</h2>
+<p>There is a package, <code>paretoset</code>, that could help us identify all the non-dominating solutions in multi-objective optimization. The installation is straightforward:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource {python} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1">pip install paretoset</span></code></pre></div>
+<p>To illustrate the usage of this package, we will use a bi-objective optimization problem as an example. Suppose we identified a list of candidate solutions with corresponding objective values for this problem, as shown in the data frame below:</p>
+<div id="cell-10" class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb2-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb2-3"></span>
+<span id="cb2-4">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.DataFrame({<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>: [<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4.0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5.0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6.0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, ], </span>
+<span id="cb2-5">                   <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>: [<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5.8</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4.8</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4.0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.6</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, ]})</span>
+<span id="cb2-6">df</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="47">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">obj1</th>
+<th data-quarto-table-cell-role="th">obj2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0.5</td>
+<td>5.8</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>1.0</td>
+<td>5.5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2.5</td>
+<td>4.8</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3.0</td>
+<td>4.5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>3.5</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>4.0</td>
+<td>3.5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>5.0</td>
+<td>2.6</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>6.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>1.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>3.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>4.0</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>5.0</td>
+<td>0.5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>0.5</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>1.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>1.5</td>
+<td>2.5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>2.0</td>
+<td>2.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<p>Putting all the solutions in a plot creates a graph as in below:</p>
+<div id="cell-12" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1">fig, ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb3-2">ax.scatter(df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>], df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>], s<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-3">ax.set_xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Objective 1'</span>)</span>
+<span id="cb3-4">ax.set_ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Objective 2'</span>)</span>
+<span id="cb3-5">ax.set_title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'All candidate solutions'</span>)</span>
+<span id="cb3-6"></span>
+<span id="cb3-7"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> idx, row <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> df.iterrows():</span>
+<span id="cb3-8">    ax.annotate(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f'(</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)'</span>, (row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>, row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>))</span>
+<span id="cb3-9"></span>
+<span id="cb3-10">fig.tight_layout()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://kunlei.github.io/docs/blog/posts/2024-04-02-pareto-front/index_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Assume we aim to maximize both objectives, it is clear that some solutions are <em>dominated</em> by other solutions. For example, the solution (0.5, 2.0) on the left is worse than the solution (2.0, 4.0) in both objectives.</p>
+<p>To use the <code>paretoset</code> package, simply pass all the objectives and their corresponding objective sense to the <code>paretoset</code> class. The result will indicate which solution is a non-dominated solution.</p>
+<div id="cell-14" class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> paretoset <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> paretoset</span>
+<span id="cb4-2"></span>
+<span id="cb4-3">df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'efficient'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> paretoset(df[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>]],</span>
+<span id="cb4-4">                            sense<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'max'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'max'</span>))</span></code></pre></div>
+</div>
+<div id="cell-15" class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1">df</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="50">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">obj1</th>
+<th data-quarto-table-cell-role="th">obj2</th>
+<th data-quarto-table-cell-role="th">efficient</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0.5</td>
+<td>5.8</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>1.0</td>
+<td>5.5</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2.5</td>
+<td>4.8</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3.0</td>
+<td>4.5</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>3.5</td>
+<td>4.0</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>4.0</td>
+<td>3.5</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>5.0</td>
+<td>2.6</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>6.0</td>
+<td>1.0</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>5.0</td>
+<td>0.5</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>0.5</td>
+<td>2.0</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>1.5</td>
+<td>2.5</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<p>To visualize the resulting non-dominated solutions (among all the solutions), we mark them using a different color (yellow) from the dominated solutions (purple) in the graph below.</p>
+<div id="cell-17" class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1">fig, ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb6-2">ax.scatter(df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>], df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>], s<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>, c<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'efficient'</span>])</span>
+<span id="cb6-3">ax.set_xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Objective 1'</span>)</span>
+<span id="cb6-4">ax.set_ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Objective 2'</span>)</span>
+<span id="cb6-5">ax.set_title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'All candidate solutions'</span>)</span>
+<span id="cb6-6"></span>
+<span id="cb6-7"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> idx, row <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> df.iterrows():</span>
+<span id="cb6-8">    ax.annotate(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f'(</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)'</span>, (row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj1'</span>]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>, row[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'obj2'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>))</span>
+<span id="cb6-9"></span>
+<span id="cb6-10">fig.tight_layout()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://kunlei.github.io/docs/blog/posts/2024-04-02-pareto-front/index_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>Multi-objective optimization</category>
+  <guid>https://kunlei.github.io/docs/blog/posts/2024-04-02-pareto-front/</guid>
+  <pubDate>Tue, 02 Apr 2024 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>SQL EXTRACT() and Python ORD()/CHR()</title>
   <dc:creator>Kunlei Lian</dc:creator>
