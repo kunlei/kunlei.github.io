@@ -1,0 +1,115 @@
+---
+title: Work Experience
+author: Kunlei Lian
+date: 08/11/2024
+draft: true
+categories:
+  - work
+format:
+  html:
+    code-line-numbers: true
+    code-overflow: wrap
+    code-block-bg: true
+    code-block-border-left: true
+    highlight-style: Arrow
+---
+
+## Marriott Vacations Worldwide
+
+### Marketing Campaign Optimization
+
+### Existing Owner Propensity to Repurchase
+
+### Interval International Supply/Demand Forecasting and Channel Allocation Optimization
+
+### Loan Delinquency Forecasting
+
+
+## Walmart
+
+### Principal Data Scientist
+
+#### Truckload optimization (TLO)
+
+**Background**
+
+Walmart has a vast inbound network consisting of thousands of vendors and close to one hundred distribution centers (DC). As part of the replenishmnet process, store-item demands are first aggregated at DC level and then orders are placed to vendors to fulfill the demands. Note that there could be many vendors replenishing the same DC and it is necessary to optimize the order quantities at each vendor such that the total transportation cost is minimized.
+
+In TLO, the inbound nework is divied into hundreds of thousands of lanes and TLO is optimized at the lane level. A lane is decided by an specific vendor or vendor pool (a group of vendors), and a specific destination DC or DC pool (a group of DCs).
+
+**Problem**
+
+Within a given lane, there are tens or hundreds of small orders are to be put onto the trucks.
+Each order has an initial order quantity and the problem is to fine-tune or optimize the initial order quantities such that the truckload utilization is maximized.
+There are several constraints to this problem:
+
+- Each order has a minimum and maximum order quantities specified and the final quantity must be within the given range.
+- Each order has an incremental order quantity specified and the increase or decrease in order quantities must be a multiple of the given incremental order quantity.
+- An order could have multiple attributes, like source vendor, destination DC and item number. It's desired to put orders from the same vendor, or going to the same DC or containing the same item together.
+
+The objectives:
+
+- maximimize truckload utilization
+- minimize vendor/DC/item split
+
+**Solution**
+
+The solution is a heuristic-based approach and its overall logic is as belows:
+
+1. Load orders with initial quantities onto trucks using the *load generator* heuristic.
+2. If the last truck capacity is under-utilized (< 10%), call load shinker *heuristic*.
+3. If the last truck capacity is close to full (> 70%), call load expander *heuristic*.
+
+The core of the optimizer is a truck loading heuristic that takes a list of orders with fixed order quantities and decides how to load them onto given number of trucks. The general logic of the algorithm is below (*load generator*):
+
+- Identify the constraining capacity constraints, it's either weight or volume
+- Sort orders in decreasing order of the constraining constraints
+- Start with one truck and load orders using first-fit heuristic.
+
+The *load shrinker* heuristic works as follows:
+
+- Use a priority queue to save all the orders and sort them in *decreasing* order of their inventory level ((curr inventory + supply) / demand)
+- In an iterative process, do the following
+  - Take an order from the top of the priority queue
+  - Shrink its order quantity based on the incremental order quantity
+  - Invoke the *load generator* to create truckloads
+  - Stop the process if the given number of trucks are fully occupied
+
+
+The *load expander* heuristic works as follows:
+
+- Use a priority queue to save all the orders and sort them in *increasing* order of their inventory level ((curr inventory + supply) / demand)
+- In an iterative process, do the following
+  - Take an order from the top of the priority queue
+  - Expand its order quantity based on the incremental order quantity
+  - Invoke the *load generator* to create truckloads
+  - Stop the process if the give number of trucks are fully occupied.
+
+
+#### Truck planning optimization
+
+**Background**
+
+
+
+**Problem**
+
+
+**Solution**
+
+
+
+#### Outbound order optimization
+
+
+#### Network planning model for Walmart Freight Planner
+
+
+### Staff Data Scientist
+
+
+### Senior Data Scientist
+
+
+### Data Scientist
+

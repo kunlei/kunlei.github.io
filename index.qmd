@@ -54,19 +54,21 @@ My professional experience can be put into the following categories:
 flowchart LR
     A[Experience] --> B[Supply Chain Management]
     A --> C[Revenue/Yield Management]
-    B --> E[Transportation]
+    B --> E[Transportation/Logistics]
     B --> F[Fulfillment]
     B --> G[Replenishment]
       E --> J[Route/delivery optimization]
       E --> K[Shipment consolidation]
       E --> L[Job/driver scheduling]
+      E --> R[Ocean procurement]
       F --> M[Warehouse inbound - item slotting/profiling]
       F --> N[Warehouse outbound - trip/pallet building]
       G --> O[Truckload optimization]
       G --> P[Order optimization]
       G --> Q[Inventory optimization]
+    C --> I[Capacity Planning]
+    C --> S[Propensity modeling]
     C --> H[Marketing campaign optimization]
-    C --> I[Inventory control]
 ```
 
 ## Contact

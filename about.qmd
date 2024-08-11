@@ -52,9 +52,9 @@ October 2023 - present
 :::
 *Principal Data Scientist / Associate Director - Data Science*
 
-- Marketing campaign optimization
-- Owner propensity to buy
-- Inventory optimization
+- Campaign targeting optimization.
+- Capacity planning in a two-sided marketplace.
+- Propensity modeling.
 
 ::: {.d-flex .justify-content-between}
 ::: {}
