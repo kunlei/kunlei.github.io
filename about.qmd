@@ -44,10 +44,23 @@ Wuhan, China
 
 ::: {.d-flex .justify-content-between}
 ::: {}
+**Symbotic**  
+:::
+::: {.text-end}
+December 2024 - Present
+:::
+:::
+*Principal Research Scientist*
+
+- Robotic fleet orchestration and tasking.
+
+
+::: {.d-flex .justify-content-between}
+::: {}
 **Marriott Vacations Worldwide**  
 :::
 ::: {.text-end}
-October 2023 - present
+October 2023 - December 2024
 :::
 :::
 *Principal Data Scientist / Associate Director - Data Science*
