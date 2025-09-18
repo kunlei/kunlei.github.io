@@ -10,7 +10,595 @@
 <atom:link href="https://kunlei.github.io/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.550</generator>
-<lastBuildDate>Tue, 02 Apr 2024 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 14 Jun 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Load Trained Models in PyTorch</title>
+  <dc:creator>Kunlei Lian</dc:creator>
+  <link>https://kunlei.github.io/docs/blog/posts/pytorch/load-pretained-models/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this blog post, we’ll explore how to load pre-trained PyTorch models and use them for inference on new images. Pre-trained models are neural networks that have already been trained on large datasets (like ImageNet) and can be used for various computer vision tasks without having to train from scratch.</p>
+<p>We’ll walk through the complete process: 1. Loading a pre-trained model from torchvision 2. Preprocessing an input image 3. Running inference to get predictions 4. Interpreting the results</p>
+<p>Let’s start by checking our PyTorch version and exploring available models.</p>
+<div id="cell-2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">torch.__version__</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>'2.8.0'</code></pre>
+</div>
+</div>
+</section>
+<section id="step-1-loading-pre-trained-models" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-loading-pre-trained-models">Step 1: Loading Pre-trained Models</h2>
+<p>PyTorch’s <code>torchvision</code> library provides access to many pre-trained models. Let’s first see what models are available, then load a ResNet-101 model that was pre-trained on ImageNet.</p>
+<div id="cell-4" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> torchvision <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> models</span>
+<span id="cb3-2"></span>
+<span id="cb3-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">dir</span>(models)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>['AlexNet',
+ 'AlexNet_Weights',
+ 'ConvNeXt',
+ 'ConvNeXt_Base_Weights',
+ 'ConvNeXt_Large_Weights',
+ 'ConvNeXt_Small_Weights',
+ 'ConvNeXt_Tiny_Weights',
+ 'DenseNet',
+ 'DenseNet121_Weights',
+ 'DenseNet161_Weights',
+ 'DenseNet169_Weights',
+ 'DenseNet201_Weights',
+ 'EfficientNet',
+ 'EfficientNet_B0_Weights',
+ 'EfficientNet_B1_Weights',
+ 'EfficientNet_B2_Weights',
+ 'EfficientNet_B3_Weights',
+ 'EfficientNet_B4_Weights',
+ 'EfficientNet_B5_Weights',
+ 'EfficientNet_B6_Weights',
+ 'EfficientNet_B7_Weights',
+ 'EfficientNet_V2_L_Weights',
+ 'EfficientNet_V2_M_Weights',
+ 'EfficientNet_V2_S_Weights',
+ 'GoogLeNet',
+ 'GoogLeNetOutputs',
+ 'GoogLeNet_Weights',
+ 'Inception3',
+ 'InceptionOutputs',
+ 'Inception_V3_Weights',
+ 'MNASNet',
+ 'MNASNet0_5_Weights',
+ 'MNASNet0_75_Weights',
+ 'MNASNet1_0_Weights',
+ 'MNASNet1_3_Weights',
+ 'MaxVit',
+ 'MaxVit_T_Weights',
+ 'MobileNetV2',
+ 'MobileNetV3',
+ 'MobileNet_V2_Weights',
+ 'MobileNet_V3_Large_Weights',
+ 'MobileNet_V3_Small_Weights',
+ 'RegNet',
+ 'RegNet_X_16GF_Weights',
+ 'RegNet_X_1_6GF_Weights',
+ 'RegNet_X_32GF_Weights',
+ 'RegNet_X_3_2GF_Weights',
+ 'RegNet_X_400MF_Weights',
+ 'RegNet_X_800MF_Weights',
+ 'RegNet_X_8GF_Weights',
+ 'RegNet_Y_128GF_Weights',
+ 'RegNet_Y_16GF_Weights',
+ 'RegNet_Y_1_6GF_Weights',
+ 'RegNet_Y_32GF_Weights',
+ 'RegNet_Y_3_2GF_Weights',
+ 'RegNet_Y_400MF_Weights',
+ 'RegNet_Y_800MF_Weights',
+ 'RegNet_Y_8GF_Weights',
+ 'ResNeXt101_32X8D_Weights',
+ 'ResNeXt101_64X4D_Weights',
+ 'ResNeXt50_32X4D_Weights',
+ 'ResNet',
+ 'ResNet101_Weights',
+ 'ResNet152_Weights',
+ 'ResNet18_Weights',
+ 'ResNet34_Weights',
+ 'ResNet50_Weights',
+ 'ShuffleNetV2',
+ 'ShuffleNet_V2_X0_5_Weights',
+ 'ShuffleNet_V2_X1_0_Weights',
+ 'ShuffleNet_V2_X1_5_Weights',
+ 'ShuffleNet_V2_X2_0_Weights',
+ 'SqueezeNet',
+ 'SqueezeNet1_0_Weights',
+ 'SqueezeNet1_1_Weights',
+ 'SwinTransformer',
+ 'Swin_B_Weights',
+ 'Swin_S_Weights',
+ 'Swin_T_Weights',
+ 'Swin_V2_B_Weights',
+ 'Swin_V2_S_Weights',
+ 'Swin_V2_T_Weights',
+ 'VGG',
+ 'VGG11_BN_Weights',
+ 'VGG11_Weights',
+ 'VGG13_BN_Weights',
+ 'VGG13_Weights',
+ 'VGG16_BN_Weights',
+ 'VGG16_Weights',
+ 'VGG19_BN_Weights',
+ 'VGG19_Weights',
+ 'ViT_B_16_Weights',
+ 'ViT_B_32_Weights',
+ 'ViT_H_14_Weights',
+ 'ViT_L_16_Weights',
+ 'ViT_L_32_Weights',
+ 'VisionTransformer',
+ 'Weights',
+ 'WeightsEnum',
+ 'Wide_ResNet101_2_Weights',
+ 'Wide_ResNet50_2_Weights',
+ '_GoogLeNetOutputs',
+ '_InceptionOutputs',
+ '__builtins__',
+ '__cached__',
+ '__doc__',
+ '__file__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__path__',
+ '__spec__',
+ '_api',
+ '_meta',
+ '_utils',
+ 'alexnet',
+ 'convnext',
+ 'convnext_base',
+ 'convnext_large',
+ 'convnext_small',
+ 'convnext_tiny',
+ 'densenet',
+ 'densenet121',
+ 'densenet161',
+ 'densenet169',
+ 'densenet201',
+ 'detection',
+ 'efficientnet',
+ 'efficientnet_b0',
+ 'efficientnet_b1',
+ 'efficientnet_b2',
+ 'efficientnet_b3',
+ 'efficientnet_b4',
+ 'efficientnet_b5',
+ 'efficientnet_b6',
+ 'efficientnet_b7',
+ 'efficientnet_v2_l',
+ 'efficientnet_v2_m',
+ 'efficientnet_v2_s',
+ 'get_model',
+ 'get_model_builder',
+ 'get_model_weights',
+ 'get_weight',
+ 'googlenet',
+ 'inception',
+ 'inception_v3',
+ 'list_models',
+ 'maxvit',
+ 'maxvit_t',
+ 'mnasnet',
+ 'mnasnet0_5',
+ 'mnasnet0_75',
+ 'mnasnet1_0',
+ 'mnasnet1_3',
+ 'mobilenet',
+ 'mobilenet_v2',
+ 'mobilenet_v3_large',
+ 'mobilenet_v3_small',
+ 'mobilenetv2',
+ 'mobilenetv3',
+ 'optical_flow',
+ 'quantization',
+ 'regnet',
+ 'regnet_x_16gf',
+ 'regnet_x_1_6gf',
+ 'regnet_x_32gf',
+ 'regnet_x_3_2gf',
+ 'regnet_x_400mf',
+ 'regnet_x_800mf',
+ 'regnet_x_8gf',
+ 'regnet_y_128gf',
+ 'regnet_y_16gf',
+ 'regnet_y_1_6gf',
+ 'regnet_y_32gf',
+ 'regnet_y_3_2gf',
+ 'regnet_y_400mf',
+ 'regnet_y_800mf',
+ 'regnet_y_8gf',
+ 'resnet',
+ 'resnet101',
+ 'resnet152',
+ 'resnet18',
+ 'resnet34',
+ 'resnet50',
+ 'resnext101_32x8d',
+ 'resnext101_64x4d',
+ 'resnext50_32x4d',
+ 'segmentation',
+ 'shufflenet_v2_x0_5',
+ 'shufflenet_v2_x1_0',
+ 'shufflenet_v2_x1_5',
+ 'shufflenet_v2_x2_0',
+ 'shufflenetv2',
+ 'squeezenet',
+ 'squeezenet1_0',
+ 'squeezenet1_1',
+ 'swin_b',
+ 'swin_s',
+ 'swin_t',
+ 'swin_transformer',
+ 'swin_v2_b',
+ 'swin_v2_s',
+ 'swin_v2_t',
+ 'vgg',
+ 'vgg11',
+ 'vgg11_bn',
+ 'vgg13',
+ 'vgg13_bn',
+ 'vgg16',
+ 'vgg16_bn',
+ 'vgg19',
+ 'vgg19_bn',
+ 'video',
+ 'vision_transformer',
+ 'vit_b_16',
+ 'vit_b_32',
+ 'vit_h_14',
+ 'vit_l_16',
+ 'vit_l_32',
+ 'wide_resnet101_2',
+ 'wide_resnet50_2']</code></pre>
+</div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1">alexnet <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> models.AlexNet()</span></code></pre></div>
+</div>
+</section>
+<section id="step-2-image-preprocessing" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-image-preprocessing">Step 2: Image Preprocessing</h2>
+<p>Before we can use our model for inference, we need to preprocess the input image. Pre-trained models expect images in a specific format:</p>
+<ul>
+<li><strong>Resize and crop</strong>: Images should be 224x224 pixels</li>
+<li><strong>Convert to tensor</strong>: Transform from PIL Image to PyTorch tensor</li>
+<li><strong>Normalize</strong>: Apply the same normalization that was used during training (ImageNet statistics)</li>
+</ul>
+<p>The normalization values (mean and std) are specific to ImageNet and help the model perform better.</p>
+<div id="cell-7" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1">alexnet</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>AlexNet(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(64, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(6, 6))
+  (classifier): Sequential(
+    (0): Dropout(p=0.5, inplace=False)
+    (1): Linear(in_features=9216, out_features=4096, bias=True)
+    (2): ReLU(inplace=True)
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(in_features=4096, out_features=4096, bias=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=4096, out_features=1000, bias=True)
+  )
+)</code></pre>
+</div>
+</div>
+<div id="cell-8" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1">resnet <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> models.resnet101(weights<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>models.ResNet101_Weights.DEFAULT)</span></code></pre></div>
+</div>
+<p>Let’s load our dog image and apply the preprocessing transformations:</p>
+<div id="cell-10" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> torchvision <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> transforms</span>
+<span id="cb9-2"></span>
+<span id="cb9-3">transform <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> transforms.Compose([</span>
+<span id="cb9-4">    transforms.Resize(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">256</span>),</span>
+<span id="cb9-5">    transforms.CenterCrop(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">224</span>),</span>
+<span id="cb9-6">    transforms.ToTensor(),</span>
+<span id="cb9-7">    transforms.Normalize(</span>
+<span id="cb9-8">        mean<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.485</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.456</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.406</span>],</span>
+<span id="cb9-9">        std<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.229</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.224</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.225</span>]</span>
+<span id="cb9-10">    )</span>
+<span id="cb9-11">])</span></code></pre></div>
+</div>
+<div id="cell-11" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> PIL <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Image</span>
+<span id="cb10-2"></span>
+<span id="cb10-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># image = Image.open("./tree.jpg")</span></span>
+<span id="cb10-4">image <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Image.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">open</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./dog.jpg"</span>)</span></code></pre></div>
+</div>
+<div id="cell-12" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1">image</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+<figure class="figure">
+<p><img src="https://kunlei.github.io/docs/blog/posts/pytorch/load-pretained-models/index_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-model-inference" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-model-inference">Step 3: Model Inference</h2>
+<p>Now we’re ready to run inference! Here’s what we need to do:</p>
+<ol type="1">
+<li><strong>Set model to evaluation mode</strong>: This disables dropout and batch normalization updates</li>
+<li><strong>Add batch dimension</strong>: Models expect batched inputs, so we add a dimension</li>
+<li><strong>Run inference</strong>: Use <code>torch.inference_mode()</code> for efficiency and to disable gradient computation</li>
+<li><strong>Get predictions</strong>: The model outputs raw logits (unnormalized scores) for each class</li>
+</ol>
+<div id="cell-14" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1">image_transformed <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> transform(image)</span></code></pre></div>
+</div>
+<div id="cell-15" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt </span>
+<span id="cb13-2"></span>
+<span id="cb13-3">plt.imshow(image_transformed.permute(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers). Got range [-1.980906..2.3785625].</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://kunlei.github.io/docs/blog/posts/pytorch/load-pretained-models/index_files/figure-html/cell-11-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-16" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1">image_batch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image_transformed.unsqueeze(dim<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb15-2">image_batch.shape</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>torch.Size([1, 3, 224, 224])</code></pre>
+</div>
+</div>
+<div id="cell-17" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1">resnet.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">eval</span>()</span>
+<span id="cb17-2"></span>
+<span id="cb17-3"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">with</span> torch.inference_mode():</span>
+<span id="cb17-4">    pred_logits <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> resnet(image_batch)</span>
+<span id="cb17-5"></span>
+<span id="cb17-6">pred_logits.shape</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>torch.Size([1, 1000])</code></pre>
+</div>
+</div>
+</section>
+<section id="step-4-interpreting-results" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-interpreting-results">Step 4: Interpreting Results</h2>
+<p>The model outputs raw logits (scores) for each of the 1000 ImageNet classes. To make sense of these predictions, we need to:</p>
+<ol type="1">
+<li><strong>Load class labels</strong>: Get the human-readable names for each class</li>
+<li><strong>Convert to probabilities</strong>: Apply softmax to get probabilities that sum to 1</li>
+<li><strong>Find top predictions</strong>: Sort by probability to see the most likely classes</li>
+</ol>
+<p>Let’s see what our model thinks the dog image contains!</p>
+<div id="cell-19" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">with</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">open</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./imagenet_classes.txt"</span>) <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> f:</span>
+<span id="cb19-2">    labels <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [line.strip() <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> line <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> f.readlines()] </span></code></pre></div>
+</div>
+<div id="cell-20" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1">_, index <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(pred_logits, dim<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb20-2">softmax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.nn.Softmax(dim<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb20-3">pred_probs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> softmax(pred_logits)</span></code></pre></div>
+</div>
+<div id="cell-21" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1">_, indices <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.sort(pred_logits, descending<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb21-2">[(labels[idx], pred_logits[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>][idx].item()) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> idx <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> indices[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>][:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>]]</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>[('golden retriever', 8.721056938171387),
+ ('Labrador retriever', 5.845145225524902),
+ ('Brittany spaniel', 5.5844011306762695),
+ ('clumber, clumber spaniel', 2.9428038597106934),
+ ('Sussex spaniel', 2.8260412216186523)]</code></pre>
+</div>
+</div>
+<div id="cell-22" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1">_, indices <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.sort(pred_probs, descending<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb23-2">[(labels[idx], pred_probs[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>][idx].item()) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> idx <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> indices[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>][:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>]]</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>[('golden retriever', 0.7772852182388306),
+ ('Labrador retriever', 0.04381147027015686),
+ ('Brittany spaniel', 0.03375577926635742),
+ ('clumber, clumber spaniel', 0.0024050103966146708),
+ ('Sussex spaniel', 0.0021399694960564375)]</code></pre>
+</div>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this tutorial, we’ve successfully:</p>
+<ol type="1">
+<li><strong>Loaded a pre-trained ResNet-101 model</strong> from torchvision</li>
+<li><strong>Preprocessed a dog image</strong> with the correct transformations</li>
+<li><strong>Ran inference</strong> to get predictions from the model</li>
+<li><strong>Interpreted the results</strong> by converting logits to probabilities and finding the top predictions</li>
+</ol>
+<p>The model correctly identified the image as containing a dog breed, demonstrating how pre-trained models can be used for image classification without any additional training. This approach is particularly useful when you have limited data or computational resources, as you can leverage models that have already learned rich visual features from large datasets like ImageNet.</p>
+<section id="key-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="key-takeaways">Key Takeaways:</h3>
+<ul>
+<li>Pre-trained models save time and computational resources</li>
+<li>Proper preprocessing is crucial for good results</li>
+<li>Models output raw logits that need to be converted to probabilities</li>
+<li>The <code>torch.inference_mode()</code> context manager is more efficient than <code>torch.no_grad()</code> for inference</li>
+</ul>
+<p>You can now use this same process with any pre-trained model from torchvision for your own image classification tasks!</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>PyTorch</category>
+  <category>Deep Learning</category>
+  <guid>https://kunlei.github.io/docs/blog/posts/pytorch/load-pretained-models/</guid>
+  <pubDate>Fri, 14 Jun 2024 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Multi-Objective Optimization and Pareto Front</title>
   <dc:creator>Kunlei Lian</dc:creator>
