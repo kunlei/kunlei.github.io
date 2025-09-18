@@ -6,6 +6,8 @@ listing:
     contents: 
         - "posts/*/index.qmd"
         - "posts/*/index.ipynb"
+        - "posts/*/*/index.qmd"
+        - "posts/*/*/index.ipynb"
     sort-ui: false
     filter-ui: false
     categories: true

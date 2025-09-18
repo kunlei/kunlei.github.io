@@ -29,47 +29,66 @@ about:
 
 :::{#hero-heading}
 
-## Background
+## Welcome
 
-I am an Operations Research Scientist and Machine Learning practitioner.
+I'm **Kunlei Lian**, an Operations Research Scientist and Machine Learning practitioner who transforms complex business challenges into data-driven solutions. With expertise spanning optimization, machine learning, and supply chain analytics, I help organizations make smarter decisions through advanced mathematical modeling and algorithmic innovation.
 
-I am currently working at Marriott Vacations Worldwide responsible for marketing campaign optimization, inventory control and revenue management.
-Previously, I contributed to various supply chain optimization projects at Walmart Global Technology. 
+## Professional Journey
 
-My academic journey includes earning a Ph.D. in Industrial Engineering from the University of Arkansas, where my research centered on solving vehicle routing problems. Prior to that, I obtained both my B.S. and M.S. degrees in Industrial Engineering from Huazhong University of Science and Technology in China.
+Currently, I'm at **Symbotic**, where I develop cutting-edge algorithms for robotic fleet orchestration and autonomous tasking systems. My work involves creating intelligent systems that optimize warehouse operations and enhance robotic coordination.
 
-## Strengths and Experience
+Previously at **Marriott Vacations Worldwide**, I led data science initiatives that revolutionized marketing campaign optimization, inventory control, and revenue management strategies. My solutions directly impacted business performance and customer experience.
 
-My competitive strengths:
+My foundation was built at **Walmart Global Technology**, where I contributed to multiple supply chain optimization projects that improved efficiency across one of the world's largest retail operations.
 
-- Solid academic background in Operations Research theories and techniques.
-- Extensive experience in solving large-scale optimization problems in supply chain.
-- Deep hands-on skills in building efficient and scalable optimization products.
+## Academic Excellence
+
+I hold a **Ph.D. in Industrial Engineering** from the **University of Arkansas**, where my research focused on vehicle routing problems and optimization algorithms. My academic journey also includes **B.S. and M.S. degrees** in Industrial Engineering from **Huazhong University of Science and Technology** in China.
+
+## Core Expertise
+
+### What I Bring to the Table
+
+- **Deep Mathematical Foundation**: Advanced expertise in Operations Research theory, optimization algorithms, and machine learning methodologies
+- **Large-Scale Problem Solving**: Proven track record of solving complex optimization challenges in enterprise environments  
+- **End-to-End Product Development**: Experience building production-ready optimization systems from research to deployment
+- **Cross-Industry Impact**: Success across supply chain, hospitality, and robotics sectors
 
 
-My professional experience can be put into the following categories:
 
-```{mermaid}
-%%{init: {'theme':'forest'}}%%
-flowchart LR
-    A[Experience] --> B[Supply Chain Management]
-    A --> C[Revenue/Yield Management]
-    B --> E[Transportation/Logistics]
-    B --> F[Fulfillment]
-    B --> G[Replenishment]
-      E --> J[Route/delivery optimization]
-      E --> K[Shipment consolidation]
-      E --> L[Job/driver scheduling]
-      E --> R[Ocean procurement]
-      F --> M[Warehouse inbound - item slotting/profiling]
-      F --> N[Warehouse outbound - trip/pallet building]
-      G --> O[Truckload optimization]
-      G --> P[Order optimization]
-      G --> Q[Inventory optimization]
-    C --> I[Capacity Planning]
-    C --> S[Propensity modeling]
-    C --> H[Marketing campaign optimization]
-```
+## Experience Portfolio
+
+My professional journey spans multiple industries and domains, creating a unique blend of expertise:
+
+### Core Domains
+
+**🔗 Supply Chain Optimization**
+
+- Transportation & Logistics (Route optimization, Fleet management, Delivery scheduling)
+- Warehouse Operations (Automation, Order fulfillment, Space optimization)  
+- Inventory Management (Demand forecasting, Stock optimization, Replenishment planning)
+
+**💰 Revenue Management**
+
+- Marketing Analytics (Campaign optimization, Customer segmentation)
+- Pricing Strategy (Dynamic pricing, Yield management)
+- Capacity Planning (Resource allocation, Demand forecasting)
+
+**🤖 Robotic Systems**
+
+- Fleet Orchestration (Multi-robot coordination, Task assignment)
+- Autonomous Tasking (Intelligent scheduling, Real-time optimization)
+
+## Let's Connect
+
+I'm passionate about solving complex optimization challenges and building intelligent systems that drive real business value. Whether you're looking to optimize supply chains, implement machine learning solutions, or explore the intersection of robotics and operations research, I'd love to discuss how we can work together.
+
+**Current Focus Areas:**
+
+- Robotic fleet optimization and autonomous systems
+- Supply chain analytics and optimization
+- Machine learning applications in operations research
+- Data-driven decision making and algorithmic solutions
 
 ## Contact
 
